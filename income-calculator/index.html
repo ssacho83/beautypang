@@ -10,10 +10,27 @@
 <link rel="canonical" href="https://beautypang.co.kr/income-calculator/">
 
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="beautypang.tools">
 <meta property="og:title" content="2026 중위소득 계산기 — 4대 급여 자격 즉시 확인">
 <meta property="og:description" content="가구원 수와 월소득만 입력하면 생계·의료·주거·교육급여 자격을 한 번에 확인합니다.">
 <meta property="og:url" content="https://beautypang.co.kr/income-calculator/">
 <meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://beautypang.co.kr/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="2026 중위소득 계산기 — beautypang.tools">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="2026 중위소득 계산기 — 4대 급여 자격 즉시 확인">
+<meta name="twitter:description" content="가구원 수와 월소득만 입력하면 생계·의료·주거·교육급여 자격을 한 번에 확인합니다.">
+<meta name="twitter:image" content="https://beautypang.co.kr/og-image.svg">
+
+<meta name="theme-color" content="#2563EB">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="beautypang.tools">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="beautypang.tools RSS" href="/rss.xml">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -22,14 +39,74 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "2026 중위소득 계산기",
-  "url": "https://beautypang.co.kr/income-calculator/",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Web",
-  "description": "2026년 기준 중위소득 대비 가구 소득 비율과 생계·의료·주거·교육급여 자격을 즉시 계산합니다.",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
-  "inLanguage": "ko-KR"
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://beautypang.co.kr/income-calculator/#app",
+      "name": "2026 중위소득 계산기",
+      "url": "https://beautypang.co.kr/income-calculator/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "description": "2026년 기준 중위소득 대비 가구 소득 비율과 생계·의료·주거·교육급여 자격을 즉시 계산합니다.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+      "inLanguage": "ko-KR",
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript",
+      "author": { "@type": "Organization", "name": "beautypang.tools", "url": "https://beautypang.co.kr/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://beautypang.co.kr/" },
+        { "@type": "ListItem", "position": 2, "name": "2026 중위소득 계산기", "item": "https://beautypang.co.kr/income-calculator/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "기준 중위소득이란 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "국민 가구소득의 중간값을 의미합니다. 보건복지부장관이 중앙생활보장위원회 심의·의결을 거쳐 매년 8월 1일까지 다음 연도분을 고시하며, 기초생활보장 4대 급여(생계·의료·주거·교육)의 선정 기준 산정에 사용됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "2026년에는 무엇이 달라졌나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2026년 기준 중위소득은 4인 가구 기준 649만 4,738원으로 2025년 대비 6.51% 인상되어 역대 최대 인상폭을 기록했습니다. 1인 가구는 7.20% 인상된 256만 4,238원입니다. 급여별 선정기준 비율(생계 32%·의료 40%·주거 48%·교육 50%)은 2025년과 동일합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "소득에는 어떤 항목이 포함되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "근로소득, 사업소득, 재산소득(이자·배당·임대 등), 이전소득(공적이전·사적이전)이 모두 포함됩니다. 실제 수급자격 심사 시에는 여기에 재산의 소득환산액을 더한 소득인정액이 적용되므로, 이 계산기 결과는 참고치로만 활용하세요."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "의료급여는 왜 부양의무자 기준이 추가로 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "생계·주거·교육급여는 부양의무자 기준이 폐지 또는 완화되었지만, 의료급여는 여전히 부양의무자(1촌 직계혈족과 그 배우자)의 소득·재산 기준을 함께 봅니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "실제 신청은 어디서 하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "주민등록상 거주지 행정복지센터(주민센터)를 방문해 신청합니다. 사전 상담은 보건복지상담센터 129 또는 복지로(bokjiro.go.kr)에서 가능합니다."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 

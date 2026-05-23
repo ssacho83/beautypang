@@ -1,4 +1,45 @@
+# beautypang.tools - 무료 도구 모음
+# https://beautypang.co.kr/
+
+# 모든 검색 크롤러 허용
 User-agent: *
 Allow: /
 
+# AdSense 크롤러 명시적 허용 (수익 최적화)
+User-agent: Mediapartners-Google
+Allow: /
+
+# Google 검색 크롤러
+User-agent: Googlebot
+Allow: /
+
+# Naver 검색 크롤러
+User-agent: Yeti
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# AI 크롤러 (학습 데이터 수집) - 차단
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# 사이트맵 + RSS 피드
 Sitemap: https://beautypang.co.kr/sitemap.xml
+Sitemap: https://beautypang.co.kr/rss.xml
