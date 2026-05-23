@@ -101,6 +101,14 @@
         },
         {
           "@type": "Question",
+          "name": "자녀세액공제는 어떻게 적용되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "만 8~20세 자녀가 있으면 1자녀 25만원, 2자녀 55만원, 3자녀 이상은 55만원 + (자녀수-2)×40만원의 세액공제가 적용됩니다. 산출세액에서 직접 차감되므로 부양가족 기본공제(소득공제)보다 절세 효과가 큽니다. 자녀 수에 따라 실수령액 차이가 클 수 있으니 정확히 입력하세요."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "비과세 식대 20만원은 무엇인가요?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -397,13 +405,26 @@
       </div>
 
       <div class="field">
-        <label for="meal">비과세 식대 (월)</label>
-        <div class="input-wrap">
-          <input id="meal" type="text" inputmode="numeric" value="200,000" autocomplete="off">
-          <span class="unit">원</span>
+        <label>자녀 수 (8~20세)</label>
+        <div class="seg" id="segChild" role="group" aria-label="자녀 수">
+          <button type="button" data-c="0" class="on">0</button>
+          <button type="button" data-c="1">1</button>
+          <button type="button" data-c="2">2</button>
+          <button type="button" data-c="3">3</button>
+          <button type="button" data-c="4">4</button>
+          <button type="button" data-c="5">5+</button>
         </div>
-        <p class="help">회사 식대 비과세 한도 월 20만원. 식대 없으면 0.</p>
+        <p class="help">자녀세액공제 대상 자녀(만 8~20세) 수.</p>
       </div>
+    </div>
+
+    <div class="field">
+      <label for="meal">비과세 식대 (월)</label>
+      <div class="input-wrap">
+        <input id="meal" type="text" inputmode="numeric" value="200,000" autocomplete="off">
+        <span class="unit">원</span>
+      </div>
+      <p class="help">회사 식대 비과세 한도 월 20만원. 식대 없으면 0.</p>
     </div>
 
     <button type="submit" class="submit">실수령액 계산하기</button>
@@ -442,7 +463,7 @@
     </div>
 
     <div class="disclaimer">
-      <b>안내</b> · 이 결과는 2026년 4대 보험 요율(국민연금 9.5%·건강보험 7.19%·장기요양 건강보험료의 12.95%·고용보험 0.9%)과 근로소득세 누진세율을 기준으로 한 <b>참고용 추정치</b>입니다. 실제 매월 통장 입금액은 회사의 비과세 항목 구성, 간이세액표 기반 원천징수, 의료비·자녀세액공제 등 다양한 요인에 따라 차이가 있습니다. <b>최종 금액은 연말정산 후 확정</b>됩니다.
+      <b>안내</b> · 이 결과는 2026년 4대 보험 요율(국민연금 9.5%·건강보험 7.19%·장기요양 건강보험료의 12.95%·고용보험 0.9%)·근로소득세 누진세율·자녀세액공제(8~20세)를 반영한 <b>참고용 추정치</b>입니다. 실제 매월 통장 입금액은 회사의 비과세 항목 구성, 간이세액표 기반 원천징수, 의료비·기부금·연금저축 등 추가 공제에 따라 차이가 있습니다. <b>최종 금액은 연말정산 후 확정</b>됩니다.
     </div>
   </div>
 
@@ -474,6 +495,10 @@
     <details>
       <summary>부양가족 수는 어떻게 세나요?</summary>
       <p>본인 1명에 더해 <b>연소득 100만원 이하</b>인 배우자·자녀·부모님·형제자매(요건 충족 시) 등을 더합니다. 1인당 150만원의 <b>기본공제</b>가 적용됩니다. 70세 이상 부모·장애인·한부모 등 추가공제 항목은 이 계산기에 반영하지 않아 실제보다 약간 보수적으로 추정될 수 있습니다.</p>
+    </details>
+    <details>
+      <summary>자녀세액공제는 어떻게 적용되나요?</summary>
+      <p>만 8~20세 자녀가 있으면 <b>1자녀 25만원, 2자녀 55만원, 3자녀 이상 55만원 + (자녀수-2)×40만원</b>의 세액공제가 적용됩니다. 산출세액에서 직접 차감되므로 부양가족 기본공제(소득공제)보다 절세 효과가 큽니다. 예: 자녀 5명이면 연 175만원(=55+3×40) 세금이 줄어 월 약 14.5만원 실수령액이 늘어납니다.</p>
     </details>
     <details>
       <summary>비과세 식대 20만원은 무엇인가요?</summary>
@@ -530,6 +555,14 @@
     return taxBase * 0.45 - 65_940_000;
   }
 
+  // 자녀세액공제 (소득세법 §59의2) - 8~20세 자녀
+  function childTaxCredit(children) {
+    if (children <= 0) return 0;
+    if (children === 1) return 250_000;
+    if (children === 2) return 550_000;
+    return 550_000 + (children - 2) * 400_000;
+  }
+
   // 근로소득세액공제 (소득세법)
   function workCredit(calcTax, gross) {
     let credit;
@@ -546,7 +579,7 @@
   }
 
   // ===== 핵심 계산 =====
-  function calc(salary, deps, mealMonthly) {
+  function calc(salary, deps, children, mealMonthly) {
     const mealYearly = mealMonthly * 12;
     const taxableSalary = Math.max(0, salary - mealYearly); // 과세 대상 연봉
     const monthlyGross = salary / 12;                       // 월 세전 (식대 포함)
@@ -569,10 +602,11 @@
     const npCredit = Math.min(salary, NP_MAX_BASE * 12) * NP_RATE; // 연 국민연금 (소득공제)
     const taxBase = Math.max(0, workIncome - personalDed - npCredit);
 
-    // 산출세액 → 근로소득세액공제 → 결정세액
+    // 산출세액 → 근로소득세액공제 → 자녀세액공제 → 결정세액
     const calcTax = incomeTax(taxBase);
     const credit = workCredit(calcTax, taxableSalary);
-    const decidedTax = Math.max(0, calcTax - credit);
+    const childCredit = childTaxCredit(children);
+    const decidedTax = Math.max(0, calcTax - credit - childCredit);
 
     // 지방소득세 10%
     const localTax = decidedTax * 0.10;
@@ -599,12 +633,14 @@
   };
 
   const seg = document.getElementById('seg');
+  const segChild = document.getElementById('segChild');
   const salaryInput = document.getElementById('salary');
   const mealInput = document.getElementById('meal');
   const form = document.getElementById('calc');
   const result = document.getElementById('result');
 
   let deps = 1;
+  let children = 0;
 
   seg.addEventListener('click', e => {
     const btn = e.target.closest('button[data-n]');
@@ -612,6 +648,14 @@
     seg.querySelectorAll('button').forEach(b => b.classList.remove('on'));
     btn.classList.add('on');
     deps = parseInt(btn.dataset.n, 10);
+  });
+
+  segChild.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-c]');
+    if (!btn) return;
+    segChild.querySelectorAll('button').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    children = parseInt(btn.dataset.c, 10);
   });
 
   [salaryInput, mealInput].forEach(el => {
@@ -627,7 +671,7 @@
     const samples = [25000000, 30000000, 35000000, 40000000, 45000000, 50000000, 60000000, 70000000, 80000000, 100000000];
     let html = '';
     samples.forEach(sal => {
-      const r = calc(sal, 1, 200000);
+      const r = calc(sal, 1, 0, 200000);
       html += `<tr>
         <td>${fmtMan(sal)}</td>
         <td>${fmt(r.monthlyGross)}</td>
@@ -652,7 +696,7 @@
     }
     const mealCapped = Math.min(meal, 200000);
 
-    const r = calc(salary, deps, mealCapped);
+    const r = calc(salary, deps, children, mealCapped);
 
     document.getElementById('monthlyNet').innerHTML = Math.round(r.monthlyNet).toLocaleString('ko-KR') + '<small>원</small>';
     document.getElementById('monthlyGross').textContent = fmt(r.monthlyGross);
@@ -660,7 +704,8 @@
     document.getElementById('yearlyNet').textContent = fmt(r.yearlyNet);
     document.getElementById('netRatio').textContent = r.ratio.toFixed(1) + '%';
 
-    document.getElementById('netDetail').innerHTML = `연봉 <b>${fmtMan(salary)}</b> 기준 · 부양가족 <b>${deps}인</b> · 연 실수령 <b>${fmtMan(r.yearlyNet)}</b>`;
+    const childStr = children > 0 ? ` · 자녀 <b>${children}인</b>` : '';
+    document.getElementById('netDetail').innerHTML = `연봉 <b>${fmtMan(salary)}</b> 기준 · 부양가족 <b>${deps}인</b>${childStr} · 연 실수령 <b>${fmtMan(r.yearlyNet)}</b>`;
 
     const bdHtml = `
       <div class="row"><span class="name">국민연금 <b>(4.75%)</b></span><span class="val">${fmt(r.np)}</span></div>
