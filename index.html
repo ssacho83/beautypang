@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>beautypang — 일상에 필요한 무료 도구 모음</title>
+<meta name="description" content="복지·금융·생활에 필요한 무료 계산기와 도구를 한 곳에서. 회원가입 없이 누구나 즉시 사용 가능합니다.">
+<meta name="keywords" content="무료 계산기, 온라인 도구, 중위소득 계산기, 복지 계산기, 생활 도구">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://beautypang.co.kr/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="beautypang — 일상에 필요한 무료 도구 모음">
+<meta property="og:description" content="복지·금융·생활에 필요한 무료 계산기와 도구를 한 곳에서.">
+<meta property="og:url" content="https://beautypang.co.kr/">
+<meta property="og:locale" content="ko_KR">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+
+<style>
+  :root {
+    --bg: #F8FAFC;
+    --surface: #FFFFFF;
+    --ink: #0F172A;
+    --ink-soft: #475569;
+    --muted: #94A3B8;
+    --line: #E2E8F0;
+    --line-strong: #CBD5E1;
+    --primary: #2563EB;
+    --primary-soft: #DBEAFE;
+    --primary-deep: #1D4ED8;
+    --accent: #F59E0B;
+    --new: #10B981;
+    --new-soft: #D1FAE5;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* === Header === */
+  header.site {
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 10;
+  }
+  .nav {
+    max-width: 1080px; margin: 0 auto; padding: 14px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { font-weight: 800; font-size: 18px; color: var(--ink); letter-spacing: -0.4px; }
+  .brand span { color: var(--primary); }
+  .nav-links { display: flex; gap: 22px; }
+  .nav-link { color: var(--ink-soft); font-size: 14px; font-weight: 600; }
+  .nav-link:hover { color: var(--primary); }
+
+  /* === Hero === */
+  .hero {
+    background: linear-gradient(180deg, #FFFFFF 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--line);
+    padding: 72px 20px 56px;
+    text-align: center;
+  }
+  .hero-inner { max-width: 720px; margin: 0 auto; }
+  .badge {
+    display: inline-block; padding: 6px 12px; border-radius: 999px;
+    background: var(--primary-soft); color: var(--primary-deep);
+    font-size: 12px; font-weight: 700; letter-spacing: 0.3px; margin-bottom: 18px;
+  }
+  h1 {
+    margin: 0 0 14px; font-size: 42px; font-weight: 800;
+    letter-spacing: -1.5px; color: var(--ink); line-height: 1.2;
+  }
+  .lead {
+    margin: 0 auto; color: var(--ink-soft); font-size: 17px; max-width: 560px;
+  }
+  .lead b { color: var(--ink); font-weight: 700; }
+
+  .stats {
+    margin-top: 36px; display: inline-flex; gap: 40px;
+    padding: 16px 28px; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  }
+  .stat-item .n { font-size: 24px; font-weight: 800; color: var(--primary); letter-spacing: -0.8px; }
+  .stat-item .l { font-size: 12px; color: var(--ink-soft); font-weight: 600; margin-top: 2px; }
+
+  /* === Sections === */
+  main { max-width: 1080px; margin: 0 auto; padding: 60px 20px; }
+  .sec { margin-bottom: 64px; }
+  .sec-head { margin-bottom: 28px; }
+  .sec-label {
+    display: inline-block; padding: 5px 11px; border-radius: 999px;
+    background: var(--primary-soft); color: var(--primary-deep);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 10px;
+  }
+  .sec-title { margin: 0 0 6px; font-size: 26px; font-weight: 800; letter-spacing: -0.7px; color: var(--ink); }
+  .sec-desc { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+  /* === Tool grid === */
+  .tools { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .tool {
+    display: flex; flex-direction: column;
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 16px; padding: 24px;
+    transition: all 0.2s; cursor: pointer;
+    position: relative; overflow: hidden;
+    min-height: 200px;
+  }
+  .tool:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.12);
+  }
+  .tool:hover .tool-cta { color: var(--primary-deep); }
+  .tool:hover .tool-cta::after { transform: translateX(4px); }
+
+  .tool-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: var(--primary-soft);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; margin-bottom: 16px;
+  }
+  .tool-tag {
+    position: absolute; top: 20px; right: 20px;
+    padding: 4px 10px; border-radius: 999px;
+    background: var(--new-soft); color: var(--new);
+    font-size: 10px; font-weight: 800; letter-spacing: 0.8px;
+  }
+  .tool-name { margin: 0 0 6px; font-size: 17px; font-weight: 800; color: var(--ink); letter-spacing: -0.3px; }
+  .tool-desc { margin: 0 0 18px; font-size: 13px; color: var(--ink-soft); line-height: 1.6; flex: 1; }
+  .tool-meta { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; }
+  .tool-meta span {
+    font-size: 11px; padding: 3px 8px; border-radius: 6px;
+    background: var(--bg); color: var(--ink-soft); font-weight: 600;
+  }
+  .tool-cta {
+    font-size: 13px; font-weight: 700; color: var(--primary);
+    display: inline-flex; align-items: center; gap: 4px;
+    transition: color 0.15s;
+  }
+  .tool-cta::after { content: '→'; transition: transform 0.15s; }
+
+  /* Coming soon tool */
+  .tool.soon {
+    background: var(--bg);
+    border-style: dashed; cursor: default;
+    opacity: 0.7;
+  }
+  .tool.soon:hover {
+    transform: none; border-color: var(--line-strong); box-shadow: none;
+  }
+  .tool.soon .tool-icon { background: var(--surface); opacity: 0.5; }
+  .tool.soon .tool-cta { color: var(--muted); cursor: default; }
+  .tool.soon .tool-cta::after { content: '◔'; }
+  .tool.soon .tool-tag { background: var(--bg); color: var(--muted); }
+
+  /* === About section === */
+  .about {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 20px; padding: 40px;
+  }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .about h2 { margin: 0 0 12px; font-size: 24px; font-weight: 800; letter-spacing: -0.5px; }
+  .about p { margin: 0 0 12px; color: var(--ink-soft); font-size: 15px; line-height: 1.75; }
+  .about p:last-child { margin-bottom: 0; }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .about-stat {
+    padding: 20px; background: var(--bg); border-radius: 12px; text-align: center;
+  }
+  .about-stat .n { font-size: 28px; font-weight: 800; color: var(--primary); letter-spacing: -0.6px; }
+  .about-stat .l { font-size: 12px; color: var(--ink-soft); font-weight: 600; margin-top: 4px; }
+
+  /* === Footer === */
+  footer.site {
+    margin-top: 0; padding: 32px 20px;
+    border-top: 1px solid var(--line); background: var(--surface);
+    text-align: center; color: var(--ink-soft); font-size: 13px;
+  }
+  footer.site a { color: var(--ink-soft); margin: 0 8px; }
+  footer.site a:hover { color: var(--primary); }
+  footer.site .copy { display: block; margin-top: 8px; font-size: 11px; color: var(--muted); }
+
+  /* === Mobile === */
+  @media (max-width: 820px) {
+    .tools { grid-template-columns: repeat(2, 1fr); }
+    .about-grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+  @media (max-width: 540px) {
+    h1 { font-size: 30px; }
+    .hero { padding: 52px 16px 40px; }
+    .lead { font-size: 15px; }
+    .stats { gap: 24px; padding: 14px 20px; }
+    .tools { grid-template-columns: 1fr; }
+    .about { padding: 28px 22px; }
+    .about-stats { grid-template-columns: 1fr 1fr; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="/" class="brand">beautypang<span>.tools</span></a>
+    <div class="nav-links">
+      <a href="#tools" class="nav-link">도구</a>
+      <a href="#about" class="nav-link">소개</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">FREE TOOLS · 회원가입 불필요</span>
+    <h1>필요할 때 바로 쓰는<br>일상의 무료 도구</h1>
+    <p class="lead">복잡한 절차 없이, <b>복지·금융·생활</b>에 필요한 계산기와 도구를 한 곳에서. 회원가입도, 결제도 없습니다.</p>
+    <div class="stats">
+      <div class="stat-item">
+        <div class="n">1</div>
+        <div class="l">사용 가능한 도구</div>
+      </div>
+      <div class="stat-item">
+        <div class="n">100%</div>
+        <div class="l">무료 · 무광고 부담</div>
+      </div>
+      <div class="stat-item">
+        <div class="n">0</div>
+        <div class="l">개인정보 수집</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="sec" id="tools">
+    <div class="sec-head">
+      <span class="sec-label">TOOLS</span>
+      <h2 class="sec-title">사용 가능한 도구</h2>
+      <p class="sec-desc">현재 제공 중인 도구 목록입니다. 새로운 도구를 꾸준히 추가하고 있습니다.</p>
+    </div>
+
+    <div class="tools">
+      <!-- 중위소득 계산기 -->
+      <a href="/income-calculator/" class="tool">
+        <span class="tool-tag">NEW</span>
+        <div class="tool-icon">📊</div>
+        <h3 class="tool-name">2026 중위소득 계산기</h3>
+        <p class="tool-desc">가구원 수와 월소득으로 생계·의료·주거·교육급여 자격을 즉시 확인합니다. 보건복지부 고시 기준.</p>
+        <div class="tool-meta"><span>복지</span><span>2026 기준</span></div>
+        <span class="tool-cta">사용하기</span>
+      </a>
+
+      <!-- 준비 중 슬롯들 -->
+      <div class="tool soon">
+        <span class="tool-tag">SOON</span>
+        <div class="tool-icon">💰</div>
+        <h3 class="tool-name">실수령액 계산기</h3>
+        <p class="tool-desc">연봉·월급에서 4대 보험과 세금을 제외한 실수령액을 계산합니다.</p>
+        <div class="tool-meta"><span>금융</span></div>
+        <span class="tool-cta">준비 중</span>
+      </div>
+
+      <div class="tool soon">
+        <span class="tool-tag">SOON</span>
+        <div class="tool-icon">🏠</div>
+        <h3 class="tool-name">전월세 전환 계산기</h3>
+        <p class="tool-desc">전세 ↔ 월세 환산, 보증금 변경 시 적정 월세를 계산합니다.</p>
+        <div class="tool-meta"><span>부동산</span></div>
+        <span class="tool-cta">준비 중</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="about">
+      <div class="about-grid">
+        <div>
+          <h2>왜 beautypang인가요?</h2>
+          <p>흩어진 정보와 복잡한 절차 사이에서 시간을 낭비하지 않도록, 자주 필요한 계산을 <b>한 페이지에서 즉시</b> 끝낼 수 있게 만듭니다.</p>
+          <p>모든 도구는 공식 출처(법령·고시·공공데이터)를 기준으로 설계하며, 결과 화면에 근거를 명시합니다. 추측 없는 도구를 지향합니다.</p>
+        </div>
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="n">∞</div>
+            <div class="l">사용 횟수 제한 없음</div>
+          </div>
+          <div class="about-stat">
+            <div class="n">0원</div>
+            <div class="l">유료 기능 없음</div>
+          </div>
+          <div class="about-stat">
+            <div class="n">즉시</div>
+            <div class="l">결과 확인</div>
+          </div>
+          <div class="about-stat">
+            <div class="n">공식</div>
+            <div class="l">출처 명시</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <a href="/">홈</a> · <a href="#tools">도구</a> · <a href="#about">소개</a>
+  <span class="copy">© 2026 beautypang.co.kr — 본 사이트의 계산 결과는 참고용이며, 법적 효력이 있는 판정은 관할 기관에서 수행됩니다.</span>
+</footer>
+
+</body>
+</html>
