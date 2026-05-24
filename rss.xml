@@ -9,13 +9,22 @@
     <description>복지·금융·생활에 필요한 무료 계산기와 도구를 한 곳에서. 회원가입 없이 누구나 즉시 사용 가능합니다.</description>
     <language>ko-KR</language>
     <copyright>© 2026 beautypang.co.kr</copyright>
-    <lastBuildDate>Sat, 23 May 2026 21:30:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 14:00:00 +0900</lastBuildDate>
     <generator>beautypang.tools</generator>
     <image>
       <url>https://beautypang.co.kr/og-image.png</url>
       <title>beautypang.tools</title>
       <link>https://beautypang.co.kr/</link>
     </image>
+
+    <item>
+      <title>2026 전월세 전환 계산기 — 전세↔월세 환산·반전세 적정 월세</title>
+      <link>https://beautypang.co.kr/rent-conversion/</link>
+      <guid isPermaLink="true">https://beautypang.co.kr/rent-conversion/</guid>
+      <pubDate>Sun, 24 May 2026 14:00:00 +0900</pubDate>
+      <category>부동산</category>
+      <description><![CDATA[전세를 월세로, 월세를 전세로 즉시 환산하고 반전세 적정 보증금을 자동 계산합니다. 주택임대차보호법 §7의2 전환율 상한(한은 기준금리 + 2%p) 안내 포함.]]></description>
+    </item>
 
     <item>
       <title>2026 연봉 실수령액 계산기 — 4대 보험·소득세 자동 공제</title>
