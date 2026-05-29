@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BMI · 기초대사량 · 일일 권장 칼로리 계산기 | beautypang</title>
+<meta name="description" content="키·몸무게·나이·성별·활동량을 입력하면 BMI 비만도, 정상 체중 범위, 기초대사량(BMR), 일일 권장 칼로리(TDEE), 다이어트 권장 칼로리를 즉시 계산합니다. WHO 아시아인 기준·Mifflin-St Jeor 공식 기반.">
+<meta name="keywords" content="BMI 계산기, 기초대사량 계산기, TDEE 계산기, 일일 권장 칼로리, 다이어트 칼로리, 정상 체중, BMR 계산, 비만도">
+<meta name="robots" content="index,follow">
+<meta name="google-site-verification" content="2xVj59QMIgWGp8je6lsptzWQYhHyDG_aVc05mWOp--4" />
+<meta name="naver-site-verification" content="74fef3d418a1e812489238486ef027fdf967907b" />
+<link rel="canonical" href="https://beautypang.co.kr/bmi-calculator/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="beautypang.tools">
+<meta property="og:title" content="BMI · 기초대사량 · 일일 권장 칼로리 계산기">
+<meta property="og:description" content="키·몸무게·나이·성별·활동량으로 BMI 비만도, 기초대사량, 일일 권장 칼로리를 즉시 계산합니다.">
+<meta property="og:url" content="https://beautypang.co.kr/bmi-calculator/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://beautypang.co.kr/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="BMI · 기초대사량 계산기 — beautypang.tools">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BMI · 기초대사량 · 일일 권장 칼로리 계산기">
+<meta name="twitter:description" content="키·몸무게·나이·성별·활동량으로 BMI·BMR·TDEE를 즉시 계산합니다.">
+<meta name="twitter:image" content="https://beautypang.co.kr/og-image.svg">
+
+<meta name="theme-color" content="#2563EB">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="beautypang.tools">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="beautypang.tools RSS" href="/rss.xml">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F76TTBSP9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F76TTBSP9F');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://beautypang.co.kr/bmi-calculator/#app",
+      "name": "BMI · 기초대사량 · 일일 권장 칼로리 계산기",
+      "url": "https://beautypang.co.kr/bmi-calculator/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "WHO 아시아인 기준 BMI와 Mifflin-St Jeor 공식 기반 기초대사량·일일 권장 칼로리를 계산합니다.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+      "inLanguage": "ko-KR",
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript",
+      "author": { "@type": "Organization", "name": "beautypang.tools", "url": "https://beautypang.co.kr/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://beautypang.co.kr/" },
+        { "@type": "ListItem", "position": 2, "name": "BMI · 기초대사량 계산기", "item": "https://beautypang.co.kr/bmi-calculator/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "BMI는 어떻게 계산하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BMI(체질량지수)는 '몸무게(kg) ÷ 키(m)²'로 계산합니다. 예를 들어 키 170cm·몸무게 70kg이면 BMI = 70 ÷ (1.70 × 1.70) = 24.2입니다. 본 계산기는 WHO 아시아·태평양 기준(저체중 <18.5, 정상 18.5~22.9, 과체중 23~24.9, 비만 ≥25)을 사용합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "기초대사량(BMR)과 일일 권장 칼로리(TDEE)는 어떻게 다른가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "기초대사량(BMR)은 아무 활동도 하지 않고 누워만 있을 때 생명 유지에 필요한 최소 칼로리입니다. 일일 권장 칼로리(TDEE)는 BMR에 활동량 계수(좌식 1.2 ~ 매우 활발 1.9)를 곱한 값으로, 현재 체중을 유지하기 위해 필요한 1일 총 칼로리입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "다이어트할 때 권장 칼로리는 어떻게 정하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "체중 1kg은 약 7,700kcal에 해당합니다. 일반적으로 TDEE에서 하루 500kcal를 줄이면 일주일에 약 0.45kg을 감량할 수 있습니다. 단, BMR 미만으로 섭취하면 근손실·대사 저하·요요 위험이 커지므로 최소 BMR 이상은 섭취하는 것을 권장합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "BMI만으로 비만도를 판단해도 되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BMI는 인구 집단 단위의 비만도 지표로는 유용하지만 근육량·체지방률·체형을 구분하지 못합니다. 근육질 운동선수는 BMI가 높아도 체지방률은 낮을 수 있고, 같은 BMI라도 복부비만 여부에 따라 건강 위험이 다릅니다. 정확한 건강 평가는 체지방률·허리둘레·혈액 검사 등을 종합해야 합니다."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-soft: #dbeafe;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --warning-soft: #fef3c7;
+  --danger-soft: #fee2e2;
+  --success-soft: #dcfce7;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-md: 0 4px 12px rgba(15,23,42,0.06);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.site {
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.nav { max-width: 960px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-weight: 800; font-size: 17px; color: var(--text); letter-spacing: -0.3px; }
+.brand span { color: var(--primary); font-weight: 600; }
+.nav-link { font-size: 13px; color: var(--text-muted); }
+.nav-link:hover { color: var(--primary); text-decoration: none; }
+
+.hero { padding: 48px 20px 32px; background: linear-gradient(180deg, var(--primary-soft) 0%, var(--bg) 100%); }
+.hero-inner { max-width: 960px; margin: 0 auto; }
+.badge { display: inline-block; padding: 4px 10px; background: rgba(37,99,235,0.1); color: var(--primary); border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+.hero h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.25; letter-spacing: -0.6px; }
+.hero .lead { margin: 0; color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 640px; }
+.hero .lead b { color: var(--text); font-weight: 700; }
+
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+
+.calc { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
+
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text); }
+.input-wrap { position: relative; }
+.input-wrap input, .input-wrap select {
+  width: 100%; padding: 12px 44px 12px 14px; font-size: 16px; font-weight: 500; color: var(--text);
+  background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md);
+  outline: none; transition: border-color 0.15s, box-shadow 0.15s; appearance: none;
+  font-family: inherit;
+}
+.input-wrap input:focus, .input-wrap select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+.input-wrap .unit { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 13px; pointer-events: none; }
+.input-wrap select { padding-right: 36px; cursor: pointer; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%2394a3b8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>'); background-repeat: no-repeat; background-position: right 14px center; }
+.help { margin: 0; font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+.gender-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.gender-tabs button {
+  padding: 12px; font-size: 14px; font-weight: 600; color: var(--text-muted);
+  background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md);
+  cursor: pointer; transition: all 0.15s; font-family: inherit;
+}
+.gender-tabs button.on { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+.actions { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { padding: 12px 22px; font-size: 14px; font-weight: 700; border-radius: var(--radius-md); cursor: pointer; font-family: inherit; transition: all 0.15s; border: 1.5px solid transparent; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-ghost { background: var(--bg); color: var(--text-muted); border-color: var(--border); }
+.btn-ghost:hover { background: var(--surface); }
+
+.result { margin-top: 28px; display: none; }
+.result.show { display: block; animation: fadeIn 0.3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.result-hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: #fff; padding: 28px; border-radius: var(--radius-lg); margin-bottom: 16px; }
+.result-hero .label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 8px; }
+.result-hero .value { font-size: 44px; font-weight: 800; line-height: 1; margin-bottom: 4px; letter-spacing: -1px; }
+.result-hero .value small { font-size: 18px; font-weight: 600; opacity: 0.7; margin-left: 4px; }
+.result-hero .category { font-size: 14px; font-weight: 600; padding: 4px 10px; background: rgba(255,255,255,0.18); border-radius: 999px; display: inline-block; margin-top: 8px; }
+.result-hero .gauge { margin-top: 18px; height: 6px; background: rgba(255,255,255,0.2); border-radius: 999px; overflow: hidden; position: relative; }
+.result-hero .gauge-fill { height: 100%; background: rgba(255,255,255,0.95); border-radius: 999px; transition: width 0.6s ease-out; }
+.result-hero .gauge-labels { margin-top: 6px; display: flex; justify-content: space-between; font-size: 11px; color: rgba(255,255,255,0.7); }
+
+.metric-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; }
+@media (max-width: 480px) { .metric-grid { grid-template-columns: 1fr; } }
+.metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+.metric .label { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 6px; }
+.metric .value { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.4px; }
+.metric .value small { font-size: 14px; font-weight: 500; color: var(--text-muted); margin-left: 4px; }
+.metric .desc { font-size: 12px; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+
+.note { margin-top: 16px; padding: 14px 16px; background: var(--warning-soft); border: 1px solid #fde68a; border-radius: var(--radius-md); font-size: 13px; color: #78350f; line-height: 1.5; }
+.note strong { color: #92400e; }
+
+.sec { margin-top: 56px; }
+.sec h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.4px; }
+.faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 10px; }
+.faq details[open] { border-color: var(--primary-soft); }
+.faq summary { font-weight: 700; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; float: right; color: var(--text-dim); font-weight: 400; font-size: 18px; line-height: 1; transition: transform 0.2s; }
+.faq details[open] summary::after { content: '−'; }
+.faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
+
+footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
+.foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
+.foot a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="/" class="brand">beautypang<span>.tools</span></a>
+    <a href="/" class="nav-link">← 도구 모음</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">WHO 아시아 기준 · Mifflin-St Jeor 공식</span>
+    <h1>BMI · 기초대사량 · 일일 권장 칼로리 계산기</h1>
+    <p class="lead">키·몸무게·나이·성별·활동량을 입력하면 <b>BMI 비만도, 정상 체중 범위, 기초대사량(BMR), 일일 권장 칼로리(TDEE), 다이어트 권장 칼로리</b>를 한 번에 계산합니다.</p>
+  </div>
+</section>
+
+<main>
+  <form class="calc" id="calc">
+    <div class="calc-grid">
+      <div class="field">
+        <label>성별</label>
+        <div class="gender-tabs" id="genderTabs">
+          <button type="button" data-gender="male" class="on">남성</button>
+          <button type="button" data-gender="female">여성</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="ageInput">나이</label>
+        <div class="input-wrap">
+          <input id="ageInput" type="number" min="10" max="100" value="30" inputmode="numeric">
+          <span class="unit">세</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="heightInput">키</label>
+        <div class="input-wrap">
+          <input id="heightInput" type="number" min="100" max="230" step="0.1" value="170" inputmode="decimal">
+          <span class="unit">cm</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="weightInput">몸무게</label>
+        <div class="input-wrap">
+          <input id="weightInput" type="number" min="30" max="200" step="0.1" value="65" inputmode="decimal">
+          <span class="unit">kg</span>
+        </div>
+      </div>
+      <div class="field" style="grid-column: 1 / -1;">
+        <label for="activitySelect">활동량</label>
+        <div class="input-wrap">
+          <select id="activitySelect">
+            <option value="1.2">거의 안 움직임 · 좌식 생활 (×1.2)</option>
+            <option value="1.375">가벼운 활동 · 주 1~3일 가벼운 운동 (×1.375)</option>
+            <option value="1.55" selected>보통 활동 · 주 3~5일 중간 강도 운동 (×1.55)</option>
+            <option value="1.725">활발한 활동 · 주 6~7일 강도 높은 운동 (×1.725)</option>
+            <option value="1.9">매우 활발 · 매일 격한 운동 또는 육체노동 (×1.9)</option>
+          </select>
+        </div>
+        <p class="help">일주일 평균 운동·신체활동 빈도와 강도를 기준으로 선택하세요.</p>
+      </div>
+    </div>
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">계산하기</button>
+      <button type="button" class="btn btn-ghost" id="resetBtn">초기화</button>
+    </div>
+  </form>
+
+  <div class="result" id="result">
+    <div class="result-hero">
+      <div class="label">BMI (체질량지수)</div>
+      <div class="value"><span id="bmiValue">0.0</span></div>
+      <div class="category" id="bmiCategory">계산 대기</div>
+      <div class="gauge"><div class="gauge-fill" id="bmiGauge" style="width:0%"></div></div>
+      <div class="gauge-labels">
+        <span>저체중</span>
+        <span>정상</span>
+        <span>과체중</span>
+        <span>비만</span>
+      </div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <div class="label">정상 체중 범위</div>
+        <div class="value"><span id="idealRange">—</span></div>
+        <div class="desc">BMI 18.5~22.9 기준</div>
+      </div>
+      <div class="metric">
+        <div class="label">기초대사량 (BMR)</div>
+        <div class="value"><span id="bmrValue">0</span><small>kcal/일</small></div>
+        <div class="desc">생명 유지에 필요한 최소 칼로리 · Mifflin-St Jeor</div>
+      </div>
+      <div class="metric">
+        <div class="label">일일 권장 칼로리 (TDEE)</div>
+        <div class="value"><span id="tdeeValue">0</span><small>kcal/일</small></div>
+        <div class="desc">현재 체중 유지에 필요한 1일 총 칼로리</div>
+      </div>
+      <div class="metric">
+        <div class="label">다이어트 권장 칼로리</div>
+        <div class="value"><span id="dietValue">0</span><small>kcal/일</small></div>
+        <div class="desc">TDEE − 500kcal · 주 약 0.45kg 감량 목표</div>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>참고:</strong> BMI는 인구 집단의 비만도 지표로 유용하지만 근육량·체지방률·체형을 구분하지 못합니다. 정확한 건강 평가는 체지방률·허리둘레·혈액검사 등을 종합해야 합니다.
+      다이어트 시 BMR 미만 섭취는 권장하지 않습니다.
+    </div>
+  </div>
+
+  <section class="sec faq">
+    <h2>자주 묻는 질문</h2>
+    <details>
+      <summary>BMI는 어떻게 계산하나요?</summary>
+      <div class="answer">
+        BMI(체질량지수)는 <b>몸무게(kg) ÷ 키(m)²</b>로 계산합니다. 예: 키 170cm·몸무게 70kg → BMI = 70 ÷ (1.70 × 1.70) = 24.2.
+        본 계산기는 <b>WHO 아시아·태평양 기준</b>(저체중 &lt;18.5, 정상 18.5~22.9, 과체중 23~24.9, 비만 ≥25)을 사용합니다. 서양 기준(과체중 25~29.9, 비만 ≥30)보다 엄격합니다.
+      </div>
+    </details>
+    <details>
+      <summary>기초대사량(BMR)과 일일 권장 칼로리(TDEE)는 어떻게 다른가요?</summary>
+      <div class="answer">
+        <b>BMR</b>은 아무 활동도 하지 않고 누워만 있을 때 생명 유지에 필요한 최소 칼로리입니다.
+        <b>TDEE</b>는 BMR × 활동량 계수(좌식 1.2 ~ 매우 활발 1.9)로, 현재 체중을 유지하기 위한 1일 총 칼로리입니다.
+        본 계산기는 정확도가 높은 <b>Mifflin-St Jeor 공식</b>을 사용합니다.
+      </div>
+    </details>
+    <details>
+      <summary>다이어트할 때 권장 칼로리는 어떻게 정하나요?</summary>
+      <div class="answer">
+        체중 1kg은 약 7,700kcal에 해당합니다. TDEE에서 하루 500kcal를 줄이면 일주일에 약 0.45kg 감량이 가능합니다.
+        단, <b>BMR 미만으로 섭취하면 근손실·대사 저하·요요 위험</b>이 커지므로 최소 BMR 이상은 섭취하는 것을 권장합니다. 본 계산기의 다이어트 권장값은 BMR 미만일 경우 자동으로 BMR로 보정됩니다.
+      </div>
+    </details>
+    <details>
+      <summary>BMI만으로 비만도를 판단해도 되나요?</summary>
+      <div class="answer">
+        BMI는 인구 집단 단위 지표라 근육질 운동선수는 비만으로, 마른 노인은 정상으로 잘못 분류될 수 있습니다.
+        근육량·체지방률·허리둘레·복부비만 여부에 따라 같은 BMI라도 건강 위험이 크게 다릅니다.
+        정확한 평가는 체지방률 측정(InBody 등)과 혈액검사를 함께 진행하는 것을 권장합니다.
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="foot">
+    <div>© <span id="year"></span> beautypang.tools — 다양한 무료 계산기</div>
+    <div><a href="/">도구 모음 →</a></div>
+  </div>
+</footer>
+
+<script>
+  // ===== 유틸 =====
+  const $ = id => document.getElementById(id);
+  const fmt = n => Math.round(n).toLocaleString('ko-KR');
+  const fmt1 = n => n.toFixed(1);
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== 상태 =====
+  let gender = 'male';
+
+  // ===== 성별 탭 =====
+  const genderTabs = $('genderTabs');
+  genderTabs.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-gender]');
+    if (!btn) return;
+    genderTabs.querySelectorAll('button').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    gender = btn.dataset.gender;
+  });
+
+  // ===== 계산 =====
+  function classifyBMI(bmi) {
+    if (bmi < 18.5) return { name: '저체중', tier: 0 };
+    if (bmi < 23.0) return { name: '정상', tier: 1 };
+    if (bmi < 25.0) return { name: '과체중', tier: 2 };
+    if (bmi < 30.0) return { name: '비만 1단계', tier: 3 };
+    if (bmi < 35.0) return { name: '비만 2단계', tier: 3 };
+    return { name: '고도비만', tier: 3 };
+  }
+
+  function calculateBMR(gender, weight, height, age) {
+    // Mifflin-St Jeor 공식
+    const base = 10 * weight + 6.25 * height - 5 * age;
+    return gender === 'male' ? base + 5 : base - 161;
+  }
+
+  function calculate() {
+    const height = parseFloat($('heightInput').value);
+    const weight = parseFloat($('weightInput').value);
+    const age = parseInt($('ageInput').value, 10);
+    const activity = parseFloat($('activitySelect').value);
+
+    if (!height || !weight || !age || height < 100 || weight < 30 || age < 10) return;
+
+    const heightM = height / 100;
+    const bmi = weight / (heightM * heightM);
+    const category = classifyBMI(bmi);
+
+    const idealMin = 18.5 * heightM * heightM;
+    const idealMax = 22.9 * heightM * heightM;
+
+    const bmr = calculateBMR(gender, weight, height, age);
+    const tdee = bmr * activity;
+    const dietRaw = tdee - 500;
+    const diet = Math.max(dietRaw, bmr);
+
+    $('bmiValue').textContent = fmt1(bmi);
+    $('bmiCategory').textContent = category.name;
+    $('idealRange').textContent = `${fmt1(idealMin)} ~ ${fmt1(idealMax)} kg`;
+    $('bmrValue').textContent = fmt(bmr);
+    $('tdeeValue').textContent = fmt(tdee);
+    $('dietValue').textContent = fmt(diet);
+
+    // 게이지: BMI 15~40 범위를 0~100%로 매핑
+    const gaugePct = Math.max(0, Math.min(100, ((bmi - 15) / 25) * 100));
+    $('bmiGauge').style.width = gaugePct + '%';
+
+    $('result').classList.add('show');
+  }
+
+  // 폼 제출
+  $('calc').addEventListener('submit', e => {
+    e.preventDefault();
+    calculate();
+    $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // 초기화
+  $('resetBtn').addEventListener('click', () => {
+    $('ageInput').value = 30;
+    $('heightInput').value = 170;
+    $('weightInput').value = 65;
+    $('activitySelect').value = '1.55';
+    genderTabs.querySelectorAll('button').forEach(b => b.classList.remove('on'));
+    genderTabs.querySelector('button[data-gender="male"]').classList.add('on');
+    gender = 'male';
+    $('result').classList.remove('show');
+  });
+
+  // 입력 변경 즉시 계산
+  ['ageInput', 'heightInput', 'weightInput', 'activitySelect'].forEach(id => {
+    $(id).addEventListener('input', calculate);
+    $(id).addEventListener('change', calculate);
+  });
+  genderTabs.addEventListener('click', () => setTimeout(calculate, 10));
+
+  // 초기 계산
+  calculate();
+</script>
+
+</body>
+</html>
