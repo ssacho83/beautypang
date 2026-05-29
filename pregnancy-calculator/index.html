@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>임신 주수 · 출산 예정일 계산기 — 주차별 태아 성장 정보 | beautypang</title>
+<meta name="description" content="마지막 생리 시작일을 입력하면 현재 임신 주수, 출산 예정일, D-day, 현재 주차의 태아 성장 정보(키·몸무게), 트라이메스터까지 한 번에 확인할 수 있습니다. 의학 표준 LMP+280일 기준.">
+<meta name="keywords" content="임신 주수 계산기, 출산 예정일 계산기, 임신 개월 계산, 임신 D-day, 태아 성장, 임신 트라이메스터, 임신 주차">
+<meta name="robots" content="index,follow">
+<meta name="google-site-verification" content="2xVj59QMIgWGp8je6lsptzWQYhHyDG_aVc05mWOp--4" />
+<meta name="naver-site-verification" content="74fef3d418a1e812489238486ef027fdf967907b" />
+<link rel="canonical" href="https://beautypang.co.kr/pregnancy-calculator/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="beautypang.tools">
+<meta property="og:title" content="임신 주수 · 출산 예정일 계산기 — 주차별 태아 성장 정보">
+<meta property="og:description" content="마지막 생리 시작일로 현재 임신 주수, 출산 예정일, 태아 성장 정보를 한 번에 확인하세요.">
+<meta property="og:url" content="https://beautypang.co.kr/pregnancy-calculator/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://beautypang.co.kr/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="임신 주수 · 출산 예정일 계산기 — beautypang.tools">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="임신 주수 · 출산 예정일 계산기">
+<meta name="twitter:description" content="마지막 생리 시작일로 현재 임신 주수, 출산 예정일, 태아 성장 정보를 한 번에 확인하세요.">
+<meta name="twitter:image" content="https://beautypang.co.kr/og-image.svg">
+
+<meta name="theme-color" content="#2563EB">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="beautypang.tools">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="beautypang.tools RSS" href="/rss.xml">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F76TTBSP9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F76TTBSP9F');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://beautypang.co.kr/pregnancy-calculator/#app",
+      "name": "임신 주수 · 출산 예정일 계산기",
+      "url": "https://beautypang.co.kr/pregnancy-calculator/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "마지막 생리 시작일 기준 현재 임신 주수, 출산 예정일, 주차별 태아 성장 정보를 계산합니다.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+      "inLanguage": "ko-KR",
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript",
+      "author": { "@type": "Organization", "name": "beautypang.tools", "url": "https://beautypang.co.kr/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://beautypang.co.kr/" },
+        { "@type": "ListItem", "position": 2, "name": "임신 주수 · 출산 예정일 계산기", "item": "https://beautypang.co.kr/pregnancy-calculator/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "임신 주수는 어떻게 계산하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "산부인과에서 사용하는 임신 주수는 마지막 생리 시작일(LMP, Last Menstrual Period)부터 계산합니다. 실제 수정일이 아닌 LMP 기준이며, 임신 0주 0일은 LMP 당일입니다. 임신 1주 0일은 LMP로부터 7일 후, 40주 0일이 출산 예정일(LMP + 280일)이 됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "출산 예정일은 정확한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "출산 예정일(EDD)은 통계적 평균일 뿐입니다. 실제로는 예정일 ±2주 사이(임신 37~42주)에 출산하는 경우가 가장 많으며, 예정일에 정확히 출산하는 경우는 약 5%에 불과합니다. 첫 출산은 평균 41주, 경산은 40주에 가까운 경향이 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "트라이메스터(임신 삼분기)는 어떻게 나누나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "임신 기간은 보통 3분기로 나눕니다. 1분기(0~13주): 주요 장기 형성, 입덧·피로감, 유산 위험 가장 높음. 2분기(14~27주): 안정기, 태동 시작(보통 18~22주). 3분기(28~40주): 태아 급성장, 막달 검사, 출산 준비. 본 계산기는 ACOG(미국 산부인과 학회) 기준을 따릅니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "임신 N주 N일은 임신 몇 개월인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "한국에서는 임신 4주를 1개월로 계산합니다. 임신 1~4주 = 1개월, 5~8주 = 2개월, 9~13주 = 3개월, ... , 37~40주 = 10개월. 다만 의학적으로는 주수가 더 정확한 기준이며, 산부인과 진료 시에도 주수로 소통합니다."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-soft: #dbeafe;
+  --accent: #ec4899;
+  --accent-soft: #fce7f3;
+  --warning-soft: #fef3c7;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.site { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 50; }
+.nav { max-width: 960px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-weight: 800; font-size: 17px; color: var(--text); letter-spacing: -0.3px; }
+.brand span { color: var(--primary); font-weight: 600; }
+.nav-link { font-size: 13px; color: var(--text-muted); }
+.nav-link:hover { color: var(--primary); text-decoration: none; }
+
+.hero { padding: 48px 20px 32px; background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg) 100%); }
+.hero-inner { max-width: 960px; margin: 0 auto; }
+.badge { display: inline-block; padding: 4px 10px; background: rgba(236,72,153,0.12); color: var(--accent); border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+.hero h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.25; letter-spacing: -0.6px; }
+.hero .lead { margin: 0; color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 640px; }
+.hero .lead b { color: var(--text); font-weight: 700; }
+
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+
+.calc { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); }
+.field { display: flex; flex-direction: column; gap: 7px; max-width: 360px; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text); }
+.input-wrap { position: relative; }
+.input-wrap input { width: 100%; padding: 12px 14px; font-size: 16px; font-weight: 500; color: var(--text); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); outline: none; transition: border-color 0.15s, box-shadow 0.15s; font-family: inherit; }
+.input-wrap input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+.help { margin: 0; font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+.actions { margin-top: 20px; }
+.btn { padding: 12px 22px; font-size: 14px; font-weight: 700; border-radius: var(--radius-md); cursor: pointer; font-family: inherit; transition: all 0.15s; border: 1.5px solid transparent; }
+.btn-ghost { background: var(--bg); color: var(--text-muted); border-color: var(--border); }
+.btn-ghost:hover { background: var(--surface); }
+
+.result { margin-top: 28px; display: none; }
+.result.show { display: block; animation: fadeIn 0.3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.result-hero { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: #fff; padding: 28px; border-radius: var(--radius-lg); margin-bottom: 16px; }
+.result-hero .label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 8px; }
+.result-hero .week { font-size: 44px; font-weight: 800; line-height: 1; letter-spacing: -1px; }
+.result-hero .week small { font-size: 18px; font-weight: 600; opacity: 0.7; margin-left: 4px; }
+.result-hero .meta-line { margin-top: 12px; display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; }
+.result-hero .meta-line span { display: inline-flex; align-items: center; gap: 6px; }
+.result-hero .meta-line strong { font-weight: 700; }
+.result-hero .progress { margin-top: 18px; height: 8px; background: rgba(255,255,255,0.2); border-radius: 999px; overflow: hidden; }
+.result-hero .progress-fill { height: 100%; background: #fff; border-radius: 999px; transition: width 0.6s ease-out; }
+.result-hero .progress-labels { margin-top: 6px; display: flex; justify-content: space-between; font-size: 11px; color: rgba(255,255,255,0.75); }
+
+.metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+@media (max-width: 640px) { .metric-grid { grid-template-columns: 1fr; } }
+.metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+.metric .label { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 6px; }
+.metric .value { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.4px; }
+.metric .desc { font-size: 12px; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+
+.fetus-card { margin-top: 16px; background: linear-gradient(135deg, var(--primary-soft) 0%, #fff 100%); border: 1px solid #bfdbfe; border-radius: var(--radius-lg); padding: 24px; }
+.fetus-card .label { font-size: 12px; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+.fetus-card h3 { margin: 0 0 8px; font-size: 18px; color: var(--text); }
+.fetus-card .fetus-meta { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--text-muted); margin-bottom: 10px; }
+.fetus-card .fetus-meta b { color: var(--text); font-weight: 700; }
+.fetus-card p { margin: 0; color: var(--text-muted); line-height: 1.65; font-size: 14px; }
+
+.note { margin-top: 16px; padding: 14px 16px; background: var(--warning-soft); border: 1px solid #fde68a; border-radius: var(--radius-md); font-size: 13px; color: #78350f; line-height: 1.5; }
+.note strong { color: #92400e; }
+
+.sec { margin-top: 56px; }
+.sec h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.4px; }
+.faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 10px; }
+.faq details[open] { border-color: var(--primary-soft); }
+.faq summary { font-weight: 700; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; float: right; color: var(--text-dim); font-weight: 400; font-size: 18px; line-height: 1; }
+.faq details[open] summary::after { content: '−'; }
+.faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
+
+footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
+.foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
+.foot a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="/" class="brand">beautypang<span>.tools</span></a>
+    <a href="/" class="nav-link">← 도구 모음</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">의학 표준 LMP + 280일 기준</span>
+    <h1>임신 주수 · 출산 예정일 계산기</h1>
+    <p class="lead">마지막 생리 시작일만 입력하면 <b>현재 임신 주수, 출산 예정일, D-day, 주차별 태아 성장 정보, 트라이메스터</b>까지 한 번에 확인할 수 있습니다.</p>
+  </div>
+</section>
+
+<main>
+  <form class="calc" id="calc">
+    <div class="field">
+      <label for="lmpInput">마지막 생리 시작일 (LMP)</label>
+      <div class="input-wrap">
+        <input id="lmpInput" type="date" required>
+      </div>
+      <p class="help">마지막 월경의 첫째 날을 선택하세요. 산부인과에서 사용하는 표준 기준입니다.</p>
+    </div>
+    <div class="actions">
+      <button type="button" class="btn btn-ghost" id="resetBtn">오늘 기준 초기화</button>
+    </div>
+  </form>
+
+  <div class="result" id="result">
+    <div class="result-hero">
+      <div class="label">현재 임신 주수</div>
+      <div class="week"><span id="weekNum">0</span>주 <span id="dayNum">0</span>일</div>
+      <div class="meta-line">
+        <span>📅 출산예정일 <strong id="eddLabel">—</strong></span>
+        <span>⏳ <strong id="ddayLabel">D-—</strong></span>
+        <span>🌸 <strong id="trimesterLabel">—</strong></span>
+        <span>📆 <strong id="monthLabel">—</strong></span>
+      </div>
+      <div class="progress"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <div class="progress-labels">
+        <span>0주</span>
+        <span>1분기 (~13주)</span>
+        <span>2분기 (~27주)</span>
+        <span>3분기 (~40주)</span>
+      </div>
+    </div>
+
+    <div class="fetus-card">
+      <div class="label">이번 주 태아 성장</div>
+      <h3 id="fetusTitle">계산 대기</h3>
+      <div class="fetus-meta" id="fetusMeta"></div>
+      <p id="fetusDesc">마지막 생리 시작일을 입력해주세요.</p>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <div class="label">경과일</div>
+        <div class="value"><span id="daysPassed">0</span>일</div>
+        <div class="desc">LMP로부터 경과한 총 일수</div>
+      </div>
+      <div class="metric">
+        <div class="label">전체 진행률</div>
+        <div class="value"><span id="progressPct">0</span>%</div>
+        <div class="desc">총 40주 기준 진행률</div>
+      </div>
+      <div class="metric">
+        <div class="label">남은 기간</div>
+        <div class="value"><span id="remainWeeks">0</span>주</div>
+        <div class="desc">출산 예정일까지</div>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>참고:</strong> 출산 예정일(EDD)은 통계적 평균입니다. 실제 출산은 37~42주 사이에 가장 많이 발생하며 예정일 정확히 출산하는 경우는 약 5%입니다.
+      본 계산은 LMP + 280일(40주) 기준으로 정상 28일 주기 가정이며, 생리 주기가 다르거나 시험관 시술 등으로 정확한 수정일을 아는 경우 산부인과 진료 결과를 우선하세요.
+    </div>
+  </div>
+
+  <section class="sec faq">
+    <h2>자주 묻는 질문</h2>
+    <details>
+      <summary>임신 주수는 어떻게 계산하나요?</summary>
+      <div class="answer">
+        산부인과 표준은 <b>마지막 생리 시작일(LMP, Last Menstrual Period)</b>로부터 계산합니다. 실제 수정일이 아닌 LMP 기준이며, 임신 0주 0일 = LMP 당일, 임신 1주 0일 = LMP + 7일, <b>40주 0일이 출산 예정일(LMP + 280일)</b>이 됩니다.
+      </div>
+    </details>
+    <details>
+      <summary>출산 예정일은 정확한가요?</summary>
+      <div class="answer">
+        출산 예정일(EDD)은 통계적 평균일 뿐입니다. 실제로는 예정일 ±2주(임신 37~42주) 사이에 출산하는 경우가 가장 많고, <b>예정일에 정확히 출산하는 경우는 약 5%</b>에 불과합니다. 첫 출산은 평균 41주, 경산은 40주에 가까운 경향이 있습니다.
+      </div>
+    </details>
+    <details>
+      <summary>트라이메스터(임신 삼분기)는 어떻게 나누나요?</summary>
+      <div class="answer">
+        임신 기간은 보통 3분기로 나눕니다.
+        <b>1분기(0~13주)</b>: 주요 장기 형성, 입덧·피로감, 유산 위험 가장 높음.
+        <b>2분기(14~27주)</b>: 안정기, 태동 시작(보통 18~22주).
+        <b>3분기(28~40주)</b>: 태아 급성장, 막달 검사, 출산 준비.
+        본 계산기는 ACOG(미국 산부인과 학회) 기준을 따릅니다.
+      </div>
+    </details>
+    <details>
+      <summary>임신 N주 N일은 임신 몇 개월인가요?</summary>
+      <div class="answer">
+        한국에서는 임신 4주를 1개월로 계산합니다. 1~4주 = 1개월, 5~8주 = 2개월, 9~13주 = 3개월, …, 37~40주 = 10개월.
+        다만 의학적으로는 <b>주수가 더 정확한 기준</b>이며 산부인과 진료에서도 주수로 소통합니다.
+      </div>
+    </details>
+    <details>
+      <summary>생리 주기가 28일이 아닌데 정확한가요?</summary>
+      <div class="answer">
+        본 계산기는 표준 28일 주기를 가정합니다. 주기가 길거나 짧으면 실제 수정일과 차이가 발생합니다(주기 35일이면 약 1주 차이).
+        시험관 시술(IVF)·정확한 배란일을 아는 경우 산부인과의 초음파 측정값(CRL)을 기준으로 한 주수가 가장 정확합니다.
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="foot">
+    <div>© <span id="year"></span> beautypang.tools — 다양한 무료 계산기</div>
+    <div><a href="/">도구 모음 →</a></div>
+  </div>
+</footer>
+
+<script>
+  const $ = id => document.getElementById(id);
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // 태아 성장 데이터 (주차 기준, 의학 통계 평균)
+  // size 단위 일관성: 20주까지 CRL(머리~엉덩이), 21주부터 전체 신장
+  // 출처: ACOG·NHS·Hadlock 임신 주수별 표준 측정치
+  const FETUS_INFO = [
+    { w: 4,  title: '심장 원시 형성',  size: '0.4mm',  sizeType: 'CRL', weight: null,   note: '수정 후 약 2주, 신경관·심장 원시 형태가 형성됩니다. 임신 검사로 hCG 호르몬을 검출할 수 있습니다.' },
+    { w: 6,  title: '심장 박동 확인',  size: '5mm',    sizeType: 'CRL', weight: null,   note: '초음파로 심장 박동이 처음 확인되는 시기. 뇌의 5개 부분이 구분되기 시작합니다. 입덧이 시작될 수 있습니다.' },
+    { w: 8,  title: '주요 장기 형성',  size: '1.6cm',  sizeType: 'CRL', weight: '1g',   note: '손가락·발가락이 나뉘고 모든 주요 장기의 원시 형태가 완성됩니다. 입덧 절정기.' },
+    { w: 10, title: '태아 단계 진입',  size: '3.1cm',  sizeType: 'CRL', weight: '4g',   note: '배아에서 태아로 분류 시작. 손톱이 형성되고 외부 생식기 분화가 시작됩니다.' },
+    { w: 12, title: '1분기 마무리',    size: '5.4cm',  sizeType: 'CRL', weight: '14g',  note: '주요 기형 위험 시기 종료. NT 측정(목덜미 투명대)으로 염색체 이상 선별 검사가 가능합니다.' },
+    { w: 14, title: '2분기 진입',      size: '8.7cm',  sizeType: 'CRL', weight: '43g',  note: '안정기 시작. 입덧이 완화되며 태아의 얼굴 표정이 나타나기 시작합니다.' },
+    { w: 16, title: '성별 확인 가능',  size: '11.6cm', sizeType: 'CRL', weight: '100g', note: '초음파로 성별 확인이 가능해집니다. 골격이 단단해지고 미세한 솜털(라누고)이 자랍니다.' },
+    { w: 18, title: '태동 시작',       size: '14.2cm', sizeType: 'CRL', weight: '190g', note: '경산은 이때부터 태동을 느낄 수 있습니다. 초산은 보통 20~22주에 첫 태동을 인지합니다.' },
+    { w: 20, title: '임신 중반',       size: '16.4cm', sizeType: 'CRL', weight: '300g', note: '정밀 초음파(레벨2)로 태아의 주요 장기를 자세히 확인할 수 있는 시기입니다.' },
+    { w: 22, title: '청각 발달',       size: '27.8cm', sizeType: '전체신장', weight: '430g', note: '청각이 발달하여 외부 소리에 반응합니다. 태아의 눈썹·머리카락이 자라기 시작합니다. (21주부터 측정 기준이 머리~엉덩이에서 머리~발까지로 전환됩니다)' },
+    { w: 24, title: '폐포 형성',       size: '30cm',   sizeType: '전체신장', weight: '600g', note: '생존 한계선이라 불리는 시기. 폐포가 형성되기 시작하지만 자가 호흡은 아직 어렵습니다.' },
+    { w: 26, title: '눈을 뜸',         size: '35.6cm', sizeType: '전체신장', weight: '760g', note: '닫혀있던 눈꺼풀이 분리되어 눈을 뜨고 깜빡일 수 있습니다. 뇌 신경 회로가 급격히 발달합니다.' },
+    { w: 28, title: '3분기 진입',      size: '37.6cm', sizeType: '전체신장', weight: '1kg',  note: 'REM 수면 관찰 시작(꿈을 꾸기 시작). 막달 검사·임신성 당뇨 검사 시기입니다.' },
+    { w: 30, title: '뇌 급성장',       size: '39.9cm', sizeType: '전체신장', weight: '1.3kg', note: '대뇌 주름이 형성되고 뼈가 단단해집니다. 양수량이 최대치에 가까워집니다.' },
+    { w: 32, title: '체지방 축적',     size: '42.4cm', sizeType: '전체신장', weight: '1.7kg', note: '피부 아래 지방층이 두꺼워지면서 체온 조절 능력을 갖춥니다. 발길질이 더 강해집니다.' },
+    { w: 34, title: '폐 거의 완성',    size: '45cm',   sizeType: '전체신장', weight: '2.1kg', note: '폐 성숙도가 충분해지는 시기. 이 시점 이후 출산해도 신생아 호흡곤란 위험이 크게 감소합니다.' },
+    { w: 36, title: '머리 아래로',     size: '47.4cm', sizeType: '전체신장', weight: '2.6kg', note: '대부분 머리가 아래로 향하는 자세(두위)가 됩니다. 골반으로 머리가 내려가기 시작합니다.' },
+    { w: 38, title: '만삭 직전',       size: '49.8cm', sizeType: '전체신장', weight: '3kg',   note: '태아의 장기·신경계가 모두 성숙합니다. 손톱이 손가락 끝을 넘어 자랍니다.' },
+    { w: 40, title: '출산 예정',       size: '51.2cm', sizeType: '전체신장', weight: '3.3kg', note: '평균 출산 시기. 실제로는 37~42주 사이에 출산하는 경우가 가장 많습니다.' },
+  ];
+
+  function findFetusInfo(week) {
+    if (week < 4) return null;
+    let best = FETUS_INFO[0];
+    for (const info of FETUS_INFO) {
+      if (info.w <= week) best = info; else break;
+    }
+    return best;
+  }
+
+  function getTrimester(week) {
+    if (week < 14) return '1분기 (Trimester 1)';
+    if (week < 28) return '2분기 (Trimester 2)';
+    return '3분기 (Trimester 3)';
+  }
+
+  function getMonth(week) {
+    const m = Math.floor((week - 1) / 4) + 1;
+    return Math.max(1, Math.min(10, m)) + '개월';
+  }
+
+  function calculate() {
+    const lmpStr = $('lmpInput').value;
+    if (!lmpStr) {
+      $('result').classList.remove('show');
+      return;
+    }
+    const lmp = new Date(lmpStr + 'T00:00:00');
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const days = Math.round((today - lmp) / (1000 * 60 * 60 * 24));
+    if (days < 0 || days > 320) {
+      $('result').classList.remove('show');
+      return;
+    }
+
+    const week = Math.floor(days / 7);
+    const dayOfWeek = days % 7;
+    const edd = new Date(lmp);
+    edd.setDate(edd.getDate() + 280);
+    const remainDays = Math.floor((edd - today) / (1000 * 60 * 60 * 24));
+    const progressPct = Math.min(100, (days / 280) * 100);
+
+    $('weekNum').textContent = week;
+    $('dayNum').textContent = dayOfWeek;
+    $('eddLabel').textContent = edd.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
+    $('ddayLabel').textContent = remainDays > 0 ? `D-${remainDays}` : remainDays === 0 ? '오늘' : `D+${Math.abs(remainDays)}`;
+    $('trimesterLabel').textContent = getTrimester(week);
+    $('monthLabel').textContent = getMonth(week);
+    $('progressFill').style.width = progressPct + '%';
+    $('daysPassed').textContent = days;
+    $('progressPct').textContent = progressPct.toFixed(1);
+    $('remainWeeks').textContent = Math.max(0, Math.ceil(remainDays / 7));
+
+    const info = findFetusInfo(week);
+    if (info) {
+      $('fetusTitle').textContent = `${week}주차: ${info.title}`;
+      const sizeLabel = info.sizeType === 'CRL' ? '머리~엉덩이' : '신장';
+      let meta = `<span>${sizeLabel} <b>${info.size}</b></span>`;
+      if (info.weight) meta += `<span>무게 <b>${info.weight}</b></span>`;
+      $('fetusMeta').innerHTML = meta;
+      $('fetusDesc').textContent = info.note;
+    } else {
+      $('fetusTitle').textContent = `${week}주차`;
+      $('fetusMeta').innerHTML = '';
+      $('fetusDesc').textContent = '아직 임신 초기 단계입니다.';
+    }
+
+    $('result').classList.add('show');
+  }
+
+  // 기본값: 오늘로부터 8주 전 (= 임신 8주차 가정)
+  const todayStr = new Date().toISOString().slice(0, 10);
+  $('lmpInput').max = todayStr;
+  const eightWeeksAgo = new Date();
+  eightWeeksAgo.setDate(eightWeeksAgo.getDate() - 56);
+  $('lmpInput').value = eightWeeksAgo.toISOString().slice(0, 10);
+
+  $('lmpInput').addEventListener('change', calculate);
+  $('lmpInput').addEventListener('input', calculate);
+  $('resetBtn').addEventListener('click', () => {
+    const e = new Date();
+    e.setDate(e.getDate() - 56);
+    $('lmpInput').value = e.toISOString().slice(0, 10);
+    calculate();
+  });
+
+  calculate();
+</script>
+
+</body>
+</html>
