@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>운동 칼로리 소모 계산기 — 종목별 MET 공식 + 음식 비교 | beautypang</title>
+<meta name="description" content="체중·운동 종목·강도·시간을 입력하면 소모 칼로리를 즉시 계산합니다. 60+개 운동 종목, 한국 음식 비교, 일주일·한 달 누적까지 한 번에. ACSM Compendium of Physical Activities 표준 MET 값 기반.">
+<meta name="keywords" content="운동 칼로리 계산기, 칼로리 소모 계산, MET 계산기, 다이어트 운동, 운동 종목별 칼로리, 걷기 칼로리, 달리기 칼로리, 수영 칼로리">
+<meta name="robots" content="index,follow">
+<meta name="google-site-verification" content="2xVj59QMIgWGp8je6lsptzWQYhHyDG_aVc05mWOp--4" />
+<meta name="naver-site-verification" content="74fef3d418a1e812489238486ef027fdf967907b" />
+<link rel="canonical" href="https://beautypang.co.kr/exercise-calorie/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="beautypang.tools">
+<meta property="og:title" content="운동 칼로리 소모 계산기 — 종목별 MET 공식 + 음식 비교">
+<meta property="og:description" content="체중·운동 종목·강도·시간으로 소모 칼로리를 즉시 계산. 한국 음식 비교, 일주일·한 달 누적까지.">
+<meta property="og:url" content="https://beautypang.co.kr/exercise-calorie/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://beautypang.co.kr/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="운동 칼로리 소모 계산기 — beautypang.tools">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="운동 칼로리 소모 계산기">
+<meta name="twitter:description" content="체중·운동 종목·강도·시간으로 소모 칼로리를 즉시 계산합니다.">
+<meta name="twitter:image" content="https://beautypang.co.kr/og-image.svg">
+
+<meta name="theme-color" content="#2563EB">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="beautypang.tools">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="beautypang.tools RSS" href="/rss.xml">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F76TTBSP9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F76TTBSP9F');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://beautypang.co.kr/exercise-calorie/#app",
+      "name": "운동 칼로리 소모 계산기",
+      "url": "https://beautypang.co.kr/exercise-calorie/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "ACSM Compendium of Physical Activities 표준 MET 값을 기반으로 60+개 운동 종목의 칼로리 소모량을 계산합니다.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+      "inLanguage": "ko-KR",
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript",
+      "author": { "@type": "Organization", "name": "beautypang.tools", "url": "https://beautypang.co.kr/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://beautypang.co.kr/" },
+        { "@type": "ListItem", "position": 2, "name": "운동 칼로리 소모 계산기", "item": "https://beautypang.co.kr/exercise-calorie/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "MET이란 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MET(Metabolic Equivalent of Task)은 신체활동의 강도를 나타내는 표준 단위입니다. 1 MET은 안정시 산소 소비량(체중 1kg당 분당 3.5ml O2)에 해당하며, 운동 강도가 높을수록 MET 값이 커집니다. 빠른 걷기는 약 3.8 MET, 달리기는 약 9.8 MET, 수영(자유형)은 8.3 MET 정도입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "칼로리 소모는 어떻게 계산하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "본 계산기는 ACSM(미국스포츠의학회)이 채택한 표준 공식 '소모 칼로리(kcal) = MET × 체중(kg) × 시간(시간)'을 사용합니다. 예를 들어 체중 60kg인 사람이 빠른 걷기(3.8 MET)를 30분 했다면 3.8 × 60 × 0.5 = 114kcal 소모입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "MET 값은 어디 출처인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "본 계산기에 사용된 MET 값은 Ainsworth 등의 'Compendium of Physical Activities (2011)'을 기준으로 합니다. 이는 ACSM(미국스포츠의학회)·WHO 등 국제 기관이 공식 채택한 표준이며, 한국 보건복지부 신체활동 지침에서도 동일 기준을 사용합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "실제 소모 칼로리와 차이가 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MET 기반 계산은 평균값입니다. 실제 칼로리 소모는 (1) 개인의 기초대사량과 체지방률, (2) 운동 숙련도(같은 운동도 효율 차이), (3) 기온·고도 등 환경, (4) 운동 강도의 미세한 차이에 따라 ±10~20% 변동할 수 있습니다. 정확한 측정은 심박수 모니터·산소소비 측정 장비가 필요합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "다이어트할 때 운동만으로 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "체중 1kg 감량에는 약 7,700kcal 부족이 필요합니다. 운동만으로는 시간 대비 효율이 낮아 일반적으로 식이 조절과 함께 진행하는 것이 권장됩니다. 운동은 칼로리 소모 외에도 근육량 유지, 기초대사량 향상, 인슐린 감수성 개선 등 체중 감량 외 장기 효과가 크므로 식이+운동 병행이 가장 효과적입니다."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-soft: #dbeafe;
+  --success: #16a34a;
+  --success-soft: #dcfce7;
+  --warning-soft: #fef3c7;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.site { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 50; }
+.nav { max-width: 960px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-weight: 800; font-size: 17px; color: var(--text); letter-spacing: -0.3px; }
+.brand span { color: var(--primary); font-weight: 600; }
+.nav-link { font-size: 13px; color: var(--text-muted); }
+.nav-link:hover { color: var(--primary); text-decoration: none; }
+
+.hero { padding: 48px 20px 32px; background: linear-gradient(180deg, var(--success-soft) 0%, var(--bg) 100%); }
+.hero-inner { max-width: 960px; margin: 0 auto; }
+.badge { display: inline-block; padding: 4px 10px; background: rgba(22,163,74,0.12); color: var(--success); border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+.hero h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.25; letter-spacing: -0.6px; }
+.hero .lead { margin: 0; color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 640px; }
+.hero .lead b { color: var(--text); font-weight: 700; }
+
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+
+.calc { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
+
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text); }
+.input-wrap { position: relative; }
+.input-wrap input, .input-wrap select {
+  width: 100%; padding: 12px 44px 12px 14px; font-size: 16px; font-weight: 500; color: var(--text);
+  background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md);
+  outline: none; transition: border-color 0.15s, box-shadow 0.15s; appearance: none;
+  font-family: inherit;
+}
+.input-wrap input:focus, .input-wrap select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+.input-wrap .unit { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 13px; pointer-events: none; }
+.input-wrap select { padding-right: 36px; cursor: pointer; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%2394a3b8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>'); background-repeat: no-repeat; background-position: right 14px center; }
+.help { margin: 0; font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+.result { margin-top: 28px; }
+.result-hero { background: linear-gradient(135deg, var(--success) 0%, #15803d 100%); color: #fff; padding: 28px; border-radius: var(--radius-lg); margin-bottom: 16px; }
+.result-hero .label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 8px; }
+.result-hero .value { font-size: 44px; font-weight: 800; line-height: 1; margin-bottom: 4px; letter-spacing: -1px; }
+.result-hero .value small { font-size: 18px; font-weight: 600; opacity: 0.7; margin-left: 4px; }
+.result-hero .formula { margin-top: 12px; font-size: 13px; color: rgba(255,255,255,0.85); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+.metric-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 16px; }
+@media (max-width: 480px) { .metric-grid { grid-template-columns: 1fr; } }
+.metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+.metric .label { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 6px; }
+.metric .value { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.4px; }
+.metric .value small { font-size: 14px; font-weight: 500; color: var(--text-muted); margin-left: 4px; }
+.metric .desc { font-size: 12px; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+
+.food-compare { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; }
+.food-compare h3 { margin: 0 0 6px; font-size: 16px; }
+.food-compare .sub { margin: 0 0 16px; font-size: 13px; color: var(--text-muted); }
+.food-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+.food-item { padding: 14px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); text-align: center; }
+.food-item .emoji { font-size: 28px; line-height: 1; margin-bottom: 6px; }
+.food-item .name { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+.food-item .qty { font-size: 18px; font-weight: 700; color: var(--text); }
+.food-item .qty small { font-size: 12px; color: var(--text-dim); font-weight: 500; }
+
+.note { margin-top: 16px; padding: 14px 16px; background: var(--warning-soft); border: 1px solid #fde68a; border-radius: var(--radius-md); font-size: 13px; color: #78350f; line-height: 1.5; }
+.note strong { color: #92400e; }
+
+.sec { margin-top: 56px; }
+.sec h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.4px; }
+.faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 10px; }
+.faq details[open] { border-color: var(--primary-soft); }
+.faq summary { font-weight: 700; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; float: right; color: var(--text-dim); font-weight: 400; font-size: 18px; line-height: 1; }
+.faq details[open] summary::after { content: '−'; }
+.faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
+
+footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
+.foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
+.foot a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="/" class="brand">beautypang<span>.tools</span></a>
+    <a href="/" class="nav-link">← 도구 모음</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">ACSM Compendium of Physical Activities 표준</span>
+    <h1>운동 칼로리 소모 계산기</h1>
+    <p class="lead">체중·운동 종목·강도·시간을 입력하면 <b>소모 칼로리, 일주일·한 달 누적, 한국 음식 비교</b>까지 한 번에 확인합니다. ACSM 표준 MET 공식 기반.</p>
+  </div>
+</section>
+
+<main>
+  <form class="calc" id="calc">
+    <div class="calc-grid">
+      <div class="field">
+        <label for="weightInput">체중</label>
+        <div class="input-wrap">
+          <input id="weightInput" type="number" min="30" max="200" step="0.1" value="65" inputmode="decimal">
+          <span class="unit">kg</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="durationInput">운동 시간</label>
+        <div class="input-wrap">
+          <input id="durationInput" type="number" min="1" max="600" step="1" value="30" inputmode="numeric">
+          <span class="unit">분</span>
+        </div>
+      </div>
+      <div class="field full">
+        <label for="categorySelect">운동 카테고리</label>
+        <div class="input-wrap">
+          <select id="categorySelect"></select>
+        </div>
+      </div>
+      <div class="field full">
+        <label for="exerciseSelect">세부 종목 (MET 값 표기)</label>
+        <div class="input-wrap">
+          <select id="exerciseSelect"></select>
+        </div>
+        <p class="help">MET = 운동 강도 표준 단위. 안정시 1 MET → 격렬 운동 12+ MET.</p>
+      </div>
+    </div>
+  </form>
+
+  <div class="result" id="result">
+    <div class="result-hero">
+      <div class="label">소모 칼로리 (1회 운동)</div>
+      <div class="value"><span id="kcalValue">0</span><small>kcal</small></div>
+      <div class="formula" id="formulaLine">— MET × — kg × — 시간</div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <div class="label">분당 소모</div>
+        <div class="value"><span id="perMin">0</span><small>kcal/분</small></div>
+        <div class="desc">이 운동의 분당 평균 소모량</div>
+      </div>
+      <div class="metric">
+        <div class="label">시간당 소모</div>
+        <div class="value"><span id="perHour">0</span><small>kcal/시간</small></div>
+        <div class="desc">1시간 지속 시 예상 소모량</div>
+      </div>
+      <div class="metric">
+        <div class="label">일주일 (주 3회 가정)</div>
+        <div class="value"><span id="perWeek">0</span><small>kcal/주</small></div>
+        <div class="desc">동일 운동을 주 3회 반복 시</div>
+      </div>
+      <div class="metric">
+        <div class="label">한 달 (주 3회 × 4주)</div>
+        <div class="value"><span id="perMonth">0</span><small>kcal/월</small></div>
+        <div class="desc">체지방 1kg ≒ 7,700kcal · <span id="fatLoss">0</span>kg 감량 효과</div>
+      </div>
+    </div>
+
+    <div class="food-compare">
+      <h3>한국 음식으로 비교하면?</h3>
+      <p class="sub">이번 운동으로 소모한 칼로리는 다음 음식들과 비슷합니다.</p>
+      <div class="food-list" id="foodList"></div>
+    </div>
+
+    <div class="note">
+      <strong>참고:</strong> MET 기반 계산은 평균값이라 개인의 기초대사량·체지방률·운동 숙련도·환경에 따라 실제 소모량과 ±10~20% 차이가 있을 수 있습니다.
+      정확한 측정은 심박수 모니터·산소소비 측정 장비가 필요합니다.
+    </div>
+  </div>
+
+  <section class="sec faq">
+    <h2>자주 묻는 질문</h2>
+    <details>
+      <summary>MET이란 무엇인가요?</summary>
+      <div class="answer">
+        MET(Metabolic Equivalent of Task)은 신체활동의 강도를 나타내는 표준 단위입니다.
+        <b>1 MET</b>은 안정시 산소 소비량(체중 1kg당 분당 3.5ml O₂)에 해당하며, 운동 강도가 높을수록 MET 값이 커집니다.
+        빠른 걷기 ≈ 3.8 MET, 달리기 ≈ 9.8 MET, 수영(자유형) ≈ 8.3 MET 정도입니다.
+      </div>
+    </details>
+    <details>
+      <summary>칼로리 소모는 어떻게 계산하나요?</summary>
+      <div class="answer">
+        본 계산기는 ACSM(미국스포츠의학회) 표준 공식 <b>소모 칼로리(kcal) = MET × 체중(kg) × 시간(시간)</b>을 사용합니다.
+        예: 체중 60kg + 빠른 걷기(3.8 MET) + 30분 → 3.8 × 60 × 0.5 = <b>114kcal</b>.
+      </div>
+    </details>
+    <details>
+      <summary>MET 값은 어디 출처인가요?</summary>
+      <div class="answer">
+        본 계산기에 사용된 MET 값은 <b>Ainsworth 등의 'Compendium of Physical Activities (2011)'</b>을 기준으로 합니다.
+        ACSM·WHO 등 국제 기관이 공식 채택한 표준이며, 한국 보건복지부 신체활동 지침에서도 동일 기준을 사용합니다.
+      </div>
+    </details>
+    <details>
+      <summary>실제 소모 칼로리와 차이가 있나요?</summary>
+      <div class="answer">
+        MET 기반 계산은 평균값입니다. 실제 칼로리 소모는 (1) 개인의 기초대사량과 체지방률,
+        (2) 운동 숙련도(같은 운동도 효율 차이), (3) 기온·고도 등 환경, (4) 운동 강도의 미세한 차이에 따라 ±10~20% 변동할 수 있습니다.
+        정확한 측정은 심박수 모니터·산소소비 측정 장비가 필요합니다.
+      </div>
+    </details>
+    <details>
+      <summary>다이어트할 때 운동만으로 가능한가요?</summary>
+      <div class="answer">
+        체중 1kg 감량에는 약 <b>7,700kcal</b> 부족이 필요합니다. 운동만으로는 시간 대비 효율이 낮아 일반적으로 식이 조절과 함께 진행하는 것이 권장됩니다.
+        다만 운동은 칼로리 소모 외에도 근육량 유지, 기초대사량 향상, 인슐린 감수성 개선 등 장기 효과가 크므로 식이+운동 병행이 가장 효과적입니다.
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="foot">
+    <div>© <span id="year"></span> beautypang.tools — 다양한 무료 계산기</div>
+    <div><a href="/">도구 모음 →</a></div>
+  </div>
+</footer>
+
+<script>
+  const $ = id => document.getElementById(id);
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== 운동 카테고리·종목·MET (Compendium of Physical Activities 2011, Ainsworth et al.) =====
+  // 각 항목은 [표시명, MET값]
+  const EXERCISES = {
+    walking: {
+      label: '🚶 걷기',
+      items: [
+        ['산책 (3km/h, 천천히)', 2.0],
+        ['보통 걷기 (4km/h)', 2.8],
+        ['빠른 걷기 (5.6km/h)', 3.8],
+        ['파워 워킹 (6.4km/h)', 5.0],
+        ['오르막 걷기', 6.0],
+        ['트레드밀 걷기 (보통)', 3.5],
+      ],
+    },
+    running: {
+      label: '🏃 달리기',
+      items: [
+        ['조깅 (6km/h)', 6.0],
+        ['조깅 (8km/h)', 8.3],
+        ['달리기 (10km/h)', 9.8],
+        ['빠른 달리기 (12km/h)', 11.5],
+        ['빠른 달리기 (14km/h)', 13.5],
+        ['트레드밀 달리기 (보통)', 9.0],
+      ],
+    },
+    cycling: {
+      label: '🚴 자전거',
+      items: [
+        ['자전거 (16km/h 이하, 느림)', 4.0],
+        ['자전거 (16~19km/h, 보통)', 6.8],
+        ['자전거 (19~22km/h, 빠름)', 8.0],
+        ['자전거 (22~25km/h, 매우 빠름)', 10.0],
+        ['스피닝 (실내, 보통)', 7.0],
+        ['스피닝 (실내, 격함)', 10.5],
+      ],
+    },
+    swimming: {
+      label: '🏊 수영',
+      items: [
+        ['자유형 (보통 속도)', 8.3],
+        ['자유형 (빠른 속도)', 10.0],
+        ['배영', 4.8],
+        ['평영', 5.3],
+        ['접영', 13.8],
+        ['아쿠아로빅', 5.5],
+      ],
+    },
+    strength: {
+      label: '🏋️ 근력 운동',
+      items: [
+        ['웨이트 (가벼운 강도)', 3.5],
+        ['웨이트 (보통 강도)', 5.0],
+        ['웨이트 (격한 강도)', 6.0],
+        ['크로스핏', 8.0],
+        ['푸시업·싯업·풀업', 8.0],
+        ['케틀벨', 9.8],
+      ],
+    },
+    studio: {
+      label: '🧘 요가·필라테스·댄스',
+      items: [
+        ['요가 (하타·인 요가)', 2.5],
+        ['요가 (빈야사·파워)', 4.0],
+        ['필라테스', 3.0],
+        ['스트레칭·폼롤러', 2.3],
+        ['줌바 댄스', 6.0],
+        ['에어로빅 (보통)', 5.5],
+        ['에어로빅 (격함)', 7.3],
+        ['발레', 5.0],
+      ],
+    },
+    sports: {
+      label: '⚽ 구기 스포츠',
+      items: [
+        ['축구 (게임)', 7.0],
+        ['농구 (게임)', 6.5],
+        ['배드민턴 (게임)', 5.5],
+        ['테니스 (싱글)', 7.3],
+        ['테니스 (복식)', 6.0],
+        ['탁구', 4.0],
+        ['배구', 4.0],
+        ['골프 (걷기)', 4.8],
+        ['볼링', 3.8],
+      ],
+    },
+    martial: {
+      label: '🥊 무술·격투',
+      items: [
+        ['복싱 (스파링)', 12.5],
+        ['복싱 (샌드백)', 5.5],
+        ['태권도·가라테', 10.3],
+        ['주짓수·유도', 10.3],
+        ['킥복싱', 10.3],
+      ],
+    },
+    outdoor: {
+      label: '🏔️ 야외 활동',
+      items: [
+        ['등산 (보통 경사)', 6.0],
+        ['등산 (가파른 경사)', 8.0],
+        ['스키 (보통)', 7.0],
+        ['스노보드', 5.3],
+        ['인라인 스케이트', 7.5],
+        ['암벽 등반', 8.0],
+        ['카약·노 젓기', 5.0],
+      ],
+    },
+    rope: {
+      label: '🪢 줄넘기·점프',
+      items: [
+        ['줄넘기 (보통)', 11.8],
+        ['줄넘기 (빠름)', 12.3],
+        ['박스 점프', 8.0],
+        ['버피', 8.0],
+      ],
+    },
+    daily: {
+      label: '🏠 일상 활동',
+      items: [
+        ['청소 (보통)', 3.5],
+        ['진공청소기', 3.3],
+        ['정원 가꾸기', 4.0],
+        ['계단 오르기', 8.8],
+        ['쇼핑 (걸으며)', 2.3],
+        ['아이와 놀기 (격함)', 5.8],
+      ],
+    },
+  };
+
+  // ===== 한국 음식 칼로리 (1인분 기준, 농촌진흥청·식약처 식품영양성분 DB) =====
+  const FOODS = [
+    ['🍚', '쌀밥 1공기', 310],
+    ['🍜', '라면 1봉지', 500],
+    ['🍔', '햄버거 1개', 500],
+    ['🍕', '피자 1조각', 290],
+    ['🍗', '치킨 1조각', 280],
+    ['🌭', '김밥 1줄', 480],
+    ['🍝', '짜장면 1그릇', 700],
+    ['🍙', '삼각김밥 1개', 200],
+    ['🥟', '만두 5개', 320],
+    ['☕', '카페라떼 1잔', 180],
+    ['🍩', '도넛 1개', 250],
+    ['🍫', '초콜릿 1조각(30g)', 160],
+    ['🍎', '사과 1개(중)', 100],
+    ['🍌', '바나나 1개', 100],
+    ['🥤', '콜라 1캔(355ml)', 140],
+    ['🍺', '맥주 1캔(500ml)', 200],
+  ];
+
+  // ===== UI 초기화 =====
+  const categorySelect = $('categorySelect');
+  const exerciseSelect = $('exerciseSelect');
+  Object.entries(EXERCISES).forEach(([key, cat]) => {
+    const opt = document.createElement('option');
+    opt.value = key;
+    opt.textContent = cat.label;
+    categorySelect.appendChild(opt);
+  });
+
+  function refreshExercises() {
+    const key = categorySelect.value;
+    const cat = EXERCISES[key];
+    exerciseSelect.innerHTML = '';
+    cat.items.forEach(([label, met], i) => {
+      const opt = document.createElement('option');
+      opt.value = met;
+      opt.textContent = `${label} (${met} MET)`;
+      exerciseSelect.appendChild(opt);
+    });
+  }
+
+  // 기본값: 빠른 걷기
+  categorySelect.value = 'walking';
+  refreshExercises();
+  // 빠른 걷기 5.6km/h 선택 (index 2)
+  exerciseSelect.selectedIndex = 2;
+
+  // ===== 계산 =====
+  function fmt(n) { return Math.round(n).toLocaleString('ko-KR'); }
+  function fmt1(n) { return n.toFixed(1); }
+
+  function calculate() {
+    const weight = parseFloat($('weightInput').value);
+    const duration = parseFloat($('durationInput').value);
+    const met = parseFloat(exerciseSelect.value);
+
+    if (!weight || !duration || !met || weight < 30 || duration < 1) {
+      $('result').style.display = 'none';
+      return;
+    }
+    $('result').style.display = 'block';
+
+    const hours = duration / 60;
+    const kcal = met * weight * hours;
+    const perMin = kcal / duration;
+    const perHour = met * weight;
+    const perWeek = kcal * 3;
+    const perMonth = perWeek * 4;
+    const fatLossKg = perMonth / 7700;
+
+    const exerciseName = exerciseSelect.options[exerciseSelect.selectedIndex].textContent
+      .replace(/\s*\([^)]*MET\)\s*$/, ''); // MET 표기 제거
+
+    $('kcalValue').textContent = fmt(kcal);
+    $('formulaLine').textContent = `${met} MET × ${fmt1(weight)} kg × ${fmt1(hours)} 시간 (${exerciseName})`;
+    $('perMin').textContent = fmt1(perMin);
+    $('perHour').textContent = fmt(perHour);
+    $('perWeek').textContent = fmt(perWeek);
+    $('perMonth').textContent = fmt(perMonth);
+    $('fatLoss').textContent = fatLossKg.toFixed(2);
+
+    // 음식 비교: kcal 기준으로 음식 개수 환산
+    const foodList = $('foodList');
+    foodList.innerHTML = '';
+    // 가장 관련성 있는 음식 6개만 (다양한 칼로리대로 선택)
+    const showFoods = FOODS.filter((f, i) => [0, 1, 2, 4, 5, 12].includes(i));
+    showFoods.forEach(([emoji, name, foodKcal]) => {
+      const qty = kcal / foodKcal;
+      const qtyStr = qty < 0.1 ? qty.toFixed(2) : qty < 1 ? qty.toFixed(1) : qty.toFixed(1);
+      const div = document.createElement('div');
+      div.className = 'food-item';
+      div.innerHTML = `
+        <div class="emoji">${emoji}</div>
+        <div class="name">${name}</div>
+        <div class="qty">${qtyStr}<small>개분</small></div>
+      `;
+      foodList.appendChild(div);
+    });
+  }
+
+  categorySelect.addEventListener('change', () => {
+    refreshExercises();
+    calculate();
+  });
+  exerciseSelect.addEventListener('change', calculate);
+  $('weightInput').addEventListener('input', calculate);
+  $('durationInput').addEventListener('input', calculate);
+
+  calculate();
+</script>
+
+</body>
+</html>
