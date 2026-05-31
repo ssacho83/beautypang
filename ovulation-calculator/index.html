@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>배란일 계산기 — 가임기간·다음 생리 예정일 자동 계산 | beautypang</title>
+<meta name="description" content="마지막 생리 시작일과 주기를 입력하면 배란일, 가임기간(임신 가능성 높은 기간), 다음 생리 예정일, 다음 6개월 배란·생리 캘린더를 자동으로 계산합니다.">
+<meta name="keywords" content="배란일 계산기, 가임기간 계산기, 생리 예정일, 임신 가능성, 배란 주기, 생리 주기, 임신 준비">
+<meta name="robots" content="index,follow">
+<meta name="google-site-verification" content="2xVj59QMIgWGp8je6lsptzWQYhHyDG_aVc05mWOp--4" />
+<meta name="naver-site-verification" content="74fef3d418a1e812489238486ef027fdf967907b" />
+<link rel="canonical" href="https://beautypang.co.kr/ovulation-calculator/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="beautypang.tools">
+<meta property="og:title" content="배란일 계산기 — 가임기간·다음 생리 예정일">
+<meta property="og:description" content="LMP·주기로 배란일·가임기간·다음 6개월 캘린더까지 한 번에 계산.">
+<meta property="og:url" content="https://beautypang.co.kr/ovulation-calculator/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://beautypang.co.kr/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="배란일 계산기 — beautypang">
+<meta name="twitter:description" content="LMP·주기로 배란일·가임기간·다음 6개월 캘린더까지.">
+<meta name="twitter:image" content="https://beautypang.co.kr/og-image.svg">
+
+<meta name="theme-color" content="#EC4899">
+<meta name="author" content="beautypang.tools">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="beautypang.tools RSS" href="/rss.xml">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F76TTBSP9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F76TTBSP9F');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://beautypang.co.kr/ovulation-calculator/#app",
+      "name": "배란일 계산기",
+      "url": "https://beautypang.co.kr/ovulation-calculator/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "마지막 생리 시작일과 주기로 배란일, 가임기간, 다음 생리 예정일, 다음 6개월 캘린더를 계산합니다.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+      "inLanguage": "ko-KR",
+      "isAccessibleForFree": true,
+      "author": { "@type": "Organization", "name": "beautypang.tools", "url": "https://beautypang.co.kr/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://beautypang.co.kr/" },
+        { "@type": "ListItem", "position": 2, "name": "배란일 계산기", "item": "https://beautypang.co.kr/ovulation-calculator/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "배란일은 어떻게 계산하나요?", "acceptedAnswer": { "@type": "Answer", "text": "황체기(배란일~다음 생리)는 평균 14일로 비교적 고정적입니다. 따라서 배란일 = 다음 생리 예정일 - 14일. 주기 28일이면 LMP + 14일, 주기 30일이면 LMP + 16일이 배란일입니다." } },
+        { "@type": "Question", "name": "가임기간은 며칠인가요?", "acceptedAnswer": { "@type": "Answer", "text": "정자는 자궁 내에서 최대 5일 생존, 난자는 배란 후 약 24시간 생존합니다. 따라서 가임기간은 배란일 5일 전부터 배란 다음날까지 약 6~7일입니다. 임신 가능성은 배란 1~2일 전이 가장 높습니다." } },
+        { "@type": "Question", "name": "주기가 불규칙하면 배란일을 알 수 없나요?", "acceptedAnswer": { "@type": "Answer", "text": "불규칙한 주기라면 평균값만으로 정확한 배란일 예측이 어렵습니다. 기초체온 측정(배란 후 0.3~0.5℃ 상승), 배란 테스트기(LH 호르몬), 자궁경부 점액 관찰을 병행하면 정확도가 올라갑니다." } },
+        { "@type": "Question", "name": "이 계산기로 피임이 가능한가요?", "acceptedAnswer": { "@type": "Answer", "text": "주기법 피임은 실패율이 매우 높습니다(연 24% 임신). 정자는 5일까지 생존하므로 '가임기 외'에도 임신 가능. 확실한 피임이 필요하면 콘돔·경구피임약·자궁내장치 등을 사용하세요. 본 계산기는 임신 준비·생리 예측용입니다." } },
+        { "@type": "Question", "name": "배란통은 누구나 느끼나요?", "acceptedAnswer": { "@type": "Answer", "text": "약 20%의 여성이 배란일 즈음 한쪽 아랫배에 가벼운 통증(미텔슈메르츠)을 느낍니다. 몇 시간~하루 정도 지속되며 정상 반응입니다. 통증이 심하거나 길게 지속되면 산부인과 진료를 권장합니다." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #FFF7FB;
+    --surface: #FFFFFF;
+    --ink: #1F0F1A;
+    --ink-soft: #6B4D5E;
+    --muted: #B294A4;
+    --line: #F5DDE9;
+    --line-strong: #E8C7D7;
+    --primary: #EC4899;
+    --primary-soft: #FCE7F3;
+    --primary-deep: #BE185D;
+    --accent: #8B5CF6;
+    --accent-soft: #EDE9FE;
+    --success: #16A34A;
+    --success-soft: #DCFCE7;
+    --warn: #D97706;
+    --warn-soft: #FEF3C7;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--ink); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  header.site { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+  .nav { max-width: 1080px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-weight: 800; font-size: 18px; color: var(--ink); text-decoration: none; letter-spacing: -0.4px; }
+  .brand span { color: var(--primary); }
+  .nav-link { color: var(--ink-soft); text-decoration: none; font-size: 14px; font-weight: 600; }
+  .nav-link:hover { color: var(--primary); }
+
+  .hero { background: linear-gradient(180deg, #FFFFFF 0%, var(--bg) 100%); border-bottom: 1px solid var(--line); padding: 48px 20px 40px; }
+  .hero-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+  .badge { display: inline-block; padding: 6px 12px; border-radius: 999px; background: var(--primary-soft); color: var(--primary-deep); font-size: 12px; font-weight: 700; letter-spacing: 0.3px; margin-bottom: 16px; }
+  h1 { margin: 0 0 12px; font-size: 34px; font-weight: 800; letter-spacing: -1.2px; color: var(--ink); line-height: 1.25; }
+  .lead { margin: 0 auto; color: var(--ink-soft); font-size: 16px; max-width: 560px; }
+  .lead b { color: var(--ink); font-weight: 700; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  .calc { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 32px; box-shadow: 0 1px 3px rgba(31,15,26,0.04); }
+
+  .field { margin-bottom: 22px; }
+  .field:last-child { margin-bottom: 0; }
+  label { display: block; font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+  .help { font-size: 12px; color: var(--muted); margin-top: 6px; font-weight: 500; }
+
+  .input-wrap { position: relative; display: flex; align-items: stretch; border: 1.5px solid var(--line-strong); border-radius: 12px; background: var(--surface); transition: border-color 0.15s, box-shadow 0.15s; }
+  .input-wrap:focus-within { border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-soft); }
+  .input-wrap input { flex: 1; border: 0; background: transparent; padding: 16px 18px; font-family: inherit; font-size: 18px; font-weight: 700; color: var(--ink); outline: none; }
+  .input-wrap input[type="date"] { text-align: left; }
+  .input-wrap input::placeholder { color: var(--muted); font-weight: 500; }
+
+  .cycle-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+  .cycle-val { font-size: 18px; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; }
+  .cycle-val small { font-size: 13px; font-weight: 700; }
+  .slider { width: 100%; height: 6px; -webkit-appearance: none; appearance: none; background: var(--bg); border-radius: 4px; outline: none; border: 1px solid var(--line); }
+  .slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--primary); cursor: pointer; border: 3px solid var(--surface); box-shadow: 0 2px 6px rgba(236,72,153,0.3); }
+  .slider::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: var(--primary); cursor: pointer; border: 3px solid var(--surface); box-shadow: 0 2px 6px rgba(236,72,153,0.3); }
+  .cycle-ticks { display: flex; justify-content: space-between; margin-top: 6px; font-size: 11px; color: var(--muted); font-weight: 600; }
+
+  .submit { width: 100%; margin-top: 24px; padding: 16px; border: 0; border-radius: 12px; background: var(--primary); color: #fff; font-family: inherit; font-size: 16px; font-weight: 700; cursor: pointer; transition: background 0.15s; letter-spacing: -0.2px; }
+  .submit:hover { background: var(--primary-deep); }
+
+  .result { margin-top: 28px; display: none; }
+  .result.show { display: block; animation: fadeIn 0.3s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  .summary { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
+  .res-head { text-align: center; padding-bottom: 24px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+  .res-label { font-size: 13px; font-weight: 600; color: var(--ink-soft); margin-bottom: 8px; }
+  .res-date { font-size: 32px; font-weight: 800; letter-spacing: -1px; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1.1; }
+  .res-detail { margin-top: 10px; font-size: 13px; color: var(--ink-soft); }
+  .res-detail b { color: var(--ink); font-weight: 700; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 540px) { .grid2 { grid-template-columns: 1fr; } }
+  .stat { background: var(--bg); padding: 16px; border-radius: 12px; }
+  .stat-label { font-size: 12px; color: var(--ink-soft); font-weight: 600; margin-bottom: 4px; }
+  .stat-val { font-size: 16px; font-weight: 800; color: var(--ink); letter-spacing: -0.3px; }
+
+  .fertile-window { margin-top: 16px; padding: 18px; background: var(--accent-soft); border: 1px solid #C4B5FD; border-radius: 12px; }
+  .fertile-window h3 { margin: 0 0 8px; font-size: 14px; color: var(--accent); font-weight: 800; }
+  .fertile-window p { margin: 0; font-size: 14px; color: var(--ink); line-height: 1.7; }
+  .fertile-window p b { color: var(--accent); }
+
+  .disclaimer { margin-top: 16px; padding: 16px 18px; background: var(--warn-soft); border: 1px solid #FCD34D; border-radius: 12px; font-size: 13px; color: #92400E; line-height: 1.6; }
+  .disclaimer b { color: #78350F; }
+
+  .sec-h { margin: 48px 0 16px; font-size: 20px; font-weight: 800; color: var(--ink); letter-spacing: -0.5px; }
+
+  .calendar { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .cal-row { display: grid; grid-template-columns: 80px 1fr 1fr 1fr; padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 13px; align-items: center; }
+  .cal-row:last-child { border-bottom: 0; }
+  .cal-row.head { background: var(--bg); font-weight: 800; color: var(--ink); font-size: 12px; letter-spacing: 0.3px; }
+  .cal-row .month { font-weight: 800; color: var(--primary); }
+  .cal-row .menses { color: var(--primary-deep); font-weight: 700; }
+  .cal-row .ovulation { color: var(--accent); font-weight: 700; }
+  .cal-row .fertile { color: var(--ink-soft); font-size: 12px; }
+
+  .faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin-bottom: 10px; }
+  .faq summary { cursor: pointer; font-weight: 700; font-size: 15px; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: '+'; color: var(--primary); font-size: 22px; font-weight: 300; transition: transform 0.2s; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { margin: 14px 0 0; font-size: 14px; color: var(--ink-soft); line-height: 1.7; }
+
+  .src { margin-top: 32px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; font-size: 13px; color: var(--ink-soft); }
+  .src b { color: var(--ink); }
+
+  footer.site { margin-top: 60px; padding: 28px 20px; border-top: 1px solid var(--line); background: var(--surface); text-align: center; color: var(--ink-soft); font-size: 13px; }
+  footer.site a { color: var(--ink-soft); text-decoration: none; margin: 0 8px; }
+  footer.site a:hover { color: var(--primary); }
+  footer.site .copy { display: block; margin-top: 8px; font-size: 11px; color: var(--muted); }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 26px; }
+    .hero { padding: 36px 16px 28px; }
+    .calc { padding: 22px; }
+    .res-date { font-size: 26px; }
+    .cal-row { grid-template-columns: 60px 1fr 1fr; font-size: 12px; padding: 10px 12px; }
+    .cal-row .fertile { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="/" class="brand">beautypang<span>.tools</span></a>
+    <a href="/" class="nav-link">← 도구 모음</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">황체기 14일 기준 표준 계산</span>
+    <h1>배란일 계산기</h1>
+    <p class="lead">마지막 생리 시작일과 평균 주기를 입력하면 <b>배란일·가임기간·다음 생리 예정일</b>을 즉시 계산합니다.</p>
+  </div>
+</section>
+
+<main>
+  <form class="calc" id="calc">
+    <div class="field">
+      <label for="lmp">마지막 생리 시작일 (LMP)</label>
+      <div class="input-wrap">
+        <input id="lmp" type="date" required>
+      </div>
+      <p class="help">생리 첫째 날을 선택하세요. 출혈이 시작된 날 기준.</p>
+    </div>
+
+    <div class="field">
+      <div class="cycle-row">
+        <label style="margin:0;">평균 생리 주기</label>
+        <div class="cycle-val"><span id="cycleVal">28</span><small>일</small></div>
+      </div>
+      <input type="range" id="cycle" class="slider" min="21" max="35" step="1" value="28">
+      <div class="cycle-ticks">
+        <span>21일</span><span>28일</span><span>35일</span>
+      </div>
+      <p class="help">일반적으로 21~35일 범위가 정상입니다. 평균을 모르면 28일로 두세요.</p>
+    </div>
+
+    <button type="submit" class="submit">배란일 계산하기</button>
+  </form>
+
+  <div class="result" id="result">
+    <div class="summary">
+      <div class="res-head">
+        <div class="res-label">예상 배란일</div>
+        <div class="res-date" id="resDate">—</div>
+        <div class="res-detail" id="resDetail"></div>
+      </div>
+      <div class="grid2" id="resStats"></div>
+      <div class="fertile-window" id="fertileWindow"></div>
+    </div>
+
+    <div class="disclaimer">
+      <b>안내</b> · 본 계산은 <b>황체기 14일 고정</b>이라는 의학적 평균치를 기반으로 한 <b>참고용 추정치</b>입니다. 실제 배란일은 호르몬·스트레스·건강 상태에 따라 ±2~3일 차이가 날 수 있습니다. 정확한 배란일은 <b>기초체온 측정·배란 테스트기(LH)·자궁경부 점액 관찰</b>을 병행하면 더 명확합니다. 임신 시도·피임 결정 시 반드시 산부인과 전문의와 상담하세요.
+    </div>
+  </div>
+
+  <h2 class="sec-h">다음 6개월 배란·생리 캘린더</h2>
+  <div class="calendar" id="calendar">
+    <div class="cal-row head">
+      <span>회차</span>
+      <span>생리 시작 예정</span>
+      <span>배란 예정</span>
+      <span class="fertile">가임 기간</span>
+    </div>
+    <div id="calBody" style="padding: 24px; text-align: center; color: var(--muted);">위 폼에 LMP를 입력하면 캘린더가 표시됩니다.</div>
+  </div>
+
+  <h2 class="sec-h">자주 묻는 질문</h2>
+  <div class="faq">
+    <details>
+      <summary>배란일은 어떻게 계산하나요?</summary>
+      <p><b>황체기(배란일~다음 생리)</b>는 평균 14일로 비교적 고정적입니다. 따라서 <b>배란일 = 다음 생리 예정일 - 14일</b>. 주기 28일이면 LMP + 14일, 주기 30일이면 LMP + 16일이 배란일입니다.</p>
+    </details>
+    <details>
+      <summary>가임기간은 며칠인가요?</summary>
+      <p>정자는 자궁 내에서 <b>최대 5일 생존</b>, 난자는 배란 후 <b>약 24시간 생존</b>합니다. 따라서 가임기간은 <b>배란일 5일 전 ~ 배란 다음날</b>까지 약 6~7일입니다. 임신 가능성은 <b>배란 1~2일 전이 가장 높습니다</b>.</p>
+    </details>
+    <details>
+      <summary>주기가 불규칙하면 배란일을 알 수 없나요?</summary>
+      <p>불규칙한 주기라면 평균값만으로 정확한 예측이 어렵습니다. <b>기초체온 측정</b>(배란 후 0.3~0.5℃ 상승), <b>배란 테스트기</b>(LH 호르몬), <b>자궁경부 점액 관찰</b>을 병행하면 정확도가 올라갑니다.</p>
+    </details>
+    <details>
+      <summary>이 계산기로 피임이 가능한가요?</summary>
+      <p>주기법 피임은 <b>실패율이 매우 높습니다(연 24% 임신)</b>. 정자는 5일까지 생존하므로 가임기 외에도 임신 가능. 확실한 피임이 필요하면 <b>콘돔·경구피임약·자궁내장치</b> 등을 사용하세요. 본 계산기는 <b>임신 준비·생리 예측용</b>입니다.</p>
+    </details>
+    <details>
+      <summary>배란통은 누구나 느끼나요?</summary>
+      <p>약 <b>20%의 여성</b>이 배란일 즈음 한쪽 아랫배에 가벼운 통증(미텔슈메르츠)을 느낍니다. 몇 시간~하루 정도 지속되며 정상 반응입니다. 통증이 심하거나 길게 지속되면 산부인과 진료를 권장합니다.</p>
+    </details>
+  </div>
+
+  <div class="src">
+    <b>출처</b> · 황체기 표준 14일 = ACOG(미국 산부인과 학회) 가이드라인 · 가임 기간 = 정자 생존 5일 + 난자 생존 1일 (Wilcox et al. NEJM 1995)
+  </div>
+</main>
+
+<footer class="site">
+  <a href="/">홈</a> · <a href="/#tools">도구 목록</a> · <a href="/#about">소개</a>
+  <span class="copy">© 2026 beautypang.co.kr — 본 계산은 의학 평균 기반 참고용이며 정확한 임신·피임 결정은 산부인과 전문의와 상담하세요.</span>
+</footer>
+
+<script>
+  const cycleInput = document.getElementById('cycle');
+  const cycleVal = document.getElementById('cycleVal');
+  const form = document.getElementById('calc');
+  const result = document.getElementById('result');
+  const calBody = document.getElementById('calBody');
+
+  cycleInput.addEventListener('input', () => { cycleVal.textContent = cycleInput.value; });
+
+  const fmtDate = d => {
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}.${m}.${day}`;
+  };
+  const fmtKor = d => {
+    const days = ['일', '월', '화', '수', '목', '금', '토'];
+    const m = d.getMonth() + 1;
+    const day = d.getDate();
+    return `${m}월 ${day}일 (${days[d.getDay()]})`;
+  };
+  const addDays = (d, n) => {
+    const r = new Date(d);
+    r.setDate(r.getDate() + n);
+    return r;
+  };
+  const daysBetween = (a, b) => Math.round((b - a) / 86400000);
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const lmpStr = document.getElementById('lmp').value;
+    if (!lmpStr) { document.getElementById('lmp').focus(); return; }
+    const lmp = new Date(lmpStr + 'T00:00:00');
+    const cycle = parseInt(cycleInput.value, 10);
+    const LUTEAL = 14;
+
+    const ovulation = addDays(lmp, cycle - LUTEAL);
+    const nextMenses = addDays(lmp, cycle);
+    const fertileStart = addDays(ovulation, -5);
+    const fertileEnd = addDays(ovulation, 1);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const dDay = daysBetween(today, ovulation);
+
+    let dDayLabel;
+    if (dDay > 0) dDayLabel = `오늘부터 <b>D-${dDay}</b>`;
+    else if (dDay === 0) dDayLabel = `<b>오늘이 예상 배란일</b>`;
+    else dDayLabel = `<b>${-dDay}일 전</b> 배란 예상일이었습니다`;
+
+    document.getElementById('resDate').textContent = fmtKor(ovulation);
+    document.getElementById('resDetail').innerHTML = `LMP <b>${fmtDate(lmp)}</b> + 주기 <b>${cycle}일</b> 기준 · ${dDayLabel}`;
+
+    document.getElementById('resStats').innerHTML = `
+      <div class="stat"><div class="stat-label">다음 생리 예정일</div><div class="stat-val">${fmtKor(nextMenses)}</div></div>
+      <div class="stat"><div class="stat-label">가임기간 시작</div><div class="stat-val">${fmtKor(fertileStart)}</div></div>
+      <div class="stat"><div class="stat-label">가임기간 끝</div><div class="stat-val">${fmtKor(fertileEnd)}</div></div>
+      <div class="stat"><div class="stat-label">주기 (LMP → 다음 생리)</div><div class="stat-val">${cycle}일</div></div>
+    `;
+
+    document.getElementById('fertileWindow').innerHTML = `
+      <h3>🌷 임신 가능성이 높은 기간</h3>
+      <p><b>${fmtKor(fertileStart)} ~ ${fmtKor(fertileEnd)}</b> (약 7일) — 정자 생존 5일 + 난자 생존 1일 기준. 가장 높은 임신 가능성은 <b>${fmtKor(addDays(ovulation, -1))} ~ ${fmtKor(ovulation)}</b> 즈음입니다.</p>
+    `;
+
+    // 다음 6회차 캘린더
+    let calHtml = '';
+    for (let i = 0; i < 6; i++) {
+      const m = addDays(lmp, cycle * (i + 1));
+      const o = addDays(m, -LUTEAL);
+      const fs = addDays(o, -5);
+      const fe = addDays(o, 1);
+      calHtml += `<div class="cal-row">
+        <span class="month">${i + 1}회차</span>
+        <span class="menses">${fmtDate(m)}</span>
+        <span class="ovulation">${fmtDate(o)}</span>
+        <span class="fertile">${fmtDate(fs)} ~ ${fmtDate(fe)}</span>
+      </div>`;
+    }
+    calBody.innerHTML = '';
+    calBody.outerHTML = calHtml;
+
+    result.classList.add('show');
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>
+
+</body>
+</html>
