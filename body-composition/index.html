@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>체지방률 · 체수분율 · 제지방량 · 기초대사량 계산기 | beautypang</title>
+<meta name="description" content="키·몸무게·나이·성별로 체지방률(Deurenberg)·체수분율(Watson)·제지방량·기초대사량(Mifflin-St Jeor)을 즉시 계산. InBody 없이도 체성분을 추정하고 운동·다이어트 목표 설정에 활용하세요.">
+<meta name="keywords" content="체지방률 계산기, 체수분율 계산기, 체성분 분석, 제지방량, Deurenberg 공식, Watson 공식, 기초대사량, BMR, 골격근량">
+<meta name="robots" content="index,follow">
+<meta name="google-site-verification" content="2xVj59QMIgWGp8je6lsptzWQYhHyDG_aVc05mWOp--4" />
+<meta name="naver-site-verification" content="74fef3d418a1e812489238486ef027fdf967907b" />
+<link rel="canonical" href="https://beautypang.co.kr/body-composition/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="beautypang.tools">
+<meta property="og:title" content="체지방률 · 체수분율 · 제지방량 · 기초대사량 계산기">
+<meta property="og:description" content="InBody 없이도 키·몸무게·나이·성별로 체성분 5종(체지방률·체수분율·제지방량·BMR·BMI)을 즉시 추정합니다.">
+<meta property="og:url" content="https://beautypang.co.kr/body-composition/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://beautypang.co.kr/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="체성분 계산기 — beautypang.tools">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="체지방률 · 체수분율 · 제지방량 계산기">
+<meta name="twitter:description" content="키·몸무게·나이·성별로 체성분 5종을 즉시 추정.">
+<meta name="twitter:image" content="https://beautypang.co.kr/og-image.svg">
+
+<meta name="theme-color" content="#2563EB">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="beautypang.tools">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="beautypang.tools RSS" href="/rss.xml">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F76TTBSP9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F76TTBSP9F');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://beautypang.co.kr/body-composition/#app",
+      "name": "체지방률 · 체수분율 · 제지방량 · 기초대사량 계산기",
+      "url": "https://beautypang.co.kr/body-composition/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "Deurenberg 체지방률 + Watson 체수분 공식 + Mifflin-St Jeor BMR을 결합한 종합 체성분 추정 계산기.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+      "inLanguage": "ko-KR",
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript",
+      "author": { "@type": "Organization", "name": "beautypang.tools", "url": "https://beautypang.co.kr/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://beautypang.co.kr/" },
+        { "@type": "ListItem", "position": 2, "name": "체지방률·체수분율 계산기", "item": "https://beautypang.co.kr/body-composition/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "체지방률은 어떻게 추정하나요?", "acceptedAnswer": { "@type": "Answer", "text": "Deurenberg 공식(1991)으로 추정합니다. 공식: 체지방률(%) = 1.20 × BMI + 0.23 × 나이 - 10.8 × 성별 - 5.4 (남성=1, 여성=0). 인구 평균과의 상관관계는 약 0.85 수준으로, InBody·DEXA 같은 직접 측정 대비 ±3~5% 오차 범위를 가집니다." } },
+        { "@type": "Question", "name": "체수분율은 어떻게 계산되나요?", "acceptedAnswer": { "@type": "Answer", "text": "Watson 공식으로 총 체수분(TBW, Total Body Water, 단위 L)을 추정한 뒤 몸무게 대비 비율을 산출합니다. 남성 TBW = 2.447 − 0.09156×나이 + 0.1074×키(cm) + 0.3362×체중(kg). 여성 TBW = −2.097 + 0.1069×키 + 0.2466×체중. 일반 성인 정상 범위는 남성 55~65%, 여성 45~60%입니다." } },
+        { "@type": "Question", "name": "정상 체지방률은 몇 %인가요?", "acceptedAnswer": { "@type": "Answer", "text": "성별·나이별로 다르지만, 미국 운동의학협회(ACSM) 기준으로 남성 평균 18~24%, 여성 25~31%가 일반 건강 범위입니다. 남성 25%·여성 32% 이상이면 비만, 남성 6~13%·여성 14~20%는 운동선수 수준입니다. 본 계산기는 체지방률 카테고리를 자동으로 분류합니다." } },
+        { "@type": "Question", "name": "공식 계산기가 InBody만큼 정확한가요?", "acceptedAnswer": { "@type": "Answer", "text": "공식 기반 추정은 키·몸무게·나이·성별만으로 산출하므로 InBody·DEXA처럼 실제 체수분 임피던스를 측정하는 방식보다 정밀도가 낮습니다. 체지방률 ±3~5%, 체수분 ±2~3% 오차가 일반적입니다. 절대값보다 변화 추이(다이어트 전후 추정 비교)에 활용하는 것이 좋습니다." } },
+        { "@type": "Question", "name": "제지방량(LBM)과 골격근량은 같은가요?", "acceptedAnswer": { "@type": "Answer", "text": "제지방량(Lean Body Mass)은 체지방을 제외한 모든 조직(근육·뼈·장기·체수분 등)을 합한 무게입니다. 골격근량은 그 중 골격근만 따로 계산한 값으로, 일반적으로 제지방량의 약 45~55%가 골격근에 해당합니다. 본 계산기는 LBM × 0.5로 골격근량을 추정합니다." } },
+        { "@type": "Question", "name": "체수분이 너무 낮으면 어떻게 해야 하나요?", "acceptedAnswer": { "@type": "Answer", "text": "체수분율이 정상 범위(남 55~65%, 여 45~60%) 미만이라면 탈수·근손실·체지방 과다 중 하나일 가능성이 있습니다. 하루 1.5~2L 물 섭취 + 단백질 충분 섭취 + 근력 운동을 권장하며, 지속적으로 낮으면 갑상선·신장 검사를 받아보는 것이 좋습니다." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-soft: #dbeafe;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --warning-soft: #fef3c7;
+  --danger-soft: #fee2e2;
+  --success-soft: #dcfce7;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-md: 0 4px 12px rgba(15,23,42,0.06);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.site { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 50; }
+.nav { max-width: 960px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-weight: 800; font-size: 17px; color: var(--text); letter-spacing: -0.3px; }
+.brand span { color: var(--primary); font-weight: 600; }
+.nav-link { font-size: 13px; color: var(--text-muted); }
+.nav-link:hover { color: var(--primary); text-decoration: none; }
+
+.hero { padding: 48px 20px 32px; background: linear-gradient(180deg, var(--primary-soft) 0%, var(--bg) 100%); }
+.hero-inner { max-width: 960px; margin: 0 auto; }
+.badge { display: inline-block; padding: 4px 10px; background: rgba(37,99,235,0.1); color: var(--primary); border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+.hero h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.25; letter-spacing: -0.6px; }
+.hero .lead { margin: 0; color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 640px; }
+.hero .lead b { color: var(--text); font-weight: 700; }
+
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+
+.calc { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
+
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text); }
+.input-wrap { position: relative; }
+.input-wrap input { width: 100%; padding: 12px 44px 12px 14px; font-size: 16px; font-weight: 500; color: var(--text); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); outline: none; transition: border-color 0.15s, box-shadow 0.15s; appearance: none; font-family: inherit; }
+.input-wrap input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+.input-wrap .unit { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 13px; pointer-events: none; }
+.help { margin: 0; font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+.gender-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.gender-tabs button { padding: 12px; font-size: 14px; font-weight: 600; color: var(--text-muted); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.gender-tabs button.on { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+.actions { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { padding: 12px 22px; font-size: 14px; font-weight: 700; border-radius: var(--radius-md); cursor: pointer; font-family: inherit; transition: all 0.15s; border: 1.5px solid transparent; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-ghost { background: var(--bg); color: var(--text-muted); border-color: var(--border); }
+.btn-ghost:hover { background: var(--surface); }
+
+.result { margin-top: 28px; display: none; }
+.result.show { display: block; animation: fadeIn 0.3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.dual-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+@media (max-width: 540px) { .dual-hero { grid-template-columns: 1fr; } }
+.result-hero { color: #fff; padding: 24px; border-radius: var(--radius-lg); }
+.result-hero.fat { background: linear-gradient(135deg, #F472B6 0%, #DB2777 100%); }
+.result-hero.water { background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%); }
+.result-hero .label { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 6px; }
+.result-hero .value { font-size: 38px; font-weight: 800; line-height: 1; margin-bottom: 6px; letter-spacing: -1px; }
+.result-hero .value small { font-size: 16px; font-weight: 600; opacity: 0.7; margin-left: 4px; }
+.result-hero .category { font-size: 13px; font-weight: 600; padding: 4px 10px; background: rgba(255,255,255,0.18); border-radius: 999px; display: inline-block; margin-top: 4px; }
+.result-hero .gauge { margin-top: 14px; height: 6px; background: rgba(255,255,255,0.2); border-radius: 999px; overflow: hidden; position: relative; }
+.result-hero .gauge-fill { height: 100%; background: rgba(255,255,255,0.95); border-radius: 999px; transition: width 0.6s ease-out; }
+
+.metric-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; }
+@media (max-width: 480px) { .metric-grid { grid-template-columns: 1fr; } }
+.metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+.metric .label { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 6px; }
+.metric .value { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.4px; }
+.metric .value small { font-size: 14px; font-weight: 500; color: var(--text-muted); margin-left: 4px; }
+.metric .desc { font-size: 12px; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+
+.ref-table-wrap { margin-top: 18px; overflow-x: auto; }
+.ref-table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; font-size: 13px; }
+.ref-table th { padding: 10px 12px; text-align: left; font-weight: 700; background: var(--surface-2); color: var(--text); }
+.ref-table td { padding: 9px 12px; border-top: 1px solid var(--border); color: var(--text-muted); }
+.ref-table tr.now { background: var(--primary-soft); }
+.ref-table tr.now td { color: var(--primary-dark); font-weight: 700; }
+
+.note { margin-top: 16px; padding: 14px 16px; background: var(--warning-soft); border: 1px solid #fde68a; border-radius: var(--radius-md); font-size: 13px; color: #78350f; line-height: 1.5; }
+.note strong { color: #92400e; }
+
+.sec { margin-top: 56px; }
+.sec h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.4px; }
+.faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 10px; }
+.faq details[open] { border-color: var(--primary-soft); }
+.faq summary { font-weight: 700; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; float: right; color: var(--text-dim); font-weight: 400; font-size: 18px; line-height: 1; transition: transform 0.2s; }
+.faq details[open] summary::after { content: '−'; }
+.faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
+
+footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
+.foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
+.foot a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="/" class="brand">beautypang<span>.tools</span></a>
+    <a href="/" class="nav-link">← 도구 모음</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">Deurenberg · Watson · Mifflin-St Jeor 공식</span>
+    <h1>체지방률 · 체수분율 · 제지방량 계산기</h1>
+    <p class="lead">키·몸무게·나이·성별만 입력하면 <b>체지방률, 체수분율, 제지방량, 추정 골격근량, 기초대사량(BMR), BMI</b>까지 한 번에 추정합니다. InBody 없이 다이어트 목표·운동 효과를 가늠할 수 있습니다.</p>
+  </div>
+</section>
+
+<main>
+  <form class="calc" id="calc">
+    <div class="calc-grid">
+      <div class="field">
+        <label>성별</label>
+        <div class="gender-tabs" id="genderTabs">
+          <button type="button" data-gender="male" class="on">남성</button>
+          <button type="button" data-gender="female">여성</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="ageInput">나이</label>
+        <div class="input-wrap">
+          <input id="ageInput" type="number" min="10" max="100" value="30" inputmode="numeric">
+          <span class="unit">세</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="heightInput">키</label>
+        <div class="input-wrap">
+          <input id="heightInput" type="number" min="100" max="230" step="0.1" value="170" inputmode="decimal">
+          <span class="unit">cm</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="weightInput">몸무게</label>
+        <div class="input-wrap">
+          <input id="weightInput" type="number" min="30" max="200" step="0.1" value="65" inputmode="decimal">
+          <span class="unit">kg</span>
+        </div>
+      </div>
+    </div>
+    <p class="help" style="margin-top:12px;">* 본 계산기는 공식 기반 추정값으로 InBody·DEXA 측정 대비 ±3~5% 오차가 있습니다. 다이어트 전후 변화 추적용으로 활용하세요.</p>
+
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">계산하기</button>
+      <button type="button" class="btn btn-ghost" id="resetBtn">초기화</button>
+    </div>
+  </form>
+
+  <div class="result" id="result">
+    <div class="dual-hero">
+      <div class="result-hero fat">
+        <div class="label">체지방률 (BFP)</div>
+        <div class="value"><span id="bfpValue">0</span><small>%</small></div>
+        <div class="category" id="bfpCategory">계산 대기</div>
+        <div class="gauge"><div class="gauge-fill" id="bfpGauge" style="width:0%"></div></div>
+      </div>
+      <div class="result-hero water">
+        <div class="label">체수분율 (TBW%)</div>
+        <div class="value"><span id="tbwpValue">0</span><small>%</small></div>
+        <div class="category" id="tbwpCategory">계산 대기</div>
+        <div class="gauge"><div class="gauge-fill" id="tbwpGauge" style="width:0%"></div></div>
+      </div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <div class="label">총 체수분 (TBW)</div>
+        <div class="value"><span id="tbwValue">0.0</span><small>L</small></div>
+        <div class="desc">Watson 공식 · 1L = 1kg 환산</div>
+      </div>
+      <div class="metric">
+        <div class="label">체지방량</div>
+        <div class="value"><span id="fatMass">0.0</span><small>kg</small></div>
+        <div class="desc">몸무게 × 체지방률(%)</div>
+      </div>
+      <div class="metric">
+        <div class="label">제지방량 (LBM)</div>
+        <div class="value"><span id="lbmValue">0.0</span><small>kg</small></div>
+        <div class="desc">근육·뼈·장기·체수분 합계</div>
+      </div>
+      <div class="metric">
+        <div class="label">추정 골격근량</div>
+        <div class="value"><span id="muscleValue">0.0</span><small>kg</small></div>
+        <div class="desc">LBM × 0.5 (참고치)</div>
+      </div>
+      <div class="metric">
+        <div class="label">기초대사량 (BMR)</div>
+        <div class="value"><span id="bmrValue">0</span><small>kcal/일</small></div>
+        <div class="desc">Mifflin-St Jeor 공식</div>
+      </div>
+      <div class="metric">
+        <div class="label">BMI</div>
+        <div class="value"><span id="bmiValue">0.0</span></div>
+        <div class="desc" id="bmiDesc">참고지표</div>
+      </div>
+    </div>
+
+    <div class="ref-table-wrap">
+      <table class="ref-table" id="bfpTable">
+        <thead><tr><th id="bfpTableTitle">남성 체지방률 기준 (ACSM)</th><th style="text-align:right;">범위</th></tr></thead>
+        <tbody id="bfpTableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>참고:</strong> 본 계산은 키·몸무게·나이·성별만 사용한 <b>인구 평균 기반 추정값</b>입니다. InBody·DEXA·BIA 등 직접 측정 방식보다 정밀도가 낮으므로 절대값보다 다이어트·운동 전후 변화 추적에 활용하세요. 임산부·근육질 운동선수·소아청소년은 오차가 크게 발생할 수 있습니다.
+    </div>
+  </div>
+
+  <section class="sec faq">
+    <h2>자주 묻는 질문</h2>
+    <details>
+      <summary>체지방률은 어떻게 추정하나요?</summary>
+      <div class="answer">
+        <b>Deurenberg 공식(1991)</b>으로 추정합니다. 공식: 체지방률(%) = <b>1.20 × BMI + 0.23 × 나이 − 10.8 × 성별 − 5.4</b> (남성=1, 여성=0).
+        인구 평균과의 상관관계는 약 0.85 수준으로, InBody·DEXA 같은 직접 측정 대비 ±3~5% 오차 범위를 가집니다. 정확도가 낮은 만큼 절대값보다 변화 추이에 활용하는 것이 좋습니다.
+      </div>
+    </details>
+    <details>
+      <summary>체수분율은 어떻게 계산되나요?</summary>
+      <div class="answer">
+        <b>Watson 공식</b>으로 총 체수분(TBW, Total Body Water, 단위 L)을 추정한 뒤 몸무게 대비 비율을 산출합니다.<br>
+        남성 TBW = 2.447 − 0.09156×나이 + 0.1074×키(cm) + 0.3362×체중(kg)<br>
+        여성 TBW = −2.097 + 0.1069×키 + 0.2466×체중<br>
+        일반 성인 정상 범위는 <b>남성 55~65%, 여성 45~60%</b>입니다.
+      </div>
+    </details>
+    <details>
+      <summary>정상 체지방률은 몇 %인가요?</summary>
+      <div class="answer">
+        성별·나이별로 다르지만, <b>미국 운동의학협회(ACSM)</b> 기준으로 남성 평균 18~24%, 여성 25~31%가 일반 건강 범위입니다.
+        남성 25%·여성 32% 이상이면 비만, 남성 6~13%·여성 14~20%는 운동선수 수준입니다.
+        본 계산기는 입력 성별에 맞춰 체지방률 카테고리를 자동으로 분류합니다.
+      </div>
+    </details>
+    <details>
+      <summary>공식 계산기가 InBody만큼 정확한가요?</summary>
+      <div class="answer">
+        공식 기반 추정은 키·몸무게·나이·성별만으로 산출하므로 InBody·DEXA처럼 실제 체수분 임피던스를 측정하는 방식보다 정밀도가 낮습니다.
+        <b>체지방률 ±3~5%, 체수분 ±2~3% 오차</b>가 일반적입니다. 절대값보다 <b>변화 추이</b>(다이어트 전후 추정 비교)에 활용하는 것이 좋습니다.
+      </div>
+    </details>
+    <details>
+      <summary>제지방량(LBM)과 골격근량은 같은가요?</summary>
+      <div class="answer">
+        <b>제지방량(Lean Body Mass)</b>은 체지방을 제외한 모든 조직(근육·뼈·장기·체수분 등)을 합한 무게입니다.
+        <b>골격근량</b>은 그 중 골격근만 따로 계산한 값으로, 일반적으로 제지방량의 약 <b>45~55%</b>가 골격근에 해당합니다.
+        본 계산기는 LBM × 0.5로 골격근량을 추정합니다(개인차 큼).
+      </div>
+    </details>
+    <details>
+      <summary>체수분이 너무 낮으면 어떻게 해야 하나요?</summary>
+      <div class="answer">
+        체수분율이 정상 범위(남 55~65%, 여 45~60%) 미만이라면 <b>탈수·근손실·체지방 과다</b> 중 하나일 가능성이 있습니다.
+        하루 1.5~2L 물 섭취 + 단백질 충분 섭취 + 근력 운동을 권장하며, 지속적으로 낮으면 갑상선·신장 검사를 받아보는 것이 좋습니다.
+      </div>
+    </details>
+  </section>
+
+  <!-- 카카오톡 공유 섹션 -->
+  <section style="text-align:center;padding:32px 20px;background:#F5F5F8;border-radius:16px;margin:40px auto;max-width:680px;">
+    <h3 style="margin:0 0 8px;font-size:18px;font-weight:800;color:#0A0A1A;">이 계산기 공유하기</h3>
+    <p style="margin:0 0 16px;font-size:14px;color:#475569;">친구·가족에게 추천해보세요.</p>
+    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+      <button type="button" id="share-kakao" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#FEE500;border:0;border-radius:8px;color:#000;font-weight:700;font-size:14px;cursor:pointer;"><span>💬</span> 카카오톡</button>
+      <button type="button" id="share-copy-kakao" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#fff;border:1px solid #D1D5DB;border-radius:8px;color:#374151;font-weight:700;font-size:14px;cursor:pointer;"><span>🔗</span> 링크 복사</button>
+    </div>
+  </section>
+  <script src="/assets/kakao-share.js?v=1" defer></script>
+
+</main>
+
+<div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-5126709833280837"
+       data-ad-slot="4801328741"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<footer class="site">
+  <div class="foot">
+    <div>© <span id="year"></span> beautypang.tools — 다양한 무료 계산기</div>
+    <div><a href="/">도구 모음 →</a></div>
+  </div>
+</footer>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const fmt = n => Math.round(n).toLocaleString('ko-KR');
+  const fmt1 = n => n.toFixed(1);
+  $('year').textContent = new Date().getFullYear();
+
+  let gender = 'male';
+  const genderTabs = $('genderTabs');
+  genderTabs.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-gender]');
+    if (!btn) return;
+    genderTabs.querySelectorAll('button').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    gender = btn.dataset.gender;
+    calculate();
+  });
+
+  // ===== 체지방률 (Deurenberg) =====
+  function calcBodyFatPct(bmi, age, sex) {
+    return 1.20 * bmi + 0.23 * age - 10.8 * sex - 5.4;
+  }
+
+  // 체지방률 카테고리 (ACSM 기준, 30대 기본)
+  const BFP_BANDS_MALE = [
+    { name: '필수 지방', min: 2, max: 5 },
+    { name: '운동선수', min: 6, max: 13 },
+    { name: '피트니스', min: 14, max: 17 },
+    { name: '평균', min: 18, max: 24 },
+    { name: '비만', min: 25, max: 100 },
+  ];
+  const BFP_BANDS_FEMALE = [
+    { name: '필수 지방', min: 10, max: 13 },
+    { name: '운동선수', min: 14, max: 20 },
+    { name: '피트니스', min: 21, max: 24 },
+    { name: '평균', min: 25, max: 31 },
+    { name: '비만', min: 32, max: 100 },
+  ];
+  function classifyBFP(bfp, sex) {
+    const bands = sex === 'male' ? BFP_BANDS_MALE : BFP_BANDS_FEMALE;
+    return bands.find(b => bfp >= b.min && bfp <= b.max) || bands[bands.length - 1];
+  }
+
+  // ===== 체수분 (Watson) =====
+  function calcTBW(sex, age, heightCm, weightKg) {
+    if (sex === 'male') {
+      return 2.447 - 0.09156 * age + 0.1074 * heightCm + 0.3362 * weightKg;
+    }
+    return -2.097 + 0.1069 * heightCm + 0.2466 * weightKg;
+  }
+  function classifyTBWP(tbwp, sex) {
+    // 정상 범위: 남 55~65%, 여 45~60%
+    if (sex === 'male') {
+      if (tbwp < 50) return '낮음';
+      if (tbwp < 55) return '약간 낮음';
+      if (tbwp <= 65) return '정상';
+      if (tbwp <= 70) return '약간 높음';
+      return '높음';
+    }
+    if (tbwp < 40) return '낮음';
+    if (tbwp < 45) return '약간 낮음';
+    if (tbwp <= 60) return '정상';
+    if (tbwp <= 65) return '약간 높음';
+    return '높음';
+  }
+
+  // ===== BMR (Mifflin-St Jeor) =====
+  function calcBMR(sex, weightKg, heightCm, age) {
+    const base = 10 * weightKg + 6.25 * heightCm - 5 * age;
+    return sex === 'male' ? base + 5 : base - 161;
+  }
+
+  function calculate() {
+    const height = parseFloat($('heightInput').value);
+    const weight = parseFloat($('weightInput').value);
+    const age = parseInt($('ageInput').value, 10);
+    if (!height || !weight || !age || height < 100 || weight < 30 || age < 10) return;
+
+    const sex = gender;
+    const sexNum = sex === 'male' ? 1 : 0;
+    const heightM = height / 100;
+    const bmi = weight / (heightM * heightM);
+
+    // 체지방률
+    const bfp = Math.max(2, calcBodyFatPct(bmi, age, sexNum));
+    const bfpCat = classifyBFP(bfp, sex);
+    const fatMass = weight * bfp / 100;
+    const lbm = weight - fatMass;
+    const skeletalMuscle = lbm * 0.5;
+
+    // 체수분
+    const tbw = calcTBW(sex, age, height, weight);
+    const tbwp = tbw / weight * 100;
+    const tbwpCat = classifyTBWP(tbwp, sex);
+
+    // BMR
+    const bmr = calcBMR(sex, weight, height, age);
+
+    // 화면 갱신
+    $('bfpValue').textContent = fmt1(bfp);
+    $('bfpCategory').textContent = bfpCat.name;
+    $('tbwpValue').textContent = fmt1(tbwp);
+    $('tbwpCategory').textContent = tbwpCat;
+    $('tbwValue').textContent = fmt1(tbw);
+    $('fatMass').textContent = fmt1(fatMass);
+    $('lbmValue').textContent = fmt1(lbm);
+    $('muscleValue').textContent = fmt1(skeletalMuscle);
+    $('bmrValue').textContent = fmt(bmr);
+    $('bmiValue').textContent = fmt1(bmi);
+
+    // BMI 설명
+    let bmiNote = '정상';
+    if (bmi < 18.5) bmiNote = '저체중';
+    else if (bmi >= 25) bmiNote = '비만';
+    else if (bmi >= 23) bmiNote = '과체중';
+    $('bmiDesc').textContent = `WHO 아시아 기준 · ${bmiNote}`;
+
+    // 게이지: BFP 5%~40% 범위
+    $('bfpGauge').style.width = Math.max(0, Math.min(100, ((bfp - 5) / 35) * 100)) + '%';
+    // TBW% 게이지: 30%~70%
+    $('tbwpGauge').style.width = Math.max(0, Math.min(100, ((tbwp - 30) / 40) * 100)) + '%';
+
+    // 체지방률 기준표
+    const bands = sex === 'male' ? BFP_BANDS_MALE : BFP_BANDS_FEMALE;
+    $('bfpTableTitle').textContent = `${sex === 'male' ? '남성' : '여성'} 체지방률 기준 (ACSM)`;
+    $('bfpTableBody').innerHTML = bands.map(b => {
+      const here = bfp >= b.min && bfp <= b.max;
+      const maxLabel = b.max === 100 ? `${b.min}% 이상` : `${b.min}~${b.max}%`;
+      return `<tr class="${here ? 'now' : ''}"><td>${b.name}${here ? ' ← 현재' : ''}</td><td style="text-align:right;">${maxLabel}</td></tr>`;
+    }).join('');
+
+    $('result').classList.add('show');
+  }
+
+  $('calc').addEventListener('submit', e => {
+    e.preventDefault();
+    calculate();
+    $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  $('resetBtn').addEventListener('click', () => {
+    $('ageInput').value = 30;
+    $('heightInput').value = 170;
+    $('weightInput').value = 65;
+    genderTabs.querySelectorAll('button').forEach(b => b.classList.remove('on'));
+    genderTabs.querySelector('button[data-gender="male"]').classList.add('on');
+    gender = 'male';
+    $('result').classList.remove('show');
+  });
+
+  ['ageInput', 'heightInput', 'weightInput'].forEach(id => {
+    $(id).addEventListener('input', calculate);
+    $(id).addEventListener('change', calculate);
+  });
+
+  calculate();
+</script>
+
+</body>
+</html>
