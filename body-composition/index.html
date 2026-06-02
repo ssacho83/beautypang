@@ -191,6 +191,12 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 .ref-table tr.now { background: var(--primary-soft); }
 .ref-table tr.now td { color: var(--primary-dark); font-weight: 700; }
 
+.extreme-warn { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; background: #fef3c7; border: 1.5px solid #f59e0b; border-radius: var(--radius-md); margin-bottom: 16px; }
+.extreme-warn .ew-icon { font-size: 22px; line-height: 1; flex-shrink: 0; }
+.extreme-warn .ew-body { flex: 1; }
+.extreme-warn strong { display: block; color: #78350f; font-size: 14px; margin-bottom: 4px; }
+.extreme-warn p { margin: 0; font-size: 13px; color: #92400e; line-height: 1.6; }
+.cat-context { font-size: 11px; color: rgba(255,255,255,0.85); margin-top: 6px; font-weight: 600; line-height: 1.4; padding: 0 8px; }
 .note { margin-top: 16px; padding: 14px 16px; background: var(--warning-soft); border: 1px solid #fde68a; border-radius: var(--radius-md); font-size: 13px; color: #78350f; line-height: 1.5; }
 .note strong { color: #92400e; }
 
@@ -267,11 +273,20 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
   </form>
 
   <div class="result" id="result">
+    <div id="extremeWarning" class="extreme-warn" hidden>
+      <span class="ew-icon">⚠️</span>
+      <div class="ew-body">
+        <strong id="ewTitle">정확도 주의</strong>
+        <p id="ewMessage"></p>
+      </div>
+    </div>
+
     <div class="dual-hero">
       <div class="result-hero fat">
         <div class="label">체지방률 (BFP)</div>
         <div class="value"><span id="bfpValue">0</span><small>%</small></div>
         <div class="category" id="bfpCategory">계산 대기</div>
+        <div class="cat-context" id="bfpContext" hidden></div>
         <div class="gauge"><div class="gauge-fill" id="bfpGauge" style="width:0%"></div></div>
       </div>
       <div class="result-hero water">
@@ -548,6 +563,41 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
     else if (bmi >= 25) bmiNote = '비만';
     else if (bmi >= 23) bmiNote = '과체중';
     $('bmiDesc').textContent = `WHO 아시아 기준 · ${bmiNote}`;
+
+    // 극단치 경고 (Deurenberg·Watson 공식 검증 범위 밖)
+    const warn = $('extremeWarning');
+    const ewTitle = $('ewTitle');
+    const ewMessage = $('ewMessage');
+    let warnMsg = '';
+    if (bmi < 17) {
+      warnMsg = `입력하신 <b>BMI ${bmi.toFixed(1)}</b>은 저체중(영양불량 우려) 범위로, 공식 검증 범위(18.5~30) 밖입니다. <b>체수분율·체지방률 추정 오차가 ±10% 이상</b> 발생할 수 있어 결과는 참고용으로만 사용하시고, 정확한 측정은 <b>InBody·DEXA</b> 등 직접 측정을 권장합니다.`;
+    } else if (bmi > 32) {
+      warnMsg = `입력하신 <b>BMI ${bmi.toFixed(1)}</b>은 비만 2단계 이상으로, 공식 검증 범위(18.5~30) 밖입니다. <b>추정 오차가 ±10% 이상</b> 발생할 수 있어 결과는 참고용으로만, 정확한 측정은 <b>InBody·DEXA</b>를 권장합니다.`;
+    } else if (tbwp > 70 || tbwp < 40) {
+      warnMsg = `<b>체수분율 ${tbwp.toFixed(1)}%</b>은 일반 성인 정상 범위(남 55~65% · 여 45~60%) 밖입니다. 입력값이 정확하다면 <b>탈수·근손실</b> 또는 추정 공식 한계일 수 있으니 의료진 상담 또는 직접 측정을 권장합니다.`;
+    }
+    if (warnMsg) {
+      ewTitle.textContent = '정확도 주의';
+      ewMessage.innerHTML = warnMsg;
+      warn.hidden = false;
+    } else {
+      warn.hidden = true;
+    }
+
+    // 체지방률 카테고리 컨텍스트 (BMI 저체중·비만일 때 라벨만으로 오해 방지)
+    const ctx = $('bfpContext');
+    let ctxMsg = '';
+    if (bmi < 18.5 && bfp < 18) {
+      ctxMsg = '⚠️ BMI 저체중 + 낮은 체지방 — 마른 체형. 라벨은 ACSM 분류일 뿐, 영양 상태는 별도 평가 필요';
+    } else if (bmi >= 25 && bfp >= 25) {
+      ctxMsg = '⚠️ BMI 비만 + 높은 체지방 — 의료진 상담 권장';
+    }
+    if (ctxMsg) {
+      ctx.textContent = ctxMsg;
+      ctx.hidden = false;
+    } else {
+      ctx.hidden = true;
+    }
 
     // 게이지: BFP 5%~40% 범위
     $('bfpGauge').style.width = Math.max(0, Math.min(100, ((bfp - 5) / 35) * 100)) + '%';
