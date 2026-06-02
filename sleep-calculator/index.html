@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>수면 시간 계산기 — 90분 수면 주기 기반 최적 기상·취침 시각 | beautypang</title>
+<meta name="description" content="잠들 시각 또는 일어날 시각을 입력하면 90분 수면 주기로 최적의 취침·기상 시각을 계산합니다. 렘 수면 직후 기상 = 가장 개운한 아침. 권장 수면 시간 가이드 포함.">
+<meta name="keywords" content="수면 시간 계산기, 90분 수면 주기, 최적 기상 시각, 수면 사이클, 권장 수면 시간, 렘 수면, beautypang">
+<meta name="robots" content="index,follow">
+<meta name="google-site-verification" content="2xVj59QMIgWGp8je6lsptzWQYhHyDG_aVc05mWOp--4" />
+<meta name="naver-site-verification" content="74fef3d418a1e812489238486ef027fdf967907b" />
+<link rel="canonical" href="https://beautypang.co.kr/sleep-calculator/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="beautypang.tools">
+<meta property="og:title" content="수면 시간 계산기 — 90분 주기로 가장 개운한 기상 시각">
+<meta property="og:description" content="잠들 시각·일어날 시각으로 90분 수면 주기 기반 최적 시각을 계산합니다.">
+<meta property="og:url" content="https://beautypang.co.kr/sleep-calculator/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://beautypang.co.kr/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="수면 시간 계산기 — beautypang.tools">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="수면 시간 계산기 — 90분 주기 최적 기상">
+<meta name="twitter:description" content="90분 수면 주기 기반 최적 취침·기상 시각.">
+<meta name="twitter:image" content="https://beautypang.co.kr/og-image.svg">
+
+<meta name="theme-color" content="#2563EB">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="beautypang.tools">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="beautypang.tools RSS" href="/rss.xml">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F76TTBSP9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F76TTBSP9F');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://beautypang.co.kr/sleep-calculator/#app",
+      "name": "수면 시간 계산기",
+      "url": "https://beautypang.co.kr/sleep-calculator/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "90분 수면 주기 기반 최적 취침·기상 시각 계산기. 렘 수면 직후 기상으로 가장 개운한 아침을 맞이하세요.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+      "inLanguage": "ko-KR",
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript",
+      "author": { "@type": "Organization", "name": "beautypang.tools", "url": "https://beautypang.co.kr/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://beautypang.co.kr/" },
+        { "@type": "ListItem", "position": 2, "name": "수면 시간 계산기", "item": "https://beautypang.co.kr/sleep-calculator/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "왜 90분 수면 주기인가요?", "acceptedAnswer": { "@type": "Answer", "text": "사람의 수면은 비렘(NREM)→렘(REM)의 사이클을 약 90분(80~100분) 단위로 반복합니다. 렘 수면 직후(=한 사이클이 끝난 시점)에 기상하면 깊은 수면 한가운데서 깨는 것보다 훨씬 개운합니다. 본 계산기는 평균 90분 + 잠들기까지 14분을 더한 시각을 제안합니다." } },
+        { "@type": "Question", "name": "권장 수면 시간은 얼마인가요?", "acceptedAnswer": { "@type": "Answer", "text": "미국 수면재단(National Sleep Foundation) 기준 성인 7~9시간, 청소년(14~17세) 8~10시간, 노년(65세+) 7~8시간입니다. 본 계산기는 수면 주기 4~6사이클(6시간~9시간)을 권장 범위로 표시합니다." } },
+        { "@type": "Question", "name": "잠들기까지 14분은 왜 더하나요?", "acceptedAnswer": { "@type": "Answer", "text": "건강한 성인이 침대에 누워서 실제로 잠들기까지 평균 10~20분 걸립니다(수면 잠복기). 본 계산기는 평균값인 14분을 사용합니다. 평소 잠들기 빠른 분은 더 짧게, 늦는 분은 더 길게 가정해 시각을 조정하세요." } },
+        { "@type": "Question", "name": "수면 부족이 건강에 어떤 영향을 주나요?", "acceptedAnswer": { "@type": "Answer", "text": "장기적 수면 부족은 면역 저하·체중 증가·인지 기능 저하·심혈관 질환 위험 증가와 관련됩니다. 특히 5시간 미만 수면이 지속되면 당뇨·고혈압 위험이 두 배 이상 높아지는 연구 결과가 있습니다. 매일 같은 시각 잠들고 일어나는 규칙성이 수면의 질을 결정합니다." } },
+        { "@type": "Question", "name": "낮잠은 몇 분이 좋은가요?", "acceptedAnswer": { "@type": "Answer", "text": "10~20분 짧은 낮잠(파워 냅)은 깊은 수면에 들기 전이라 일어났을 때 개운합니다. 30분 이상 자면 깊은 수면에 진입해 일어났을 때 오히려 멍한 상태(수면 관성)가 발생합니다. 90분 한 사이클 전체를 자는 것도 한 방법이지만 일상에선 20분이 가장 실용적입니다." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-soft: #dbeafe;
+  --indigo: #4f46e5;
+  --night: #1e1b4b;
+  --night-soft: #e0e7ff;
+  --success: #16a34a;
+  --warning: #d97706;
+  --warning-soft: #fef3c7;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-md: 0 4px 12px rgba(15,23,42,0.06);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.site { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 50; }
+.nav { max-width: 960px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-weight: 800; font-size: 17px; color: var(--text); letter-spacing: -0.3px; }
+.brand span { color: var(--primary); font-weight: 600; }
+.nav-link { font-size: 13px; color: var(--text-muted); }
+.nav-link:hover { color: var(--primary); text-decoration: none; }
+
+.hero { padding: 48px 20px 32px; background: linear-gradient(180deg, var(--night-soft) 0%, var(--bg) 100%); }
+.hero-inner { max-width: 960px; margin: 0 auto; }
+.badge { display: inline-block; padding: 4px 10px; background: rgba(79,70,229,0.12); color: var(--indigo); border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+.hero h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.25; letter-spacing: -0.6px; }
+.hero .lead { margin: 0; color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 640px; }
+.hero .lead b { color: var(--text); font-weight: 700; }
+
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+
+.mode-tabs { display: flex; gap: 8px; margin-bottom: 24px; background: var(--surface-2); padding: 4px; border-radius: var(--radius-md); border: 1px solid var(--border); }
+.mode-tabs button { flex: 1; padding: 12px; font-size: 14px; font-weight: 700; color: var(--text-muted); background: transparent; border: 0; border-radius: var(--radius-sm); cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.mode-tabs button.on { background: var(--bg); color: var(--indigo); box-shadow: 0 1px 3px rgba(15,23,42,0.08); }
+
+.calc { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); margin-bottom: 24px; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text); }
+.input-wrap { position: relative; }
+.input-wrap input[type="time"] { width: 100%; padding: 16px; font-size: 24px; font-weight: 700; color: var(--text); background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius-md); outline: none; transition: border-color 0.15s, box-shadow 0.15s; font-family: inherit; text-align: center; letter-spacing: 1px; }
+.input-wrap input[type="time"]:focus { border-color: var(--indigo); box-shadow: 0 0 0 3px rgba(79,70,229,0.1); }
+.help { margin: 12px 0 0; font-size: 13px; color: var(--text-dim); line-height: 1.5; text-align: center; }
+.help b { color: var(--text); }
+
+.actions { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { padding: 12px 22px; font-size: 14px; font-weight: 700; border-radius: var(--radius-md); cursor: pointer; font-family: inherit; transition: all 0.15s; border: 1.5px solid transparent; }
+.btn-primary { background: var(--indigo); color: #fff; flex: 1; }
+.btn-primary:hover { background: #4338ca; }
+
+.result { display: none; }
+.result.show { display: block; animation: fadeIn 0.3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.result-intro { text-align: center; color: var(--text-muted); font-size: 14px; margin-bottom: 18px; }
+.result-intro b { color: var(--text); }
+
+.time-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+@media (max-width: 640px) { .time-cards { grid-template-columns: 1fr 1fr; } }
+.time-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; text-align: center; transition: all 0.15s; }
+.time-card.recommended { background: linear-gradient(135deg, var(--indigo) 0%, var(--night) 100%); border-color: var(--indigo); color: #fff; transform: scale(1.03); box-shadow: 0 8px 24px rgba(79,70,229,0.25); }
+.time-card.recommended .label { color: rgba(255,255,255,0.85); }
+.time-card.recommended .sub { color: rgba(255,255,255,0.7); }
+.time-card .label { font-size: 11px; color: var(--text-muted); font-weight: 700; margin-bottom: 8px; letter-spacing: 0.5px; }
+.time-card .time { font-size: 28px; font-weight: 800; color: var(--text); letter-spacing: -0.5px; }
+.time-card.recommended .time { color: #fff; }
+.time-card .sub { font-size: 12px; color: var(--text-dim); margin-top: 6px; }
+.time-card .badge-best { display: inline-block; margin-top: 8px; padding: 2px 8px; background: rgba(255,255,255,0.2); border-radius: 999px; font-size: 10px; font-weight: 700; }
+
+.guide-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; margin-top: 16px; }
+.guide-card h3 { margin: 0 0 12px; font-size: 14px; color: var(--text); font-weight: 700; }
+.guide-card ul { margin: 0; padding-left: 18px; color: var(--text-muted); font-size: 13px; line-height: 1.8; }
+.guide-card ul li b { color: var(--text); }
+
+.note { margin-top: 16px; padding: 14px 16px; background: var(--warning-soft); border: 1px solid #fde68a; border-radius: var(--radius-md); font-size: 13px; color: #78350f; line-height: 1.5; }
+.note strong { color: #92400e; }
+
+.sec { margin-top: 56px; }
+.sec h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.4px; }
+.faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 10px; }
+.faq details[open] { border-color: var(--primary-soft); }
+.faq summary { font-weight: 700; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; float: right; color: var(--text-dim); font-weight: 400; font-size: 18px; line-height: 1; transition: transform 0.2s; }
+.faq details[open] summary::after { content: '−'; }
+.faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
+
+footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
+.foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
+.foot a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="/" class="brand">beautypang<span>.tools</span></a>
+    <a href="/" class="nav-link">← 도구 모음</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">🌙 NEW · 90분 수면 주기 기반</span>
+    <h1>수면 시간 계산기</h1>
+    <p class="lead">잠들 시각 또는 일어날 시각만 입력하면 <b>90분 수면 주기로 최적의 취침·기상 시각</b>을 추천합니다. 렘 수면 직후 깨어나면 한결 개운합니다.</p>
+  </div>
+</section>
+
+<main>
+  <div class="mode-tabs" id="modeTabs">
+    <button type="button" data-mode="wakeup" class="on">⏰ 일어날 시각으로 → 취침 시각 추천</button>
+    <button type="button" data-mode="bedtime">🌙 지금 잘 시각 → 기상 시각 추천</button>
+  </div>
+
+  <form class="calc" id="calc">
+    <div class="field">
+      <label id="timeLabel" for="timeInput">일어나고 싶은 시각</label>
+      <div class="input-wrap">
+        <input id="timeInput" type="time" value="07:00" required>
+      </div>
+      <p class="help">잠들기까지 평균 <b>14분</b>(수면 잠복기)을 가정합니다.</p>
+    </div>
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">최적 시각 계산</button>
+    </div>
+  </form>
+
+  <div class="result" id="result">
+    <p class="result-intro" id="resultIntro"></p>
+    <div class="time-cards" id="timeCards"></div>
+
+    <div class="guide-card">
+      <h3>💡 사용 팁</h3>
+      <ul>
+        <li>가장 추천되는 시각은 <b>5사이클(7시간 30분)</b> 또는 <b>6사이클(9시간)</b>입니다. 성인 권장 수면 시간 7~9시간 범위 안.</li>
+        <li>3사이클(4시간 30분)은 비상시 단기 수면용. 매일은 피하세요.</li>
+        <li>매일 같은 시각에 자고 일어나는 <b>규칙성</b>이 수면 시간보다 더 중요합니다.</li>
+        <li>잠들기 1시간 전 스마트폰·블루라이트 회피, 카페인은 취침 6시간 전부터 X.</li>
+      </ul>
+    </div>
+
+    <div class="note">
+      <strong>참고:</strong> 본 계산기는 90분 평균 수면 주기에 기반한 추정값입니다. 실제 수면 주기는 개인·연령·컨디션에 따라 80~100분으로 변동합니다. 수면 장애가 의심되면 수면 전문의 상담을 권합니다.
+    </div>
+  </div>
+
+  <section class="sec faq">
+    <h2>자주 묻는 질문</h2>
+    <details>
+      <summary>왜 90분 수면 주기인가요?</summary>
+      <div class="answer">
+        사람의 수면은 <b>비렘(NREM)→렘(REM)</b>의 사이클을 약 <b>90분(80~100분)</b> 단위로 반복합니다. 한 사이클 안에서 가벼운 수면→깊은 수면→꿈을 꾸는 렘 수면이 순차적으로 일어납니다. 렘 수면 직후(=한 사이클이 끝난 시점)에 기상하면 깊은 수면 한가운데서 깨는 것보다 훨씬 개운합니다. 본 계산기는 평균 90분에 잠들기까지 평균 14분을 더한 시각을 제안합니다.
+      </div>
+    </details>
+    <details>
+      <summary>권장 수면 시간은 얼마인가요?</summary>
+      <div class="answer">
+        미국 수면재단(National Sleep Foundation) 기준: <b>성인(18~64세) 7~9시간</b>, 청소년(14~17세) 8~10시간, 어린이(6~13세) 9~11시간, 노년(65세+) 7~8시간. 본 계산기는 수면 주기 <b>4~6사이클(6시간~9시간)</b>을 권장 범위로 표시하고, 5사이클(7시간 30분)과 6사이클(9시간)을 추천 시각으로 강조합니다.
+      </div>
+    </details>
+    <details>
+      <summary>잠들기까지 14분은 왜 더하나요?</summary>
+      <div class="answer">
+        건강한 성인이 침대에 누워서 실제로 잠들기까지 평균 <b>10~20분</b> 걸립니다(수면 잠복기, sleep latency). 본 계산기는 평균값인 <b>14분</b>을 사용합니다. 평소 잠들기 빠른 분(5분 이내)은 더 짧게, 늦는 분(30분+)은 더 길게 가정해 시각을 조정하세요. 잠들기까지 너무 오래 걸린다면 만성적 수면 장애 신호일 수 있습니다.
+      </div>
+    </details>
+    <details>
+      <summary>수면 부족이 건강에 어떤 영향을 주나요?</summary>
+      <div class="answer">
+        장기적 수면 부족은 <b>면역 저하·체중 증가·인지 기능 저하·심혈관 질환 위험 증가</b>와 관련됩니다. 특히 <b>5시간 미만 수면이 지속</b>되면 당뇨·고혈압 위험이 두 배 이상 높아지는 연구 결과가 있습니다. 매일 같은 시각 잠들고 일어나는 <b>규칙성</b>이 수면의 질을 결정합니다.
+      </div>
+    </details>
+    <details>
+      <summary>낮잠은 몇 분이 좋은가요?</summary>
+      <div class="answer">
+        <b>10~20분 짧은 낮잠(파워 냅)</b>은 깊은 수면에 들기 전이라 일어났을 때 개운합니다. 30분 이상 자면 깊은 수면에 진입해 일어났을 때 오히려 멍한 상태(수면 관성)가 발생합니다. <b>90분 한 사이클 전체</b>를 자는 것도 한 방법이지만 일상에선 20분이 가장 실용적입니다.
+      </div>
+    </details>
+  </section>
+
+  <!-- 카카오톡 공유 -->
+  <section style="text-align:center;padding:32px 20px;background:#F5F5F8;border-radius:16px;margin:40px auto;max-width:680px;">
+    <h3 style="margin:0 0 8px;font-size:18px;font-weight:800;color:#0A0A1A;">이 계산기 공유하기</h3>
+    <p style="margin:0 0 16px;font-size:14px;color:#475569;">친구·가족에게 추천해보세요.</p>
+    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+      <button type="button" id="share-kakao" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#FEE500;border:0;border-radius:8px;color:#000;font-weight:700;font-size:14px;cursor:pointer;"><span>💬</span> 카카오톡</button>
+      <button type="button" id="share-copy-kakao" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#fff;border:1px solid #D1D5DB;border-radius:8px;color:#374151;font-weight:700;font-size:14px;cursor:pointer;"><span>🔗</span> 링크 복사</button>
+    </div>
+  </section>
+  <script src="/assets/kakao-share.js?v=1" defer></script>
+
+</main>
+
+<div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-5126709833280837"
+       data-ad-slot="4801328741"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<footer class="site">
+  <div class="foot">
+    <div>© <span id="year"></span> beautypang.tools — 다양한 무료 계산기</div>
+    <div><a href="/">도구 모음 →</a></div>
+  </div>
+</footer>
+
+<script>
+  const $ = id => document.getElementById(id);
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const SLEEP_CYCLE_MIN = 90;
+  const FALL_ASLEEP_MIN = 14;
+
+  let mode = 'wakeup'; // wakeup = 일어날 시각 입력 → 취침 시각 추천 / bedtime = 잘 시각 입력 → 기상 시각 추천
+
+  const modeTabs = $('modeTabs');
+  const timeLabel = $('timeLabel');
+  modeTabs.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-mode]');
+    if (!btn) return;
+    modeTabs.querySelectorAll('button').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    mode = btn.dataset.mode;
+    timeLabel.textContent = mode === 'wakeup' ? '일어나고 싶은 시각' : '잠자리에 누울 시각';
+    $('timeInput').value = mode === 'wakeup' ? '07:00' : '23:00';
+    $('result').classList.remove('show');
+  });
+
+  function parseTime(str) {
+    const [h, m] = str.split(':').map(Number);
+    return { h, m, totalMin: h * 60 + m };
+  }
+  function fmt(totalMin) {
+    const t = ((totalMin % 1440) + 1440) % 1440;
+    const h = Math.floor(t / 60);
+    const m = t % 60;
+    const ampm = h < 12 ? '오전' : '오후';
+    const h12 = h % 12 === 0 ? 12 : h % 12;
+    return `${ampm} ${String(h12).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+  }
+
+  function calculate() {
+    const t = parseTime($('timeInput').value);
+
+    let times = [];
+    if (mode === 'wakeup') {
+      // 일어날 시각에서 역산. 5/6사이클이 최적.
+      for (let cycles of [3, 4, 5, 6]) {
+        const totalSleep = cycles * SLEEP_CYCLE_MIN; // 분
+        const bedtime = t.totalMin - totalSleep - FALL_ASLEEP_MIN;
+        const hours = totalSleep / 60;
+        times.push({
+          time: fmt(bedtime),
+          cycles,
+          hours,
+          best: cycles === 5 || cycles === 6,
+        });
+      }
+      $('resultIntro').innerHTML = `<b>${fmt(t.totalMin)}</b>에 일어나려면 — 추천 취침 시각`;
+    } else {
+      // 누울 시각 + 14분 + 90분*N
+      for (let cycles of [4, 5, 6]) {
+        const totalSleep = cycles * SLEEP_CYCLE_MIN;
+        const wake = t.totalMin + FALL_ASLEEP_MIN + totalSleep;
+        const hours = totalSleep / 60;
+        times.push({
+          time: fmt(wake),
+          cycles,
+          hours,
+          best: cycles === 5 || cycles === 6,
+        });
+      }
+      // 다음 사이클까지 한 번 더
+      const totalSleep7 = 7 * SLEEP_CYCLE_MIN;
+      times.push({ time: fmt(t.totalMin + FALL_ASLEEP_MIN + totalSleep7), cycles: 7, hours: 7 * 1.5, best: false });
+      $('resultIntro').innerHTML = `<b>${fmt(t.totalMin)}</b>에 잠자리에 누우면 — 추천 기상 시각`;
+    }
+
+    const cards = $('timeCards');
+    cards.innerHTML = '';
+    times.forEach(({ time, cycles, hours, best }) => {
+      const div = document.createElement('div');
+      div.className = 'time-card' + (best ? ' recommended' : '');
+      const hoursLabel = hours === Math.floor(hours) ? `${hours}시간` : `${Math.floor(hours)}시간 30분`;
+      div.innerHTML = `
+        <div class="label">${cycles}사이클 · ${hoursLabel}</div>
+        <div class="time">${time}</div>
+        <div class="sub">${best ? '권장 수면 시간' : (cycles < 5 ? '부족' : '충분 이상')}</div>
+        ${best ? '<div class="badge-best">⭐ 추천</div>' : ''}
+      `;
+      cards.appendChild(div);
+    });
+
+    $('result').classList.add('show');
+  }
+
+  $('calc').addEventListener('submit', e => {
+    e.preventDefault();
+    calculate();
+    $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  $('timeInput').addEventListener('change', calculate);
+  calculate();
+</script>
+
+</body>
+</html>

@@ -87,6 +87,12 @@
           "position": 5,
           "url": "https://beautypang.co.kr/body-composition/",
           "name": "체지방률·체수분율·제지방량 계산기"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://beautypang.co.kr/sleep-calculator/",
+          "name": "수면 시간 계산기"
         }
       ]
     }
@@ -498,7 +504,7 @@
     <p class="lead">건강·다이어트·임신·생활. 회원가입 없이 즉시 사용하는 무료 계산기 모음.</p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <div class="n">4</div>
+        <div class="n" data-auto-tool-count>6</div>
         <div class="l">사용 가능한 도구</div>
       </div>
       <div class="hero-stat">
@@ -615,6 +621,26 @@
           <span class="bento-cta" style="white-space:nowrap;">사용하기</span>
         </div>
       </a>
+
+      <!-- 수면 시간 — 와이드 카드 -->
+      <a href="/sleep-calculator/" class="bento-card bento-wide card-health">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+          <div style="flex:1; min-width:260px;">
+            <div class="bento-top" style="margin-bottom:14px;">
+              <div class="bento-icon">🌙</div>
+              <span class="bento-tag">NEW</span>
+            </div>
+            <h3 class="bento-name">수면 시간 계산기 — 90분 주기 최적 기상</h3>
+            <p class="bento-desc" style="margin-bottom:14px;">잠들 시각 또는 일어날 시각을 입력하면 90분 수면 주기 기반 최적 취침·기상 시각을 추천. 렘 수면 직후 깨면 한결 개운한 아침.</p>
+            <div class="bento-meta">
+              <span>건강·일상</span>
+              <span>90분 수면 주기</span>
+              <span>수면 잠복기 14분</span>
+            </div>
+          </div>
+          <span class="bento-cta" style="white-space:nowrap;">사용하기</span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -671,6 +697,16 @@
   </div>
   <span class="copy">© 2026 beautypang.co.kr — 본 사이트의 계산 결과는 참고용이며, 법적 효력이 있는 판정은 관할 기관에서 수행됩니다.</span>
 </footer>
+
+<script>
+  // hero-stat 도구 개수 자동 카운트 (bento-card 개수 = 도구 개수)
+  (function () {
+    const toolCount = document.querySelectorAll('.bento-card').length;
+    document.querySelectorAll('[data-auto-tool-count]').forEach(el => {
+      if (toolCount > 0) el.textContent = toolCount;
+    });
+  })();
+</script>
 
 </body>
 </html>
