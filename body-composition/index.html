@@ -469,7 +469,10 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
   ];
   function classifyBFP(bfp, sex) {
     const bands = sex === 'male' ? BFP_BANDS_MALE : BFP_BANDS_FEMALE;
-    return bands.find(b => bfp >= b.min && bfp <= b.max) || bands[bands.length - 1];
+    // 소수점 갭(13.5 같이 정수 경계 사이) 해결 — Math.floor로 정수 변환 후 매칭
+    const r = Math.floor(bfp);
+    if (r < bands[0].min) return bands[0]; // 최저 미만 → 필수 지방
+    return bands.find(b => r >= b.min && r <= b.max) || bands[bands.length - 1];
   }
 
   // ===== 체수분 (Watson) =====
