@@ -103,6 +103,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+<script src="/assets/nav.js?v=1" defer></script>
 
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F76TTBSP9F"></script>
@@ -297,6 +298,27 @@
   }
   .sec-title { margin: 0 0 6px; font-size: 28px; font-weight: 800; letter-spacing: -0.8px; color: var(--ink); }
   .sec-desc { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+  /* === 도구 필터 (검색 + 카테고리) === */
+  .tool-filter { max-width: 720px; margin: 0 auto 32px; }
+  .tool-filter input[type="search"] {
+    width: 100%; padding: 14px 18px; font-size: 15px; font-weight: 500;
+    background: var(--surface); border: 1.5px solid var(--line); border-radius: 14px;
+    outline: none; transition: all 0.15s; font-family: inherit; color: var(--ink);
+    box-shadow: var(--shadow-sm);
+  }
+  .tool-filter input[type="search"]:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(37,99,235,0.10); }
+  .filter-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; justify-content: center; }
+  .filter-chips button {
+    padding: 8px 16px; font-size: 13px; font-weight: 700; color: var(--ink-soft);
+    background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+    cursor: pointer; font-family: inherit; transition: all 0.15s;
+  }
+  .filter-chips button:hover { border-color: var(--primary); color: var(--primary); }
+  .filter-chips button.on { background: var(--primary); border-color: var(--primary); color: #fff; }
+  .filter-chips button .cnt { font-size: 11px; opacity: 0.75; margin-left: 4px; }
+  .filter-empty { text-align: center; color: var(--ink-muted); font-size: 14px; margin-top: 24px; padding: 32px; background: var(--surface); border-radius: 14px; }
+  .bento-card.hidden { display: none !important; }
 
   /* === Bento Grid (도구 영역) === */
   .bento {
@@ -529,6 +551,17 @@
       </div>
     </div>
 
+    <div class="tool-filter">
+      <input type="search" id="tool-search" placeholder="🔍 도구 이름·키워드로 빠르게 찾기" autocomplete="off">
+      <div class="filter-chips" id="filter-chips">
+        <button type="button" data-cat="all" class="on">전체 <span class="cnt"></span></button>
+        <button type="button" data-cat="health">건강 <span class="cnt"></span></button>
+        <button type="button" data-cat="diet">다이어트 <span class="cnt"></span></button>
+        <button type="button" data-cat="family">임신·여성 <span class="cnt"></span></button>
+      </div>
+      <div class="filter-empty" id="filter-empty" hidden>검색 결과가 없습니다. 다른 키워드를 시도해보세요.</div>
+    </div>
+
     <div class="bento">
       <!-- BMI · 기초대사량 — 대형 카드 -->
       <a href="/bmi-calculator/" class="bento-card bento-large card-health">
@@ -705,6 +738,66 @@
     document.querySelectorAll('[data-auto-tool-count]').forEach(el => {
       if (toolCount > 0) el.textContent = toolCount;
     });
+  })();
+
+  // === 도구 필터 (카테고리 + 검색) ===
+  (function () {
+    const cards = Array.from(document.querySelectorAll('.bento-card'));
+    if (!cards.length) return;
+
+    // 각 카드의 카테고리·검색 키워드 추출
+    cards.forEach(card => {
+      let cat = 'other';
+      if (card.classList.contains('card-health')) cat = 'health';
+      else if (card.classList.contains('card-diet')) cat = 'diet';
+      else if (card.classList.contains('card-family')) cat = 'family';
+      else if (card.classList.contains('card-estate')) cat = 'estate';
+      card.dataset.cat = cat;
+      // 검색용 텍스트
+      card.dataset.searchText = (card.textContent || '').toLowerCase().replace(/\s+/g, ' ');
+    });
+
+    // 카운트 표시
+    const counts = { all: cards.length, health: 0, diet: 0, family: 0 };
+    cards.forEach(c => { if (counts[c.dataset.cat] !== undefined) counts[c.dataset.cat]++; });
+    document.querySelectorAll('.filter-chips button').forEach(btn => {
+      const c = counts[btn.dataset.cat] ?? 0;
+      const span = btn.querySelector('.cnt');
+      if (span) span.textContent = `(${c})`;
+    });
+
+    let activeCat = 'all';
+    let searchTerm = '';
+
+    function applyFilter() {
+      let visible = 0;
+      cards.forEach(card => {
+        const catOk = activeCat === 'all' || card.dataset.cat === activeCat;
+        const searchOk = !searchTerm || card.dataset.searchText.includes(searchTerm);
+        const show = catOk && searchOk;
+        card.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+      const empty = document.getElementById('filter-empty');
+      if (empty) empty.hidden = visible > 0;
+    }
+
+    document.getElementById('filter-chips').addEventListener('click', e => {
+      const btn = e.target.closest('button[data-cat]');
+      if (!btn) return;
+      document.querySelectorAll('.filter-chips button').forEach(b => b.classList.remove('on'));
+      btn.classList.add('on');
+      activeCat = btn.dataset.cat;
+      applyFilter();
+    });
+
+    const searchInput = document.getElementById('tool-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', e => {
+        searchTerm = e.target.value.toLowerCase().trim();
+        applyFilter();
+      });
+    }
   })();
 </script>
 
