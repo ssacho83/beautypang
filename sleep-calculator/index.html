@@ -182,18 +182,50 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 .sec { margin-top: 56px; }
 .sec h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.4px; }
 
-/* 가이드 섹션 (SEO 콘텐츠 깊이) */
-.guide-section { background: linear-gradient(180deg, var(--night-soft) 0%, transparent 100%); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 24px; margin-top: 56px; }
-.guide-section .guide-intro { color: var(--text-muted); line-height: 1.7; margin: 0 0 22px; font-size: 14.5px; }
-.guide-section .guide-intro b { color: var(--text); }
-.guide-section .guide-item { margin-bottom: 20px; }
-.guide-section .guide-item:last-child { margin-bottom: 0; }
-.guide-section .guide-item h3 { font-size: 16px; color: var(--indigo); margin: 0 0 6px; font-weight: 700; }
-.guide-section .guide-item h3 .num { display: inline-block; width: 24px; height: 24px; border-radius: 50%; background: var(--indigo); color: #fff; text-align: center; line-height: 24px; font-size: 12px; font-weight: 800; margin-right: 8px; vertical-align: 1px; }
-.guide-section .guide-item p { margin: 0; color: var(--text-muted); line-height: 1.75; font-size: 14px; }
-.guide-section .guide-item p b { color: var(--text); }
-.guide-section .guide-outro { margin: 22px 0 0; padding: 16px 18px; background: var(--bg); border-left: 3px solid var(--indigo); border-radius: 8px; font-size: 13.5px; color: var(--text-muted); line-height: 1.7; }
-.guide-section .guide-outro b { color: var(--text); }
+/* === 가이드 섹션 (Bento 카드 + 큰 숫자 + 타임라인) === */
+.guide-wrap { margin-top: 56px; }
+.guide-intro-text { font-size: 15px; color: var(--text-muted); line-height: 1.75; max-width: 720px; margin: 0 auto 28px; text-align: center; }
+.guide-intro-text b { color: var(--text); }
+
+/* 핵심 통계 박스 (큰 숫자) */
+.guide-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
+@media (max-width: 640px) { .guide-stats { grid-template-columns: 1fr; } }
+.guide-stat { padding: 24px 20px; background: linear-gradient(135deg, var(--indigo) 0%, var(--night) 100%); color: #fff; border-radius: 16px; text-align: center; position: relative; overflow: hidden; }
+.guide-stat::before { content: ''; position: absolute; top: -20px; right: -20px; width: 80px; height: 80px; background: rgba(255,255,255,0.06); border-radius: 50%; }
+.guide-stat .stat-num { font-size: 36px; font-weight: 900; letter-spacing: -1.5px; line-height: 1; margin-bottom: 8px; position: relative; }
+.guide-stat .stat-num small { font-size: 18px; font-weight: 700; opacity: 0.8; margin-left: 2px; }
+.guide-stat .stat-label { font-size: 12px; opacity: 0.85; font-weight: 600; position: relative; line-height: 1.5; }
+.guide-stat .stat-label b { color: #fff; font-weight: 800; }
+
+/* 7항목 카드 그리드 */
+.guide-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
+@media (max-width: 720px) { .guide-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .guide-cards { grid-template-columns: 1fr; } }
+.guide-card { padding: 20px 18px; background: #fff; border: 1px solid var(--border); border-radius: 14px; transition: all 0.2s; position: relative; }
+.guide-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(79,70,229,0.12); border-color: var(--indigo); }
+.guide-card .gc-icon { font-size: 28px; line-height: 1; margin-bottom: 10px; display: block; }
+.guide-card .gc-num { position: absolute; top: 16px; right: 16px; width: 22px; height: 22px; border-radius: 50%; background: var(--indigo); color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.guide-card .gc-title { font-size: 14px; font-weight: 800; color: var(--text); margin: 0 0 4px; line-height: 1.4; }
+.guide-card .gc-key { font-size: 13px; font-weight: 700; color: var(--indigo); margin: 0 0 8px; }
+.guide-card .gc-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+/* 시간대별 타임라인 */
+.guide-timeline { background: linear-gradient(180deg, var(--night-soft) 0%, transparent 100%); border-radius: 16px; padding: 28px 24px; margin-bottom: 28px; }
+.guide-timeline h4 { font-size: 15px; margin: 0 0 18px; color: var(--text); font-weight: 800; text-align: center; }
+.guide-timeline h4 .emoji { font-size: 18px; margin-right: 6px; }
+.timeline-track { position: relative; padding: 8px 0 0; }
+.timeline-line { position: absolute; left: 14px; top: 24px; bottom: 10px; width: 2px; background: linear-gradient(180deg, var(--indigo) 0%, var(--night) 100%); border-radius: 1px; }
+.timeline-step { display: flex; align-items: flex-start; gap: 14px; padding: 6px 0; position: relative; }
+.timeline-step .ts-dot { width: 30px; height: 30px; border-radius: 50%; background: #fff; border: 2px solid var(--indigo); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; z-index: 1; box-shadow: 0 2px 6px rgba(79,70,229,0.15); }
+.timeline-step .ts-content { padding-top: 4px; flex: 1; }
+.timeline-step .ts-time { font-size: 13px; font-weight: 800; color: var(--indigo); }
+.timeline-step .ts-text { font-size: 13px; color: var(--text-muted); margin-top: 2px; line-height: 1.5; }
+.timeline-step .ts-text b { color: var(--text); }
+
+/* 마무리 박스 */
+.guide-outro { padding: 20px 22px; background: linear-gradient(135deg, var(--primary-soft) 0%, var(--night-soft) 100%); border-radius: 14px; font-size: 14px; color: var(--text); line-height: 1.75; text-align: center; }
+.guide-outro b { color: var(--indigo); }
+.guide-outro .cta-tag { display: inline-block; margin-top: 10px; padding: 6px 14px; background: var(--indigo); color: #fff; border-radius: 999px; font-size: 12px; font-weight: 800; }
 .faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 10px; }
 .faq details[open] { border-color: var(--primary-soft); }
 .faq summary { font-weight: 700; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; }
@@ -263,46 +295,142 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
   </div>
 
   <section class="sec">
-    <h2>🌙 잠 잘 자는 7가지 습관 — 수면의 질을 결정하는 핵심</h2>
-    <div class="guide-section">
-      <p class="guide-intro">수면은 <b>몇 시간 자느냐</b>보다 <b>어떻게 자느냐</b>가 더 큰 차이를 만듭니다. 같은 7시간이라도 깊이 잘 자면 다음 날 컨디션·집중력·면역력 모두 달라집니다. 본 계산기로 <b>최적 시각</b>을 잡았다면, 아래 7가지 습관으로 <b>수면의 질</b>까지 끌어올려 보세요.</p>
+    <h2>🌙 잠 잘 자는 7가지 습관</h2>
+    <div class="guide-wrap">
+      <p class="guide-intro-text">수면은 <b>몇 시간 자느냐</b>보다 <b>어떻게 자느냐</b>가 더 큰 차이를 만듭니다. 같은 7시간이라도 깊이 자면 다음 날 컨디션·집중력·면역력이 달라집니다.</p>
 
-      <div class="guide-item">
-        <h3><span class="num">1</span>같은 시각 자고 일어나기 (규칙성)</h3>
-        <p>수면의 질을 결정하는 첫 번째 변수는 <b>일관성</b>입니다. 평일·주말 가리지 않고 비슷한 시각에 잠들고 일어나면 생체리듬(서캐디언 리듬)이 안정되어 잠드는 속도와 깊이가 모두 좋아집니다. 30분 이내 차이까지가 이상적이고, 주말 늦잠은 2시간 이내로 제한하세요.</p>
+      <!-- 핵심 통계 3개 -->
+      <div class="guide-stats">
+        <div class="guide-stat">
+          <div class="stat-num">5<small>시간</small></div>
+          <div class="stat-label"><b>카페인 반감기</b><br>오후 4시 = 마지막 카페인</div>
+        </div>
+        <div class="guide-stat">
+          <div class="stat-num">30<small>분</small></div>
+          <div class="stat-label"><b>블루라이트로 늘어나는</b><br>잠드는 시간</div>
+        </div>
+        <div class="guide-stat">
+          <div class="stat-num">18~20<small>℃</small></div>
+          <div class="stat-label"><b>이상적 침실 온도</b><br>습도 50~60%</div>
+        </div>
       </div>
 
-      <div class="guide-item">
-        <h3><span class="num">2</span>잠들기 1시간 전 블루라이트 차단</h3>
-        <p>스마트폰·노트북·TV의 청색광은 <b>멜라토닌 분비를 억제</b>해 잠드는 시간을 평균 30분 이상 늘립니다. 침실 진입 1시간 전부터는 화면 대신 종이책·일기·간단한 스트레칭으로 전환하는 게 좋습니다. 부득이하면 야간 모드(나이트 시프트) + 화면 밝기 최저로.</p>
+      <!-- 7항목 카드 그리드 -->
+      <div class="guide-cards">
+        <div class="guide-card">
+          <span class="gc-num">1</span>
+          <span class="gc-icon">⏰</span>
+          <h3 class="gc-title">규칙성</h3>
+          <p class="gc-key">30분 이내 차이</p>
+          <p class="gc-desc">평일·주말 같은 시각에 자고 일어나면 생체리듬이 안정. 주말 늦잠은 2시간 이내로.</p>
+        </div>
+        <div class="guide-card">
+          <span class="gc-num">2</span>
+          <span class="gc-icon">📱</span>
+          <h3 class="gc-title">블루라이트 차단</h3>
+          <p class="gc-key">취침 1시간 전부터</p>
+          <p class="gc-desc">청색광은 멜라토닌을 억제. 화면 대신 종이책·스트레칭. 야간모드 + 밝기 최저.</p>
+        </div>
+        <div class="guide-card">
+          <span class="gc-num">3</span>
+          <span class="gc-icon">☕</span>
+          <h3 class="gc-title">카페인 컷오프</h3>
+          <p class="gc-key">취침 6시간 전부터 X</p>
+          <p class="gc-desc">반감기 5시간. 오후 4시 이후 마신 커피의 절반이 자정까지 몸에 남습니다.</p>
+        </div>
+        <div class="guide-card">
+          <span class="gc-num">4</span>
+          <span class="gc-icon">🍷</span>
+          <h3 class="gc-title">알코올 X</h3>
+          <p class="gc-key">취침 3시간 전부터</p>
+          <p class="gc-desc">술은 깊은 수면(N3)·렘 수면을 모두 줄여 새벽 각성·다음 날 피로의 주범.</p>
+        </div>
+        <div class="guide-card">
+          <span class="gc-num">5</span>
+          <span class="gc-icon">🏃</span>
+          <h3 class="gc-title">운동 마감</h3>
+          <p class="gc-key">저녁 7시 이전</p>
+          <p class="gc-desc">격렬한 운동은 심박·체온 ↑. 그 이후엔 가벼운 산책·요가·스트레칭만.</p>
+        </div>
+        <div class="guide-card">
+          <span class="gc-num">6</span>
+          <span class="gc-icon">🍎</span>
+          <h3 class="gc-title">늦은 야식 X</h3>
+          <p class="gc-key">취침 2시간 전부터</p>
+          <p class="gc-desc">소화 중이면 깊은 수면 X. 정 출출하면 따뜻한 우유·바나나·견과류 소량으로.</p>
+        </div>
+        <div class="guide-card">
+          <span class="gc-num">7</span>
+          <span class="gc-icon">🌡️</span>
+          <h3 class="gc-title">침실 환경</h3>
+          <p class="gc-key">어두움·조용함·서늘함</p>
+          <p class="gc-desc">암막 커튼으로 빛 차단, 휴대폰은 거실에, 백색소음으로 외부 소음 가리기.</p>
+        </div>
       </div>
 
-      <div class="guide-item">
-        <h3><span class="num">3</span>카페인은 취침 6시간 전부터 X</h3>
-        <p>커피·녹차·콜라·에너지 드링크의 카페인은 반감기가 평균 <b>5시간</b>. 오후 3시 이후 마신 커피의 절반이 밤 8시까지 몸에 남아 깊은 수면을 방해합니다. 자정에 잠자리에 든다면 오후 4시가 마지막 카페인 시각이라고 생각하세요.</p>
+      <!-- 시간대별 타임라인 -->
+      <div class="guide-timeline">
+        <h4><span class="emoji">⏳</span>하루의 수면 준비 타임라인</h4>
+        <div class="timeline-track">
+          <div class="timeline-line"></div>
+          <div class="timeline-step">
+            <div class="ts-dot">☕</div>
+            <div class="ts-content">
+              <div class="ts-time">오후 4시</div>
+              <div class="ts-text"><b>마지막 카페인</b> — 이후 커피·녹차·콜라·에너지 드링크 모두 중단</div>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="ts-dot">🏃</div>
+            <div class="ts-content">
+              <div class="ts-time">저녁 7시</div>
+              <div class="ts-text"><b>운동 마감</b> — 격렬한 유산소·근력 운동은 여기까지</div>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="ts-dot">🍽️</div>
+            <div class="ts-content">
+              <div class="ts-time">밤 9~10시</div>
+              <div class="ts-text"><b>저녁 식사 완료</b> — 무거운 음식·매운 음식은 이때까지</div>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="ts-dot">📱</div>
+            <div class="ts-content">
+              <div class="ts-time">밤 10~11시</div>
+              <div class="ts-text"><b>블루라이트 차단</b> — 화면 OFF, 야간모드 + 침실 조명 디밍</div>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="ts-dot">🛏️</div>
+            <div class="ts-content">
+              <div class="ts-time">밤 11시</div>
+              <div class="ts-text"><b>침실 입장</b> — 18~20℃ 설정, 커튼 닫고 휴대폰 거실에</div>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="ts-dot">😴</div>
+            <div class="ts-content">
+              <div class="ts-time">자정</div>
+              <div class="ts-text"><b>잠자리</b> — 본 계산기의 최적 시각에 맞춰 입면</div>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="ts-dot">☀️</div>
+            <div class="ts-content">
+              <div class="ts-time">다음 날 7시</div>
+              <div class="ts-text"><b>같은 시각 기상</b> — 주말도 ±30분 이내로 유지</div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="guide-item">
-        <h3><span class="num">4</span>알코올은 수면의 친구가 아닙니다</h3>
-        <p>술 한 잔이 잠을 부르는 듯하지만 <b>깊은 수면(N3)과 렘 수면을 모두 줄여</b> 다음 날 피로가 가중됩니다. 특히 새벽에 깨거나 얕은 잠에서 헤매는 원인의 상당수가 전날 알코올입니다. 취침 3시간 전부터는 자제 권장.</p>
+      <!-- 마무리 -->
+      <div class="guide-outro">
+        작은 습관 하나로 같은 시간을 자도 다음 날이 다릅니다.<br>
+        본 계산기의 <b>최적 시각</b>과 위 7가지 <b>수면 위생</b>을 함께 지키면 평일 컨디션이 평균 30% 이상 좋아집니다.<br>
+        <span class="cta-tag">📅 1주일만 해보세요</span>
       </div>
-
-      <div class="guide-item">
-        <h3><span class="num">5</span>운동은 취침 3시간 전까지</h3>
-        <p>가벼운 산책·요가·스트레칭은 잠을 돕지만 격렬한 유산소·근력 운동은 심박과 코어 체온을 올려 잠들기를 늦춥니다. 운동은 가급적 <b>저녁 7시 이전</b>에 끝내고, 그 이후에는 부드러운 동작 위주로.</p>
-      </div>
-
-      <div class="guide-item">
-        <h3><span class="num">6</span>잠자기 2시간 전 무거운 식사 피하기</h3>
-        <p>위에서 소화가 진행 중이면 깊은 수면에 들기 어렵습니다. 늦은 야식·기름진 음식·매운 음식은 역류성 증상까지 유발해 새벽 각성의 원인이 됩니다. 정 출출하면 <b>따뜻한 우유·바나나·소량의 견과류</b>처럼 트립토판이 풍부한 가벼운 간식으로.</p>
-      </div>
-
-      <div class="guide-item">
-        <h3><span class="num">7</span>침실 환경 — 어두움·조용함·서늘함</h3>
-        <p>이상적 실내 온도는 <b>18~20℃</b>, 습도 50~60%. 두꺼운 암막 커튼으로 빛 완전 차단, 휴대폰 진동·알림 끄기 또는 거실에 두기, 백색소음(선풍기·공기청정기 저소음)으로 외부 소음을 가리면 깨는 횟수가 눈에 띄게 줄어듭니다.</p>
-      </div>
-
-      <p class="guide-outro">작은 습관 하나로도 같은 시간을 자고 다음 날이 달라집니다. 본 계산기의 <b>최적 시각</b>과 위 7가지 <b>수면 위생</b>을 함께 지키면, 평일 컨디션·집중력·기분이 평균 30% 이상 개선된다는 게 미국 수면재단(National Sleep Foundation)의 일관된 권고입니다. 1주일만 해보세요.</p>
     </div>
   </section>
 
