@@ -208,6 +208,10 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 .guide-card .gc-title { font-size: 14px; font-weight: 800; color: var(--text); margin: 0 0 4px; line-height: 1.4; }
 .guide-card .gc-key { font-size: 13px; font-weight: 700; color: var(--indigo); margin: 0 0 8px; }
 .guide-card .gc-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+.guide-card .gc-personal { font-size: 12px; font-weight: 700; color: var(--indigo); background: rgba(79,70,229,0.08); padding: 6px 10px; border-radius: 8px; margin: 6px 0 8px; line-height: 1.4; }
+.guide-card .gc-personal b { color: var(--indigo); font-weight: 900; font-size: 13px; }
+.guide-card .gc-personal .pulse-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--indigo); margin-right: 4px; animation: pulse 1.4s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
 
 /* 시간대별 타임라인 */
 .guide-timeline { background: linear-gradient(180deg, var(--night-soft) 0%, transparent 100%); border-radius: 16px; padding: 28px 24px; margin-bottom: 28px; }
@@ -329,6 +333,7 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
           <span class="gc-icon">📱</span>
           <h3 class="gc-title">블루라이트 차단</h3>
           <p class="gc-key">취침 1시간 전부터</p>
+          <p class="gc-personal" data-offset-hours="1" hidden><span class="pulse-dot"></span>당신 기준: <b>—</b></p>
           <p class="gc-desc">청색광은 멜라토닌을 억제. 화면 대신 종이책·스트레칭. 야간모드 + 밝기 최저.</p>
         </div>
         <div class="guide-card">
@@ -336,6 +341,7 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
           <span class="gc-icon">☕</span>
           <h3 class="gc-title">카페인 컷오프</h3>
           <p class="gc-key">취침 6시간 전부터 X</p>
+          <p class="gc-personal" data-offset-hours="6" hidden><span class="pulse-dot"></span>당신 기준: <b>—</b></p>
           <p class="gc-desc">반감기 5시간. 오후 4시 이후 마신 커피의 절반이 자정까지 몸에 남습니다.</p>
         </div>
         <div class="guide-card">
@@ -349,7 +355,8 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
           <span class="gc-num">5</span>
           <span class="gc-icon">🏃</span>
           <h3 class="gc-title">운동 마감</h3>
-          <p class="gc-key">저녁 7시 이전</p>
+          <p class="gc-key">취침 5시간 전</p>
+          <p class="gc-personal" data-offset-hours="5" hidden><span class="pulse-dot"></span>당신 기준: <b>—</b></p>
           <p class="gc-desc">격렬한 운동은 심박·체온 ↑. 그 이후엔 가벼운 산책·요가·스트레칭만.</p>
         </div>
         <div class="guide-card">
@@ -357,6 +364,7 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
           <span class="gc-icon">🍎</span>
           <h3 class="gc-title">늦은 야식 X</h3>
           <p class="gc-key">취침 2시간 전부터</p>
+          <p class="gc-personal" data-offset-hours="2" hidden><span class="pulse-dot"></span>당신 기준: <b>—</b></p>
           <p class="gc-desc">소화 중이면 깊은 수면 X. 정 출출하면 따뜻한 우유·바나나·견과류 소량으로.</p>
         </div>
         <div class="guide-card">
@@ -535,6 +543,26 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
     return `${ampm} ${String(h12).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
   }
 
+  function getBedtimeMin() {
+    const t = parseTime($('timeInput').value);
+    if (mode === 'bedtime') return t.totalMin;
+    // wakeup mode: 추천 취침 (5사이클 = 7시간 30분 + 14분 잠복기)
+    return t.totalMin - (5 * 90) - 14;
+  }
+
+  function updatePersonalGuide() {
+    const bedtime = getBedtimeMin();
+    document.querySelectorAll('.gc-personal[data-offset-hours]').forEach(el => {
+      const hours = parseFloat(el.dataset.offsetHours);
+      if (!Number.isFinite(hours)) return;
+      const personalMin = bedtime - hours * 60;
+      const formatted = fmt(personalMin);
+      const bold = el.querySelector('b');
+      if (bold) bold.textContent = formatted;
+      el.hidden = false;
+    });
+  }
+
   function calculate() {
     const t = parseTime($('timeInput').value);
 
@@ -588,6 +616,7 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
     });
 
     $('result').classList.add('show');
+    updatePersonalGuide();
   }
 
   $('calc').addEventListener('submit', e => {
@@ -597,7 +626,9 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
   });
 
   $('timeInput').addEventListener('change', calculate);
+  $('timeInput').addEventListener('input', updatePersonalGuide);
   calculate();
+  updatePersonalGuide();
 </script>
 
 </body>
