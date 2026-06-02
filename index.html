@@ -586,7 +586,7 @@
         <div>
           <div class="bento-top">
             <div class="bento-icon">🏃</div>
-            <span class="bento-tag">NEW</span>
+            <span class="bento-tag" data-new-until="2026-06-06">NEW</span>
           </div>
           <h3 class="bento-name">운동 칼로리 소모 계산기</h3>
           <p class="bento-desc">60+개 운동 종목 + ACSM Compendium 표준 MET + 한국 음식 비교.</p>
@@ -603,7 +603,7 @@
         <div>
           <div class="bento-top">
             <div class="bento-icon">🤰</div>
-            <span class="bento-tag">NEW</span>
+            <span class="bento-tag" data-new-until="2026-06-11">NEW</span>
           </div>
           <h3 class="bento-name">임신 주수 · 출산 예정일</h3>
           <p class="bento-desc">현재 주수 + 출산 예정일 + 주차별 태아 성장 정보까지 한 번에.</p>
@@ -621,7 +621,7 @@
           <div style="flex:1; min-width:260px;">
             <div class="bento-top" style="margin-bottom:14px;">
               <div class="bento-icon">🌷</div>
-              <span class="bento-tag">NEW</span>
+              <span class="bento-tag" data-new-until="2026-06-14">NEW</span>
             </div>
             <h3 class="bento-name">배란일·가임기간 계산기</h3>
             <p class="bento-desc" style="margin-bottom:14px;">마지막 생리 시작일과 주기로 배란일·가임기간·다음 생리 예정일을 즉시 계산. 다음 6개월 캘린더까지 한 번에.</p>
@@ -641,7 +641,7 @@
           <div style="flex:1; min-width:260px;">
             <div class="bento-top" style="margin-bottom:14px;">
               <div class="bento-icon">💪</div>
-              <span class="bento-tag">NEW</span>
+              <span class="bento-tag" data-new-until="2026-06-15">NEW</span>
             </div>
             <h3 class="bento-name">체지방률·체수분율·제지방량 계산기</h3>
             <p class="bento-desc" style="margin-bottom:14px;">키·몸무게·나이·성별로 체지방률(Deurenberg)·체수분율(Watson)·제지방량·골격근량·기초대사량까지 한 번에 추정. InBody 없이도 다이어트 전후 변화 추적.</p>
@@ -661,7 +661,7 @@
           <div style="flex:1; min-width:260px;">
             <div class="bento-top" style="margin-bottom:14px;">
               <div class="bento-icon">🌙</div>
-              <span class="bento-tag">NEW</span>
+              <span class="bento-tag" data-new-until="2026-06-16">NEW</span>
             </div>
             <h3 class="bento-name">수면 시간 계산기 — 90분 주기 최적 기상</h3>
             <p class="bento-desc" style="margin-bottom:14px;">잠들 시각 또는 일어날 시각을 입력하면 90분 수면 주기 기반 최적 취침·기상 시각을 추천. 렘 수면 직후 깨면 한결 개운한 아침.</p>
@@ -737,6 +737,14 @@
     const toolCount = document.querySelectorAll('.bento-card').length;
     document.querySelectorAll('[data-auto-tool-count]').forEach(el => {
       if (toolCount > 0) el.textContent = toolCount;
+    });
+  })();
+
+  // NEW 배지 자동 만료 — data-new-until="YYYY-MM-DD" 박힌 요소
+  (function () {
+    const today = new Date().toISOString().slice(0, 10);
+    document.querySelectorAll('[data-new-until]').forEach(el => {
+      if (el.dataset.newUntil < today) el.style.display = 'none';
     });
   })();
 
