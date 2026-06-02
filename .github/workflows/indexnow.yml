@@ -1,0 +1,28 @@
+name: IndexNow 자동 색인 알림
+
+# 트리거: main 브랜치에 push될 때 (단 HTML/sitemap만 바뀐 경우)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.html'
+      - 'sitemap.xml'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Submit URLs to IndexNow
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          # sitemap.xml의 모든 URL을 IndexNow에 일괄 알림
+          # (변경된 파일만 추출하는 게 더 효율적이지만 일단 전체로 단순 시작)
+          node scripts/submit-urls.mjs
