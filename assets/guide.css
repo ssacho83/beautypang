@@ -3,6 +3,10 @@
  * 도구별 색은 페이지에서 --guide-accent 변수로 override
  */
 
+/* 한국어 줄맞춤 (전역) — 어절 단위 줄바꿈 + 제목 줄 균형 */
+body { word-break: keep-all; overflow-wrap: break-word; }
+h1, h2, h3, h4 { text-wrap: balance; }
+
 :root {
   --guide-accent: #2563eb;          /* 기본 (블루) */
   --guide-accent-dark: #1d4ed8;
