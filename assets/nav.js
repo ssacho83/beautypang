@@ -47,15 +47,43 @@
     .nav-link .nav-label { flex: 1; line-height: 1.4; }
     .nav-link .nav-cat { font-size: 10px; color: #94a3b8; background: #f1f5f9; padding: 2px 6px; border-radius: 999px; font-weight: 600; }
     .nav-section-foot { padding: 16px 20px; border-top: 1px solid #e2e8f0; font-size: 12px; color: #94a3b8; }
-    .nav-section-foot a { color: #475569; }
+    .nav-section-foot a { color: #475569; display: inline-block; }
     body.nav-open { overflow: hidden; }
+    .nav-injected-foot { padding: 36px 24px; margin-top: 32px; border-top: 1px solid #e2e8f0; background: #fff; text-align: center; }
+    .nav-injected-foot .foot-nav { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 18px; font-size: 13px; }
+    .nav-injected-foot .foot-nav a { color: #475569; font-weight: 600; text-decoration: none; transition: color 0.15s; }
+    .nav-injected-foot .foot-nav a:hover { color: #2563eb; }
+    .nav-injected-foot .copy { display: block; margin-top: 14px; font-size: 11px; color: #94a3b8; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6; }
   `;
+
+  // ─── 공통 푸터 (법적 링크) — 자체 footer가 없는 페이지에만 주입 ───
+  const LEGAL_LINKS = `
+    <a href="/legal/privacy.html">개인정보 처리방침</a>
+    <a href="/legal/terms.html">이용약관</a>
+    <a href="/legal/disclaimer.html">면책 고지</a>`;
+
+  function injectFooter() {
+    if (document.querySelector('footer.site')) return; // 홈 등 자체 푸터 있으면 건너뜀
+    const foot = document.createElement('footer');
+    foot.className = 'site nav-injected-foot';
+    foot.innerHTML = `
+      <div class="foot-nav">
+        <a href="/">홈</a>${LEGAL_LINKS}
+      </div>
+      <span class="copy">© <span data-foot-year></span> beautypang.co.kr — 계산 결과는 참고용이며 의료 전문가의 진단·처방을 대체하지 않습니다.</span>`;
+    document.body.appendChild(foot);
+    const y = foot.querySelector('[data-foot-year]');
+    if (y) y.textContent = new Date().getFullYear();
+  }
 
   function init() {
     // 스타일 주입
     const styleEl = document.createElement('style');
     styleEl.textContent = STYLE;
     document.head.appendChild(styleEl);
+
+    // 공통 푸터 주입 (헤더 유무와 무관하게 실행)
+    injectFooter();
 
     const header = document.querySelector('header.site');
     if (!header) return;
@@ -119,6 +147,9 @@
         </a>
       </nav>
       <div class="nav-section-foot">
+        <a href="/legal/privacy.html">개인정보 처리방침</a> ·
+        <a href="/legal/terms.html">이용약관</a> ·
+        <a href="/legal/disclaimer.html">면책 고지</a><br>
         © <span data-year></span> beautypang.tools<br>
         <a href="https://jr-j.com/" rel="noopener">주려줌 — URL 단축 · QR 코드</a>
       </div>
