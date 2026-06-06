@@ -62,16 +62,29 @@
     <a href="/legal/terms.html">이용약관</a>
     <a href="/legal/disclaimer.html">면책 고지</a>`;
 
-  function injectFooter() {
-    if (document.querySelector('footer.site')) return; // 홈 등 자체 푸터 있으면 건너뜀
-    const foot = document.createElement('footer');
-    foot.className = 'site nav-injected-foot';
-    foot.innerHTML = `
+  const FOOT_HTML = `
       <div class="foot-nav">
         <a href="/">홈</a>${LEGAL_LINKS}
       </div>
       <span class="copy">© <span data-foot-year></span> beautypang.co.kr — 계산 결과는 참고용이며 의료 전문가의 진단·처방을 대체하지 않습니다.</span>`;
-    document.body.appendChild(foot);
+
+  function injectFooter() {
+    const existing = document.querySelector('footer.site');
+    // 이미 법적 링크가 있는 푸터(홈 등)는 건드리지 않음
+    if (existing && existing.querySelector('a[href*="/legal/"]')) return;
+    let foot;
+    if (existing) {
+      // 비어있는 footer.site 껍데기(도구 페이지)를 채움
+      foot = existing;
+      foot.classList.add('nav-injected-foot');
+      foot.innerHTML = FOOT_HTML;
+    } else {
+      // 푸터 자체가 없는 페이지에 새로 주입
+      foot = document.createElement('footer');
+      foot.className = 'site nav-injected-foot';
+      foot.innerHTML = FOOT_HTML;
+      document.body.appendChild(foot);
+    }
     const y = foot.querySelector('[data-foot-year]');
     if (y) y.textContent = new Date().getFullYear();
   }
