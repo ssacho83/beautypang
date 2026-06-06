@@ -20,20 +20,20 @@
 
   <!-- 배지 -->
   <rect x="120" y="180" width="220" height="46" rx="23" fill="#1E40AF" opacity="0.3"/>
-  <text x="230" y="210" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#93C5FD" text-anchor="middle" letter-spacing="1">FREE TOOLS · 회원가입 불필요</text>
+  <text x="230" y="210" font-family="'Malgun Gothic','Apple SD Gothic Neo',-apple-system,'Segoe UI',sans-serif" font-size="20" font-weight="700" fill="#93C5FD" text-anchor="middle" letter-spacing="1">FREE TOOLS · 회원가입 불필요</text>
 
   <!-- 메인 타이틀 -->
-  <text x="120" y="320" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="80" font-weight="800" fill="#FFFFFF" letter-spacing="-2">필요할 때 바로 쓰는</text>
-  <text x="120" y="410" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="80" font-weight="800" letter-spacing="-2">
+  <text x="120" y="320" font-family="'Malgun Gothic','Apple SD Gothic Neo',-apple-system,'Segoe UI',sans-serif" font-size="80" font-weight="800" fill="#FFFFFF" letter-spacing="-2">필요할 때 바로 쓰는</text>
+  <text x="120" y="410" font-family="'Malgun Gothic','Apple SD Gothic Neo',-apple-system,'Segoe UI',sans-serif" font-size="80" font-weight="800" letter-spacing="-2">
     <tspan fill="#FFFFFF">일상의 </tspan>
     <tspan fill="url(#accent)">무료 도구</tspan>
   </text>
 
   <!-- 서브카피 -->
-  <text x="120" y="470" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="24" font-weight="500" fill="#94A3B8">복지 · 금융 · 생활에 필요한 계산기와 도구를 한 곳에서</text>
+  <text x="120" y="470" font-family="'Malgun Gothic','Apple SD Gothic Neo',-apple-system,'Segoe UI',sans-serif" font-size="24" font-weight="500" fill="#94A3B8">복지 · 금융 · 생활에 필요한 계산기와 도구를 한 곳에서</text>
 
   <!-- 도메인 -->
-  <text x="120" y="560" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="28" font-weight="700">
+  <text x="120" y="560" font-family="'Malgun Gothic','Apple SD Gothic Neo',-apple-system,'Segoe UI',sans-serif" font-size="28" font-weight="700">
     <tspan fill="#FFFFFF">beautypang</tspan><tspan fill="#3B82F6">.tools</tspan>
   </text>
 
