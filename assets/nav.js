@@ -23,6 +23,7 @@
     { icon: '🌙', label: '수면 시간 (90분 주기)', href: '/sleep-calculator/', cat: '건강' },
     { icon: '🤰', label: '임신 주수 · 출산 예정일', href: '/pregnancy-calculator/', cat: '임신·여성' },
     { icon: '🌷', label: '배란일 · 가임기간', href: '/ovulation-calculator/', cat: '임신·여성' },
+    { icon: '💧', label: '하루 물 섭취량', href: '/water-intake/', cat: '건강' },
   ];
 
   // ─── 스타일 ───────────────────────────────────────────

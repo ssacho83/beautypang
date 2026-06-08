@@ -17,6 +17,7 @@
     { icon: '🌙', name: '수면 시간', desc: '90분 수면 주기 기반 최적 기상', href: '/sleep-calculator/' },
     { icon: '🤰', name: '임신 주수 · 출산 예정일', desc: 'LMP+280일 주차별 가이드', href: '/pregnancy-calculator/' },
     { icon: '🌷', name: '배란일 · 가임기간', desc: '황체기 14일 + 6개월 캘린더', href: '/ovulation-calculator/' },
+    { icon: '💧', name: '하루 물 섭취량', desc: '체중·활동량 기반 권장 수분량', href: '/water-intake/' },
   ];
 
   const STYLE = `
