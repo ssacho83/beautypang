@@ -332,20 +332,12 @@
   /* === Bento Grid (도구 영역) === */
   .bento {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    grid-template-rows: minmax(220px, auto) minmax(220px, auto);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
     gap: 16px;
   }
-  .bento-large {
-    grid-column: 1; grid-row: 1 / 3;
-    min-height: 460px;
-  }
-  .bento-medium {
-    grid-column: 2;
-  }
-  .bento-wide {
-    grid-column: 1 / -1;
-    min-height: 180px;
+  /* 균일 그리드 — 모든 도구 카드 동일 크기 (양산 확장성). 크기 클래스는 호환용으로 무효화 */
+  .bento-large, .bento-medium, .bento-wide {
+    grid-column: auto; grid-row: auto; min-height: 0;
   }
 
   .bento-card {
@@ -417,10 +409,8 @@
     font-size: 10px; font-weight: 800; letter-spacing: 0.6px;
     text-transform: uppercase;
   }
-  .bento-name { margin: 0 0 10px; font-size: 20px; font-weight: 800; color: var(--ink); letter-spacing: -0.5px; line-height: 1.3; }
-  .bento-large .bento-name { font-size: 26px; }
-  .bento-desc { margin: 0 0 16px; font-size: 14px; color: var(--ink-soft); line-height: 1.65; flex: 1; }
-  .bento-large .bento-desc { font-size: 15px; }
+  .bento-name { margin: 0 0 10px; font-size: 18px; font-weight: 800; color: var(--ink); letter-spacing: -0.5px; line-height: 1.35; min-height: 2.7em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .bento-desc { margin: 0 0 16px; font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   .bento-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
   .bento-meta span {
     font-size: 11px; padding: 4px 9px; border-radius: 6px;
@@ -572,50 +562,47 @@
     </div>
 
     <div class="bento">
-      <!-- BMI · 기초대사량 — 대형 카드 -->
-      <a href="/bmi-calculator/" class="bento-card bento-large card-health">
+      <a href="/bmi-calculator/" class="bento-card card-health">
         <div>
           <div class="bento-top">
             <div class="bento-icon">💪</div>
-            <span class="bento-tag">건강 메인</span>
+            <span class="bento-tag">인기</span>
           </div>
-          <h3 class="bento-name">BMI · 기초대사량 ·<br>일일 권장 칼로리 계산기</h3>
-          <p class="bento-desc">키·몸무게·나이·성별·활동량으로 BMI 비만도, 정상 체중 범위, 기초대사량(BMR), 일일 권장 칼로리(TDEE), 다이어트 권장 칼로리를 한 번에 계산합니다. WHO 아시아 기준·Mifflin-St Jeor 공식 기반.</p>
+          <h3 class="bento-name">BMI · 기초대사량 · 일일 권장 칼로리 계산기</h3>
+          <p class="bento-desc">키·몸무게·활동량으로 BMI 비만도, 기초대사량(BMR), 일일 권장 칼로리(TDEE)를 한 번에. WHO 아시아 기준·Mifflin-St Jeor 공식.</p>
           <div class="bento-meta">
             <span>건강</span>
-            <span>WHO 아시아 기준</span>
+            <span>WHO 기준</span>
             <span>Mifflin-St Jeor</span>
           </div>
         </div>
         <span class="bento-cta">사용하기</span>
       </a>
 
-      <!-- 운동 칼로리 — 중형 카드 -->
-      <a href="/exercise-calorie/" class="bento-card bento-medium card-diet">
+      <a href="/exercise-calorie/" class="bento-card card-diet">
         <div>
           <div class="bento-top">
             <div class="bento-icon">🏃</div>
             <span class="bento-tag" data-new-until="2026-06-06">NEW</span>
           </div>
           <h3 class="bento-name">운동 칼로리 소모 계산기</h3>
-          <p class="bento-desc">60+개 운동 종목 + ACSM Compendium 표준 MET + 한국 음식 비교.</p>
+          <p class="bento-desc">60+개 운동 종목 + ACSM Compendium 표준 MET 기반 소모 칼로리 계산. 한국 음식으로 환산 비교.</p>
           <div class="bento-meta">
             <span>다이어트</span>
-            <span>ACSM</span>
+            <span>ACSM MET</span>
           </div>
         </div>
         <span class="bento-cta">사용하기</span>
       </a>
 
-      <!-- 임신주수 — 중형 카드 -->
-      <a href="/pregnancy-calculator/" class="bento-card bento-medium card-family">
+      <a href="/pregnancy-calculator/" class="bento-card card-family">
         <div>
           <div class="bento-top">
             <div class="bento-icon">🤰</div>
             <span class="bento-tag" data-new-until="2026-06-11">NEW</span>
           </div>
-          <h3 class="bento-name">임신 주수 · 출산 예정일</h3>
-          <p class="bento-desc">현재 주수 + 출산 예정일 + 주차별 태아 성장 정보까지 한 번에.</p>
+          <h3 class="bento-name">임신 주수 · 출산 예정일 계산기</h3>
+          <p class="bento-desc">마지막 생리일로 현재 임신 주수, 출산 예정일, 주차별 태아 성장 정보까지 한 번에.</p>
           <div class="bento-meta">
             <span>가족·임신</span>
             <span>LMP+280일</span>
@@ -624,82 +611,72 @@
         <span class="bento-cta">사용하기</span>
       </a>
 
-      <!-- 배란일·가임기간 — 와이드 카드 -->
-      <a href="/ovulation-calculator/" class="bento-card bento-wide card-family">
-        <div style="display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
-          <div style="flex:1; min-width:260px;">
-            <div class="bento-top" style="margin-bottom:14px;">
-              <div class="bento-icon">🌷</div>
-              <span class="bento-tag" data-new-until="2026-06-14">NEW</span>
-            </div>
-            <h3 class="bento-name">배란일·가임기간 계산기</h3>
-            <p class="bento-desc" style="margin-bottom:14px;">마지막 생리 시작일과 주기로 배란일·가임기간·다음 생리 예정일을 즉시 계산. 다음 6개월 캘린더까지 한 번에.</p>
-            <div class="bento-meta">
-              <span>가족·임신</span>
-              <span>황체기 14일 표준</span>
-              <span>6개월 캘린더</span>
-            </div>
+      <a href="/ovulation-calculator/" class="bento-card card-family">
+        <div>
+          <div class="bento-top">
+            <div class="bento-icon">🌷</div>
+            <span class="bento-tag" data-new-until="2026-06-14">NEW</span>
           </div>
-          <span class="bento-cta" style="white-space:nowrap;">사용하기</span>
+          <h3 class="bento-name">배란일 · 가임기간 계산기</h3>
+          <p class="bento-desc">마지막 생리일과 주기로 배란일·가임기간·다음 생리 예정일을 즉시 계산. 다음 6개월 캘린더까지.</p>
+          <div class="bento-meta">
+            <span>가족·임신</span>
+            <span>황체기 14일</span>
+            <span>6개월 캘린더</span>
+          </div>
         </div>
+        <span class="bento-cta">사용하기</span>
       </a>
 
-      <!-- 체성분(체지방률·체수분율) — 와이드 카드 -->
-      <a href="/body-composition/" class="bento-card bento-wide card-health">
-        <div style="display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
-          <div style="flex:1; min-width:260px;">
-            <div class="bento-top" style="margin-bottom:14px;">
-              <div class="bento-icon">💪</div>
-              <span class="bento-tag" data-new-until="2026-06-15">NEW</span>
-            </div>
-            <h3 class="bento-name">체지방률·체수분율·제지방량 계산기</h3>
-            <p class="bento-desc" style="margin-bottom:14px;">키·몸무게·나이·성별로 체지방률(Deurenberg)·체수분율(Watson)·제지방량·골격근량·기초대사량까지 한 번에 추정. InBody 없이도 다이어트 전후 변화 추적.</p>
-            <div class="bento-meta">
-              <span>건강·다이어트</span>
-              <span>Deurenberg·Watson 공식</span>
-              <span>ACSM 카테고리</span>
-            </div>
+      <a href="/body-composition/" class="bento-card card-health">
+        <div>
+          <div class="bento-top">
+            <div class="bento-icon">💪</div>
+            <span class="bento-tag" data-new-until="2026-06-15">NEW</span>
           </div>
-          <span class="bento-cta" style="white-space:nowrap;">사용하기</span>
+          <h3 class="bento-name">체지방률 · 체수분율 · 제지방량 계산기</h3>
+          <p class="bento-desc">키·몸무게·나이·성별로 체지방률(Deurenberg)·체수분율(Watson)·제지방량·골격근량·BMR까지 추정. InBody 없이 변화 추적.</p>
+          <div class="bento-meta">
+            <span>건강·다이어트</span>
+            <span>Deurenberg·Watson</span>
+            <span>ACSM</span>
+          </div>
         </div>
+        <span class="bento-cta">사용하기</span>
       </a>
 
-      <!-- 수면 시간 — 와이드 카드 -->
-      <a href="/sleep-calculator/" class="bento-card bento-wide card-health">
-        <div style="display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
-          <div style="flex:1; min-width:260px;">
-            <div class="bento-top" style="margin-bottom:14px;">
-              <div class="bento-icon">🌙</div>
-              <span class="bento-tag" data-new-until="2026-06-16">NEW</span>
-            </div>
-            <h3 class="bento-name">수면 시간 계산기 — 90분 주기 최적 기상</h3>
-            <p class="bento-desc" style="margin-bottom:14px;">잠들 시각 또는 일어날 시각을 입력하면 90분 수면 주기 기반 최적 취침·기상 시각을 추천. 렘 수면 직후 깨면 한결 개운한 아침.</p>
-            <div class="bento-meta">
-              <span>건강·일상</span>
-              <span>90분 수면 주기</span>
-              <span>수면 잠복기 14분</span>
-            </div>
+      <a href="/sleep-calculator/" class="bento-card card-health">
+        <div>
+          <div class="bento-top">
+            <div class="bento-icon">🌙</div>
+            <span class="bento-tag" data-new-until="2026-06-16">NEW</span>
           </div>
-          <span class="bento-cta" style="white-space:nowrap;">사용하기</span>
+          <h3 class="bento-name">수면 시간 계산기 — 90분 주기 최적 기상</h3>
+          <p class="bento-desc">잠들 시각 또는 일어날 시각을 입력하면 90분 수면 주기 기반 최적 취침·기상 시각을 추천. 렘 수면 직후 = 개운한 아침.</p>
+          <div class="bento-meta">
+            <span>건강·일상</span>
+            <span>90분 주기</span>
+            <span>잠복기 14분</span>
+          </div>
         </div>
+        <span class="bento-cta">사용하기</span>
       </a>
-      <a href="/water-intake/" class="bento-card bento-wide card-health">
-        <div style="display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
-          <div style="flex:1; min-width:260px;">
-            <div class="bento-top" style="margin-bottom:14px;">
-              <div class="bento-icon">💧</div>
-              <span class="bento-tag" data-new-until="2026-06-22">NEW</span>
-            </div>
-            <h3 class="bento-name">하루 물 섭취량 계산기</h3>
-            <p class="bento-desc" style="margin-bottom:14px;">몸무게·활동량을 입력하면 하루 권장 물 섭취량을 즉시 계산. 컵 환산 + 시간대별 음수 가이드 + 한국영양학회 기준 비교.</p>
-            <div class="bento-meta">
-              <span>건강·일상</span>
-              <span>체중 33ml/kg</span>
-              <span>컵·병 환산</span>
-            </div>
+
+      <a href="/water-intake/" class="bento-card card-health">
+        <div>
+          <div class="bento-top">
+            <div class="bento-icon">💧</div>
+            <span class="bento-tag" data-new-until="2026-06-22">NEW</span>
           </div>
-          <span class="bento-cta" style="white-space:nowrap;">사용하기</span>
+          <h3 class="bento-name">하루 물 섭취량 계산기</h3>
+          <p class="bento-desc">몸무게·활동량으로 하루 권장 물 섭취량을 즉시 계산. 컵·병 환산 + 시간대별 음수 가이드 + 한국영양학회 기준 비교.</p>
+          <div class="bento-meta">
+            <span>건강·일상</span>
+            <span>체중 33ml/kg</span>
+            <span>컵·병 환산</span>
+          </div>
         </div>
+        <span class="bento-cta">사용하기</span>
       </a>
     </div>
   </section>
