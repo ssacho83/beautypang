@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>하루 단백질 섭취량 계산기 — 체중·목표별 권장량 + 식품 환산 | beautypang</title>
+<meta name="description" content="몸무게·나이·목표(다이어트·근육증가·건강유지)를 입력하면 하루 권장 단백질 섭취량을 g 단위로 즉시 계산합니다. 체중당 g/kg 기준 + 끼니별 분배 + 닭가슴살·계란·두부 식품 환산 + 한국인 영양소 섭취기준(KDRI) 비교.">
+<meta name="keywords" content="단백질 계산기, 하루 단백질 섭취량, 단백질 권장량, 단백질 섭취량 계산, 체중당 단백질, 다이어트 단백질, 근육 단백질, 프로틴 계산기, beautypang">
+<meta name="robots" content="index,follow">
+<meta name="google-site-verification" content="2xVj59QMIgWGp8je6lsptzWQYhHyDG_aVc05mWOp--4" />
+<meta name="naver-site-verification" content="74fef3d418a1e812489238486ef027fdf967907b" />
+<link rel="canonical" href="https://beautypang.co.kr/protein-calculator/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="beautypang.tools">
+<meta property="og:title" content="하루 단백질 섭취량 계산기 — 체중·목표별 권장량 + 식품 환산">
+<meta property="og:description" content="몸무게·목표로 하루 권장 단백질을 즉시 계산. 끼니별 분배 + 닭가슴살·계란·두부 환산 + 한국인 영양소 섭취기준 비교.">
+<meta property="og:url" content="https://beautypang.co.kr/protein-calculator/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://beautypang.co.kr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="하루 단백질 섭취량 계산기 — beautypang.tools">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="하루 단백질 섭취량 계산기">
+<meta name="twitter:description" content="몸무게·목표로 하루 권장 단백질을 즉시 계산. 식품 환산 + KDRI 비교.">
+<meta name="twitter:image" content="https://beautypang.co.kr/og-image.png">
+
+<meta name="theme-color" content="#EA580C">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="beautypang.tools">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="beautypang.tools RSS" href="/rss.xml">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+<script src="/assets/nav.js?v=2" defer></script>
+<script src="/assets/related-tools.js?v=1" defer></script>
+<link rel="stylesheet" href="/assets/guide.css?v=2">
+<style>:root { --guide-accent: #EA580C; --guide-accent-dark: #C2410C; --guide-accent-soft: #FFEDD5; }</style>
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F76TTBSP9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F76TTBSP9F');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://beautypang.co.kr/protein-calculator/#app",
+      "name": "하루 단백질 섭취량 계산기",
+      "url": "https://beautypang.co.kr/protein-calculator/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "몸무게·나이·목표(다이어트·근육증가·건강유지)별로 하루 권장 단백질 섭취량을 체중당 g/kg 기준으로 계산하고 끼니별 분배·식품 환산을 제공합니다.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+      "inLanguage": "ko-KR",
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript",
+      "author": { "@type": "Organization", "name": "beautypang.tools", "url": "https://beautypang.co.kr/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://beautypang.co.kr/" },
+        { "@type": "ListItem", "position": 2, "name": "하루 단백질 섭취량 계산기", "item": "https://beautypang.co.kr/protein-calculator/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "하루 단백질 얼마나 먹어야 하나요?", "acceptedAnswer": { "@type": "Answer", "text": "목표에 따라 다릅니다. 일반 건강 유지는 체중 1kg당 0.8~1.0g, 활동적인 생활은 1.0~1.4g, 다이어트(근손실 방지)나 근육 증가는 1.6~2.2g가 권장됩니다. 예를 들어 70kg이 근육 증가를 목표로 한다면 약 112~154g입니다. 한국인 영양소 섭취기준(KDRI)의 최소 권장량은 체중당 0.91g(성인 남성 약 65g, 여성 약 55g)입니다." } },
+        { "@type": "Question", "name": "단백질을 너무 많이 먹으면 해로운가요?", "acceptedAnswer": { "@type": "Answer", "text": "건강한 성인에게 체중당 2g 안팎의 고단백 식단은 대체로 안전하다고 보고됩니다. 다만 신장 질환이 있는 경우 단백질 제한이 필요할 수 있으므로 반드시 의사와 상담해야 합니다. 또 단백질만 과도하게 늘리고 수분·식이섬유가 부족하면 변비가 생길 수 있으니 물과 채소를 함께 챙기세요." } },
+        { "@type": "Question", "name": "단백질 보충제를 꼭 먹어야 하나요?", "acceptedAnswer": { "@type": "Answer", "text": "필수는 아닙니다. 단백질은 닭가슴살·계란·생선·두부·콩 같은 일반 식품으로 충분히 채울 수 있습니다. 다만 식사로 목표량을 채우기 어렵거나 운동 직후 빠른 보충이 필요할 때 보충제(1스쿱당 약 20~25g)가 편리한 보조 수단이 됩니다. 식품을 기본으로 두고 부족분을 보충제로 메우는 방식이 좋습니다." } },
+        { "@type": "Question", "name": "한 끼에 단백질이 얼마나 흡수되나요?", "acceptedAnswer": { "@type": "Answer", "text": "근육 단백질 합성은 한 끼 약 20~40g(체중당 0.4g 안팎)에서 최대치에 가까워집니다. 그래서 하루 목표량을 한 번에 몰아 먹기보다 3~4끼에 나눠 고르게 섭취하는 것이 근육 유지·증가에 유리합니다. 한 끼에 더 먹어도 흡수가 안 되는 것은 아니며, 초과분도 에너지·대사에 쓰입니다." } },
+        { "@type": "Question", "name": "운동을 안 해도 단백질을 챙겨야 하나요?", "acceptedAnswer": { "@type": "Answer", "text": "그렇습니다. 단백질은 근육뿐 아니라 효소·호르몬·면역·피부·머리카락의 재료입니다. 운동을 안 해도 체중당 0.8~1.0g은 필요하며, 특히 50대 이후에는 근감소(사르코페니아) 예방을 위해 체중당 1.0~1.2g으로 조금 더 챙기는 것이 권장됩니다." } },
+        { "@type": "Question", "name": "식물성 단백질만으로 충분한가요?", "acceptedAnswer": { "@type": "Answer", "text": "충분히 가능하지만 조합이 중요합니다. 식물성 단백질은 일부 필수아미노산(특히 류신)이 부족할 수 있어, 콩+곡물(예: 밥+두부, 콩+현미)처럼 다양하게 조합하면 동물성에 가까운 균형을 맞출 수 있습니다. 총량을 약간 더 넉넉히 잡고 콩·두부·렌틸·견과를 다양하게 섭취하세요." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  --primary: #EA580C;
+  --primary-dark: #C2410C;
+  --primary-soft: #FFEDD5;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --warning-soft: #fef3c7;
+  --success-soft: #dcfce7;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-md: 0 4px 12px rgba(15,23,42,0.06);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; word-break: keep-all; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.site { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 50; }
+.nav { max-width: 960px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-weight: 800; font-size: 17px; color: var(--text); letter-spacing: -0.3px; }
+.brand span { color: var(--primary); font-weight: 600; }
+.nav-link { font-size: 13px; color: var(--text-muted); }
+.nav-link:hover { color: var(--primary); text-decoration: none; }
+
+.hero { padding: 48px 20px 32px; background: linear-gradient(180deg, var(--primary-soft) 0%, var(--bg) 100%); }
+.hero-inner { max-width: 960px; margin: 0 auto; }
+.badge { display: inline-block; padding: 4px 10px; background: rgba(234,88,12,0.1); color: var(--primary); border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+.hero h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.25; letter-spacing: -0.6px; text-wrap: balance; }
+.hero .lead { margin: 0; color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 640px; }
+.hero .lead b { color: var(--text); font-weight: 700; }
+
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+
+.calc { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
+
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text); }
+.input-wrap { position: relative; }
+.input-wrap input { width: 100%; padding: 12px 44px 12px 14px; font-size: 16px; font-weight: 500; color: var(--text); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); outline: none; transition: border-color 0.15s, box-shadow 0.15s; appearance: none; font-family: inherit; }
+.input-wrap input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(234,88,12,0.1); }
+.input-wrap .unit { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 13px; pointer-events: none; }
+.help { margin: 0; font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+.seg-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.seg-tabs button { padding: 12px 8px; font-size: 14px; font-weight: 600; color: var(--text-muted); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.seg-tabs button.on { background: var(--primary); color: #fff; border-color: var(--primary); }
+.goal-select { width: 100%; padding: 12px 14px; font-size: 15px; font-weight: 500; color: var(--text); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); outline: none; font-family: inherit; appearance: none; cursor: pointer; }
+.goal-select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(234,88,12,0.1); }
+
+.actions { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { padding: 12px 22px; font-size: 14px; font-weight: 700; border-radius: var(--radius-md); cursor: pointer; font-family: inherit; transition: all 0.15s; border: 1.5px solid transparent; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-ghost { background: var(--bg); color: var(--text-muted); border-color: var(--border); }
+.btn-ghost:hover { background: var(--surface); }
+
+.result { margin-top: 28px; display: none; }
+.result.show { display: block; animation: fadeIn 0.3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.result-hero { color: #fff; padding: 28px 24px; border-radius: var(--radius-lg); text-align: center; background: linear-gradient(135deg, #FB923C 0%, #EA580C 100%); }
+.result-hero .label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 8px; }
+.result-hero .value { font-size: 46px; font-weight: 800; line-height: 1; letter-spacing: -1.5px; }
+.result-hero .value small { font-size: 20px; font-weight: 600; opacity: 0.8; margin-left: 4px; }
+.result-hero .sub { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.92); margin-top: 10px; }
+.result-hero .range-bar { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; font-size: 13px; color: rgba(255,255,255,0.95); }
+.result-hero .range-bar .pill { background: rgba(255,255,255,0.18); padding: 5px 12px; border-radius: 999px; font-weight: 700; }
+
+.metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+@media (max-width: 560px) { .metric-grid { grid-template-columns: 1fr; } }
+.metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+.metric .label { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 6px; }
+.metric .value { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.4px; }
+.metric .value small { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-left: 3px; }
+.metric .desc { font-size: 12px; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+
+.breakdown { margin-top: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+.breakdown h3 { margin: 0 0 12px; font-size: 14px; color: var(--text); }
+.bd-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; font-size: 14px; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+.bd-row:last-of-type { border-bottom: 0; }
+.bd-row .v { font-weight: 700; color: var(--text); }
+.bd-row.total { margin-top: 6px; padding-top: 12px; border-top: 2px solid var(--border-strong); border-bottom: 0; font-size: 15px; color: var(--text); font-weight: 700; }
+.bd-row.total .v { color: var(--primary-dark); font-size: 17px; }
+
+.food { margin-top: 16px; }
+.food h3 { font-size: 14px; margin: 0 0 4px; color: var(--text); }
+.food .food-note { font-size: 12px; color: var(--text-dim); margin: 0 0 12px; }
+.food-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+@media (max-width: 560px) { .food-grid { grid-template-columns: 1fr 1fr; } }
+.food-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; text-align: center; }
+.food-card .ico { font-size: 26px; line-height: 1; }
+.food-card .nm { font-size: 12px; font-weight: 600; color: var(--text-muted); margin: 6px 0 4px; }
+.food-card .qty { font-size: 19px; font-weight: 800; color: var(--primary-dark); letter-spacing: -0.4px; }
+.food-card .qty small { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-left: 2px; }
+.food-card .per { font-size: 11px; color: var(--text-dim); margin-top: 4px; }
+
+.schedule { margin-top: 16px; }
+.schedule h3 { font-size: 14px; margin: 0 0 10px; color: var(--text); }
+.sched-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+@media (max-width: 560px) { .sched-grid { grid-template-columns: 1fr 1fr; } }
+.sched-card { background: var(--primary-soft); border-radius: var(--radius-md); padding: 14px; text-align: center; }
+.sched-card .t { font-size: 12px; font-weight: 700; color: var(--primary-dark); }
+.sched-card .a { font-size: 18px; font-weight: 800; color: var(--text); margin: 4px 0 2px; letter-spacing: -0.4px; }
+.sched-card .a small { font-size: 11px; font-weight: 600; color: var(--text-muted); }
+.sched-card .d { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+.note { margin-top: 16px; padding: 14px 16px; background: var(--warning-soft); border: 1px solid #fde68a; border-radius: var(--radius-md); font-size: 13px; color: #78350f; line-height: 1.6; }
+.note strong { color: #92400e; }
+
+.sec { margin-top: 56px; }
+.sec h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.4px; }
+.faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 10px; }
+.faq details[open] { border-color: var(--primary-soft); }
+.faq summary { font-weight: 700; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; float: right; color: var(--text-dim); font-weight: 400; font-size: 18px; line-height: 1; transition: transform 0.2s; }
+.faq details[open] summary::after { content: '−'; }
+.faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
+
+footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
+.foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
+.foot a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="/" class="brand">beautypang<span>.tools</span></a>
+    <a href="/" class="nav-link">← 도구 모음</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">체중 g/kg + 목표별 권장량</span>
+    <h1>하루 단백질 섭취량 계산기</h1>
+    <p class="lead">몸무게·나이·목표만 입력하면 <b>하루 권장 단백질</b>을 g 단위로 즉시 계산합니다. 다이어트·근육증가·건강유지별 <b>g/kg 기준</b>, 끼니별 분배, <b>닭가슴살·계란·두부 환산</b>, 한국인 영양소 섭취기준(KDRI) 비교까지 한 번에.</p>
+  </div>
+</section>
+
+<main>
+  <form class="calc" id="calc">
+    <div class="calc-grid">
+      <div class="field">
+        <label>성별</label>
+        <div class="seg-tabs" id="genderTabs">
+          <button type="button" data-gender="male" class="on">남성</button>
+          <button type="button" data-gender="female">여성</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="ageInput">나이</label>
+        <div class="input-wrap">
+          <input id="ageInput" type="number" min="10" max="100" value="30" inputmode="numeric">
+          <span class="unit">세</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="weightInput">몸무게</label>
+        <div class="input-wrap">
+          <input id="weightInput" type="number" min="20" max="200" step="0.1" value="65" inputmode="decimal">
+          <span class="unit">kg</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="goalSelect">목표</label>
+        <select id="goalSelect" class="goal-select">
+          <option value="maintain">일반 건강 유지 (좌식·가벼운 활동)</option>
+          <option value="active">활동적 생활 (주 1~3회 운동)</option>
+          <option value="endurance">지구력 운동 (러닝·사이클)</option>
+          <option value="diet">체중 감량 (근손실 방지)</option>
+          <option value="muscle" selected>근육 증가 (근력 운동)</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="help" style="margin-top:12px;">* 권장량은 체중 1kg당 단백질(g/kg) 기준입니다. 비만(BMI 30↑)이라면 총체중 대신 표준체중 기준으로 잡는 것이 더 정확합니다.</p>
+
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">계산하기</button>
+      <button type="button" class="btn btn-ghost" id="resetBtn">초기화</button>
+    </div>
+  </form>
+
+  <div class="result" id="result">
+    <div class="result-hero">
+      <div class="label" id="goalLabel">하루 권장 단백질</div>
+      <div class="value"><span id="totalG">0</span><small>g</small></div>
+      <div class="sub">하루 목표 단백질 (<span id="perKg">0</span>g/kg 기준)</div>
+      <div class="range-bar">
+        <span>권장 범위</span>
+        <span class="pill"><span id="rangeLow">0</span> ~ <span id="rangeHigh">0</span>g</span>
+      </div>
+    </div>
+
+    <div class="breakdown">
+      <h3>📊 계산 내역</h3>
+      <div class="bd-row"><span>몸무게</span><span class="v"><span id="bdWeight">65</span>kg</span></div>
+      <div class="bd-row"><span>목표 기준</span><span class="v" id="bdGoal">근육 증가</span></div>
+      <div class="bd-row"><span>적용 계수 (중간값)</span><span class="v"><span id="bdCoef">2.0</span>g/kg</span></div>
+      <div class="bd-row total"><span>하루 권장 단백질</span><span class="v"><span id="bdTotal">0</span>g</span></div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <div class="label">끼니당 분배</div>
+        <div class="value"><span id="mPerMeal">0</span><small>g</small></div>
+        <div class="desc">하루 4회(3끼+간식) 기준</div>
+      </div>
+      <div class="metric">
+        <div class="label">보충제 환산</div>
+        <div class="value"><span id="mScoop">0</span><small>스쿱</small></div>
+        <div class="desc">전량 보충제 시 (1스쿱 24g)</div>
+      </div>
+      <div class="metric">
+        <div class="label">한국인 영양소 섭취기준</div>
+        <div class="value" style="font-size:15px;"><span id="mKdri">—</span></div>
+        <div class="desc" id="mKdriDesc">최소 권장섭취량(RDA)</div>
+      </div>
+    </div>
+
+    <div class="food">
+      <h3>🍽️ 이만큼 먹으면 하루치 (택1 환산)</h3>
+      <p class="food-note">목표량을 한 가지 식품으로만 채운다면 대략 이 정도입니다. 실제로는 여러 식품을 섞어 드세요.</p>
+      <div class="food-grid" id="foodGrid"></div>
+    </div>
+
+    <div class="schedule">
+      <h3>⏰ 끼니별 분배 예시</h3>
+      <div class="sched-grid" id="schedGrid"></div>
+    </div>
+
+    <div class="note">
+      <strong>참고:</strong> 본 계산은 일반 성인 기준 권장량입니다. <b>신장 질환자·투석 환자</b>는 단백질 제한이 필요할 수 있으니 반드시 의사와 상담하세요. 고단백 식단 시 <b>수분과 식이섬유(채소)</b>를 함께 챙겨야 변비를 예방할 수 있습니다.
+    </div>
+  </div>
+
+  <section class="sec">
+    <h2>🥩 단백질 제대로 먹는 6가지 원칙</h2>
+    <div class="guide-wrap">
+      <p class="guide-intro-text">단백질은 <b>총량만큼 타이밍과 분배</b>가 중요합니다. 같은 양을 먹어도 한 끼에 몰아 먹는 것보다 하루에 고르게 나눠 먹을 때 근육 합성에 더 효율적입니다. 본 계산기로 내 목표량을 확인하고 아래 원칙으로 채워보세요.</p>
+      <div class="guide-stats">
+        <div class="guide-stat"><div class="stat-num">0.8~2.2<small>g/kg</small></div><div class="stat-label"><b>목표별 권장 범위</b><br>유지~근육증가</div></div>
+        <div class="guide-stat"><div class="stat-num">20~40<small>g</small></div><div class="stat-label"><b>한 끼 권장</b><br>근합성 최적 구간</div></div>
+        <div class="guide-stat"><div class="stat-num">3~4<small>끼</small></div><div class="stat-label"><b>나눠 먹기</b><br>고르게 분배</div></div>
+      </div>
+      <div class="guide-cards">
+        <div class="guide-card"><span class="gc-num">1</span><span class="gc-icon">🎯</span><h3 class="gc-title">목표부터 정하기</h3><p class="gc-key">체중 × g/kg</p><p class="gc-desc">건강 유지면 0.8~1.0g/kg, 다이어트나 근육 증가면 1.6~2.2g/kg. 목적에 맞는 계수를 골라 총량을 정하는 게 첫 단계입니다.</p></div>
+        <div class="guide-card"><span class="gc-num">2</span><span class="gc-icon">🍽️</span><h3 class="gc-title">끼니마다 고르게</h3><p class="gc-key">한 끼 20~40g</p><p class="gc-desc">근육 단백질 합성은 한 끼 20~40g에서 최대치에 가까워집니다. 아침을 거르고 저녁에 몰아 먹기보다 매 끼 챙기는 게 핵심.</p></div>
+        <div class="guide-card"><span class="gc-num">3</span><span class="gc-icon">💪</span><h3 class="gc-title">운동 후 보충</h3><p class="gc-key">단백질 + 탄수</p><p class="gc-desc">근력 운동 후 1~2시간 내 단백질 20~40g과 탄수화물을 함께 섭취하면 회복과 근성장에 유리합니다.</p></div>
+        <div class="guide-card"><span class="gc-num">4</span><span class="gc-icon">🥚</span><h3 class="gc-title">동물성+식물성 균형</h3><p class="gc-key">아미노산 다양성</p><p class="gc-desc">계란·고기·생선 같은 완전단백질에 콩·두부·견과를 섞으면 필수아미노산(특히 류신)을 골고루 채울 수 있습니다.</p></div>
+        <div class="guide-card"><span class="gc-num">5</span><span class="gc-icon">🌙</span><h3 class="gc-title">자기 전 저지방 단백질</h3><p class="gc-key">야간 회복</p><p class="gc-desc">취침 전 그릭요거트·저지방 우유·카제인 같은 천천히 소화되는 단백질은 자는 동안 근육 회복을 돕습니다.</p></div>
+        <div class="guide-card"><span class="gc-num">6</span><span class="gc-icon">💧</span><h3 class="gc-title">물·채소 함께</h3><p class="gc-key">소화·신장 부담↓</p><p class="gc-desc">고단백 식단은 수분 요구가 늘고 식이섬유가 부족하기 쉽습니다. 물과 채소를 함께 챙겨 변비와 신장 부담을 줄이세요.</p></div>
+      </div>
+      <div class="guide-outro">권장량은 <b>절대 기준이 아니라 출발점</b>입니다. 활동량·근육량·목표에 따라 조절하세요.<br>중요한 건 <b>총량을 꾸준히 채우고 끼니마다 고르게 나누는 것</b>입니다.<br><span class="cta-tag">🥩 한 끼 몰아먹기보다 매 끼 20~40g씩 꾸준히</span></div>
+    </div>
+  </section>
+
+
+  <!-- mid 광고 슬롯 -->
+  <div style="max-width:900px;margin:32px auto;padding:0 20px;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5126709833280837"
+         data-ad-slot="1670772523"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <section class="sec faq">
+    <h2>자주 묻는 질문</h2>
+    <details>
+      <summary>하루 단백질 얼마나 먹어야 하나요?</summary>
+      <div class="answer">
+        목표에 따라 다릅니다. <b>일반 건강 유지는 체중 1kg당 0.8~1.0g</b>, 활동적인 생활은 1.0~1.4g, <b>다이어트(근손실 방지)나 근육 증가는 1.6~2.2g</b>가 권장됩니다.
+        예를 들어 70kg이 근육 증가를 목표로 한다면 약 112~154g입니다. 한국인 영양소 섭취기준(KDRI)의 최소 권장량은 체중당 0.91g(성인 남성 약 65g, 여성 약 55g)입니다.
+      </div>
+    </details>
+    <details>
+      <summary>단백질을 너무 많이 먹으면 해로운가요?</summary>
+      <div class="answer">
+        건강한 성인에게 <b>체중당 2g 안팎의 고단백 식단은 대체로 안전</b>하다고 보고됩니다. 다만 <b>신장 질환</b>이 있는 경우 단백질 제한이 필요할 수 있으므로 반드시 의사와 상담해야 합니다.
+        또 단백질만 과도하게 늘리고 수분·식이섬유가 부족하면 변비가 생길 수 있으니 물과 채소를 함께 챙기세요.
+      </div>
+    </details>
+    <details>
+      <summary>단백질 보충제를 꼭 먹어야 하나요?</summary>
+      <div class="answer">
+        필수는 아닙니다. 단백질은 닭가슴살·계란·생선·두부·콩 같은 <b>일반 식품으로 충분히</b> 채울 수 있습니다.
+        다만 식사로 목표량을 채우기 어렵거나 운동 직후 빠른 보충이 필요할 때 보충제(1스쿱당 약 20~25g)가 편리한 보조 수단이 됩니다. 식품을 기본으로 두고 부족분을 보충제로 메우는 방식이 좋습니다.
+      </div>
+    </details>
+    <details>
+      <summary>한 끼에 단백질이 얼마나 흡수되나요?</summary>
+      <div class="answer">
+        근육 단백질 합성은 한 끼 <b>약 20~40g(체중당 0.4g 안팎)</b>에서 최대치에 가까워집니다. 그래서 하루 목표량을 한 번에 몰아 먹기보다 <b>3~4끼에 나눠</b> 고르게 섭취하는 것이 근육 유지·증가에 유리합니다.
+        한 끼에 더 먹어도 흡수가 안 되는 것은 아니며, 초과분도 에너지·대사에 쓰입니다.
+      </div>
+    </details>
+    <details>
+      <summary>운동을 안 해도 단백질을 챙겨야 하나요?</summary>
+      <div class="answer">
+        그렇습니다. 단백질은 근육뿐 아니라 <b>효소·호르몬·면역·피부·머리카락</b>의 재료입니다. 운동을 안 해도 체중당 0.8~1.0g은 필요하며,
+        특히 <b>50대 이후에는 근감소(사르코페니아) 예방</b>을 위해 체중당 1.0~1.2g으로 조금 더 챙기는 것이 권장됩니다.
+      </div>
+    </details>
+    <details>
+      <summary>식물성 단백질만으로 충분한가요?</summary>
+      <div class="answer">
+        충분히 가능하지만 조합이 중요합니다. 식물성 단백질은 일부 필수아미노산(특히 <b>류신</b>)이 부족할 수 있어,
+        <b>콩+곡물</b>(예: 밥+두부, 콩+현미)처럼 다양하게 조합하면 동물성에 가까운 균형을 맞출 수 있습니다. 총량을 약간 더 넉넉히 잡고 콩·두부·렌틸·견과를 다양하게 섭취하세요.
+      </div>
+    </details>
+  </section>
+
+
+  <!-- faq 광고 슬롯 -->
+  <div style="max-width:900px;margin:32px auto;padding:0 20px;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5126709833280837"
+         data-ad-slot="4831288333"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- 카카오톡 공유 섹션 -->
+  <section style="text-align:center;padding:32px 20px;background:#F5F5F8;border-radius:16px;margin:40px auto;max-width:680px;">
+    <h3 style="margin:0 0 8px;font-size:18px;font-weight:800;color:#0A0A1A;">이 계산기 공유하기</h3>
+    <p style="margin:0 0 16px;font-size:14px;color:#475569;">친구·가족에게 추천해보세요.</p>
+    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+      <button type="button" id="share-kakao" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#FEE500;border:0;border-radius:8px;color:#000;font-weight:700;font-size:14px;cursor:pointer;"><span>💬</span> 카카오톡</button>
+      <button type="button" id="share-copy-kakao" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#fff;border:1px solid #D1D5DB;border-radius:8px;color:#374151;font-weight:700;font-size:14px;cursor:pointer;"><span>🔗</span> 링크 복사</button>
+    </div>
+  </section>
+  <script src="/assets/kakao-share.js?v=1" defer></script>
+
+</main>
+
+<div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-5126709833280837"
+       data-ad-slot="4801328741"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div data-related-tools></div>
+
+<footer class="site">
+  <div class="foot">
+    <div>© <span id="year"></span> beautypang.tools — 다양한 무료 계산기</div>
+    <div><a href="/">도구 모음 →</a></div>
+  </div>
+</footer>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const fmt = n => Math.round(n).toLocaleString('ko-KR');
+  $('year').textContent = new Date().getFullYear();
+
+  let gender = 'male';
+
+  // 목표별 체중당 단백질(g/kg): 스포츠영양(ISSN) + KDRI 기반
+  const GOALS = {
+    maintain:  { label: '일반 건강 유지', low: 0.8, high: 1.0, mid: 0.9 },
+    active:    { label: '활동적 생활',   low: 1.0, high: 1.4, mid: 1.2 },
+    endurance: { label: '지구력 운동',   low: 1.2, high: 1.6, mid: 1.4 },
+    diet:      { label: '체중 감량',     low: 1.6, high: 2.2, mid: 1.8 },
+    muscle:    { label: '근육 증가',     low: 1.6, high: 2.2, mid: 2.0 },
+  };
+
+  // 식품 100g(또는 1단위)당 단백질(g)
+  const FOODS = [
+    { ico: '🍗', nm: '닭가슴살', per: 23, unit: '조각', size: '100g' },
+    { ico: '🥚', nm: '계란',     per: 6,  unit: '개',   size: '대란 1개' },
+    { ico: '🧈', nm: '두부',     per: 13, unit: '모',   size: '1/2모 150g' },
+    { ico: '🥛', nm: '그릭요거트', per: 10, unit: '개', size: '100g' },
+  ];
+
+  // 한국인 영양소 섭취기준(KDRI 2020) 단백질 권장섭취량(RDA, g/일)
+  function kdriRDA(sex, age) {
+    if (sex === 'male')  return age <= 49 ? 65 : 60;
+    return age <= 29 ? 55 : 50;
+  }
+
+  const genderTabs = $('genderTabs');
+  genderTabs.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-gender]');
+    if (!btn) return;
+    genderTabs.querySelectorAll('button').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    gender = btn.dataset.gender;
+    calculate();
+  });
+
+  function calculate() {
+    const weight = parseFloat($('weightInput').value);
+    const age = parseInt($('ageInput').value, 10);
+    if (!weight || !age || weight < 20 || age < 10) return;
+
+    const goalKey = $('goalSelect').value;
+    const g = GOALS[goalKey];
+
+    const target = weight * g.mid;
+    const low = weight * g.low;
+    const high = weight * g.high;
+
+    $('goalLabel').textContent = `${g.label} 목표 단백질`;
+    $('totalG').textContent = fmt(target);
+    $('perKg').textContent = g.mid;
+    $('rangeLow').textContent = fmt(low);
+    $('rangeHigh').textContent = fmt(high);
+
+    // 내역
+    $('bdWeight').textContent = weight;
+    $('bdGoal').textContent = g.label;
+    $('bdCoef').textContent = g.mid;
+    $('bdTotal').textContent = fmt(target);
+
+    // 끼니당 / 보충제 / KDRI
+    $('mPerMeal').textContent = fmt(target / 4);
+    $('mScoop').textContent = (target / 24).toFixed(1);
+    const rda = kdriRDA(gender, age);
+    $('mKdri').textContent = rda + 'g';
+    $('mKdriDesc').textContent = `${gender === 'male' ? '남성' : '여성'} ${age}세 최소 권장(RDA)`;
+
+    // 식품 환산
+    $('foodGrid').innerHTML = FOODS.map(f => {
+      const qty = Math.max(1, Math.round(target / f.per));
+      return `<div class="food-card"><div class="ico">${f.ico}</div><div class="nm">${f.nm}</div><div class="qty">${qty}<small>${f.unit}</small></div><div class="per">${f.size} · ${f.per}g</div></div>`;
+    }).join('');
+
+    // 끼니별 분배 (아침 30·점심 30·저녁 30·간식 10)
+    const meals = [
+      { t: '아침', r: 0.30, d: '하루 시작 단백질' },
+      { t: '점심', r: 0.30, d: '메인 식사' },
+      { t: '저녁', r: 0.30, d: '운동 후 회복' },
+      { t: '간식', r: 0.10, d: '요거트·견과 등' },
+    ];
+    $('schedGrid').innerHTML = meals.map(m => {
+      const amt = Math.round(target * m.r);
+      return `<div class="sched-card"><div class="t">${m.t}</div><div class="a">${fmt(amt)}<small>g</small></div><div class="d">${m.d}</div></div>`;
+    }).join('');
+
+    $('result').classList.add('show');
+  }
+
+  $('calc').addEventListener('submit', e => {
+    e.preventDefault();
+    calculate();
+    $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  $('resetBtn').addEventListener('click', () => {
+    $('ageInput').value = 30;
+    $('weightInput').value = 65;
+    $('goalSelect').value = 'muscle';
+    genderTabs.querySelectorAll('button').forEach(b => b.classList.remove('on'));
+    genderTabs.querySelector('button[data-gender="male"]').classList.add('on');
+    gender = 'male';
+    $('result').classList.remove('show');
+  });
+
+  ['ageInput', 'weightInput'].forEach(id => {
+    $(id).addEventListener('input', calculate);
+    $(id).addEventListener('change', calculate);
+  });
+  $('goalSelect').addEventListener('change', calculate);
+
+  calculate();
+</script>
+
+</body>
+</html>
