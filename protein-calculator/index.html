@@ -227,6 +227,19 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
 .foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
 .foot a { color: var(--text-muted); }
+
+.cp-wrap { margin-top: 56px; }
+.cp-wrap h2 { font-size: 22px; margin: 0 0 6px; letter-spacing: -0.4px; }
+.cp-sub { margin: 0 0 18px; font-size: 13px; color: var(--text-dim); }
+.cp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 640px) { .cp-grid { grid-template-columns: 1fr; } }
+.cp-card { display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); transition: all 0.15s; }
+.cp-card:hover { border-color: var(--primary); box-shadow: 0 4px 16px rgba(234,88,12,0.1); transform: translateY(-2px); text-decoration: none; }
+.cp-card .cp-ico { font-size: 28px; line-height: 1; }
+.cp-card .cp-nm { font-weight: 800; font-size: 15px; color: var(--text); letter-spacing: -0.3px; }
+.cp-card .cp-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+.cp-card .cp-cta { margin-top: auto; padding-top: 8px; font-size: 13px; color: var(--primary); font-weight: 700; }
+.cp-disc { margin: 16px 0 0; font-size: 11px; color: var(--text-dim); line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -362,6 +375,34 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
       </div>
       <div class="guide-outro">권장량은 <b>절대 기준이 아니라 출발점</b>입니다. 활동량·근육량·목표에 따라 조절하세요.<br>중요한 건 <b>총량을 꾸준히 채우고 끼니마다 고르게 나누는 것</b>입니다.<br><span class="cta-tag">🥩 한 끼 몰아먹기보다 매 끼 20~40g씩 꾸준히</span></div>
     </div>
+  </section>
+
+
+  <!-- 쿠팡 파트너스 추천 상품 -->
+  <section class="sec cp-wrap">
+    <h2>🍗 계산한 단백질, 이걸로 채워보세요</h2>
+    <p class="cp-sub">하루 목표 단백질을 채우기 좋은 닭가슴살·프로틴 — 회원가입 없이 바로 주문하세요.</p>
+    <div class="cp-grid">
+      <a href="https://link.coupang.com/a/err3jRRszZ" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🍗</div>
+        <div class="cp-nm">하림 IFF 닭가슴살 2kg</div>
+        <div class="cp-desc">닭가슴살 대표 브랜드, 대용량 가성비. 100g당 단백질 약 23g으로 목표량 채우기 좋습니다.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/err63E7bW0" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🔥</div>
+        <div class="cp-nm">한끼통살 그릴드 닭가슴살 5종</div>
+        <div class="cp-desc">다양한 맛으로 안 질리게. 데우기만 하면 바로 먹을 수 있어 끼니별 단백질 챙기기 편합니다.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/ersmj10xTU" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🥛</div>
+        <div class="cp-nm">하이뮨 프로틴 밸런스</div>
+        <div class="cp-desc">식사로 부족한 단백질을 간편하게 보충. 한 잔으로 약 20g씩, 위 계산값의 부족분을 메우기 좋아요.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+    </div>
+    <p class="cp-disc">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따라 일정액의 수수료를 제공받습니다.</p>
   </section>
 
 
