@@ -215,6 +215,19 @@
     .cal-row { grid-template-columns: 60px 1fr 1fr; font-size: 12px; padding: 10px 12px; }
     .cal-row .fertile { display: none; }
   }
+
+.cp-wrap { margin-top: 56px; }
+.cp-wrap h2 { font-size: 22px; margin: 0 0 6px; letter-spacing: -0.4px; }
+.cp-sub { margin: 0 0 18px; font-size: 13px; color: var(--text-dim); }
+.cp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 640px) { .cp-grid { grid-template-columns: 1fr; } }
+.cp-card { display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); transition: all 0.15s; }
+.cp-card:hover { border-color: var(--primary); box-shadow: 0 4px 16px rgba(15,23,42,0.10); transform: translateY(-2px); text-decoration: none; }
+.cp-card .cp-ico { font-size: 28px; line-height: 1; }
+.cp-card .cp-nm { font-weight: 800; font-size: 15px; color: var(--text); letter-spacing: -0.3px; }
+.cp-card .cp-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+.cp-card .cp-cta { margin-top: auto; padding-top: 8px; font-size: 13px; color: var(--primary); font-weight: 700; }
+.cp-disc { margin: 16px 0 0; font-size: 11px; color: var(--text-dim); line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -310,6 +323,34 @@
       </div>
       <div class="guide-outro">임신을 확인했다면 본 사이트의 <b>임신 주수 계산기</b>로 출산 예정일과 주차별 변화를 추적하세요.<br><a href="/pregnancy-calculator/" style="color:inherit;text-decoration:underline;"><span class="cta-tag">🤰 임신 주수 계산기로 이동</span></a></div>
     </div>
+  </section>
+
+
+  <!-- 쿠팡 파트너스 추천 상품 -->
+  <section class="sec cp-wrap">
+    <h2>🌷 임신 준비, 엽산부터 챙기세요</h2>
+    <p class="cp-sub">임신을 계획 중이라면 미리 챙기면 좋은 엽산 영양제 — 회원가입 없이 바로 주문하세요.</p>
+    <div class="cp-grid">
+      <a href="https://link.coupang.com/a/erul7Gdwse" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🌼</div>
+        <div class="cp-nm">동화약품 활성형 엽산</div>
+        <div class="cp-desc">제약사의 활성형 엽산. 임신 준비·계획 시 필요한 엽산을 가성비 좋게 챙기기 좋습니다.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/erunxaMGnQ" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">💗</div>
+        <div class="cp-nm">뉴트리짓 콜린 이노시톨 4000 엽산</div>
+        <div class="cp-desc">판매 1위 인기 제품. 이노시톨과 엽산을 함께 담아 임신 준비기에 많이 찾습니다.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/eruozy16Cy" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">👫</div>
+        <div class="cp-nm">지엠펌 더폴리포 마미+대디 세트</div>
+        <div class="cp-desc">부부가 함께 챙기는 임신 준비 엽산 세트. 예비 엄마·아빠가 같이 준비할 수 있어요.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+    </div>
+    <p class="cp-disc">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따라 일정액의 수수료를 제공받습니다.</p>
   </section>
 
 
