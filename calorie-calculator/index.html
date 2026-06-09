@@ -235,6 +235,19 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
 .foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
 .foot a { color: var(--text-muted); }
+
+.cp-wrap { margin-top: 56px; }
+.cp-wrap h2 { font-size: 22px; margin: 0 0 6px; letter-spacing: -0.4px; }
+.cp-sub { margin: 0 0 18px; font-size: 13px; color: var(--text-dim); }
+.cp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 640px) { .cp-grid { grid-template-columns: 1fr; } }
+.cp-card { display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); transition: all 0.15s; }
+.cp-card:hover { border-color: var(--primary); box-shadow: 0 4px 16px rgba(234,88,12,0.1); transform: translateY(-2px); text-decoration: none; }
+.cp-card .cp-ico { font-size: 28px; line-height: 1; }
+.cp-card .cp-nm { font-weight: 800; font-size: 15px; color: var(--text); letter-spacing: -0.3px; }
+.cp-card .cp-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+.cp-card .cp-cta { margin-top: auto; padding-top: 8px; font-size: 13px; color: var(--primary); font-weight: 700; }
+.cp-disc { margin: 16px 0 0; font-size: 11px; color: var(--text-dim); line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -394,6 +407,34 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
       </div>
       <div class="guide-outro">칼로리 목표는 <b>절대 기준이 아니라 출발점</b>입니다. 활동량·근육량·대사에 따라 사람마다 다릅니다.<br>중요한 건 <b>유지 칼로리를 알고, 완만하게 조절하며, 단백질을 지키는 것</b>입니다.<br><span class="cta-tag">🔥 굶지 말고, 내 유지 칼로리에서 천천히 조절하세요</span></div>
     </div>
+  </section>
+
+
+  <!-- 쿠팡 파트너스 추천 상품 -->
+  <section class="sec cp-wrap">
+    <h2>🍱 계산한 칼로리, 이 식단으로 채워보세요</h2>
+    <p class="cp-sub">목표 칼로리에 맞춰 골라 먹기 좋은 다이어트 도시락 — 회원가입 없이 바로 주문하세요.</p>
+    <div class="cp-grid">
+      <a href="https://link.coupang.com/a/erp1s7VHtQ" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🥇</div>
+        <div class="cp-nm">마이비밀 다이어트 도시락 6종</div>
+        <div class="cp-desc">다이어트 도시락 인기 브랜드. 6종 구성이라 질리지 않게 한 끼를 관리할 수 있습니다.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/erp3p2r0qy" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">💰</div>
+        <div class="cp-nm">곰곰 곤약 도시락 6종</div>
+        <div class="cp-desc">곤약으로 칼로리는 낮게, 가격은 가볍게. 로켓프레시 빠른배송으로 부담 없이 시작하기 좋아요.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/erp5pPPvA4" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🎯</div>
+        <div class="cp-nm">굽네 UNDER 299 도시락 5종</div>
+        <div class="cp-desc">한 끼 299kcal 이하로 설계된 식단. 위에서 계산한 목표 칼로리에 딱 맞춰 먹기 좋습니다.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+    </div>
+    <p class="cp-disc">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따라 일정액의 수수료를 제공받습니다.</p>
   </section>
 
 
