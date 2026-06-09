@@ -245,6 +245,19 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
 .foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
 .foot a { color: var(--text-muted); }
+
+.cp-wrap { margin-top: 56px; }
+.cp-wrap h2 { font-size: 22px; margin: 0 0 6px; letter-spacing: -0.4px; }
+.cp-sub { margin: 0 0 18px; font-size: 13px; color: var(--text-dim); }
+.cp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 640px) { .cp-grid { grid-template-columns: 1fr; } }
+.cp-card { display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); transition: all 0.15s; }
+.cp-card:hover { border-color: var(--primary); box-shadow: 0 4px 16px rgba(15,23,42,0.10); transform: translateY(-2px); text-decoration: none; }
+.cp-card .cp-ico { font-size: 28px; line-height: 1; }
+.cp-card .cp-nm { font-weight: 800; font-size: 15px; color: var(--text); letter-spacing: -0.3px; }
+.cp-card .cp-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+.cp-card .cp-cta { margin-top: auto; padding-top: 8px; font-size: 13px; color: var(--primary); font-weight: 700; }
+.cp-disc { margin: 16px 0 0; font-size: 11px; color: var(--text-dim); line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -444,6 +457,34 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
         <span class="cta-tag">📅 1주일만 해보세요</span>
       </div>
     </div>
+  </section>
+
+
+  <!-- 쿠팡 파트너스 추천 상품 -->
+  <section class="sec cp-wrap">
+    <h2>🌙 편안한 밤을 위한 영양</h2>
+    <p class="cp-sub">긴장 완화·편안한 밤에 도움을 주는 수면 영양 제품 — 회원가입 없이 바로 주문하세요.</p>
+    <div class="cp-grid">
+      <a href="https://link.coupang.com/a/ertT1sA7pc" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🌙</div>
+        <div class="cp-nm">뉴트림 릴렉스 테아닌 800</div>
+        <div class="cp-desc">긴장 완화에 도움을 주는 L-테아닌. 만원 이하 가성비라 부담 없이 시작하기 좋습니다.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/ertVFeVD3s" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">💊</div>
+        <div class="cp-nm">밸러니티 식물성 멜라토닌+테아닌</div>
+        <div class="cp-desc">식물성 멜라토닌·테아닌·트립토판을 담은 수면 특화 조합. 편안한 밤 루틴에 활용해보세요.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/ertZ5qlquG" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🌿</div>
+        <div class="cp-nm">씨엔지 수면건강 락티움 테아닌</div>
+        <div class="cp-desc">락티움·테아닌을 함께 담은 수면 건강 영양제. 로켓배송으로 빠르게 받아볼 수 있어요.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+    </div>
+    <p class="cp-disc">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따라 일정액의 수수료를 제공받습니다.</p>
   </section>
 
 
