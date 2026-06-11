@@ -240,6 +240,20 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
 .foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
 .foot a { color: var(--text-muted); }
+
+.cp-wrap { margin-top: 56px; }
+.cp-wrap h2 { font-size: 22px; margin: 0 0 6px; letter-spacing: -0.4px; }
+.cp-sub { margin: 0 0 8px; font-size: 13px; color: var(--text-muted); }
+.cp-adlabel { display: inline-block; margin: 0 0 16px; font-size: 11px; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 6px 11px; line-height: 1.5; font-weight: 600; }
+.cp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 640px) { .cp-grid { grid-template-columns: 1fr; } }
+.cp-card { display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); transition: all 0.15s; }
+.cp-card:hover { border-color: var(--guide-accent); box-shadow: 0 4px 16px rgba(15,23,42,0.08); transform: translateY(-2px); text-decoration: none; }
+.cp-card .cp-ico { font-size: 28px; line-height: 1; }
+.cp-card .cp-nm { font-weight: 800; font-size: 15px; color: var(--text); letter-spacing: -0.3px; }
+.cp-card .cp-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+.cp-card .cp-cta { margin-top: auto; padding-top: 8px; font-size: 13px; color: var(--guide-accent-dark); font-weight: 700; }
+.cp-disc { margin: 16px 0 0; font-size: 11px; color: var(--text-dim); line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -372,6 +386,35 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
       </div>
       <div class="guide-outro">BMI는 <b>인구 단위 지표</b>라 근육질 운동선수는 비만으로 잘못 분류될 수 있습니다.<br>정확한 평가는 <b>체지방률·허리둘레</b>와 함께 종합.<br><a href="/body-composition/" style="color:inherit;text-decoration:underline;"><span class="cta-tag">💪 체성분 계산기로 더 정확히</span></a></div>
     </div>
+  </section>
+
+
+  <!-- 쿠팡 파트너스 추천 상품 -->
+  <section class="sec cp-wrap">
+    <h2>⚖️ 체중 관리, 이런 제품으로 시작해요</h2>
+    <p class="cp-sub">체중 기록과 식단 관리에 많이 쓰는 제품 — 회원가입 없이 바로 주문하세요.</p>
+    <span class="cp-adlabel">[광고] 이 섹션은 쿠팡 파트너스 활동의 일환으로, 일정액의 수수료를 제공받습니다.</span>
+    <div class="cp-grid">
+      <a href="https://link.coupang.com/a/euK7n0evRc" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">⚖️</div>
+        <div class="cp-nm">홈프레닛 디지털 LED 체중계</div>
+        <div class="cp-desc">LED 표시창의 가정용 디지털 체중계. 매일 같은 시간 체중을 기록해 변화를 확인하기 좋습니다. 로켓배송.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/euLaw82nPo" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🥤</div>
+        <div class="cp-nm">칼로바이 다밀 뉴트리션 단백질 쉐이크 오곡맛 560g</div>
+        <div class="cp-desc">물·우유에 타 먹는 식사대용 단백질 쉐이크(560g). 바쁜 아침 한 끼 대용으로 찾는 제품입니다. 로켓배송.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/euLbJ3sDQG" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🍙</div>
+        <div class="cp-nm">곰곰 현미 곤약밥 150g 10개</div>
+        <div class="cp-desc">현미에 곤약을 섞은 즉석 곤약밥 10개입. 밥 대신 간편하게 데워 먹는 식단 관리용 제품입니다. 로켓배송.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+    </div>
+    <p class="cp-disc">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따라 일정액의 수수료를 제공받습니다. 제품 정보·가격은 쿠팡 페이지를 확인하세요.</p>
   </section>
 
 
