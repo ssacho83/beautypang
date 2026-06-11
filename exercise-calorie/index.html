@@ -226,6 +226,20 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
 .foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
 .foot a { color: var(--text-muted); }
+
+.cp-wrap { margin-top: 56px; }
+.cp-wrap h2 { font-size: 22px; margin: 0 0 6px; letter-spacing: -0.4px; }
+.cp-sub { margin: 0 0 8px; font-size: 13px; color: var(--text-muted); }
+.cp-adlabel { display: inline-block; margin: 0 0 16px; font-size: 11px; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 6px 11px; line-height: 1.5; font-weight: 600; }
+.cp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 640px) { .cp-grid { grid-template-columns: 1fr; } }
+.cp-card { display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); transition: all 0.15s; }
+.cp-card:hover { border-color: var(--guide-accent); box-shadow: 0 4px 16px rgba(15,23,42,0.08); transform: translateY(-2px); text-decoration: none; }
+.cp-card .cp-ico { font-size: 28px; line-height: 1; }
+.cp-card .cp-nm { font-weight: 800; font-size: 15px; color: var(--text); letter-spacing: -0.3px; }
+.cp-card .cp-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+.cp-card .cp-cta { margin-top: auto; padding-top: 8px; font-size: 13px; color: var(--guide-accent-dark); font-weight: 700; }
+.cp-disc { margin: 16px 0 0; font-size: 11px; color: var(--text-dim); line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -339,6 +353,35 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
       </div>
       <div class="guide-outro">체중만 보지 마세요. <b>체지방률·근육량 변화</b>가 진짜 지표.<br>같은 5kg이라도 지방 5kg과 근육 5kg은 외형 완전 다름.<br><a href="/body-composition/" style="color:inherit;text-decoration:underline;"><span class="cta-tag">💪 체성분 측정으로 변화 추적</span></a></div>
     </div>
+  </section>
+
+
+  <!-- 쿠팡 파트너스 추천 상품 -->
+  <section class="sec cp-wrap">
+    <h2>🏋️ 홈트레이닝, 이것부터 준비하세요</h2>
+    <p class="cp-sub">집에서 운동을 시작할 때 갖춰두면 좋은 기본 장비 — 회원가입 없이 바로 주문하세요.</p>
+    <span class="cp-adlabel">[광고] 이 섹션은 쿠팡 파트너스 활동의 일환으로, 일정액의 수수료를 제공받습니다.</span>
+    <div class="cp-grid">
+      <a href="https://link.coupang.com/a/euJ2y482RE" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🧘</div>
+        <div class="cp-nm">코멧 NBR 10mm 요가매트</div>
+        <div class="cp-desc">바닥 충격과 층간소음을 줄여주는 10mm 두께 매트. 홈트·스트레칭·코어 운동용 기본템으로 색상 선택폭이 넓습니다. 로켓배송.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/euJ7kKVpee" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">💪</div>
+        <div class="cp-nm">코멧 스포츠 라텍스 루프밴드 5종</div>
+        <div class="cp-desc">강도가 다른 5종 세트로 구성된 저항 밴드. 하체·둔근·전신 근력 운동에 두루 쓰입니다. 부피가 작아 보관·휴대 편리. 로켓배송.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/euJ9Efcogu" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🏋️</div>
+        <div class="cp-nm">코멧 스포츠 무게조절 덤벨바벨 28kg 세트</div>
+        <div class="cp-desc">원판을 더하고 빼서 무게를 조절하는 방식. 덤벨과 바벨로 변환되어 다양한 동작에 활용할 수 있는 28kg 세트입니다. 로켓배송.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+    </div>
+    <p class="cp-disc">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따라 일정액의 수수료를 제공받습니다. 제품 구매 여부와 가격은 쿠팡 페이지를 확인하세요.</p>
   </section>
 
 
