@@ -215,6 +215,20 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
 .foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
 .foot a { color: var(--text-muted); }
+
+.cp-wrap { margin-top: 56px; }
+.cp-wrap h2 { font-size: 22px; margin: 0 0 6px; letter-spacing: -0.4px; }
+.cp-sub { margin: 0 0 8px; font-size: 13px; color: var(--text-muted); }
+.cp-adlabel { display: inline-block; margin: 0 0 16px; font-size: 11px; color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 6px 11px; line-height: 1.5; font-weight: 600; }
+.cp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 640px) { .cp-grid { grid-template-columns: 1fr; } }
+.cp-card { display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); transition: all 0.15s; }
+.cp-card:hover { border-color: var(--guide-accent); box-shadow: 0 4px 16px rgba(15,23,42,0.08); transform: translateY(-2px); text-decoration: none; }
+.cp-card .cp-ico { font-size: 28px; line-height: 1; }
+.cp-card .cp-nm { font-weight: 800; font-size: 15px; color: var(--text); letter-spacing: -0.3px; }
+.cp-card .cp-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+.cp-card .cp-cta { margin-top: auto; padding-top: 8px; font-size: 13px; color: var(--guide-accent-dark); font-weight: 700; }
+.cp-disc { margin: 16px 0 0; font-size: 11px; color: var(--text-dim); line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -320,6 +334,34 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
       </div>
       <div class="guide-outro">매주 변화가 매우 큰 시기입니다. <b>산부인과 정기 검진</b>이 가장 안전한 가이드.<br>이 페이지 정보는 일반적 권고이며 <b>본인 상황은 주치의와 상담</b>하세요.<br><span class="cta-tag">📅 다음 검진일을 캘린더에</span></div>
     </div>
+  </section>
+
+  <!-- 쿠팡 파트너스 추천 상품 -->
+  <section class="sec cp-wrap">
+    <h2>🤰 임신·출산 준비, 이런 제품이 있어요</h2>
+    <p class="cp-sub">임신·수유기 많이 찾는 영양제와 용품 — 회원가입 없이 바로 주문하세요. 영양제 섭취는 주치의와 상담하세요.</p>
+    <span class="cp-adlabel">[광고] 이 섹션은 쿠팡 파트너스 활동의 일환으로, 일정액의 수수료를 제공받습니다.</span>
+    <div class="cp-grid">
+      <a href="https://link.coupang.com/a/euKyW48QOi" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🩸</div>
+        <div class="cp-nm">옴니룬건강식품 프리미엄 철분제 90정</div>
+        <div class="cp-desc">철분을 함유한 임산부·여성용 건강기능식품(90정). 섭취 전 성분·섭취량과 주치의 권고를 확인하세요. 로켓배송.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/euKCsEfZSu" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🐟</div>
+        <div class="cp-nm">바디닥터스 초임계 식물성 알티지 오메가3</div>
+        <div class="cp-desc">임산부·수유부가 많이 찾는 식물성(조류 유래) 알티지 오메가3. EPA·DHA 함유 건강기능식품. 로켓배송.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/euKJdXciJg" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🤱</div>
+        <div class="cp-nm">쉬즈홈 맘드림 면 임산부 바디필로우 (+솜)</div>
+        <div class="cp-desc">면 커버에 솜이 포함된 임산부용 바디필로우. 옆으로 누운 수면 자세와 배·다리 받침에 사용합니다. 로켓배송.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+    </div>
+    <p class="cp-disc">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따라 일정액의 수수료를 제공받습니다. 건강기능식품은 질병의 예방·치료를 위한 의약품이 아니며, 제품 정보·가격은 쿠팡 페이지를 확인하세요.</p>
   </section>
 
 
