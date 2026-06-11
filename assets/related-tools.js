@@ -21,6 +21,7 @@
     { icon: '🥩', name: '하루 단백질 섭취량', desc: '목표별 권장 단백질 + 식품 환산', href: '/protein-calculator/' },
     { icon: '🔥', name: '칼로리 계산기', desc: '기초대사량·하루 권장 칼로리 + 탄단지 매크로', href: '/calorie-calculator/' },
     { icon: '📏', name: '예상 키 계산기', desc: '부모 키로 자녀 성인 키 예측 (중간부모키)', href: '/height-predictor/' },
+    { icon: '📐', name: '복부비만 계산기', desc: '허리둘레·BMI·WHtR·WHR 종합 비만도 진단', href: '/obesity-check/' },
   ];
 
   const STYLE = `

@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>복부비만 계산기 — 허리둘레·BMI·WHtR·WHR 종합 비만도 진단 | beautypang</title>
+<meta name="description" content="허리둘레·키·몸무게만 입력하면 복부비만 여부를 BMI·허리둘레·WHtR(허리둘레/키)·WHR(허리/엉덩이) 4가지 지표로 종합 진단합니다. 대한비만학회·WHO 기준 적용. 정상 체중인데도 위험한 '마른 비만'까지 한 번에 확인.">
+<meta name="keywords" content="복부비만 계산기, 복부비만 기준, 허리둘레 정상, WHtR 계산기, 허리둘레 키 비율, WHR 계산기, 비만도 계산기, 내장지방, 마른 비만, beautypang">
+<meta name="robots" content="index,follow">
+<meta name="google-site-verification" content="2xVj59QMIgWGp8je6lsptzWQYhHyDG_aVc05mWOp--4" />
+<meta name="naver-site-verification" content="74fef3d418a1e812489238486ef027fdf967907b" />
+<link rel="canonical" href="https://beautypang.co.kr/obesity-check/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="beautypang.tools">
+<meta property="og:title" content="복부비만 계산기 — 허리둘레·BMI·WHtR·WHR 종합 진단">
+<meta property="og:description" content="허리둘레·키·몸무게로 복부비만 여부를 4가지 지표로 종합 진단. 대한비만학회·WHO 기준. 정상 체중인데도 위험한 '마른 비만'까지 확인.">
+<meta property="og:url" content="https://beautypang.co.kr/obesity-check/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://beautypang.co.kr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="복부비만 계산기 — beautypang.tools">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="복부비만 계산기 — 허리둘레·BMI·WHtR·WHR 종합 진단">
+<meta name="twitter:description" content="허리둘레·키·몸무게로 복부비만 여부를 4가지 지표로 종합 진단. 대한비만학회·WHO 기준.">
+<meta name="twitter:image" content="https://beautypang.co.kr/og-image.png">
+
+<meta name="theme-color" content="#0D9488">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="beautypang.tools">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="beautypang.tools RSS" href="/rss.xml">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+<script src="/assets/nav.js?v=2" defer></script>
+<script src="/assets/related-tools.js?v=1" defer></script>
+<link rel="stylesheet" href="/assets/guide.css?v=2">
+<style>:root { --guide-accent: #0D9488; --guide-accent-dark: #0F766E; --guide-accent-soft: #CCFBF1; }</style>
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F76TTBSP9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F76TTBSP9F');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://beautypang.co.kr/obesity-check/#app",
+      "name": "복부비만 계산기 (BMI·허리둘레·WHtR·WHR 종합)",
+      "url": "https://beautypang.co.kr/obesity-check/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "허리둘레·키·몸무게로 복부비만 여부를 BMI·허리둘레·WHtR·WHR 4가지 지표로 종합 진단합니다. 대한비만학회·WHO 기준 적용.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+      "inLanguage": "ko-KR",
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript",
+      "author": { "@type": "Organization", "name": "beautypang.tools", "url": "https://beautypang.co.kr/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://beautypang.co.kr/" },
+        { "@type": "ListItem", "position": 2, "name": "복부비만 계산기", "item": "https://beautypang.co.kr/obesity-check/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "복부비만 기준은 어떻게 되나요?", "acceptedAnswer": { "@type": "Answer", "text": "대한비만학회 기준으로 허리둘레가 남성 90cm(약 35.4인치) 이상, 여성 85cm(약 33.5인치) 이상이면 복부비만으로 진단합니다. 허리둘레는 갈비뼈 가장 아래와 골반 가장 높은 곳(장골능)의 중간 위치에서, 숨을 편안히 내쉰 상태로 측정합니다. 허리둘레 외에도 허리둘레를 키로 나눈 WHtR이 0.5 이상이거나, 허리둘레를 엉덩이둘레로 나눈 WHR이 남성 0.90·여성 0.85 이상이면 복부비만 위험으로 봅니다." } },
+        { "@type": "Question", "name": "WHtR(허리둘레/키 비율)이란 무엇인가요?", "acceptedAnswer": { "@type": "Answer", "text": "WHtR(Waist-to-Height Ratio)은 허리둘레를 키로 나눈 값으로, '허리둘레는 키의 절반을 넘기지 말라'는 국제적으로 통용되는 간단한 건강 지표입니다. 0.4~0.5는 건강한 범위, 0.5~0.6은 위험 증가, 0.6 이상은 고위험으로 봅니다. BMI보다 내장지방 위험을 잘 반영하고 인종·성별·나이의 영향을 덜 받아 실용적인 지표로 평가받습니다." } },
+        { "@type": "Question", "name": "BMI는 정상인데 복부비만일 수 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "있습니다. 이를 '정상체중 비만' 또는 '마른 비만(skinny fat)'이라고 합니다. 체중과 키로만 계산하는 BMI는 정상이어도, 근육량이 적고 복부에 내장지방이 많으면 허리둘레·WHtR 기준으로는 복부비만일 수 있습니다. 내장지방은 당뇨·고혈압·심혈관질환 위험과 직결되므로, BMI만 보지 말고 허리둘레를 함께 확인하는 것이 중요합니다." } },
+        { "@type": "Question", "name": "내장지방과 피하지방은 어떻게 다른가요?", "acceptedAnswer": { "@type": "Answer", "text": "피하지방은 피부 바로 아래에 쌓이는 지방으로 손으로 잡히는 살입니다. 내장지방은 복강 안 장기 사이에 쌓이는 지방으로, 겉으로는 배만 볼록 나온 형태(복부비만)로 나타납니다. 내장지방은 인슐린 저항성·만성 염증을 유발해 제2형 당뇨·고혈압·이상지질혈증·심혈관질환 위험을 크게 높입니다. 허리둘레가 늘었다면 내장지방을 의심해야 합니다." } },
+        { "@type": "Question", "name": "복부 지방은 어떻게 빼나요?", "acceptedAnswer": { "@type": "Answer", "text": "특정 부위만 빼는 '부분 감량'은 의학적으로 불가능하므로, 전체 체지방을 줄이는 것이 핵심입니다. 가공식품·당분·정제 탄수화물을 줄이고 단백질·식이섬유를 늘리는 식단, 주 150분 이상의 유산소 운동과 근력 운동 병행, 충분한 수면(부족하면 식욕호르몬 교란), 스트레스 관리(코르티솔이 복부지방 축적 촉진)가 함께 가야 효과적입니다. 술은 내장지방 축적을 직접 늘리므로 절주가 중요합니다." } },
+        { "@type": "Question", "name": "허리둘레는 어떻게 정확히 재나요?", "acceptedAnswer": { "@type": "Answer", "text": "양발을 25~30cm 정도 벌리고 서서 체중을 양쪽에 고르게 둔 뒤, 숨을 편안히 내쉰 상태에서 측정합니다. 측정 위치는 갈비뼈 가장 아랫부분과 골반 가장 윗부분(장골능)의 중간 지점입니다. 배꼽 높이가 아니라 이 중간 지점이 기준이며, 줄자가 바닥과 수평이 되도록 하고 줄자를 너무 조이지 않습니다. 식후나 배에 힘을 준 상태는 피하세요." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  --primary: #0D9488;
+  --primary-dark: #0F766E;
+  --primary-soft: #CCFBF1;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --warning-soft: #fef3c7;
+  --success-soft: #dcfce7;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-md: 0 4px 12px rgba(15,23,42,0.06);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; word-break: keep-all; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.site { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 50; }
+.nav { max-width: 960px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-weight: 800; font-size: 17px; color: var(--text); letter-spacing: -0.3px; }
+.brand span { color: var(--primary); font-weight: 600; }
+.nav-link { font-size: 13px; color: var(--text-muted); }
+.nav-link:hover { color: var(--primary); text-decoration: none; }
+
+.hero { padding: 48px 20px 32px; background: linear-gradient(180deg, var(--primary-soft) 0%, var(--bg) 100%); }
+.hero-inner { max-width: 960px; margin: 0 auto; }
+.badge { display: inline-block; padding: 4px 10px; background: rgba(13,148,136,0.1); color: var(--primary-dark); border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+.hero h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.25; letter-spacing: -0.6px; text-wrap: balance; }
+.hero .lead { margin: 0; color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 640px; }
+.hero .lead b { color: var(--text); font-weight: 700; }
+
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+
+.calc { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
+
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text); }
+.field label .opt { font-weight: 500; color: var(--text-dim); font-size: 12px; }
+.input-wrap { position: relative; }
+.input-wrap input { width: 100%; padding: 12px 44px 12px 14px; font-size: 16px; font-weight: 500; color: var(--text); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); outline: none; transition: border-color 0.15s, box-shadow 0.15s; appearance: none; font-family: inherit; }
+.input-wrap input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(13,148,136,0.1); }
+.input-wrap .unit { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 13px; pointer-events: none; }
+.help { margin: 0; font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+.seg-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.seg-tabs button { padding: 12px 8px; font-size: 14px; font-weight: 600; color: var(--text-muted); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.seg-tabs button.on { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+.actions { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { padding: 12px 22px; font-size: 14px; font-weight: 700; border-radius: var(--radius-md); cursor: pointer; font-family: inherit; transition: all 0.15s; border: 1.5px solid transparent; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-ghost { background: var(--bg); color: var(--text-muted); border-color: var(--border); }
+.btn-ghost:hover { background: var(--surface); }
+
+.result { margin-top: 28px; display: none; }
+.result.show { display: block; animation: fadeIn 0.3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.result-hero { color: #fff; padding: 28px 24px; border-radius: var(--radius-lg); text-align: center; background: linear-gradient(135deg, #2DD4BF 0%, #0D9488 100%); transition: background 0.3s; }
+.result-hero .label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 8px; }
+.result-hero .value { font-size: 38px; font-weight: 800; line-height: 1.1; letter-spacing: -1px; }
+.result-hero .sub { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.92); margin-top: 10px; }
+.result-hero .range-bar { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; font-size: 13px; color: rgba(255,255,255,0.95); flex-wrap: wrap; }
+.result-hero .range-bar .pill { background: rgba(255,255,255,0.18); padding: 5px 12px; border-radius: 999px; font-weight: 700; }
+
+.metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+@media (max-width: 720px) { .metric-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 420px) { .metric-grid { grid-template-columns: 1fr; } }
+.metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; border-left: 4px solid var(--border-strong); }
+.metric.ok { border-left-color: var(--success); }
+.metric.warn { border-left-color: var(--warning); }
+.metric.bad { border-left-color: var(--danger); }
+.metric .label { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 6px; }
+.metric .value { font-size: 22px; font-weight: 800; color: var(--text); letter-spacing: -0.4px; }
+.metric .value small { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-left: 3px; }
+.metric .tag { display: inline-block; margin-top: 7px; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--surface-2); color: var(--text-muted); }
+.metric.ok .tag { background: var(--success-soft); color: #166534; }
+.metric.warn .tag { background: var(--warning-soft); color: #92400e; }
+.metric.bad .tag { background: #fee2e2; color: #991b1b; }
+.metric .desc { font-size: 11px; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+
+.breakdown { margin-top: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+.breakdown h3 { margin: 0 0 12px; font-size: 14px; color: var(--text); }
+.bd-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; font-size: 14px; color: var(--text-muted); border-bottom: 1px solid var(--border); gap: 12px; }
+.bd-row:last-of-type { border-bottom: 0; }
+.bd-row .v { font-weight: 700; color: var(--text); text-align: right; }
+.bd-row .v small { font-weight: 500; color: var(--text-dim); display: block; font-size: 11px; margin-top: 1px; }
+
+.note { margin-top: 16px; padding: 14px 16px; background: var(--warning-soft); border: 1px solid #fde68a; border-radius: var(--radius-md); font-size: 13px; color: #78350f; line-height: 1.6; }
+.note strong { color: #92400e; }
+
+.info { margin-top: 16px; }
+.info h3 { font-size: 14px; margin: 0 0 4px; color: var(--text); }
+.info .info-note { font-size: 12px; color: var(--text-dim); margin: 0 0 12px; }
+.info-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+@media (max-width: 560px) { .info-grid { grid-template-columns: 1fr 1fr; } }
+.info-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; text-align: center; }
+.info-card .ico { font-size: 26px; line-height: 1; }
+.info-card .nm { font-size: 13px; font-weight: 700; color: var(--text); margin: 6px 0 4px; }
+.info-card .per { font-size: 11px; color: var(--text-dim); margin-top: 4px; line-height: 1.5; }
+
+.habit { margin-top: 16px; }
+.habit h3 { font-size: 14px; margin: 0 0 10px; color: var(--text); }
+.habit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+@media (max-width: 560px) { .habit-grid { grid-template-columns: 1fr 1fr; } }
+.habit-card { background: var(--primary-soft); border-radius: var(--radius-md); padding: 14px; text-align: center; }
+.habit-card .t { font-size: 13px; font-weight: 800; color: var(--primary-dark); }
+.habit-card .d { font-size: 11px; color: var(--text-muted); line-height: 1.5; margin-top: 4px; }
+
+.sec { margin-top: 56px; }
+.sec h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.4px; }
+.faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 10px; }
+.faq details[open] { border-color: var(--primary-soft); }
+.faq summary { font-weight: 700; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; float: right; color: var(--text-dim); font-weight: 400; font-size: 18px; line-height: 1; transition: transform 0.2s; }
+.faq details[open] summary::after { content: '−'; }
+.faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
+
+footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
+.foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
+.foot a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="/" class="brand">beautypang<span>.tools</span></a>
+    <a href="/" class="nav-link">← 도구 모음</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">대한비만학회·WHO 기준 · 4가지 지표 종합</span>
+    <h1>복부비만 계산기</h1>
+    <p class="lead">허리둘레·키·몸무게만 입력하면 <b>복부비만 여부</b>를 <b>BMI·허리둘레·WHtR(허리/키)·WHR(허리/엉덩이)</b> 4가지 지표로 종합 진단합니다. 체중은 정상인데도 위험한 <b>'마른 비만'</b>까지 한 번에 확인하세요.</p>
+  </div>
+</section>
+
+<main>
+  <form class="calc" id="calc">
+    <div class="calc-grid">
+      <div class="field full">
+        <label>성별</label>
+        <div class="seg-tabs" id="genderTabs">
+          <button type="button" data-gender="male" class="on">남성</button>
+          <button type="button" data-gender="female">여성</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="heightInput">키</label>
+        <div class="input-wrap">
+          <input id="heightInput" type="number" min="120" max="220" step="0.1" value="170" inputmode="decimal">
+          <span class="unit">cm</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="weightInput">몸무게</label>
+        <div class="input-wrap">
+          <input id="weightInput" type="number" min="25" max="250" step="0.1" value="70" inputmode="decimal">
+          <span class="unit">kg</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="waistInput">허리둘레</label>
+        <div class="input-wrap">
+          <input id="waistInput" type="number" min="40" max="180" step="0.1" value="85" inputmode="decimal">
+          <span class="unit">cm</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="hipInput">엉덩이둘레 <span class="opt">(선택 · WHR 계산용)</span></label>
+        <div class="input-wrap">
+          <input id="hipInput" type="number" min="50" max="200" step="0.1" placeholder="예: 95" inputmode="decimal">
+          <span class="unit">cm</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="help" style="margin-top:12px;">* <b>허리둘레</b>는 갈비뼈 맨 아래와 골반 맨 위(장골능)의 <b>중간 지점</b>을, 숨을 편히 내쉰 상태에서 측정하세요(배꼽 높이 아님). 엉덩이둘레는 엉덩이가 가장 튀어나온 부분을 잽니다.</p>
+
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">비만도 진단</button>
+      <button type="button" class="btn btn-ghost" id="resetBtn">초기화</button>
+    </div>
+  </form>
+
+  <div class="result" id="result">
+    <div class="result-hero" id="resultHero">
+      <div class="label">종합 진단 결과</div>
+      <div class="value" id="verdictText">—</div>
+      <div class="sub" id="verdictSub">4가지 지표 종합</div>
+      <div class="range-bar">
+        <span class="pill" id="riskPill">위험 지표 0 / 4</span>
+      </div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric" id="mBmiBox">
+        <div class="label">BMI (체질량지수)</div>
+        <div class="value"><span id="mBmi">0</span></div>
+        <span class="tag" id="mBmiTag">—</span>
+        <div class="desc">대한비만학회 기준</div>
+      </div>
+      <div class="metric" id="mWaistBox">
+        <div class="label">허리둘레</div>
+        <div class="value"><span id="mWaist">0</span><small>cm</small></div>
+        <span class="tag" id="mWaistTag">—</span>
+        <div class="desc" id="mWaistDesc">남 90·여 85cm 기준</div>
+      </div>
+      <div class="metric" id="mWhtrBox">
+        <div class="label">WHtR (허리/키)</div>
+        <div class="value"><span id="mWhtr">0</span></div>
+        <span class="tag" id="mWhtrTag">—</span>
+        <div class="desc">0.5 미만 권장</div>
+      </div>
+      <div class="metric" id="mWhrBox">
+        <div class="label">WHR (허리/엉덩이)</div>
+        <div class="value"><span id="mWhr">—</span></div>
+        <span class="tag" id="mWhrTag">미입력</span>
+        <div class="desc" id="mWhrDesc">엉덩이둘레 입력 시</div>
+      </div>
+    </div>
+
+    <div class="breakdown">
+      <h3>📊 지표별 상세 판정</h3>
+      <div class="bd-row"><span>BMI 체질량지수</span><span class="v"><span id="bdBmi">0</span><small id="bdBmiNote">정상 18.5~22.9</small></span></div>
+      <div class="bd-row"><span>허리둘레 (복부비만 여부)</span><span class="v"><span id="bdWaist">0</span> cm<small id="bdWaistNote"></small></span></div>
+      <div class="bd-row"><span>WHtR · 허리둘레 ÷ 키</span><span class="v"><span id="bdWhtr">0</span><small id="bdWhtrNote">건강 0.4~0.5</small></span></div>
+      <div class="bd-row"><span>WHR · 허리 ÷ 엉덩이</span><span class="v"><span id="bdWhr">—</span><small id="bdWhrNote">엉덩이둘레 입력 시</small></span></div>
+    </div>
+
+    <div class="info">
+      <h3>⚠️ 복부비만(내장지방)이 위험한 이유</h3>
+      <p class="info-note">복부에 쌓이는 내장지방은 단순한 살이 아니라, 호르몬을 분비해 전신 건강에 영향을 줍니다.</p>
+      <div class="info-grid">
+        <div class="info-card"><div class="ico">🩸</div><div class="nm">당뇨 위험</div><div class="per">인슐린 저항성 ↑<br>제2형 당뇨 직결</div></div>
+        <div class="info-card"><div class="ico">❤️</div><div class="nm">심혈관질환</div><div class="per">고혈압·동맥경화<br>심근경색·뇌졸중</div></div>
+        <div class="info-card"><div class="ico">🧪</div><div class="nm">이상지질혈증</div><div class="per">중성지방 ↑<br>좋은 콜레스테롤 ↓</div></div>
+        <div class="info-card"><div class="ico">🔥</div><div class="nm">만성 염증</div><div class="per">염증물질 분비<br>대사증후군 핵심</div></div>
+      </div>
+    </div>
+
+    <div class="habit">
+      <h3>🎯 복부 지방 줄이는 4가지 습관</h3>
+      <div class="habit-grid">
+        <div class="habit-card"><div class="t">🥗 식단 관리</div><div class="d">정제 탄수화물·당분·가공식품 줄이고 단백질·식이섬유 늘리기</div></div>
+        <div class="habit-card"><div class="t">🏃 유산소+근력</div><div class="d">주 150분 이상 유산소 + 근력 운동 병행이 내장지방에 효과적</div></div>
+        <div class="habit-card"><div class="t">😴 충분한 수면</div><div class="d">수면 부족은 식욕호르몬을 교란해 복부지방 축적을 촉진</div></div>
+        <div class="habit-card"><div class="t">🍺 절주·스트레스</div><div class="d">술은 내장지방 직접 증가, 스트레스 호르몬도 복부지방 축적</div></div>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>참고:</strong> 본 계산은 키·몸무게·둘레 기반의 <b>선별(screening) 도구</b>이며 의학적 진단이 아닙니다. 허리둘레·BMI 등은 근육량이 매우 많은 사람(운동선수)이나 임산부·부종·노약자에서는 실제 체지방과 다르게 나올 수 있습니다. 정확한 내장지방·대사 위험 평가는 <b>병원의 복부 CT·혈액검사·체성분 분석</b>으로 확인하세요.
+    </div>
+  </div>
+
+  <section class="sec">
+    <h2>🩺 복부비만에 대해 알아야 할 6가지</h2>
+    <div class="guide-wrap">
+      <p class="guide-intro-text">비만의 진짜 위험은 <b>체중이 아니라 '어디에 지방이 쌓였는가'</b>입니다. 같은 체중이라도 복부에 내장지방이 많으면 당뇨·심혈관질환 위험이 훨씬 높습니다. 그래서 체중계 숫자보다 <b>허리둘레</b>를 챙겨야 합니다. 본 계산기로 4가지 지표를 확인하고 아래 내용을 참고하세요.</p>
+      <div class="guide-stats">
+        <div class="guide-stat"><div class="stat-num">90·85<small>cm</small></div><div class="stat-label"><b>복부비만 허리둘레</b><br>남성·여성 기준</div></div>
+        <div class="guide-stat"><div class="stat-num">0.5<small>미만</small></div><div class="stat-label"><b>WHtR 권장</b><br>허리는 키의 절반 이하</div></div>
+        <div class="guide-stat"><div class="stat-num">4<small>지표</small></div><div class="stat-label"><b>종합 진단</b><br>BMI·허리·WHtR·WHR</div></div>
+      </div>
+      <div class="guide-cards">
+        <div class="guide-card"><span class="gc-num">1</span><span class="gc-icon">📏</span><h3 class="gc-title">허리둘레가 1순위</h3><p class="gc-key">남 90·여 85cm</p><p class="gc-desc">대한비만학회는 허리둘레 남성 90cm·여성 85cm 이상을 복부비만으로 봅니다. 가장 간단하면서도 내장지방 위험을 잘 반영하는 핵심 지표입니다.</p></div>
+        <div class="guide-card"><span class="gc-num">2</span><span class="gc-icon">📐</span><h3 class="gc-title">키의 절반 규칙(WHtR)</h3><p class="gc-key">0.5 미만</p><p class="gc-desc">'허리둘레는 키의 절반을 넘기지 말라'는 국제 지표입니다. 키 170cm라면 허리 85cm 미만이 목표. 성별·나이의 영향을 덜 받아 실용적입니다.</p></div>
+        <div class="guide-card"><span class="gc-num">3</span><span class="gc-icon">🍎</span><h3 class="gc-title">마른 비만 주의</h3><p class="gc-key">정상체중 비만</p><p class="gc-desc">BMI가 정상이어도 근육이 적고 배만 나왔다면 '마른 비만'입니다. 체중계만 믿지 말고 허리둘레를 꼭 함께 확인해야 합니다.</p></div>
+        <div class="guide-card"><span class="gc-num">4</span><span class="gc-icon">🧬</span><h3 class="gc-title">내장지방이 진짜 위험</h3><p class="gc-key">대사증후군</p><p class="gc-desc">내장지방은 인슐린 저항성·만성 염증을 일으켜 당뇨·고혈압·심혈관질환 위험을 높입니다. 손에 잡히는 피하지방보다 훨씬 위험합니다.</p></div>
+        <div class="guide-card"><span class="gc-num">5</span><span class="gc-icon">🍐</span><h3 class="gc-title">사과형 vs 서양배형</h3><p class="gc-key">WHR로 구분</p><p class="gc-desc">배에 살이 몰린 '사과형'이 엉덩이·허벅지형(서양배형)보다 대사 위험이 큽니다. 허리/엉덩이 비율(WHR)이 이 체형을 보여줍니다.</p></div>
+        <div class="guide-card"><span class="gc-num">6</span><span class="gc-icon">🎯</span><h3 class="gc-title">부분 감량은 불가능</h3><p class="gc-key">전체 체지방 ↓</p><p class="gc-desc">윗몸일으키기만으로 뱃살은 빠지지 않습니다. 식단·유산소·근력·수면·절주로 전체 체지방을 줄여야 내장지방이 함께 줄어듭니다.</p></div>
+      </div>
+      <div class="guide-outro">비만 관리의 시작은 <b>체중이 아니라 허리둘레</b>입니다. 한 달에 한 번 같은 조건에서 재며 변화를 추적해 보세요.<br>허리둘레가 기준을 넘었다면 식단·운동·수면을 함께 바꾸는 것이 가장 빠른 길입니다.<br><span class="cta-tag">🩺 숫자보다 추세, 체중보다 허리둘레</span></div>
+    </div>
+  </section>
+
+  <!-- mid 광고 슬롯 -->
+  <div style="max-width:900px;margin:32px auto;padding:0 20px;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5126709833280837"
+         data-ad-slot="1670772523"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <section class="sec faq">
+    <h2>자주 묻는 질문</h2>
+    <details>
+      <summary>복부비만 기준은 어떻게 되나요?</summary>
+      <div class="answer">
+        대한비만학회 기준으로 허리둘레가 <b>남성 90cm(약 35.4인치), 여성 85cm(약 33.5인치) 이상</b>이면 복부비만으로 진단합니다.
+        허리둘레 외에도 허리둘레를 키로 나눈 <b>WHtR이 0.5 이상</b>이거나, 허리둘레를 엉덩이둘레로 나눈 <b>WHR이 남성 0.90·여성 0.85 이상</b>이면 복부비만 위험으로 봅니다.
+      </div>
+    </details>
+    <details>
+      <summary>WHtR(허리둘레/키 비율)이란 무엇인가요?</summary>
+      <div class="answer">
+        WHtR(Waist-to-Height Ratio)은 허리둘레를 키로 나눈 값으로, <b>'허리둘레는 키의 절반을 넘기지 말라'</b>는 국제적으로 통용되는 간단한 건강 지표입니다.
+        0.4~0.5는 건강한 범위, 0.5~0.6은 위험 증가, 0.6 이상은 고위험으로 봅니다. BMI보다 내장지방 위험을 잘 반영하고 인종·성별·나이의 영향을 덜 받습니다.
+      </div>
+    </details>
+    <details>
+      <summary>BMI는 정상인데 복부비만일 수 있나요?</summary>
+      <div class="answer">
+        있습니다. 이를 <b>'정상체중 비만' 또는 '마른 비만(skinny fat)'</b>이라고 합니다. 체중과 키로만 계산하는 BMI는 정상이어도, 근육량이 적고 복부에 내장지방이 많으면 허리둘레·WHtR 기준으로는 복부비만일 수 있습니다.
+        내장지방은 당뇨·고혈압·심혈관질환 위험과 직결되므로, BMI만 보지 말고 허리둘레를 함께 확인하는 것이 중요합니다.
+      </div>
+    </details>
+    <details>
+      <summary>내장지방과 피하지방은 어떻게 다른가요?</summary>
+      <div class="answer">
+        <b>피하지방</b>은 피부 바로 아래에 쌓이는, 손으로 잡히는 살입니다. <b>내장지방</b>은 복강 안 장기 사이에 쌓이는 지방으로, 겉으로는 배만 볼록 나온 형태로 나타납니다.
+        내장지방은 인슐린 저항성·만성 염증을 유발해 제2형 당뇨·고혈압·이상지질혈증·심혈관질환 위험을 크게 높입니다. 허리둘레가 늘었다면 내장지방을 의심해야 합니다.
+      </div>
+    </details>
+    <details>
+      <summary>복부 지방은 어떻게 빼나요?</summary>
+      <div class="answer">
+        특정 부위만 빼는 '부분 감량'은 의학적으로 불가능하므로, <b>전체 체지방을 줄이는 것</b>이 핵심입니다.
+        가공식품·당분·정제 탄수화물을 줄이고 단백질·식이섬유를 늘리는 식단, 주 150분 이상의 유산소 운동과 근력 운동 병행, 충분한 수면, 스트레스 관리·절주가 함께 가야 효과적입니다.
+      </div>
+    </details>
+    <details>
+      <summary>허리둘레는 어떻게 정확히 재나요?</summary>
+      <div class="answer">
+        양발을 25~30cm 정도 벌리고 서서 체중을 양쪽에 고르게 둔 뒤, <b>숨을 편안히 내쉰 상태</b>에서 측정합니다.
+        측정 위치는 <b>갈비뼈 가장 아랫부분과 골반 가장 윗부분(장골능)의 중간 지점</b>입니다. 배꼽 높이가 아니며, 줄자가 바닥과 수평이 되도록 하고 너무 조이지 않습니다.
+      </div>
+    </details>
+  </section>
+
+  <!-- faq 광고 슬롯 -->
+  <div style="max-width:900px;margin:32px auto;padding:0 20px;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5126709833280837"
+         data-ad-slot="4831288333"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- 카카오톡 공유 섹션 -->
+  <section style="text-align:center;padding:32px 20px;background:#F5F5F8;border-radius:16px;margin:40px auto;max-width:680px;">
+    <h3 style="margin:0 0 8px;font-size:18px;font-weight:800;color:#0A0A1A;">이 계산기 공유하기</h3>
+    <p style="margin:0 0 16px;font-size:14px;color:#475569;">친구·가족에게 추천해보세요.</p>
+    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+      <button type="button" id="share-kakao" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#FEE500;border:0;border-radius:8px;color:#000;font-weight:700;font-size:14px;cursor:pointer;"><span>💬</span> 카카오톡</button>
+      <button type="button" id="share-copy-kakao" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#fff;border:1px solid #D1D5DB;border-radius:8px;color:#374151;font-weight:700;font-size:14px;cursor:pointer;"><span>🔗</span> 링크 복사</button>
+    </div>
+  </section>
+  <script src="/assets/kakao-share.js?v=1" defer></script>
+
+</main>
+
+<div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-5126709833280837"
+       data-ad-slot="4801328741"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div data-related-tools></div>
+
+<footer class="site">
+  <div class="foot">
+    <div>© <span id="year"></span> beautypang.tools — 다양한 무료 계산기</div>
+    <div><a href="/">도구 모음 →</a></div>
+  </div>
+</footer>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const fmt1 = n => (Math.round(n * 10) / 10).toLocaleString('ko-KR');
+  const fmt2 = n => (Math.round(n * 100) / 100).toLocaleString('ko-KR', { minimumFractionDigits: 2 });
+  $('year').textContent = new Date().getFullYear();
+
+  let gender = 'male';
+
+  // 복부비만 허리둘레 기준 (대한비만학회) — 남 90cm / 여 85cm
+  const WAIST_CUT = { male: 90, female: 85 };
+  // WHR 복부비만 기준 (WHO) — 남 0.90 / 여 0.85
+  const WHR_CUT = { male: 0.90, female: 0.85 };
+
+  const genderTabs = $('genderTabs');
+  genderTabs.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-gender]');
+    if (!btn) return;
+    genderTabs.querySelectorAll('button').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    gender = btn.dataset.gender;
+    calculate();
+  });
+
+  // BMI 단계 (대한비만학회 2022) — 0:저체중 1:정상 2:비만전단계 3:1단계 4:2단계 5:3단계
+  function bmiStage(bmi) {
+    if (bmi < 18.5) return { lv: 0, label: '저체중', risk: false };
+    if (bmi < 23)   return { lv: 1, label: '정상', risk: false };
+    if (bmi < 25)   return { lv: 2, label: '비만 전단계', risk: false };
+    if (bmi < 30)   return { lv: 3, label: '1단계 비만', risk: true };
+    if (bmi < 35)   return { lv: 4, label: '2단계 비만', risk: true };
+    return { lv: 5, label: '3단계 비만(고도)', risk: true };
+  }
+
+  function setMetric(boxId, tagId, state, tagText) {
+    const box = $(boxId);
+    box.classList.remove('ok', 'warn', 'bad');
+    if (state) box.classList.add(state);
+    $(tagId).textContent = tagText;
+  }
+
+  function calculate() {
+    const h = parseFloat($('heightInput').value);
+    const w = parseFloat($('weightInput').value);
+    const waist = parseFloat($('waistInput').value);
+    const hipRaw = $('hipInput').value;
+    const hip = parseFloat(hipRaw);
+    if (!h || !w || !waist || h < 100 || w < 20 || waist < 30) return;
+
+    let risk = 0, total = 3; // BMI, 허리둘레, WHtR 항상 평가. WHR은 입력 시 +1
+
+    // 1) BMI
+    const bmi = w / Math.pow(h / 100, 2);
+    const bs = bmiStage(bmi);
+    $('mBmi').textContent = fmt1(bmi);
+    $('bdBmi').textContent = fmt1(bmi);
+    $('bdBmiNote').textContent = bs.label;
+    setMetric('mBmiBox', 'mBmiTag', bs.lv >= 3 ? 'bad' : (bs.lv === 2 ? 'warn' : 'ok'), bs.label);
+    if (bs.risk) risk++;
+
+    // 2) 허리둘레 (복부비만 절대 기준)
+    const wc = WAIST_CUT[gender];
+    const waistObese = waist >= wc;
+    const waistWarn = waist >= wc - 5 && waist < wc; // 경계
+    $('mWaist').textContent = fmt1(waist);
+    $('bdWaist').textContent = fmt1(waist);
+    $('mWaistDesc').textContent = `${gender === 'male' ? '남성' : '여성'} ${wc}cm 이상 = 복부비만`;
+    if (waistObese) {
+      setMetric('mWaistBox', 'mWaistTag', 'bad', '복부비만');
+      $('bdWaistNote').textContent = `${gender === 'male' ? '남성' : '여성'} ${wc}cm 이상`;
+      risk++;
+    } else if (waistWarn) {
+      setMetric('mWaistBox', 'mWaistTag', 'warn', '경계 (주의)');
+      $('bdWaistNote').textContent = `기준 ${wc}cm에 근접`;
+    } else {
+      setMetric('mWaistBox', 'mWaistTag', 'ok', '정상');
+      $('bdWaistNote').textContent = `기준 ${wc}cm 미만`;
+    }
+
+    // 3) WHtR (허리둘레 / 키)
+    const whtr = waist / h;
+    $('mWhtr').textContent = fmt2(whtr);
+    $('bdWhtr').textContent = fmt2(whtr);
+    let whtrLabel, whtrState;
+    if (whtr < 0.4)       { whtrLabel = '낮음';       whtrState = 'warn'; }
+    else if (whtr < 0.5)  { whtrLabel = '건강 범위';  whtrState = 'ok'; }
+    else if (whtr < 0.6)  { whtrLabel = '위험 증가';  whtrState = 'warn'; risk++; }
+    else                  { whtrLabel = '고위험';     whtrState = 'bad';  risk++; }
+    setMetric('mWhtrBox', 'mWhtrTag', whtrState, whtrLabel);
+    $('bdWhtrNote').textContent = whtrLabel + ' (건강 0.4~0.5)';
+
+    // 4) WHR (허리 / 엉덩이) — 선택
+    if (hip && hip > 0 && !isNaN(hip)) {
+      total = 4;
+      const whr = waist / hip;
+      const whrCut = WHR_CUT[gender];
+      const whrObese = whr >= whrCut;
+      $('mWhr').textContent = fmt2(whr);
+      $('bdWhr').textContent = fmt2(whr);
+      $('mWhrDesc').textContent = `${gender === 'male' ? '남성' : '여성'} ${whrCut.toFixed(2)} 이상 = 위험`;
+      if (whrObese) {
+        setMetric('mWhrBox', 'mWhrTag', 'bad', '복부비만');
+        $('bdWhrNote').textContent = `${gender === 'male' ? '남' : '여'} ${whrCut.toFixed(2)} 이상 (사과형)`;
+        risk++;
+      } else {
+        setMetric('mWhrBox', 'mWhrTag', 'ok', '정상');
+        $('bdWhrNote').textContent = `기준 ${whrCut.toFixed(2)} 미만`;
+      }
+    } else {
+      $('mWhr').textContent = '—';
+      $('bdWhr').textContent = '—';
+      setMetric('mWhrBox', 'mWhrTag', null, '미입력');
+      $('mWhrDesc').textContent = '엉덩이둘레 입력 시 계산';
+      $('bdWhrNote').textContent = '엉덩이둘레 미입력';
+    }
+
+    // 종합 판정
+    let verdict, sub, grad;
+    if (risk === 0) {
+      verdict = '정상 범위';
+      sub = '복부비만 위험 지표가 없습니다. 지금 상태를 유지하세요.';
+      grad = 'linear-gradient(135deg, #34D399 0%, #16A34A 100%)';
+    } else if (risk === 1) {
+      verdict = '주의 필요';
+      sub = '일부 지표가 기준을 넘었습니다. 허리둘레 관리를 시작하세요.';
+      grad = 'linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%)';
+    } else if (risk === 2) {
+      verdict = '복부비만 경계';
+      sub = '여러 지표가 위험 신호를 보입니다. 식단·운동 개선이 필요합니다.';
+      grad = 'linear-gradient(135deg, #FB923C 0%, #EA580C 100%)';
+    } else {
+      verdict = '복부비만 관리 필요';
+      sub = '대부분 지표가 위험 범위입니다. 생활습관 개선과 검진을 권장합니다.';
+      grad = 'linear-gradient(135deg, #F87171 0%, #DC2626 100%)';
+    }
+    $('verdictText').textContent = verdict;
+    $('verdictSub').textContent = sub;
+    $('riskPill').textContent = `위험 지표 ${risk} / ${total}`;
+    $('resultHero').style.background = grad;
+
+    $('result').classList.add('show');
+  }
+
+  $('calc').addEventListener('submit', e => {
+    e.preventDefault();
+    calculate();
+    $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  $('resetBtn').addEventListener('click', () => {
+    $('heightInput').value = 170;
+    $('weightInput').value = 70;
+    $('waistInput').value = 85;
+    $('hipInput').value = '';
+    genderTabs.querySelectorAll('button').forEach(b => b.classList.remove('on'));
+    genderTabs.querySelector('button[data-gender="male"]').classList.add('on');
+    gender = 'male';
+    $('result').classList.remove('show');
+  });
+
+  ['heightInput', 'weightInput', 'waistInput', 'hipInput'].forEach(id => {
+    $(id).addEventListener('input', calculate);
+    $(id).addEventListener('change', calculate);
+  });
+
+  calculate();
+</script>
+
+</body>
+</html>
