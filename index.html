@@ -839,11 +839,15 @@
     });
   })();
 
-  // NEW 배지 자동 만료 — data-new-until="YYYY-MM-DD" 박힌 요소
+  // NEW 배지 — 항상 "가장 최근 양산된 N개" 도구에만 표시.
+  // 카드 DOM 순서 = 출시 순서(오래된→최신)이므로, NEW 후보(data-new-until 보유) 중
+  // 마지막 N개만 남기고 나머지는 숨김. 도구를 추가하면 자동으로 최신 쪽으로 NEW가 이동.
+  // → 신규 도구 추가 시: 카드를 그리드 맨 끝에 넣고 data-new-until 속성(아무 날짜)만 박으면 됨.
   (function () {
-    const today = new Date().toISOString().slice(0, 10);
-    document.querySelectorAll('[data-new-until]').forEach(el => {
-      if (el.dataset.newUntil < today) el.style.display = 'none';
+    const NEW_COUNT = 3;
+    const badges = Array.from(document.querySelectorAll('.bento-card [data-new-until]'));
+    badges.forEach((el, i) => {
+      el.style.display = (i >= badges.length - NEW_COUNT) ? '' : 'none';
     });
   })();
 
