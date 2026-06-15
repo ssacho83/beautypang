@@ -24,6 +24,7 @@
     { icon: '📐', name: '복부비만 계산기', desc: '허리둘레·BMI·WHtR·WHR 종합 비만도 진단', href: '/obesity-check/' },
     { icon: '🎂', name: '만 나이 계산기', desc: '만 나이·연 나이·띠·별자리·생일 D-day', href: '/age-calculator/' },
     { icon: '🎯', name: '디데이 계산기', desc: 'D-day·100일·기념일·날짜 더하기/빼기', href: '/d-day/' },
+    { icon: '☕', name: '카페인 계산기', desc: '하루 카페인 한도·섭취량·취침 전 마지노선', href: '/caffeine/' },
   ];
 
   const STYLE = `

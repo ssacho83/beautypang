@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>카페인 계산기 — 하루 권장량·섭취량·취침 전 마지노선 | beautypang</title>
+<meta name="description" content="커피·에너지드링크·콜라 섭취량으로 오늘 마신 카페인 총량을 계산하고 하루 권장 한도와 비교합니다. 카페인 반감기 기반 '잠 방해 마지노선 시각'까지. 식약처 기준, 무료.">
+<meta name="keywords" content="카페인 계산기, 카페인 하루 권장량, 카페인 섭취량, 커피 카페인, 에너지드링크 카페인, 카페인 반감기, 카페인 한도, 임산부 카페인, beautypang">
+<meta name="robots" content="index,follow">
+<meta name="google-site-verification" content="2xVj59QMIgWGp8je6lsptzWQYhHyDG_aVc05mWOp--4" />
+<meta name="naver-site-verification" content="74fef3d418a1e812489238486ef027fdf967907b" />
+<link rel="canonical" href="https://beautypang.co.kr/caffeine/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="beautypang.tools">
+<meta property="og:title" content="카페인 계산기 — 하루 권장량·섭취량·취침 전 마지노선">
+<meta property="og:description" content="오늘 마신 카페인 총량을 계산하고 권장 한도와 비교. 반감기 기반 '잠 방해 마지노선 시각'까지.">
+<meta property="og:url" content="https://beautypang.co.kr/caffeine/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://beautypang.co.kr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="카페인 계산기 — beautypang.tools">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="카페인 계산기">
+<meta name="twitter:description" content="오늘 마신 카페인 총량·권장 한도 비교·취침 전 마지노선 시각 계산.">
+<meta name="twitter:image" content="https://beautypang.co.kr/og-image.png">
+
+<meta name="theme-color" content="#B45309">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="beautypang.tools">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="beautypang.tools RSS" href="/rss.xml">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+<script src="/assets/nav.js?v=2" defer></script>
+<script src="/assets/related-tools.js?v=1" defer></script>
+<link rel="stylesheet" href="/assets/guide.css?v=2">
+<style>:root { --guide-accent: #B45309; --guide-accent-dark: #92400E; --guide-accent-soft: #FEF3C7; }</style>
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F76TTBSP9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F76TTBSP9F');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://beautypang.co.kr/caffeine/#app",
+      "name": "카페인 계산기",
+      "url": "https://beautypang.co.kr/caffeine/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "커피·에너지드링크 등 음료 섭취량으로 카페인 총량을 계산하고 하루 권장 한도와 비교, 반감기 기반 취침 전 카페인 마지노선 시각을 제공합니다.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+      "inLanguage": "ko-KR",
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript",
+      "author": { "@type": "Organization", "name": "beautypang.tools", "url": "https://beautypang.co.kr/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://beautypang.co.kr/" },
+        { "@type": "ListItem", "position": 2, "name": "카페인 계산기", "item": "https://beautypang.co.kr/caffeine/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "하루 카페인 권장량은 얼마인가요?", "acceptedAnswer": { "@type": "Answer", "text": "식품의약품안전처 기준으로 건강한 성인은 하루 400mg 이하를 권장합니다. 임산부는 300mg 이하, 어린이·청소년은 체중 1kg당 2.5mg 이하입니다. 400mg은 대략 아메리카노 4잔 정도에 해당합니다." } },
+        { "@type": "Question", "name": "커피 한 잔에 카페인이 얼마나 들어 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "음료에 따라 다릅니다(평균치 기준). 아메리카노·드립커피 1잔 약 100mg, 에스프레소 1샷 약 75mg, 믹스커피 1봉 약 50mg, 에너지드링크 250ml 약 60mg, 콜라 355ml 약 35mg, 녹차·홍차 1잔 약 30mg입니다. 매장·제품마다 편차가 있습니다." } },
+        { "@type": "Question", "name": "카페인 반감기가 무엇인가요?", "acceptedAnswer": { "@type": "Answer", "text": "몸속 카페인이 절반으로 줄어드는 데 걸리는 시간으로, 성인 평균 약 5시간입니다. 오후 3시에 100mg을 마시면 저녁 8시에 약 50mg, 새벽 1시에 약 25mg이 남아 있습니다. 이 잔여 카페인이 수면을 방해할 수 있습니다." } },
+        { "@type": "Question", "name": "잠을 위해 카페인을 언제까지 마셔도 되나요?", "acceptedAnswer": { "@type": "Answer", "text": "수면 전문가들은 취침 약 6시간 전부터 카페인을 피하라고 권합니다. 반감기가 약 5시간이라 6시간 전에 마셔도 절반 가까이 남기 때문입니다. 카페인에 민감하다면 점심 이후 카페인을 줄이는 것이 좋습니다." } },
+        { "@type": "Question", "name": "디카페인 커피에도 카페인이 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "네, 소량 있습니다. 디카페인은 카페인을 약 97% 이상 제거하지만 0은 아니어서 1잔당 약 2~5mg이 남습니다. 카페인에 매우 민감하거나 여러 잔 마신다면 이 양도 고려하세요." } },
+        { "@type": "Question", "name": "카페인을 너무 많이 마시면 어떻게 되나요?", "acceptedAnswer": { "@type": "Answer", "text": "하루 400mg을 크게 넘으면 불면·심장 두근거림·불안·위장 장애·손떨림이 나타날 수 있습니다. 한 번에 많은 양(성인 기준 약 600mg 이상)은 특히 주의해야 하며, 카페인 민감도와 약 복용 여부에 따라 개인차가 큽니다." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  --primary: #B45309;
+  --primary-dark: #92400E;
+  --primary-soft: #FEF3C7;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --warning-soft: #fef3c7;
+  --success-soft: #dcfce7;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-md: 0 4px 12px rgba(15,23,42,0.06);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; word-break: keep-all; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.site { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 50; }
+.nav { max-width: 960px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-weight: 800; font-size: 17px; color: var(--text); letter-spacing: -0.3px; }
+.brand span { color: var(--primary); font-weight: 600; }
+.nav-link { font-size: 13px; color: var(--text-muted); }
+.nav-link:hover { color: var(--primary); text-decoration: none; }
+
+.hero { padding: 48px 20px 32px; background: linear-gradient(180deg, var(--primary-soft) 0%, var(--bg) 100%); }
+.hero-inner { max-width: 960px; margin: 0 auto; }
+.badge { display: inline-block; padding: 4px 10px; background: rgba(180,83,9,0.1); color: var(--primary); border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+.hero h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.25; letter-spacing: -0.6px; text-wrap: balance; }
+.hero .lead { margin: 0; color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 640px; }
+.hero .lead b { color: var(--text); font-weight: 700; }
+
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+
+.calc { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); }
+
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text); }
+.help { margin: 0; font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+.seg-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.seg-tabs button { padding: 12px 8px; font-size: 14px; font-weight: 600; color: var(--text-muted); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.seg-tabs button.on { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+.drinks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 6px; }
+@media (max-width: 560px) { .drinks { grid-template-columns: 1fr; } }
+.drink { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: var(--radius-md); background: var(--bg); }
+.drink.has { border-color: var(--primary); background: #fffdf7; }
+.drink .ico { font-size: 24px; line-height: 1; flex-shrink: 0; }
+.drink .info { flex: 1; min-width: 0; }
+.drink .nm { font-size: 14px; font-weight: 700; color: var(--text); }
+.drink .mg { font-size: 11px; color: var(--text-dim); }
+.stepper { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.stepper button { width: 30px; height: 30px; border-radius: 8px; border: 1.5px solid var(--border); background: var(--bg); color: var(--text); font-size: 18px; font-weight: 700; cursor: pointer; line-height: 1; display: flex; align-items: center; justify-content: center; }
+.stepper button:hover { border-color: var(--primary); color: var(--primary); }
+.stepper .cnt { min-width: 22px; text-align: center; font-size: 16px; font-weight: 800; color: var(--text); }
+
+.bedtime-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 20px; }
+@media (max-width: 560px) { .bedtime-row { grid-template-columns: 1fr; } }
+.input-wrap input { width: 100%; padding: 12px 14px; font-size: 16px; font-weight: 500; color: var(--text); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); outline: none; font-family: inherit; }
+.input-wrap input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(180,83,9,0.1); }
+
+.actions { margin-top: 22px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { padding: 12px 22px; font-size: 14px; font-weight: 700; border-radius: var(--radius-md); cursor: pointer; font-family: inherit; transition: all 0.15s; border: 1.5px solid transparent; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-ghost { background: var(--bg); color: var(--text-muted); border-color: var(--border); }
+.btn-ghost:hover { background: var(--surface); }
+
+.result { margin-top: 28px; display: none; }
+.result.show { display: block; animation: fadeIn 0.3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.result-hero { color: #fff; padding: 28px 24px; border-radius: var(--radius-lg); text-align: center; background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%); }
+.result-hero.over { background: linear-gradient(135deg, #F87171 0%, #B91C1C 100%); }
+.result-hero .label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 8px; }
+.result-hero .value { font-size: 46px; font-weight: 800; line-height: 1; letter-spacing: -1.5px; }
+.result-hero .value small { font-size: 20px; font-weight: 600; opacity: 0.85; margin-left: 4px; }
+.result-hero .sub { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.92); margin-top: 10px; }
+
+.gauge { margin-top: 16px; height: 14px; border-radius: 999px; background: rgba(255,255,255,0.25); overflow: hidden; }
+.gauge .fill { height: 100%; background: #fff; border-radius: 999px; transition: width 0.4s; }
+.gauge-label { display: flex; justify-content: space-between; font-size: 11px; color: rgba(255,255,255,0.85); margin-top: 6px; }
+
+.metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+@media (max-width: 560px) { .metric-grid { grid-template-columns: 1fr; } }
+.metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+.metric .label { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 6px; }
+.metric .value { font-size: 20px; font-weight: 700; color: var(--text); letter-spacing: -0.4px; }
+.metric .value small { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-left: 3px; }
+.metric .desc { font-size: 12px; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+
+.breakdown { margin-top: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+.breakdown h3 { margin: 0 0 12px; font-size: 14px; color: var(--text); }
+.bd-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; font-size: 14px; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+.bd-row:last-of-type { border-bottom: 0; }
+.bd-row .v { font-weight: 700; color: var(--text); }
+.bd-row.total { margin-top: 6px; padding-top: 12px; border-top: 2px solid var(--border-strong); border-bottom: 0; font-size: 15px; color: var(--text); font-weight: 700; }
+.bd-row.total .v { color: var(--primary-dark); font-size: 17px; }
+
+.sleep-card { margin-top: 16px; background: var(--primary-soft); border: 1px solid #fcd9a3; border-radius: var(--radius-md); padding: 18px; }
+.sleep-card h3 { margin: 0 0 8px; font-size: 14px; color: var(--primary-dark); }
+.sleep-card .big { font-size: 22px; font-weight: 800; color: var(--text); letter-spacing: -0.4px; }
+.sleep-card p { margin: 6px 0 0; font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+.note { margin-top: 16px; padding: 14px 16px; background: var(--warning-soft); border: 1px solid #fde68a; border-radius: var(--radius-md); font-size: 13px; color: #78350f; line-height: 1.6; }
+.note strong { color: #92400e; }
+
+.sec { margin-top: 56px; }
+.sec h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.4px; }
+.faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 10px; }
+.faq details[open] { border-color: var(--primary-soft); }
+.faq summary { font-weight: 700; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; float: right; color: var(--text-dim); font-weight: 400; font-size: 18px; line-height: 1; transition: transform 0.2s; }
+.faq details[open] summary::after { content: '−'; }
+.faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
+
+footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
+.foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
+.foot a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="/" class="brand">beautypang<span>.tools</span></a>
+    <a href="/" class="nav-link">← 도구 모음</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">식약처 기준 · 반감기 5시간</span>
+    <h1>카페인 계산기</h1>
+    <p class="lead">오늘 마신 음료로 <b>카페인 총량</b>을 계산하고 <b>하루 권장 한도</b>와 비교하세요. 반감기 기반 <b>'잠 방해 마지노선 시각'</b>까지 알려드립니다.</p>
+  </div>
+</section>
+
+<main>
+  <form class="calc" id="calc">
+    <div class="field">
+      <label>기준 (하루 권장 한도)</label>
+      <div class="seg-tabs" id="limitTabs">
+        <button type="button" data-limit="400" class="on">일반 성인 (400mg)</button>
+        <button type="button" data-limit="300">임신·수유 (300mg)</button>
+      </div>
+    </div>
+
+    <div class="field" style="margin-top:20px;">
+      <label>오늘 마신 음료 (잔/캔 수)</label>
+      <div class="drinks" id="drinks"></div>
+    </div>
+
+    <div class="bedtime-row">
+      <div class="field">
+        <label for="lastTime">마지막으로 마신 시각</label>
+        <div class="input-wrap"><input id="lastTime" type="time" value="15:00"></div>
+        <p class="help">잠들 때 남는 카페인 계산에 사용.</p>
+      </div>
+      <div class="field">
+        <label for="bedTime">취침 예정 시각</label>
+        <div class="input-wrap"><input id="bedTime" type="time" value="23:30"></div>
+        <p class="help">카페인 마지노선 시각을 알려드려요.</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">계산하기</button>
+      <button type="button" class="btn btn-ghost" id="resetBtn">초기화</button>
+    </div>
+  </form>
+
+  <div class="result" id="result">
+    <div class="result-hero" id="resHero">
+      <div class="label">오늘 카페인 섭취량</div>
+      <div class="value"><span id="totalMg">0</span><small>mg</small></div>
+      <div class="sub"><span id="pctTxt">권장 한도의 0%</span> · <span id="statusTxt">안전</span></div>
+      <div class="gauge"><div class="fill" id="gaugeFill" style="width:0%"></div></div>
+      <div class="gauge-label"><span>0</span><span id="limitLabel">한도 400mg</span></div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <div class="label">하루 권장 한도</div>
+        <div class="value"><span id="mLimit">400</span><small>mg</small></div>
+        <div class="desc" id="mLimitDesc">식약처 성인 기준</div>
+      </div>
+      <div class="metric">
+        <div class="label">커피 잔 환산</div>
+        <div class="value"><span id="mCups">0</span><small>잔</small></div>
+        <div class="desc">아메리카노(100mg) 기준</div>
+      </div>
+      <div class="metric">
+        <div class="label">남은 여유</div>
+        <div class="value"><span id="mLeft">400</span><small>mg</small></div>
+        <div class="desc" id="mLeftDesc">한도까지 더 마실 수 있는 양</div>
+      </div>
+    </div>
+
+    <div class="breakdown" id="bdBox">
+      <h3>☕ 음료별 카페인</h3>
+      <div id="bdRows"></div>
+    </div>
+
+    <div class="sleep-card">
+      <h3>😴 수면 & 카페인</h3>
+      <div class="big" id="sleepLine">—</div>
+      <p id="sleepDesc"></p>
+    </div>
+
+    <div class="note">
+      <strong>참고:</strong> 카페인 함량은 매장·제품마다 편차가 큰 <b>평균 추정치</b>입니다. 반감기(약 5시간)와 민감도는 개인차가 크며, 임신·심장질환·약 복용 시에는 의사와 상담하세요.
+    </div>
+  </div>
+
+  <section class="sec">
+    <h2>☕ 카페인, 똑똑하게 마시는 6가지</h2>
+    <div class="guide-wrap">
+      <p class="guide-intro-text">카페인은 적당히 마시면 집중력에 도움이 되지만, <b>양과 타이밍</b>을 놓치면 수면을 망칩니다. 내 하루 한도를 확인하고 아래 원칙으로 관리하세요.</p>
+      <div class="guide-stats">
+        <div class="guide-stat"><div class="stat-num">400<small>mg</small></div><div class="stat-label"><b>성인 하루 한도</b><br>아메리카노 약 4잔</div></div>
+        <div class="guide-stat"><div class="stat-num">5<small>시간</small></div><div class="stat-label"><b>반감기</b><br>절반 줄어드는 시간</div></div>
+        <div class="guide-stat"><div class="stat-num">6<small>시간</small></div><div class="stat-label"><b>취침 전 중단</b><br>숙면 마지노선</div></div>
+      </div>
+      <div class="guide-cards">
+        <div class="guide-card"><span class="gc-num">1</span><span class="gc-icon">📏</span><h3 class="gc-title">하루 400mg 이하</h3><p class="gc-key">성인 기준</p><p class="gc-desc">식약처 권장은 성인 400mg, 임산부 300mg, 청소년은 체중당 2.5mg. 한도를 알면 과다 섭취를 막을 수 있어요.</p></div>
+        <div class="guide-card"><span class="gc-num">2</span><span class="gc-icon">⏰</span><h3 class="gc-title">오후 2시 이후 주의</h3><p class="gc-key">반감기 5시간</p><p class="gc-desc">오후 늦게 마신 카페인은 밤까지 절반 가까이 남습니다. 카페인에 민감하면 점심 이후 줄이세요.</p></div>
+        <div class="guide-card"><span class="gc-num">3</span><span class="gc-icon">⚡</span><h3 class="gc-title">에너지드링크 주의</h3><p class="gc-key">당+카페인</p><p class="gc-desc">에너지드링크는 카페인에 당까지 많아요. 여러 캔을 몰아 마시면 두근거림·불면 위험이 커집니다.</p></div>
+        <div class="guide-card"><span class="gc-num">4</span><span class="gc-icon">💧</span><h3 class="gc-title">물도 함께</h3><p class="gc-key">이뇨 작용</p><p class="gc-desc">카페인은 이뇨 작용이 있어요. 커피 한 잔마다 물 한 잔을 함께 마시면 탈수를 예방할 수 있습니다.</p></div>
+        <div class="guide-card"><span class="gc-num">5</span><span class="gc-icon">🤰</span><h3 class="gc-title">임신 중 300mg</h3><p class="gc-key">더 낮게</p><p class="gc-desc">임산부·수유부는 300mg 이하로 권장됩니다. 커피뿐 아니라 초콜릿·콜라·차의 카페인도 합산하세요.</p></div>
+        <div class="guide-card"><span class="gc-num">6</span><span class="gc-icon">😴</span><h3 class="gc-title">취침 6시간 전 끊기</h3><p class="gc-key">숙면의 핵심</p><p class="gc-desc">잠들기 6시간 전부터 카페인을 피하세요. 잠은 들어도 깊은 수면이 줄어 다음 날 피로로 이어집니다.</p></div>
+      </div>
+      <div class="guide-outro">같은 양도 사람마다 <b>민감도</b>가 다릅니다. 두근거림·불면이 있으면 한도보다 적게 드세요.<br>밤잠이 얕다면 오후 카페인부터 점검해보세요.<br><span class="cta-tag">😴 잠이 안 온다면 오늘 마신 카페인부터 세어보세요</span></div>
+    </div>
+  </section>
+
+  <!-- mid 광고 슬롯 -->
+  <div style="max-width:900px;margin:32px auto;padding:0 20px;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5126709833280837"
+         data-ad-slot="1670772523"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <section class="sec faq">
+    <h2>자주 묻는 질문</h2>
+    <details>
+      <summary>하루 카페인 권장량은 얼마인가요?</summary>
+      <div class="answer">
+        식약처 기준 건강한 성인은 <b>하루 400mg 이하</b>, 임산부는 300mg 이하, 어린이·청소년은 체중 1kg당 2.5mg 이하입니다. 400mg은 대략 아메리카노 4잔 정도예요.
+      </div>
+    </details>
+    <details>
+      <summary>커피 한 잔에 카페인이 얼마나 들어 있나요?</summary>
+      <div class="answer">
+        평균치 기준 아메리카노·드립 1잔 약 100mg, 에스프레소 1샷 75mg, 믹스커피 1봉 50mg, 에너지드링크 250ml 60mg, 콜라 355ml 35mg, 녹차·홍차 1잔 30mg입니다. <b>제품마다 편차</b>가 있습니다.
+      </div>
+    </details>
+    <details>
+      <summary>카페인 반감기가 무엇인가요?</summary>
+      <div class="answer">
+        몸속 카페인이 <b>절반으로 줄어드는 시간</b>으로 성인 평균 약 5시간입니다. 오후 3시에 100mg을 마시면 저녁 8시에 약 50mg, 새벽 1시에 약 25mg이 남아 수면을 방해할 수 있습니다.
+      </div>
+    </details>
+    <details>
+      <summary>잠을 위해 카페인을 언제까지 마셔도 되나요?</summary>
+      <div class="answer">
+        취침 <b>약 6시간 전</b>부터 피하는 것이 좋습니다. 반감기가 5시간이라 6시간 전에 마셔도 절반 가까이 남기 때문입니다. <a href="/sleep-calculator/">수면 시간 계산기</a>와 함께 보면 좋아요.
+      </div>
+    </details>
+    <details>
+      <summary>디카페인 커피에도 카페인이 있나요?</summary>
+      <div class="answer">
+        네, 소량 있습니다. 디카페인은 카페인을 약 97% 이상 제거하지만 0은 아니어서 <b>1잔당 약 2~5mg</b>이 남습니다. 매우 민감하거나 여러 잔 마신다면 고려하세요.
+      </div>
+    </details>
+    <details>
+      <summary>카페인을 너무 많이 마시면 어떻게 되나요?</summary>
+      <div class="answer">
+        하루 400mg을 크게 넘으면 <b>불면·심장 두근거림·불안·위장 장애·손떨림</b>이 나타날 수 있습니다. 카페인 민감도와 약 복용 여부에 따라 개인차가 큽니다.
+      </div>
+    </details>
+  </section>
+
+  <!-- faq 광고 슬롯 -->
+  <div style="max-width:900px;margin:32px auto;padding:0 20px;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5126709833280837"
+         data-ad-slot="4831288333"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- 카카오톡 공유 섹션 -->
+  <section style="text-align:center;padding:32px 20px;background:#F5F5F8;border-radius:16px;margin:40px auto;max-width:680px;">
+    <h3 style="margin:0 0 8px;font-size:18px;font-weight:800;color:#0A0A1A;">이 계산기 공유하기</h3>
+    <p style="margin:0 0 16px;font-size:14px;color:#475569;">커피 좋아하는 친구에게 추천해보세요.</p>
+    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+      <button type="button" id="share-kakao" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#FEE500;border:0;border-radius:8px;color:#000;font-weight:700;font-size:14px;cursor:pointer;"><span>💬</span> 카카오톡</button>
+      <button type="button" id="share-copy-kakao" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#fff;border:1px solid #D1D5DB;border-radius:8px;color:#374151;font-weight:700;font-size:14px;cursor:pointer;"><span>🔗</span> 링크 복사</button>
+    </div>
+  </section>
+  <script src="/assets/kakao-share.js?v=1" defer></script>
+
+</main>
+
+<div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-5126709833280837"
+       data-ad-slot="4801328741"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div data-related-tools></div>
+
+<footer class="site">
+  <div class="foot">
+    <div>© <span id="year"></span> beautypang.tools — 다양한 무료 계산기</div>
+    <div><a href="/">도구 모음 →</a></div>
+  </div>
+</footer>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const fmt = n => Math.round(n).toLocaleString('ko-KR');
+  $('year').textContent = new Date().getFullYear();
+
+  const HALF_LIFE = 5; // 시간
+  const DRINKS = [
+    { key:'coffee',  ico:'☕', nm:'커피(아메리카노)', mg:100, sub:'드립·아메리카노 1잔' },
+    { key:'mix',     ico:'🥄', nm:'믹스커피',        mg:50,  sub:'1봉' },
+    { key:'espresso',ico:'☕', nm:'에스프레소',      mg:75,  sub:'1샷' },
+    { key:'energy',  ico:'⚡', nm:'에너지드링크',    mg:60,  sub:'250ml 1캔' },
+    { key:'cola',    ico:'🥤', nm:'콜라',            mg:35,  sub:'355ml 1캔' },
+    { key:'tea',     ico:'🍵', nm:'녹차·홍차',       mg:30,  sub:'1잔' },
+  ];
+  const counts = {};
+  DRINKS.forEach(d => counts[d.key] = 0);
+  counts.coffee = 1;
+
+  let limit = 400;
+
+  // 음료 카운터 렌더
+  $('drinks').innerHTML = DRINKS.map(d => `
+    <div class="drink" data-key="${d.key}" id="drink-${d.key}">
+      <div class="ico">${d.ico}</div>
+      <div class="info"><div class="nm">${d.nm}</div><div class="mg">${d.mg}mg · ${d.sub}</div></div>
+      <div class="stepper">
+        <button type="button" data-act="dec" aria-label="빼기">−</button>
+        <span class="cnt" id="cnt-${d.key}">${counts[d.key]}</span>
+        <button type="button" data-act="inc" aria-label="더하기">+</button>
+      </div>
+    </div>`).join('');
+
+  $('drinks').addEventListener('click', e => {
+    const btn = e.target.closest('button[data-act]'); if(!btn) return;
+    const row = e.target.closest('.drink'); const key = row.dataset.key;
+    counts[key] = Math.max(0, Math.min(30, counts[key] + (btn.dataset.act==='inc'?1:-1)));
+    $('cnt-'+key).textContent = counts[key];
+    row.classList.toggle('has', counts[key] > 0);
+    calculate();
+  });
+
+  $('limitTabs').addEventListener('click', e => {
+    const b = e.target.closest('button[data-limit]'); if(!b) return;
+    $('limitTabs').querySelectorAll('button').forEach(x => x.classList.remove('on'));
+    b.classList.add('on'); limit = parseInt(b.dataset.limit, 10);
+    calculate();
+  });
+
+  function parseTime(str){ if(!str) return null; const [h,m] = str.split(':').map(Number); return h*60 + m; }
+  function fmtTime(mins){ mins = ((mins % 1440) + 1440) % 1440; const h = Math.floor(mins/60), m = mins%60;
+    const ap = h < 12 ? '오전' : '오후'; let h12 = h % 12; if(h12===0) h12 = 12;
+    return `${ap} ${h12}시${m>0?' '+m+'분':''}`; }
+
+  function calculate(){
+    let total = 0;
+    DRINKS.forEach(d => total += counts[d.key] * d.mg);
+
+    const pct = Math.round(total / limit * 100);
+    const left = Math.max(0, limit - total);
+    const cups = (total / 100);
+
+    let status, over = false;
+    if(total === 0) status = '아직 0mg';
+    else if(pct <= 75) status = '안전';
+    else if(pct <= 100) status = '한도 근접 ⚠️';
+    else { status = '한도 초과 ⚠️'; over = true; }
+
+    $('resHero').classList.toggle('over', over);
+    $('totalMg').textContent = fmt(total);
+    $('pctTxt').textContent = `권장 한도의 ${pct}%`;
+    $('statusTxt').textContent = status;
+    $('gaugeFill').style.width = Math.min(100, pct) + '%';
+    $('gaugeFill').style.background = over ? '#FCA5A5' : '#fff';
+    $('limitLabel').textContent = `한도 ${limit}mg`;
+
+    $('mLimit').textContent = limit;
+    $('mLimitDesc').textContent = limit === 300 ? '임신·수유 기준' : '식약처 성인 기준';
+    $('mCups').textContent = cups.toFixed(1);
+    $('mLeft').textContent = fmt(left);
+    $('mLeftDesc').textContent = left === 0 ? '한도에 도달했어요' : '한도까지 더 마실 수 있는 양';
+
+    // 음료별 내역
+    const rows = DRINKS.filter(d => counts[d.key] > 0)
+      .map(d => `<div class="bd-row"><span>${d.ico} ${d.nm} × ${counts[d.key]}</span><span class="v">${fmt(counts[d.key]*d.mg)}mg</span></div>`)
+      .join('');
+    $('bdRows').innerHTML = rows + `<div class="bd-row total"><span>오늘 총 카페인</span><span class="v">${fmt(total)}mg</span></div>`;
+    $('bdBox').style.display = total > 0 ? 'block' : 'none';
+
+    // 수면 & 카페인
+    const last = parseTime($('lastTime').value);
+    const bed = parseTime($('bedTime').value);
+    if(total > 0 && last !== null && bed !== null){
+      let gap = bed - last; if(gap < 0) gap += 1440; // 자정 넘김
+      const hrs = gap / 60;
+      const remain = total * Math.pow(0.5, hrs / HALF_LIFE);
+      const cutoff = bed - 6*60;
+      $('sleepLine').textContent = `취침 시 잔여 카페인 약 ${fmt(remain)}mg`;
+      let msg = `마지막 섭취 후 취침까지 약 ${hrs.toFixed(1)}시간. 카페인은 반감기가 약 5시간이라 그만큼 남습니다. `;
+      if(remain >= 50) msg += `잔여량이 많아 <b>수면을 방해</b>할 수 있어요. `;
+      else if(remain >= 20) msg += `약간의 영향이 있을 수 있어요. `;
+      else msg += `수면 영향은 크지 않을 것으로 보여요. `;
+      msg += `숙면하려면 <b>${fmtTime(cutoff)}</b> 이후엔 카페인을 피하세요(취침 6시간 전).`;
+      $('sleepDesc').innerHTML = msg;
+    } else {
+      const cutoff = bed !== null ? bed - 6*60 : null;
+      $('sleepLine').textContent = cutoff !== null ? `카페인 마지노선: ${fmtTime(cutoff)}` : '—';
+      $('sleepDesc').innerHTML = '숙면을 위해 <b>취침 6시간 전</b>부터 카페인을 피하는 것이 좋습니다. 마신 시각과 취침 시각을 입력하면 잔여 카페인도 계산해드려요.';
+    }
+
+    $('result').classList.add('show');
+  }
+
+  $('calc').addEventListener('submit', e => {
+    e.preventDefault();
+    calculate();
+    $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  $('resetBtn').addEventListener('click', () => {
+    DRINKS.forEach(d => { counts[d.key] = 0; $('cnt-'+d.key).textContent = 0; $('drink-'+d.key).classList.remove('has'); });
+    counts.coffee = 1; $('cnt-coffee').textContent = 1; $('drink-coffee').classList.add('has');
+    $('lastTime').value = '15:00'; $('bedTime').value = '23:30';
+    $('limitTabs').querySelectorAll('button').forEach(x => x.classList.remove('on'));
+    $('limitTabs').querySelector('button[data-limit="400"]').classList.add('on'); limit = 400;
+    calculate();
+  });
+
+  ['lastTime','bedTime'].forEach(id => $(id).addEventListener('change', calculate));
+  $('drink-coffee').classList.add('has');
+  calculate();
+</script>
+
+</body>
+</html>
