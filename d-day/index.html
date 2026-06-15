@@ -195,6 +195,19 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 .faq details[open] summary::after { content: '−'; }
 .faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
 
+.cp-wrap { margin-top: 56px; }
+.cp-wrap h2 { font-size: 22px; margin: 0 0 6px; letter-spacing: -0.4px; }
+.cp-sub { margin: 0 0 18px; font-size: 13px; color: var(--text-dim); }
+.cp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 640px) { .cp-grid { grid-template-columns: 1fr; } }
+.cp-card { display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); transition: all 0.15s; }
+.cp-card:hover { border-color: var(--primary); box-shadow: 0 4px 16px rgba(15,23,42,0.10); transform: translateY(-2px); text-decoration: none; }
+.cp-card .cp-ico { font-size: 28px; line-height: 1; }
+.cp-card .cp-nm { font-weight: 800; font-size: 15px; color: var(--text); letter-spacing: -0.3px; }
+.cp-card .cp-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+.cp-card .cp-cta { margin-top: auto; padding-top: 8px; font-size: 13px; color: var(--primary); font-weight: 700; }
+.cp-disc { margin: 16px 0 0; font-size: 11px; color: var(--text-dim); line-height: 1.5; }
+
 footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
 .foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
 .foot a { color: var(--text-muted); }
@@ -303,6 +316,33 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
       </div>
       <div class="guide-outro">목표가 흐릿할수록 미뤄집니다. <b>D-day로 못 박으면</b> 행동이 따라옵니다.<br>연인 기념일은 미리 알림으로, 시험은 역산 계획으로 활용하세요.<br><span class="cta-tag">🎯 오늘이 그 목표의 D-며칠인가요?</span></div>
     </div>
+  </section>
+
+  <!-- 쿠팡 파트너스 추천 상품 -->
+  <section class="sec cp-wrap">
+    <h2>🎯 기념일·일정, 손으로 적으면 더 오래 남아요</h2>
+    <p class="cp-sub">디데이·100일·기념일 챙기기 좋은 다이어리·플래너·탁상 달력.</p>
+    <div class="cp-grid">
+      <a href="https://link.coupang.com/a/eBdUb97Xsi" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">💕</div>
+        <div class="cp-nm">제이로그 러브블라썸 커플 다이어리 세트</div>
+        <div class="cp-desc">연인과 함께 쓰는 커플 다이어리 세트. 기념일·100일을 손으로 기록하세요.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/eBd6sKl47U" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">📒</div>
+        <div class="cp-nm">데일리 스터디 학습 플래너</div>
+        <div class="cp-desc">시험·목표 디데이 관리에 좋은 데일리 타임 플래너 스케줄러.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/eBd8KoaLFk" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">📅</div>
+        <div class="cp-nm">탐사 만년형 디데이 탁상 달력</div>
+        <div class="cp-desc">날짜 없는 만년형 탁상 달력. 기념일·디데이를 책상 위에 늘 띄워두기.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+    </div>
+    <p class="cp-disc">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따라 일정액의 수수료를 제공받습니다.</p>
   </section>
 
   <!-- mid 광고 슬롯 -->

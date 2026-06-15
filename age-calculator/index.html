@@ -209,6 +209,19 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 .faq details[open] summary::after { content: '−'; }
 .faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
 
+.cp-wrap { margin-top: 56px; }
+.cp-wrap h2 { font-size: 22px; margin: 0 0 6px; letter-spacing: -0.4px; }
+.cp-sub { margin: 0 0 18px; font-size: 13px; color: var(--text-dim); }
+.cp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 640px) { .cp-grid { grid-template-columns: 1fr; } }
+.cp-card { display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); transition: all 0.15s; }
+.cp-card:hover { border-color: var(--primary); box-shadow: 0 4px 16px rgba(15,23,42,0.10); transform: translateY(-2px); text-decoration: none; }
+.cp-card .cp-ico { font-size: 28px; line-height: 1; }
+.cp-card .cp-nm { font-weight: 800; font-size: 15px; color: var(--text); letter-spacing: -0.3px; }
+.cp-card .cp-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+.cp-card .cp-cta { margin-top: auto; padding-top: 8px; font-size: 13px; color: var(--primary); font-weight: 700; }
+.cp-disc { margin: 16px 0 0; font-size: 11px; color: var(--text-dim); line-height: 1.5; }
+
 footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
 .foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
 .foot a { color: var(--text-muted); }
@@ -322,6 +335,33 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
       </div>
       <div class="guide-outro">대부분의 공식 서류·계약·의료는 이제 <b>만 나이</b>가 기준입니다.<br>헷갈릴 땐 위 계산기로 <b>만 나이·연 나이</b>를 함께 확인하세요.<br><span class="cta-tag">🎂 생일이 지났는지가 핵심입니다</span></div>
     </div>
+  </section>
+
+  <!-- 쿠팡 파트너스 추천 상품 -->
+  <section class="sec cp-wrap">
+    <h2>🎂 내 별자리·탄생석으로 고르는 선물</h2>
+    <p class="cp-sub">별자리·탄생석은 나만의 의미가 담긴 선물 — 생일·기념일에 잘 어울려요.</p>
+    <div class="cp-grid">
+      <a href="https://link.coupang.com/a/eBedrfDVYG" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🔮</div>
+        <div class="cp-nm">로이드 탄생석 10K 골드 목걸이</div>
+        <div class="cp-desc">월별 탄생석을 담은 로이드 골드 목걸이. 생일 선물로 의미 있게.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/eBehFhIIMe" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">✨</div>
+        <div class="cp-nm">믿음상 별자리 목걸이</div>
+        <div class="cp-desc">내 별자리를 담은 써지컬 목걸이. 커플·우정 선물로도 좋아요.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/eBemjNLSYm" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🏅</div>
+        <div class="cp-nm">골드팡 24K 순금 골드바</div>
+        <div class="cp-desc">돌·생일·기념일 선물의 클래식, 골드팡 24K 골드바.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+    </div>
+    <p class="cp-disc">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따라 일정액의 수수료를 제공받습니다.</p>
   </section>
 
   <!-- mid 광고 슬롯 -->
