@@ -123,6 +123,12 @@
           "position": 11,
           "url": "https://beautypang.co.kr/obesity-check/",
           "name": "복부비만 계산기 (허리둘레·WHtR·WHR 종합)"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://beautypang.co.kr/age-calculator/",
+          "name": "만 나이 계산기 (만 나이·연 나이·띠·별자리)"
         }
       ]
     }
@@ -415,6 +421,12 @@
     --card-border: rgba(139, 92, 246, 0.3);
     --card-accent: var(--c-estate);
   }
+  .card-life {
+    --card-bg: radial-gradient(at 100% 0%, var(--c-estate-soft) 0%, transparent 60%);
+    --card-glow: var(--shadow-glow-estate);
+    --card-border: rgba(139, 92, 246, 0.3);
+    --card-accent: var(--c-estate);
+  }
 
   .bento-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
   .bento-icon {
@@ -581,6 +593,7 @@
         <button type="button" data-cat="health">건강 <span class="cnt"></span></button>
         <button type="button" data-cat="diet">다이어트 <span class="cnt"></span></button>
         <button type="button" data-cat="family">임신·여성 <span class="cnt"></span></button>
+        <button type="button" data-cat="life">생활 <span class="cnt"></span></button>
       </div>
       <div class="filter-empty" id="filter-empty" hidden>검색 결과가 없습니다. 다른 키워드를 시도해보세요.</div>
     </div>
@@ -770,6 +783,23 @@
         </div>
         <span class="bento-cta">사용하기</span>
       </a>
+
+      <a href="/age-calculator/" class="bento-card card-life">
+        <div>
+          <div class="bento-top">
+            <div class="bento-icon">🎂</div>
+            <span class="bento-tag" data-new-until="2026-07-09">NEW</span>
+          </div>
+          <h3 class="bento-name">만 나이 계산기</h3>
+          <p class="bento-desc">생년월일만 넣으면 만 나이·연 나이·세는 나이를 한 번에. 띠·별자리·살아온 일수·다음 생일 D-day까지. 2023년 만 나이 통일 기준.</p>
+          <div class="bento-meta">
+            <span>생활</span>
+            <span>만 나이 통일</span>
+            <span>띠·별자리</span>
+          </div>
+        </div>
+        <span class="bento-cta">사용하기</span>
+      </a>
     </div>
   </section>
 
@@ -862,6 +892,7 @@
       if (card.classList.contains('card-health')) cat = 'health';
       else if (card.classList.contains('card-diet')) cat = 'diet';
       else if (card.classList.contains('card-family')) cat = 'family';
+      else if (card.classList.contains('card-life')) cat = 'life';
       else if (card.classList.contains('card-estate')) cat = 'estate';
       card.dataset.cat = cat;
       // 검색용 텍스트
@@ -869,7 +900,7 @@
     });
 
     // 카운트 표시
-    const counts = { all: cards.length, health: 0, diet: 0, family: 0 };
+    const counts = { all: cards.length, health: 0, diet: 0, family: 0, life: 0 };
     cards.forEach(c => { if (counts[c.dataset.cat] !== undefined) counts[c.dataset.cat]++; });
     document.querySelectorAll('.filter-chips button').forEach(btn => {
       const c = counts[btn.dataset.cat] ?? 0;
