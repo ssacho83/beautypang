@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>디데이(D-day) 계산기 — 날짜 계산·100일·기념일 | beautypang</title>
+<meta name="description" content="목표일까지 며칠 남았는지 D-day를 즉시 계산합니다. 두 날짜 사이 일수, N일 후·전 날짜, 연인 100일·200일·1주년 기념일까지 한 번에. 회원가입·결제 없이 무료.">
+<meta name="keywords" content="디데이 계산기, d-day 계산기, 날짜 계산기, 디데이, 100일 계산기, 기념일 계산기, 며칠 남았지, 날짜 차이 계산, 날짜 더하기, beautypang">
+<meta name="robots" content="index,follow">
+<meta name="google-site-verification" content="2xVj59QMIgWGp8je6lsptzWQYhHyDG_aVc05mWOp--4" />
+<meta name="naver-site-verification" content="74fef3d418a1e812489238486ef027fdf967907b" />
+<link rel="canonical" href="https://beautypang.co.kr/d-day/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="beautypang.tools">
+<meta property="og:title" content="디데이(D-day) 계산기 — 날짜 계산·100일·기념일">
+<meta property="og:description" content="목표일까지 D-day, 두 날짜 사이 일수, N일 후·전 날짜, 연인 100일·기념일까지 즉시 계산.">
+<meta property="og:url" content="https://beautypang.co.kr/d-day/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://beautypang.co.kr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="디데이 계산기 — beautypang.tools">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="디데이(D-day) 계산기">
+<meta name="twitter:description" content="D-day, 두 날짜 사이 일수, 날짜 더하기·빼기, 연인 100일·기념일을 즉시 계산.">
+<meta name="twitter:image" content="https://beautypang.co.kr/og-image.png">
+
+<meta name="theme-color" content="#E11D48">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="beautypang.tools">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="beautypang.tools RSS" href="/rss.xml">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+<script src="/assets/nav.js?v=2" defer></script>
+<script src="/assets/related-tools.js?v=1" defer></script>
+<link rel="stylesheet" href="/assets/guide.css?v=2">
+<style>:root { --guide-accent: #E11D48; --guide-accent-dark: #BE123C; --guide-accent-soft: #FFE4E6; }</style>
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F76TTBSP9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F76TTBSP9F');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://beautypang.co.kr/d-day/#app",
+      "name": "디데이(D-day) 계산기",
+      "url": "https://beautypang.co.kr/d-day/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "description": "목표일까지의 D-day, 두 날짜 사이 일수, N일 후·전 날짜, 연인 100일·기념일을 계산합니다.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+      "inLanguage": "ko-KR",
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript",
+      "author": { "@type": "Organization", "name": "beautypang.tools", "url": "https://beautypang.co.kr/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://beautypang.co.kr/" },
+        { "@type": "ListItem", "position": 2, "name": "디데이(D-day) 계산기", "item": "https://beautypang.co.kr/d-day/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "D-day는 어떻게 계산하나요?", "acceptedAnswer": { "@type": "Answer", "text": "기준일(보통 오늘)과 목표일 사이의 날짜 차이를 셉니다. 목표일이 미래면 'D-남은일수', 지났으면 'D+지난일수', 같으면 'D-DAY'로 표시합니다. 예: 오늘이 6월 15일이고 목표가 6월 25일이면 D-10입니다." } },
+        { "@type": "Question", "name": "연인 100일은 어떻게 세나요?", "acceptedAnswer": { "@type": "Answer", "text": "우리나라에서는 보통 만난 날을 '1일'로 세기 때문에, 100일은 만난 날로부터 99일 뒤가 됩니다. 이 계산기의 기념일 모드는 이 방식(시작일=1일)으로 100·200·300·500·1000일과 1·2·3주년 날짜를 자동으로 계산합니다." } },
+        { "@type": "Question", "name": "D-day와 D+1의 차이는 뭔가요?", "acceptedAnswer": { "@type": "Answer", "text": "D-day는 목표 당일을 뜻하고, D-1은 하루 전, D+1은 하루 뒤입니다. 시험·기념일 당일이 'D-DAY'이고, 그 전날들은 D-2·D-3처럼 남은 일수로, 지난 뒤는 D+1·D+2처럼 표시합니다." } },
+        { "@type": "Question", "name": "두 날짜 사이 일수도 계산되나요?", "acceptedAnswer": { "@type": "Answer", "text": "네. 디데이 모드에서 기준일과 목표일을 모두 원하는 날짜로 바꾸면, 두 날짜 사이의 정확한 일수와 주·개월 환산을 함께 보여줍니다. 과거 두 날짜 사이의 기간 계산에도 사용할 수 있습니다." } },
+        { "@type": "Question", "name": "특정 날짜의 N일 후·전 날짜를 알 수 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "날짜 계산 모드를 사용하세요. 기준일과 일수를 입력하고 '후' 또는 '전'을 선택하면, 해당 날짜와 그날의 요일을 알려줍니다. 마감일·예정일·복용일 계산에 편리합니다." } },
+        { "@type": "Question", "name": "그날이 무슨 요일인지도 나오나요?", "acceptedAnswer": { "@type": "Answer", "text": "네. 모든 결과에 해당 날짜의 요일이 함께 표시됩니다. 디데이 목표일, 기념일, 계산된 날짜가 각각 무슨 요일인지 바로 확인할 수 있어 일정 계획에 유용합니다." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  --primary: #E11D48;
+  --primary-dark: #BE123C;
+  --primary-soft: #FFE4E6;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --warning-soft: #fef3c7;
+  --success-soft: #dcfce7;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-md: 0 4px 12px rgba(15,23,42,0.06);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; word-break: keep-all; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.site { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 50; }
+.nav { max-width: 960px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-weight: 800; font-size: 17px; color: var(--text); letter-spacing: -0.3px; }
+.brand span { color: var(--primary); font-weight: 600; }
+.nav-link { font-size: 13px; color: var(--text-muted); }
+.nav-link:hover { color: var(--primary); text-decoration: none; }
+
+.hero { padding: 48px 20px 32px; background: linear-gradient(180deg, var(--primary-soft) 0%, var(--bg) 100%); }
+.hero-inner { max-width: 960px; margin: 0 auto; }
+.badge { display: inline-block; padding: 4px 10px; background: rgba(225,29,72,0.1); color: var(--primary); border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+.hero h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.25; letter-spacing: -0.6px; text-wrap: balance; }
+.hero .lead { margin: 0; color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 640px; }
+.hero .lead b { color: var(--text); font-weight: 700; }
+
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+
+.calc { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
+
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text); }
+.input-wrap { position: relative; }
+.input-wrap input { width: 100%; padding: 12px 14px; font-size: 16px; font-weight: 500; color: var(--text); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); outline: none; transition: border-color 0.15s, box-shadow 0.15s; font-family: inherit; }
+.input-wrap input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(225,29,72,0.1); }
+.help { margin: 0; font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+.seg-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.seg-tabs.three { grid-template-columns: 1fr 1fr 1fr; }
+.seg-tabs button { padding: 12px 8px; font-size: 14px; font-weight: 600; color: var(--text-muted); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.seg-tabs button.on { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+.mode-grp { display: none; margin-top: 18px; }
+.mode-grp.on { display: block; }
+.mode-tabs { margin-bottom: 4px; }
+
+.actions { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { padding: 12px 22px; font-size: 14px; font-weight: 700; border-radius: var(--radius-md); cursor: pointer; font-family: inherit; transition: all 0.15s; border: 1.5px solid transparent; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-ghost { background: var(--bg); color: var(--text-muted); border-color: var(--border); }
+.btn-ghost:hover { background: var(--surface); }
+
+.result { margin-top: 28px; display: none; }
+.result.show { display: block; animation: fadeIn 0.3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.result-hero { color: #fff; padding: 28px 24px; border-radius: var(--radius-lg); text-align: center; background: linear-gradient(135deg, #FB7185 0%, #E11D48 100%); }
+.result-hero .label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 8px; }
+.result-hero .value { font-size: 46px; font-weight: 800; line-height: 1; letter-spacing: -1.5px; }
+.result-hero .value small { font-size: 20px; font-weight: 600; opacity: 0.8; margin-left: 4px; }
+.result-hero .sub { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.92); margin-top: 10px; }
+
+.breakdown { margin-top: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+.breakdown h3 { margin: 0 0 12px; font-size: 14px; color: var(--text); }
+.bd-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; font-size: 14px; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+.bd-row:last-of-type { border-bottom: 0; }
+.bd-row .v { font-weight: 700; color: var(--text); }
+.bd-row.total { margin-top: 6px; padding-top: 12px; border-top: 2px solid var(--border-strong); border-bottom: 0; font-size: 15px; color: var(--text); font-weight: 700; }
+.bd-row.total .v { color: var(--primary-dark); font-size: 17px; }
+.bd-row .dday { font-size: 12px; font-weight: 700; color: var(--primary); background: var(--primary-soft); padding: 2px 8px; border-radius: 999px; margin-left: 8px; }
+
+.note { margin-top: 16px; padding: 14px 16px; background: var(--warning-soft); border: 1px solid #fde68a; border-radius: var(--radius-md); font-size: 13px; color: #78350f; line-height: 1.6; }
+.note strong { color: #92400e; }
+
+.sec { margin-top: 56px; }
+.sec h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.4px; }
+.faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 10px; }
+.faq details[open] { border-color: var(--primary-soft); }
+.faq summary { font-weight: 700; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; float: right; color: var(--text-dim); font-weight: 400; font-size: 18px; line-height: 1; transition: transform 0.2s; }
+.faq details[open] summary::after { content: '−'; }
+.faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
+
+footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
+.foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
+.foot a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="/" class="brand">beautypang<span>.tools</span></a>
+    <a href="/" class="nav-link">← 도구 모음</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">디데이 · 기념일 · 날짜 계산</span>
+    <h1>디데이(D-day) 계산기</h1>
+    <p class="lead">목표일까지 <b>며칠 남았는지</b> 한눈에. <b>두 날짜 사이 일수</b>, <b>N일 후·전 날짜</b>, 연인 <b>100일·기념일</b>까지 한 번에 계산하세요.</p>
+  </div>
+</section>
+
+<main>
+  <form class="calc" id="calc">
+    <div class="field mode-tabs">
+      <label>무엇을 계산할까요?</label>
+      <div class="seg-tabs three" id="modeTabs">
+        <button type="button" data-mode="dday" class="on">🎯 디데이</button>
+        <button type="button" data-mode="anniv">💕 기념일</button>
+        <button type="button" data-mode="calc">📅 날짜 계산</button>
+      </div>
+    </div>
+
+    <!-- 모드: 디데이 -->
+    <div class="mode-grp on" id="grpDday">
+      <div class="calc-grid">
+        <div class="field">
+          <label for="baseD">기준일</label>
+          <div class="input-wrap"><input id="baseD" type="date"></div>
+          <p class="help">기본값은 <b>오늘</b>입니다.</p>
+        </div>
+        <div class="field">
+          <label for="targetD">목표일 (디데이)</label>
+          <div class="input-wrap"><input id="targetD" type="date"></div>
+          <p class="help">시험·여행·기념일 등 목표 날짜.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 모드: 기념일 -->
+    <div class="mode-grp" id="grpAnniv">
+      <div class="calc-grid">
+        <div class="field">
+          <label for="startD">시작일 (사귄 날·시작한 날)</label>
+          <div class="input-wrap"><input id="startD" type="date"></div>
+          <p class="help">만난 날을 <b>1일</b>로 세어 100·200·1000일과 주년을 계산합니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 모드: 날짜 계산 -->
+    <div class="mode-grp" id="grpCalc">
+      <div class="calc-grid">
+        <div class="field">
+          <label for="calcBase">기준일</label>
+          <div class="input-wrap"><input id="calcBase" type="date"></div>
+        </div>
+        <div class="field">
+          <label for="calcDays">일수</label>
+          <div class="input-wrap"><input id="calcDays" type="number" min="0" max="100000" value="100" inputmode="numeric"></div>
+        </div>
+      </div>
+      <div class="field" style="margin-top:16px;">
+        <label>방향</label>
+        <div class="seg-tabs" id="dirTabs">
+          <button type="button" data-dir="after" class="on">이후 (+)</button>
+          <button type="button" data-dir="before">이전 (−)</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">계산하기</button>
+      <button type="button" class="btn btn-ghost" id="resetBtn">오늘로 초기화</button>
+    </div>
+  </form>
+
+  <div class="result" id="result"></div>
+
+  <section class="sec">
+    <h2>🎯 디데이 200% 활용법</h2>
+    <div class="guide-wrap">
+      <p class="guide-intro-text">디데이는 단순히 날짜를 세는 걸 넘어, <b>목표를 눈에 보이게</b> 만들어 동기를 높입니다. 시험·연애·여행·마감, 무엇이든 D-day로 관리해보세요.</p>
+      <div class="guide-stats">
+        <div class="guide-stat"><div class="stat-num">D-1<small></small></div><div class="stat-label"><b>하루 전</b><br>당일은 D-DAY</div></div>
+        <div class="guide-stat"><div class="stat-num">100<small>일</small></div><div class="stat-label"><b>연인 100일</b><br>시작일=1일 기준</div></div>
+        <div class="guide-stat"><div class="stat-num">+N<small>일</small></div><div class="stat-label"><b>날짜 더하기</b><br>마감·예정일 계산</div></div>
+      </div>
+      <div class="guide-cards">
+        <div class="guide-card"><span class="gc-num">1</span><span class="gc-icon">🎯</span><h3 class="gc-title">D-day의 뜻</h3><p class="gc-key">목표 당일 = D-DAY</p><p class="gc-desc">목표 당일이 D-DAY, 하루 전은 D-1, 지난 뒤는 D+1입니다. 군대·시험에서 쓰던 표현이 일상으로 퍼졌어요.</p></div>
+        <div class="guide-card"><span class="gc-num">2</span><span class="gc-icon">💕</span><h3 class="gc-title">연인 100일 세는 법</h3><p class="gc-key">만난 날 = 1일</p><p class="gc-desc">한국식은 만난 날을 1일로 셉니다. 그래서 100일은 만난 날 +99일. 기념일 모드가 자동으로 맞춰 계산해요.</p></div>
+        <div class="guide-card"><span class="gc-num">3</span><span class="gc-icon">📆</span><h3 class="gc-title">주년 계산</h3><p class="gc-key">같은 날짜 +N년</p><p class="gc-desc">1주년은 시작일의 1년 뒤 같은 날짜. 윤년 2월 29일 시작이면 평년엔 3월 1일로 처리되니 참고하세요.</p></div>
+        <div class="guide-card"><span class="gc-num">4</span><span class="gc-icon">📝</span><h3 class="gc-title">시험·마감 관리</h3><p class="gc-key">남은 일수 시각화</p><p class="gc-desc">시험·과제·발표일을 디데이로 걸어두면 남은 일수가 한눈에. 역산해 공부 계획을 세우기 좋습니다.</p></div>
+        <div class="guide-card"><span class="gc-num">5</span><span class="gc-icon">➕</span><h3 class="gc-title">N일 후 날짜</h3><p class="gc-key">날짜 더하기·빼기</p><p class="gc-desc">처방일+복용기간, 계약일+만기, 예약일 등 '며칠 뒤가 무슨 요일'인지 날짜 계산 모드로 즉시 확인.</p></div>
+        <div class="guide-card"><span class="gc-num">6</span><span class="gc-icon">🗓️</span><h3 class="gc-title">요일까지 확인</h3><p class="gc-key">계획의 기본</p><p class="gc-desc">목표일·기념일이 평일인지 주말인지 미리 알면 일정 조율이 쉽습니다. 모든 결과에 요일이 함께 나옵니다.</p></div>
+      </div>
+      <div class="guide-outro">목표가 흐릿할수록 미뤄집니다. <b>D-day로 못 박으면</b> 행동이 따라옵니다.<br>연인 기념일은 미리 알림으로, 시험은 역산 계획으로 활용하세요.<br><span class="cta-tag">🎯 오늘이 그 목표의 D-며칠인가요?</span></div>
+    </div>
+  </section>
+
+  <!-- mid 광고 슬롯 -->
+  <div style="max-width:900px;margin:32px auto;padding:0 20px;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5126709833280837"
+         data-ad-slot="1670772523"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <section class="sec faq">
+    <h2>자주 묻는 질문</h2>
+    <details>
+      <summary>D-day는 어떻게 계산하나요?</summary>
+      <div class="answer">
+        기준일(보통 오늘)과 목표일 사이의 날짜 차이를 셉니다. 목표일이 미래면 <b>D-남은일수</b>, 지났으면 <b>D+지난일수</b>, 같으면 <b>D-DAY</b>로 표시합니다.
+        예: 오늘 6월 15일, 목표 6월 25일 → D-10.
+      </div>
+    </details>
+    <details>
+      <summary>연인 100일은 어떻게 세나요?</summary>
+      <div class="answer">
+        우리나라는 보통 <b>만난 날을 1일</b>로 세기 때문에, 100일은 만난 날로부터 <b>99일 뒤</b>입니다.
+        기념일 모드가 이 방식으로 100·200·300·500·1000일과 1·2·3주년을 자동 계산합니다.
+      </div>
+    </details>
+    <details>
+      <summary>D-day와 D+1의 차이는 뭔가요?</summary>
+      <div class="answer">
+        D-day는 목표 당일, D-1은 하루 전, <b>D+1은 하루 뒤</b>입니다. 당일이 D-DAY이고 그 전은 D-2·D-3처럼 남은 일수로, 지난 뒤는 D+1·D+2로 표시합니다.
+      </div>
+    </details>
+    <details>
+      <summary>두 날짜 사이 일수도 계산되나요?</summary>
+      <div class="answer">
+        네. 디데이 모드에서 <b>기준일과 목표일을 모두</b> 원하는 날짜로 바꾸면 두 날짜 사이의 정확한 일수와 주·개월 환산을 함께 보여줍니다.
+      </div>
+    </details>
+    <details>
+      <summary>특정 날짜의 N일 후·전 날짜를 알 수 있나요?</summary>
+      <div class="answer">
+        <b>날짜 계산 모드</b>를 사용하세요. 기준일과 일수를 넣고 '이후/이전'을 고르면 해당 날짜와 요일을 알려줍니다. 마감일·예정일 계산에 편리합니다.
+      </div>
+    </details>
+    <details>
+      <summary>그날이 무슨 요일인지도 나오나요?</summary>
+      <div class="answer">
+        네. 모든 결과에 <b>해당 날짜의 요일</b>이 함께 표시됩니다. 디데이 목표일·기념일·계산된 날짜가 각각 무슨 요일인지 바로 확인할 수 있습니다.
+      </div>
+    </details>
+  </section>
+
+  <!-- faq 광고 슬롯 -->
+  <div style="max-width:900px;margin:32px auto;padding:0 20px;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5126709833280837"
+         data-ad-slot="4831288333"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- 카카오톡 공유 섹션 -->
+  <section style="text-align:center;padding:32px 20px;background:#F5F5F8;border-radius:16px;margin:40px auto;max-width:680px;">
+    <h3 style="margin:0 0 8px;font-size:18px;font-weight:800;color:#0A0A1A;">이 계산기 공유하기</h3>
+    <p style="margin:0 0 16px;font-size:14px;color:#475569;">친구·연인에게 디데이를 공유해보세요.</p>
+    <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+      <button type="button" id="share-kakao" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#FEE500;border:0;border-radius:8px;color:#000;font-weight:700;font-size:14px;cursor:pointer;"><span>💬</span> 카카오톡</button>
+      <button type="button" id="share-copy-kakao" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#fff;border:1px solid #D1D5DB;border-radius:8px;color:#374151;font-weight:700;font-size:14px;cursor:pointer;"><span>🔗</span> 링크 복사</button>
+    </div>
+  </section>
+  <script src="/assets/kakao-share.js?v=1" defer></script>
+
+</main>
+
+<div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-5126709833280837"
+       data-ad-slot="4801328741"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div data-related-tools></div>
+
+<footer class="site">
+  <div class="foot">
+    <div>© <span id="year"></span> beautypang.tools — 다양한 무료 계산기</div>
+    <div><a href="/">도구 모음 →</a></div>
+  </div>
+</footer>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const fmt = n => Math.round(n).toLocaleString('ko-KR');
+  $('year').textContent = new Date().getFullYear();
+
+  const DOW = ['일','월','화','수','목','금','토'];
+  const MS = 86400000;
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function parseDate(str){ if(!str) return null; const p = str.split('-').map(Number); if(p.length!==3||p.some(isNaN)) return null; const d = new Date(p[0], p[1]-1, p[2]); d.setHours(0,0,0,0); return d; }
+  function toISO(d){ return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function fmtKDate(d){ return `${d.getFullYear()}년 ${d.getMonth()+1}월 ${d.getDate()}일 (${DOW[d.getDay()]})`; }
+  function diffDays(a, b){ return Math.round((b - a) / MS); }
+  function addDays(d, n){ const r = new Date(d.getTime() + n*MS); r.setHours(0,0,0,0); return r; }
+  function ymdBetween(a, b){ // a<=b
+    let y=b.getFullYear()-a.getFullYear(), m=b.getMonth()-a.getMonth(), d=b.getDate()-a.getDate();
+    if(d<0){ m--; d += new Date(b.getFullYear(), b.getMonth(), 0).getDate(); }
+    if(m<0){ y--; m+=12; }
+    return {y,m,d};
+  }
+
+  const today = new Date(); today.setHours(0,0,0,0);
+  $('baseD').value = toISO(today);
+  $('targetD').value = toISO(addDays(today, 100));
+  $('startD').value = toISO(today);
+  $('calcBase').value = toISO(today);
+
+  let mode = 'dday';
+  let dir = 'after';
+
+  $('modeTabs').addEventListener('click', e => {
+    const b = e.target.closest('button[data-mode]'); if(!b) return;
+    $('modeTabs').querySelectorAll('button').forEach(x => x.classList.remove('on'));
+    b.classList.add('on'); mode = b.dataset.mode;
+    ['Dday','Anniv','Calc'].forEach(g => $('grp'+g).classList.remove('on'));
+    $('grp' + (mode==='dday'?'Dday':mode==='anniv'?'Anniv':'Calc')).classList.add('on');
+    $('result').classList.remove('show');
+  });
+
+  $('dirTabs').addEventListener('click', e => {
+    const b = e.target.closest('button[data-dir]'); if(!b) return;
+    $('dirTabs').querySelectorAll('button').forEach(x => x.classList.remove('on'));
+    b.classList.add('on'); dir = b.dataset.dir;
+    if(mode==='calc') calculate();
+  });
+
+  function ddayLabel(n){ return n>0 ? 'D-'+fmt(n) : n<0 ? 'D+'+fmt(-n) : 'D-DAY'; }
+
+  function renderDday(){
+    const base = parseDate($('baseD').value), target = parseDate($('targetD').value);
+    if(!base || !target) return;
+    const n = diffDays(base, target);           // +면 미래
+    const abs = Math.abs(n);
+    const lo = n>=0 ? base : target, hi = n>=0 ? target : base;
+    const ymd = ymdBetween(lo, hi);
+    const weeks = Math.floor(abs/7), wRem = abs%7;
+    const subTxt = n>0 ? `${fmt(n)}일 남음` : n<0 ? `${fmt(-n)}일 지남` : '바로 오늘입니다 🎉';
+    $('result').innerHTML = `
+      <div class="result-hero">
+        <div class="label">${fmtKDate(target)}</div>
+        <div class="value">${ddayLabel(n)}</div>
+        <div class="sub">${subTxt}</div>
+      </div>
+      <div class="breakdown">
+        <h3>📊 날짜 상세</h3>
+        <div class="bd-row"><span>기준일</span><span class="v">${fmtKDate(base)}</span></div>
+        <div class="bd-row"><span>목표일</span><span class="v">${fmtKDate(target)}</span></div>
+        <div class="bd-row"><span>주 환산</span><span class="v">${fmt(weeks)}주 ${wRem}일</span></div>
+        <div class="bd-row"><span>년·월·일 환산</span><span class="v">${ymd.y>0?ymd.y+'년 ':''}${ymd.m}개월 ${ymd.d}일</span></div>
+        <div class="bd-row total"><span>두 날짜 사이</span><span class="v">${fmt(abs)}일</span></div>
+      </div>
+      <div class="note"><strong>팁:</strong> 기준일을 오늘이 아닌 다른 날로 바꾸면 <b>두 날짜 사이의 기간</b>도 계산할 수 있습니다. 목표 당일이 D-DAY입니다.</div>`;
+    $('result').classList.add('show');
+  }
+
+  function renderAnniv(){
+    const start = parseDate($('startD').value);
+    if(!start) return;
+    const todayN = diffDays(start, today) + 1; // 시작일=1일
+    const dayMarks = [100,200,300,500,1000,2000,3000];
+    const yearMarks = [1,2,3,5,10];
+    let rows = '';
+    dayMarks.forEach(m => {
+      const d = addDays(start, m-1);            // m일째 = 시작일 + (m-1)
+      const dd = diffDays(today, d);
+      rows += `<div class="bd-row"><span>${fmt(m)}일</span><span class="v">${fmtKDate(d)} <span class="dday">${ddayLabel(dd)}</span></span></div>`;
+    });
+    yearMarks.forEach(y => {
+      const d = new Date(start.getFullYear()+y, start.getMonth(), start.getDate()); d.setHours(0,0,0,0);
+      const dd = diffDays(today, d);
+      rows += `<div class="bd-row"><span>${y}주년</span><span class="v">${fmtKDate(d)} <span class="dday">${ddayLabel(dd)}</span></span></div>`;
+    });
+    $('result').innerHTML = `
+      <div class="result-hero">
+        <div class="label">${fmtKDate(start)} 부터</div>
+        <div class="value">${fmt(todayN)}<small>일째</small></div>
+        <div class="sub">오늘 기준 (만난 날을 1일로 계산)</div>
+      </div>
+      <div class="breakdown">
+        <h3>💕 다가오는 기념일</h3>
+        ${rows}
+      </div>
+      <div class="note"><strong>참고:</strong> 한국식으로 <b>시작일을 1일</b>로 셉니다(100일 = 시작일 +99일). 주년은 같은 날짜의 N년 뒤입니다. <span class="dday" style="margin:0;">D-</span>는 오늘 기준 남은 일수예요.</div>`;
+    $('result').classList.add('show');
+  }
+
+  function renderCalc(){
+    const base = parseDate($('calcBase').value);
+    const days = parseInt($('calcDays').value, 10);
+    if(!base || isNaN(days)) return;
+    const signed = dir==='after' ? days : -days;
+    const res = addDays(base, signed);
+    const dd = diffDays(today, res);
+    $('result').innerHTML = `
+      <div class="result-hero">
+        <div class="label">${fmtKDate(base)} 기준 ${fmt(days)}일 ${dir==='after'?'후':'전'}</div>
+        <div class="value" style="font-size:34px;">${res.getFullYear()}.${pad(res.getMonth()+1)}.${pad(res.getDate())}</div>
+        <div class="sub">${DOW[res.getDay()]}요일 · ${ddayLabel(dd)}</div>
+      </div>
+      <div class="breakdown">
+        <h3>📅 계산 상세</h3>
+        <div class="bd-row"><span>기준일</span><span class="v">${fmtKDate(base)}</span></div>
+        <div class="bd-row"><span>${dir==='after'?'더한':'뺀'} 일수</span><span class="v">${dir==='after'?'+':'−'}${fmt(days)}일</span></div>
+        <div class="bd-row"><span>요일</span><span class="v">${DOW[res.getDay()]}요일</span></div>
+        <div class="bd-row total"><span>결과 날짜</span><span class="v">${fmtKDate(res)}</span></div>
+      </div>`;
+    $('result').classList.add('show');
+  }
+
+  function calculate(){
+    if(mode==='dday') renderDday();
+    else if(mode==='anniv') renderAnniv();
+    else renderCalc();
+  }
+
+  $('calc').addEventListener('submit', e => {
+    e.preventDefault();
+    calculate();
+    if($('result').classList.contains('show')) $('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  $('resetBtn').addEventListener('click', () => {
+    $('baseD').value = toISO(today);
+    $('targetD').value = toISO(addDays(today, 100));
+    $('startD').value = toISO(today);
+    $('calcBase').value = toISO(today);
+    $('calcDays').value = 100;
+    calculate();
+  });
+
+  ['baseD','targetD','startD','calcBase','calcDays'].forEach(id => {
+    $(id).addEventListener('change', calculate);
+    $(id).addEventListener('input', calculate);
+  });
+
+  calculate();
+</script>
+
+</body>
+</html>
