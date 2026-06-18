@@ -25,6 +25,7 @@
     { icon: '🎂', name: '만 나이 계산기', desc: '만 나이·연 나이·띠·별자리·생일 D-day', href: '/age-calculator/' },
     { icon: '🎯', name: '디데이 계산기', desc: 'D-day·100일·기념일·날짜 더하기/빼기', href: '/d-day/' },
     { icon: '☕', name: '카페인 계산기', desc: '하루 카페인 한도·섭취량·취침 전 마지노선', href: '/caffeine/' },
+    { icon: '🏋️', name: '1RM 계산기', desc: '1회 최대 중량 추정 + 훈련강도 %1RM 환산표', href: '/one-rep-max/' },
   ];
 
   const STYLE = `
