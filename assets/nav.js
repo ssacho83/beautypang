@@ -24,6 +24,7 @@
     { icon: '🤰', label: '임신 주수 · 출산 예정일', href: '/pregnancy-calculator/', cat: '임신·여성' },
     { icon: '🌷', label: '배란일 · 가임기간', href: '/ovulation-calculator/', cat: '임신·여성' },
     { icon: '💧', label: '하루 물 섭취량', href: '/water-intake/', cat: '건강' },
+    { icon: '🍺', label: '혈중알코올농도 · 술 깨는 시간', href: '/alcohol-calculator/', cat: '생활' },
   ];
 
   // ─── 스타일 ───────────────────────────────────────────
