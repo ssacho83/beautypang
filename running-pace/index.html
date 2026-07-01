@@ -209,6 +209,20 @@ main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
 .faq details[open] summary::after { content: '−'; }
 .faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
 
+.cp-wrap { margin-top: 56px; }
+.cp-wrap h2 { font-size: 22px; margin: 0 0 6px; letter-spacing: -0.4px; }
+.cp-sub { margin: 0 0 18px; font-size: 13px; color: var(--text-dim); }
+.cp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 640px) { .cp-grid { grid-template-columns: 1fr; } }
+.cp-card { display: flex; flex-direction: column; gap: 8px; padding: 18px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; text-decoration: none; color: var(--text); transition: all 0.15s; }
+.cp-card:hover { border-color: var(--primary); box-shadow: 0 4px 16px rgba(234,88,12,0.1); transform: translateY(-2px); text-decoration: none; }
+.cp-card .cp-ico { font-size: 28px; line-height: 1; }
+.cp-card .cp-nm { font-weight: 800; font-size: 15px; color: var(--text); letter-spacing: -0.3px; }
+.cp-card .cp-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+.cp-card .cp-cta { margin-top: auto; padding-top: 8px; font-size: 13px; color: var(--primary); font-weight: 700; }
+.cp-adlabel { display: inline-block; margin: 0 0 16px; font-size: 11px; color: var(--text-dim); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 6px 11px; line-height: 1.5; font-weight: 600; }
+.cp-disc { margin: 16px 0 0; font-size: 11px; color: var(--text-dim); line-height: 1.5; }
+
 footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
 .foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
 .foot a { color: var(--text-muted); }
@@ -344,6 +358,34 @@ footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24
       </div>
       <div class="guide-outro">페이스 계산은 목표 기록을 <b>현실적인 훈련 페이스</b>로 바꾸는 첫걸음입니다.<br>무리한 목표보다 꾸준히 지킬 수 있는 페이스가 결국 더 좋은 기록을 만듭니다.<br><span class="cta-tag">🏃 오늘의 목표 페이스를 정하고 달려보세요</span></div>
     </div>
+  </section>
+
+  <!-- 쿠팡 파트너스 추천 상품 -->
+  <section class="sec cp-wrap">
+    <h2>👟 러닝, 이것부터 챙기면 기록이 달라집니다</h2>
+    <p class="cp-sub">페이스를 지켜주는 러닝 필수 아이템 — 회원가입 없이 바로 확인하세요.</p>
+    <span class="cp-adlabel">[광고] 이 섹션은 쿠팡 파트너스 활동의 일환으로, 일정액의 수수료를 제공받습니다.</span>
+    <div class="cp-grid">
+      <a href="https://link.coupang.com/a/e1kEx9waQu" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">👟</div>
+        <div class="cp-nm">러닝화</div>
+        <div class="cp-desc">발에 맞는 러닝화는 부상을 줄이고 페이스를 지켜주는 가장 기본 장비입니다. 쿠션·무게를 비교해 내 발에 맞는 걸 고르세요.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/e1kHbTeeLQ" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">⌚</div>
+        <div class="cp-nm">러닝 워치 · 스마트밴드</div>
+        <div class="cp-desc">1km마다 랩과 페이스를 실시간으로 확인하면 오버페이스를 막을 수 있습니다. 페이스 관리의 핵심 장비입니다.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+      <a href="https://link.coupang.com/a/e1kJrmPoc0" target="_blank" rel="sponsored nofollow noopener" class="cp-card">
+        <div class="cp-ico">🧦</div>
+        <div class="cp-nm">러닝 양말</div>
+        <div class="cp-desc">기능성 러닝 양말은 물집과 미끄러짐을 줄여 장거리에서 발을 보호합니다. 발목 높이·쿠션 타입을 확인하세요.</div>
+        <div class="cp-cta">쿠팡에서 보기 →</div>
+      </a>
+    </div>
+    <p class="cp-disc">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따라 일정액의 수수료를 제공받습니다.</p>
   </section>
 
   <!-- mid 광고 슬롯 -->
