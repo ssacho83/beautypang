@@ -25,6 +25,7 @@
     { icon: '🌷', label: '배란일 · 가임기간', href: '/ovulation-calculator/', cat: '임신·여성' },
     { icon: '💧', label: '하루 물 섭취량', href: '/water-intake/', cat: '건강' },
     { icon: '🍺', label: '혈중알코올농도 · 술 깨는 시간', href: '/alcohol-calculator/', cat: '생활' },
+    { icon: '👟', label: '러닝 페이스 · 완주 시간', href: '/running-pace/', cat: '운동' },
   ];
 
   // ─── 스타일 ───────────────────────────────────────────

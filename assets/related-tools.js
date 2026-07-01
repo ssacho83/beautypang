@@ -27,6 +27,7 @@
     { icon: '☕', name: '카페인 계산기', desc: '하루 카페인 한도·섭취량·취침 전 마지노선', href: '/caffeine/' },
     { icon: '🏋️', name: '1RM 계산기', desc: '1회 최대 중량 추정 + 훈련강도 %1RM 환산표', href: '/one-rep-max/' },
     { icon: '🍺', name: '혈중알코올농도 계산기', desc: '술 깨는 시간·운전 가능 시간 추정 (Widmark)', href: '/alcohol-calculator/' },
+    { icon: '👟', name: '러닝 페이스 계산기', desc: '목표 기록으로 페이스·완주 시간·구간 스플릿 계산', href: '/running-pace/' },
   ];
 
   const STYLE = `

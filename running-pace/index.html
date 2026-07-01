@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>러닝 페이스 계산기 — 마라톤 목표 기록·완주 시간·구간 페이스 | beautypang</title>
+<meta name="description" content="목표 거리와 완주 시간을 넣으면 1km 당 페이스와 시속, 구간별 통과 시간을 계산합니다. 반대로 페이스를 넣어 5K·10K·하프·풀코스 완주 예상 시간도 확인하세요. 마라톤 서브3·서브4 목표 페이스 계산기.">
+<meta name="keywords" content="러닝 페이스 계산기, 마라톤 페이스, 완주 시간 계산, 목표 페이스, 서브3 서브4, 하프마라톤 페이스, 10K 페이스, 러닝 속도 계산, 페이스 시속 변환, beautypang">
+<meta name="robots" content="index,follow">
+<meta name="google-site-verification" content="2xVj59QMIgWGp8je6lsptzWQYhHyDG_aVc05mWOp--4" />
+<meta name="naver-site-verification" content="74fef3d418a1e812489238486ef027fdf967907b" />
+<link rel="canonical" href="https://beautypang.co.kr/running-pace/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="beautypang.tools">
+<meta property="og:title" content="러닝 페이스 계산기 — 목표 기록·완주 시간·구간 페이스">
+<meta property="og:description" content="거리와 목표 시간으로 필요한 페이스를, 페이스로 5K·10K·하프·풀코스 완주 시간을 계산. 마라톤 서브3·서브4 페이스.">
+<meta property="og:url" content="https://beautypang.co.kr/running-pace/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://beautypang.co.kr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="러닝 페이스 계산기 — beautypang.tools">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="러닝 페이스 계산기 — 목표 기록·완주 시간·구간 페이스">
+<meta name="twitter:description" content="거리와 목표 시간으로 필요한 페이스를, 페이스로 완주 예상 시간을 계산. 마라톤 서브3·서브4 페이스.">
+<meta name="twitter:image" content="https://beautypang.co.kr/og-image.png">
+
+<meta name="theme-color" content="#EA580C">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="beautypang.tools">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="beautypang.tools RSS" href="/rss.xml">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126709833280837" crossorigin="anonymous"></script>
+<script src="/assets/nav.js?v=4" defer></script>
+<script src="/assets/related-tools.js?v=3" defer></script>
+<link rel="stylesheet" href="/assets/guide.css?v=2">
+<style>:root { --guide-accent: #EA580C; --guide-accent-dark: #C2410C; --guide-accent-soft: #FFEDD5; }</style>
+
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F76TTBSP9F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F76TTBSP9F');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://beautypang.co.kr/running-pace/#app",
+      "name": "러닝 페이스 계산기",
+      "url": "https://beautypang.co.kr/running-pace/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "목표 거리와 완주 시간으로 1km 당 페이스와 시속·구간별 통과 시간을 계산하고, 반대로 페이스로 5K·10K·하프·풀코스 완주 예상 시간을 계산하는 무료 러닝 페이스 계산기입니다.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+      "inLanguage": "ko-KR",
+      "isAccessibleForFree": true,
+      "browserRequirements": "Requires JavaScript",
+      "author": { "@type": "Organization", "name": "beautypang.tools", "url": "https://beautypang.co.kr/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://beautypang.co.kr/" },
+        { "@type": "ListItem", "position": 2, "name": "러닝 페이스 계산기", "item": "https://beautypang.co.kr/running-pace/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "러닝에서 페이스가 무슨 뜻인가요?", "acceptedAnswer": { "@type": "Answer", "text": "페이스는 1km를 달리는 데 걸리는 시간을 '분:초'로 나타낸 값입니다. 예를 들어 페이스 5:00/km는 1km를 5분에 달린다는 뜻이며, 이 속도를 유지하면 10km를 50분에 완주합니다. 러닝에서는 시속(km/h)보다 페이스를 더 자주 쓰는데, 목표 기록을 세우고 오버페이스를 막는 기준이 되기 때문입니다." } },
+        { "@type": "Question", "name": "페이스를 시속(km/h)으로 어떻게 바꾸나요?", "acceptedAnswer": { "@type": "Answer", "text": "시속(km/h) = 3600 ÷ 페이스(초)로 계산합니다. 페이스 5:00/km는 300초이므로 3600 ÷ 300 = 시속 12km입니다. 반대로 페이스(초) = 3600 ÷ 시속으로 구할 수 있어, 시속 10km는 360초 = 페이스 6:00/km가 됩니다." } },
+        { "@type": "Question", "name": "마라톤 서브4·서브3 페이스는 얼마인가요?", "acceptedAnswer": { "@type": "Answer", "text": "풀코스(42.195km)를 4시간에 완주하는 '서브4'는 페이스 약 5:41/km, 3시간에 완주하는 '서브3'는 약 4:16/km가 필요합니다. 서브4는 많은 러너의 첫 목표이며, 서브3은 상급자 수준입니다. 실제로는 후반 페이스 저하를 감안해 초반에 약간의 여유를 두는 것이 좋습니다." } },
+        { "@type": "Question", "name": "하프마라톤 2시간 완주 페이스는?", "acceptedAnswer": { "@type": "Answer", "text": "하프마라톤(21.0975km)을 2시간에 완주하려면 페이스 약 5:41/km가 필요합니다. 우연히 풀코스 서브4와 같은 페이스인데, 거리가 절반이라 체감 난이도는 낮습니다. 하프 초보자의 흔한 목표가 바로 '서브2'입니다." } },
+        { "@type": "Question", "name": "페이스만 알면 완주 시간을 계산할 수 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "네. 완주 시간 = 페이스(초) × 거리(km)로 계산합니다. 페이스 6:00/km(360초)로 10km를 달리면 360 × 10 = 3600초 = 1시간입니다. 이 계산기의 '페이스 → 완주 시간' 모드를 쓰면 5K·10K·하프·풀코스 완주 예상 시간을 한 번에 확인할 수 있습니다." } },
+        { "@type": "Question", "name": "네거티브 스플릿이 무엇인가요?", "acceptedAnswer": { "@type": "Answer", "text": "네거티브 스플릿은 경기 후반을 전반보다 더 빠르게 달리는 페이스 전략입니다. 초반에 오버페이스로 힘을 쏟으면 후반에 급격히 느려져 기록이 무너지기 쉽습니다. 전반을 목표 페이스보다 약간 느리게 시작해 후반에 끌어올리면, 같은 체력으로 더 좋은 기록을 낼 수 있습니다." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  --primary: #EA580C;
+  --primary-dark: #C2410C;
+  --primary-soft: #FFEDD5;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --warning-soft: #fef3c7;
+  --success-soft: #dcfce7;
+  --danger-soft: #fee2e2;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+  --shadow-md: 0 4px 12px rgba(15,23,42,0.06);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased; word-break: keep-all; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.site { border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 50; }
+.nav { max-width: 960px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+.brand { font-weight: 800; font-size: 17px; color: var(--text); letter-spacing: -0.3px; }
+.brand span { color: var(--primary); font-weight: 600; }
+.nav-link { font-size: 13px; color: var(--text-muted); }
+.nav-link:hover { color: var(--primary); text-decoration: none; }
+
+.hero { padding: 48px 20px 32px; background: linear-gradient(180deg, var(--primary-soft) 0%, var(--bg) 100%); }
+.hero-inner { max-width: 960px; margin: 0 auto; }
+.badge { display: inline-block; padding: 4px 10px; background: rgba(234,88,12,0.1); color: var(--primary); border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+.hero h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.25; letter-spacing: -0.6px; text-wrap: balance; }
+.hero .lead { margin: 0; color: var(--text-muted); font-size: 16px; line-height: 1.6; max-width: 640px; }
+.hero .lead b { color: var(--text); font-weight: 700; }
+
+main { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+
+.calc { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 640px) { .calc-grid { grid-template-columns: 1fr; } }
+
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text); }
+.input-wrap { position: relative; }
+.input-wrap input { width: 100%; padding: 12px 44px 12px 14px; font-size: 16px; font-weight: 500; color: var(--text); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); outline: none; transition: border-color 0.15s, box-shadow 0.15s; appearance: none; font-family: inherit; }
+.input-wrap input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(234,88,12,0.1); }
+.input-wrap .unit { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 13px; pointer-events: none; }
+.help { margin: 0; font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+.tg { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+.tg.two { grid-template-columns: 1fr 1fr; }
+
+.seg-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.seg-tabs button { padding: 12px 8px; font-size: 14px; font-weight: 600; color: var(--text-muted); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.seg-tabs button.on { background: var(--primary); color: #fff; border-color: var(--primary); }
+.goal-select { width: 100%; padding: 12px 14px; font-size: 15px; font-weight: 500; color: var(--text); background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-md); outline: none; font-family: inherit; appearance: none; cursor: pointer; }
+.goal-select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(234,88,12,0.1); }
+
+.actions { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn { padding: 12px 22px; font-size: 14px; font-weight: 700; border-radius: var(--radius-md); cursor: pointer; font-family: inherit; transition: all 0.15s; border: 1.5px solid transparent; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-ghost { background: var(--bg); color: var(--text-muted); border-color: var(--border); }
+.btn-ghost:hover { background: var(--surface); }
+
+.result { margin-top: 28px; display: none; }
+.result.show { display: block; animation: fadeIn 0.3s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.result-hero { color: #fff; padding: 28px 24px; border-radius: var(--radius-lg); text-align: center; background: linear-gradient(135deg, #FB923C 0%, #EA580C 100%); }
+.result-hero .label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 8px; }
+.result-hero .value { font-size: 46px; font-weight: 800; line-height: 1; letter-spacing: -1.5px; }
+.result-hero .value small { font-size: 20px; font-weight: 600; opacity: 0.8; margin-left: 4px; }
+.result-hero .sub { font-size: 15px; font-weight: 700; color: #fff; margin-top: 12px; }
+.result-hero .range-bar { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; font-size: 13px; color: rgba(255,255,255,0.95); }
+.result-hero .range-bar .pill { background: rgba(255,255,255,0.18); padding: 5px 12px; border-radius: 999px; font-weight: 700; }
+
+.metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+@media (max-width: 560px) { .metric-grid { grid-template-columns: 1fr; } }
+.metric { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; text-align: center; }
+.metric .label { font-size: 12px; color: var(--text-muted); font-weight: 600; margin-bottom: 6px; }
+.metric .value { font-size: 22px; font-weight: 800; color: var(--text); letter-spacing: -0.4px; }
+.metric .value small { font-size: 13px; font-weight: 500; color: var(--text-muted); margin-left: 3px; }
+.metric .desc { font-size: 12px; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+
+.breakdown { margin-top: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; }
+.breakdown h3 { margin: 0 0 12px; font-size: 14px; color: var(--text); }
+.bd-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; font-size: 14px; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+.bd-row:last-of-type { border-bottom: 0; }
+.bd-row .v { font-weight: 700; color: var(--text); }
+.bd-row.hl { font-weight: 700; color: var(--text); }
+.bd-row.hl .v { color: var(--primary-dark); font-size: 16px; }
+.bd-row.total { margin-top: 6px; padding-top: 12px; border-top: 2px solid var(--border-strong); border-bottom: 0; font-size: 15px; color: var(--text); font-weight: 700; }
+.bd-row.total .v { color: var(--primary-dark); font-size: 17px; }
+
+.note { margin-top: 16px; padding: 14px 16px; background: var(--warning-soft); border: 1px solid #fde68a; border-radius: var(--radius-md); font-size: 13px; color: #78350f; line-height: 1.6; }
+.note strong { color: #92400e; }
+
+.sec { margin-top: 56px; }
+.sec h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.4px; }
+.faq details { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px; margin-bottom: 10px; }
+.faq details[open] { border-color: var(--primary-soft); }
+.faq summary { font-weight: 700; cursor: pointer; list-style: none; color: var(--text); font-size: 15px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; float: right; color: var(--text-dim); font-weight: 400; font-size: 18px; line-height: 1; transition: transform 0.2s; }
+.faq details[open] summary::after { content: '−'; }
+.faq .answer { margin-top: 10px; color: var(--text-muted); line-height: 1.7; font-size: 14px; }
+
+footer.site { border-top: 1px solid var(--border); margin-top: 64px; padding: 24px 20px; background: var(--surface); }
+.foot { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
+.foot a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="/" class="brand">beautypang<span>.tools</span></a>
+    <a href="/" class="nav-link">← 도구 모음</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">러닝 페이스 · 완주 시간 계산</span>
+    <h1>러닝 페이스 계산기</h1>
+    <p class="lead">거리와 <b>목표 완주 기록</b>을 넣으면 1km 당 <b>필요 페이스</b>와 시속, 구간별 통과 시간이 나옵니다. 반대로 <b>페이스</b>를 넣어 5K·10K·하프·풀코스 <b>완주 예상 시간</b>도 계산하세요.<br>마라톤 서브3·서브4 목표 페이스까지 한 번에.</p>
+  </div>
+</section>
+
+<main>
+  <form class="calc" id="calc">
+    <div class="field full">
+      <label>계산 방식</label>
+      <div class="seg-tabs" id="modeTabs">
+        <button type="button" data-mode="time" class="on">완주 시간 → 페이스</button>
+        <button type="button" data-mode="pace">페이스 → 완주 시간</button>
+      </div>
+    </div>
+
+    <div class="calc-grid">
+      <div class="field">
+        <label for="distSelect">거리</label>
+        <select id="distSelect" class="goal-select">
+          <option value="5">5K (5km)</option>
+          <option value="10" selected>10K (10km)</option>
+          <option value="21.0975">하프마라톤 (21.0975km)</option>
+          <option value="42.195">풀코스 마라톤 (42.195km)</option>
+          <option value="custom">사용자 지정</option>
+        </select>
+      </div>
+      <div class="field" id="customField" style="display:none;">
+        <label for="customDist">사용자 거리</label>
+        <div class="input-wrap">
+          <input id="customDist" type="number" min="0.1" max="500" step="0.1" value="15" inputmode="decimal">
+          <span class="unit">km</span>
+        </div>
+      </div>
+
+      <div class="field full" id="timeBlock">
+        <label>목표 완주 기록</label>
+        <div class="tg">
+          <div class="input-wrap"><input id="hInput" type="number" min="0" max="99" step="1" value="0" inputmode="numeric"><span class="unit">시</span></div>
+          <div class="input-wrap"><input id="mInput" type="number" min="0" max="59" step="1" value="50" inputmode="numeric"><span class="unit">분</span></div>
+          <div class="input-wrap"><input id="sInput" type="number" min="0" max="59" step="1" value="0" inputmode="numeric"><span class="unit">초</span></div>
+        </div>
+      </div>
+
+      <div class="field full" id="paceBlock" style="display:none;">
+        <label>목표 페이스 (1km 당)</label>
+        <div class="tg two">
+          <div class="input-wrap"><input id="pmInput" type="number" min="0" max="59" step="1" value="5" inputmode="numeric"><span class="unit">분</span></div>
+          <div class="input-wrap"><input id="psInput" type="number" min="0" max="59" step="1" value="0" inputmode="numeric"><span class="unit">초</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="help" id="hint" style="margin-top:12px;">* <b>완주 시간 → 페이스</b>: 거리와 목표 기록을 넣으면 필요한 페이스가 나옵니다. <b>페이스 → 완주 시간</b>: 페이스를 넣으면 거리별 완주 예상 시간이 나옵니다. '사용자 지정'으로 원하는 거리도 계산할 수 있어요.</p>
+
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">계산하기</button>
+      <button type="button" class="btn btn-ghost" id="resetBtn">초기화</button>
+    </div>
+  </form>
+
+  <div class="result" id="result">
+    <div class="result-hero" id="resultHero">
+      <div class="label" id="heroLabel">필요 페이스 (1km 당)</div>
+      <div class="value"><span id="heroValue">0</span></div>
+      <div class="sub" id="heroSub">—</div>
+      <div class="range-bar">
+        <span id="heroExtraLabel">평균 속도</span>
+        <span class="pill"><span id="heroExtra">0</span></span>
+      </div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <div class="label">🏃 평균 속도</div>
+        <div class="value" id="mSpeed">0<small>km/h</small></div>
+        <div class="desc">이 페이스를 유지할 때의 시속입니다.</div>
+      </div>
+      <div class="metric">
+        <div class="label">📏 1마일(1.609km) 페이스</div>
+        <div class="value" id="mMile">0</div>
+        <div class="desc">마일 기준 대회·트레드밀에서 유용합니다.</div>
+      </div>
+      <div class="metric">
+        <div class="label">🔁 400m 트랙 1바퀴</div>
+        <div class="value" id="mLap">0</div>
+        <div class="desc">운동장 트랙 한 바퀴 통과 시간입니다.</div>
+      </div>
+    </div>
+
+    <div class="breakdown" id="splitBox">
+      <h3 id="splitTitle">📊 구간별 통과 시간</h3>
+      <div id="splitRows"></div>
+    </div>
+
+    <div class="note" id="infoNote">
+      <strong>참고:</strong> 이 계산은 <b>일정한 페이스</b>를 가정한 이론값입니다. 실제로는 오르막·바람·후반 체력 저하로 페이스가 변하므로, 목표를 세울 땐 <b>초반에 약간의 여유</b>를 두고 후반에 끌어올리는 전략(네거티브 스플릿)이 안전합니다.
+    </div>
+  </div>
+
+  <section class="sec">
+    <h2>🏃 러닝 페이스, 꼭 알아야 할 6가지</h2>
+    <div class="guide-wrap">
+      <p class="guide-intro-text">러닝에서 <b>페이스</b>는 1km를 몇 분에 달리는지를 뜻하며, 목표 기록을 세우고 <b>오버페이스를 막는 가장 중요한 기준</b>입니다. 내 목표에 맞는 페이스를 정확히 알고, 처음부터 끝까지 일정하게 유지하는 것이 좋은 기록의 핵심입니다.</p>
+      <div class="guide-stats">
+        <div class="guide-stat"><div class="stat-num">5:41<small>/km</small></div><div class="stat-label"><b>풀 서브4 · 하프 서브2</b><br>가장 흔한 첫 목표 페이스</div></div>
+        <div class="guide-stat"><div class="stat-num">4:16<small>/km</small></div><div class="stat-label"><b>풀코스 서브3</b><br>상급자 목표 페이스</div></div>
+        <div class="guide-stat"><div class="stat-num">12<small>km/h</small></div><div class="stat-label"><b>페이스 5:00/km</b><br>= 시속 12km 환산</div></div>
+      </div>
+      <div class="guide-cards">
+        <div class="guide-card"><span class="gc-num">1</span><span class="gc-icon">⏱️</span><h3 class="gc-title">페이스 = 1km 당 시간</h3><p class="gc-key">분:초 / km</p><p class="gc-desc">페이스 5:00/km는 1km를 5분에 달린다는 뜻입니다. 이 속도를 유지하면 10km를 50분에 완주합니다. 러닝의 기본 단위입니다.</p></div>
+        <div class="guide-card"><span class="gc-num">2</span><span class="gc-icon">🔄</span><h3 class="gc-title">페이스 ↔ 시속 변환</h3><p class="gc-key">시속 = 3600 ÷ 페이스(초)</p><p class="gc-desc">페이스 5:00/km(300초)는 시속 12km입니다. 트레드밀은 시속으로, 야외 러닝은 페이스로 표시되는 경우가 많아 둘을 오갈 줄 알면 편합니다.</p></div>
+        <div class="guide-card"><span class="gc-num">3</span><span class="gc-icon">🎯</span><h3 class="gc-title">대회별 목표 페이스</h3><p class="gc-key">거리마다 감각이 다르다</p><p class="gc-desc">10K 60분은 6:00/km, 하프 2시간은 5:41/km, 풀 서브4는 5:41/km입니다. 목표 대회 거리에 맞춰 페이스를 먼저 정하고 훈련하세요.</p></div>
+        <div class="guide-card"><span class="gc-num">4</span><span class="gc-icon">📉</span><h3 class="gc-title">네거티브 스플릿</h3><p class="gc-key">후반을 더 빠르게</p><p class="gc-desc">전반을 목표보다 살짝 느리게 시작해 후반에 끌어올리면, 같은 체력으로 더 좋은 기록이 나옵니다. 초반 질주는 후반 급락의 원인입니다.</p></div>
+        <div class="guide-card"><span class="gc-num">5</span><span class="gc-icon">⚠️</span><h3 class="gc-title">오버페이스 주의</h3><p class="gc-key">초반 10~20초가 함정</p><p class="gc-desc">출발 직후 목표보다 빠른 페이스는 완주 실패의 가장 흔한 원인입니다. 몸이 가볍게 느껴져도 계획한 페이스를 지키세요.</p></div>
+        <div class="guide-card"><span class="gc-num">6</span><span class="gc-icon">⌚</span><h3 class="gc-title">페이스 유지 팁</h3><p class="gc-key">1km마다 랩 확인</p><p class="gc-desc">러닝워치로 구간 랩을 확인하고 호흡·보폭을 일정하게 가져가세요. 감이 아니라 숫자로 관리해야 페이스가 흔들리지 않습니다.</p></div>
+      </div>
+      <div class="guide-outro">페이스 계산은 목표 기록을 <b>현실적인 훈련 페이스</b>로 바꾸는 첫걸음입니다.<br>무리한 목표보다 꾸준히 지킬 수 있는 페이스가 결국 더 좋은 기록을 만듭니다.<br><span class="cta-tag">🏃 오늘의 목표 페이스를 정하고 달려보세요</span></div>
+    </div>
+  </section>
+
+  <!-- mid 광고 슬롯 -->
+  <div style="max-width:900px;margin:32px auto;padding:0 20px;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5126709833280837"
+         data-ad-slot="1670772523"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <section class="sec faq">
+    <h2>자주 묻는 질문</h2>
+    <details>
+      <summary>러닝에서 페이스가 무슨 뜻인가요?</summary>
+      <div class="answer">
+        페이스는 <b>1km를 달리는 데 걸리는 시간</b>을 '분:초'로 나타낸 값입니다. 페이스 5:00/km는 1km를 5분에 달린다는 뜻이며, 이 속도를 유지하면 10km를 50분에 완주합니다. 러닝에서는 시속보다 페이스를 더 자주 쓰는데, 목표 기록을 세우고 오버페이스를 막는 기준이 되기 때문입니다.
+      </div>
+    </details>
+    <details>
+      <summary>페이스를 시속(km/h)으로 어떻게 바꾸나요?</summary>
+      <div class="answer">
+        <b>시속(km/h) = 3600 ÷ 페이스(초)</b>로 계산합니다. 페이스 5:00/km는 300초이므로 3600 ÷ 300 = 시속 12km입니다. 반대로 페이스(초) = 3600 ÷ 시속으로, 시속 10km는 360초 = 페이스 6:00/km가 됩니다.
+      </div>
+    </details>
+    <details>
+      <summary>마라톤 서브4·서브3 페이스는 얼마인가요?</summary>
+      <div class="answer">
+        풀코스(42.195km)를 4시간에 완주하는 '서브4'는 페이스 <b>약 5:41/km</b>, 3시간에 완주하는 '서브3'는 <b>약 4:16/km</b>가 필요합니다. 서브4는 많은 러너의 첫 목표이며, 서브3은 상급자 수준입니다. 실제로는 후반 페이스 저하를 감안해 초반에 약간의 여유를 두는 것이 좋습니다.
+      </div>
+    </details>
+    <details>
+      <summary>하프마라톤 2시간 완주 페이스는?</summary>
+      <div class="answer">
+        하프마라톤(21.0975km)을 2시간에 완주하려면 페이스 <b>약 5:41/km</b>가 필요합니다. 우연히 풀코스 서브4와 같은 페이스인데, 거리가 절반이라 체감 난이도는 낮습니다. 하프 초보자의 흔한 목표가 바로 '서브2'입니다.
+      </div>
+    </details>
+    <details>
+      <summary>페이스만 알면 완주 시간을 계산할 수 있나요?</summary>
+      <div class="answer">
+        네. <b>완주 시간 = 페이스(초) × 거리(km)</b>로 계산합니다. 페이스 6:00/km(360초)로 10km를 달리면 360 × 10 = 3600초 = 1시간입니다. 이 계산기의 '페이스 → 완주 시간' 모드를 쓰면 5K·10K·하프·풀코스 완주 예상 시간을 한 번에 확인할 수 있습니다.
+      </div>
+    </details>
+    <details>
+      <summary>네거티브 스플릿이 무엇인가요?</summary>
+      <div class="answer">
+        네거티브 스플릿은 <b>경기 후반을 전반보다 더 빠르게</b> 달리는 페이스 전략입니다. 초반에 오버페이스로 힘을 쏟으면 후반에 급격히 느려져 기록이 무너지기 쉽습니다. 전반을 목표 페이스보다 약간 느리게 시작해 후반에 끌어올리면, 같은 체력으로 더 좋은 기록을 낼 수 있습니다.
+      </div>
+    </details>
+  </section>
+
+  <div data-related-tools></div>
+
+</main>
+
+<footer class="site">
+  <div class="foot">
+    <span>© <span id="year"></span> beautypang.tools — 건강·생활 무료 계산기</span>
+    <span><a href="/legal/privacy.html">개인정보처리방침</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  const $ = (s) => document.querySelector(s);
+
+  const HALF = 21.0975, FULL = 42.195;
+  const STD = [
+    { n: '1km', d: 1 },
+    { n: '5K', d: 5 },
+    { n: '10K', d: 10 },
+    { n: '하프마라톤', d: HALF },
+    { n: '풀코스 마라톤', d: FULL },
+  ];
+
+  let mode = 'time';
+
+  // 모드 토글
+  $('#modeTabs').addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-mode]');
+    if (!btn) return;
+    mode = btn.dataset.mode;
+    $('#modeTabs').querySelectorAll('button').forEach(b => b.classList.toggle('on', b === btn));
+    $('#timeBlock').style.display = mode === 'time' ? '' : 'none';
+    $('#paceBlock').style.display = mode === 'pace' ? '' : 'none';
+    $('#result').classList.remove('show');
+  });
+
+  // 사용자 지정 거리 토글
+  $('#distSelect').addEventListener('change', () => {
+    $('#customField').style.display = $('#distSelect').value === 'custom' ? '' : 'none';
+  });
+
+  const pad2 = (n) => String(n).padStart(2, '0');
+  // 초 → 시:분:초 (또는 분:초)
+  function fmtClock(sec) {
+    sec = Math.round(sec);
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
+    const s = sec % 60;
+    return h > 0 ? `${h}:${pad2(m)}:${pad2(s)}` : `${m}:${pad2(s)}`;
+  }
+  // 초 → 분:초 (페이스)
+  function fmtPace(sec) {
+    sec = Math.round(sec);
+    const m = Math.floor(sec / 60);
+    const s = sec % 60;
+    return `${m}:${pad2(s)}`;
+  }
+  function fmtKm(k) {
+    return (Math.abs(k - Math.round(k)) < 1e-6) ? String(Math.round(k)) : k.toFixed(2);
+  }
+  function getDist() {
+    const v = $('#distSelect').value;
+    return v === 'custom' ? parseFloat($('#customDist').value) : parseFloat(v);
+  }
+  function row(label, val, hl) {
+    return `<div class="bd-row${hl ? ' hl' : ''}"><span>${label}</span><span class="v">${val}</span></div>`;
+  }
+  // 통과지점 마커 생성
+  function splitMarkers(D) {
+    const step = D <= 10.001 ? 1 : (D <= 21.2 ? 2 : 5);
+    const arr = [];
+    for (let k = step; k < D - 1e-6; k += step) arr.push(k);
+    arr.push(D); // 완주 지점(정확 거리)
+    return arr;
+  }
+
+  function fillMetrics(paceSec, speed) {
+    $('#mSpeed').innerHTML = `${speed.toFixed(1)}<small>km/h</small>`;
+    $('#mMile').innerHTML = `${fmtPace(paceSec * 1.609344)}<small>/mile</small>`;
+    $('#mLap').innerHTML = `${fmtPace(paceSec * 0.4)}<small>/400m</small>`;
+  }
+
+  $('#calc').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const D = getDist();
+    if (!D || D <= 0) return;
+
+    let paceSec; // 1km 당 초
+    const hero = $('#resultHero');
+
+    if (mode === 'time') {
+      const h = parseInt($('#hInput').value) || 0;
+      const m = parseInt($('#mInput').value) || 0;
+      const s = parseInt($('#sInput').value) || 0;
+      const total = h * 3600 + m * 60 + s;
+      if (total <= 0) return;
+      paceSec = total / D;
+      const speed = 3600 / paceSec;
+
+      $('#heroLabel').textContent = '필요 페이스 (1km 당)';
+      $('#heroValue').innerHTML = `${fmtPace(paceSec)}<small>/km</small>`;
+      $('#heroSub').textContent = `${fmtKm(D)}km를 ${fmtClock(total)}에 완주하려면`;
+      $('#heroExtraLabel').textContent = '평균 속도';
+      $('#heroExtra').textContent = `${speed.toFixed(1)} km/h`;
+      fillMetrics(paceSec, speed);
+
+      $('#splitTitle').textContent = '📊 구간별 통과 시간';
+      const markers = splitMarkers(D);
+      $('#splitRows').innerHTML = markers.map((k, i) => {
+        const isFinal = i === markers.length - 1;
+        return row(`${fmtKm(k)} km${isFinal ? ' · 완주' : ''}`, fmtClock(paceSec * k), isFinal);
+      }).join('');
+    } else {
+      const pm = parseInt($('#pmInput').value) || 0;
+      const ps = parseInt($('#psInput').value) || 0;
+      paceSec = pm * 60 + ps;
+      if (paceSec <= 0) return;
+      const speed = 3600 / paceSec;
+      const total = paceSec * D;
+
+      $('#heroLabel').textContent = '완주 예상 기록';
+      $('#heroValue').innerHTML = fmtClock(total);
+      $('#heroSub').textContent = `${fmtKm(D)}km · 페이스 ${fmtPace(paceSec)}/km`;
+      $('#heroExtraLabel').textContent = '평균 속도';
+      $('#heroExtra').textContent = `${speed.toFixed(1)} km/h`;
+      fillMetrics(paceSec, speed);
+
+      $('#splitTitle').textContent = '📊 거리별 완주 예상 시간';
+      const rows = STD.map(o => row(o.n, fmtClock(paceSec * o.d), Math.abs(o.d - D) < 1e-6));
+      // 표준 거리에 없는 사용자 거리면 별도 행 추가
+      if (!STD.some(o => Math.abs(o.d - D) < 1e-6)) {
+        rows.push(row(`${fmtKm(D)}km (선택 거리)`, fmtClock(total), true));
+      }
+      $('#splitRows').innerHTML = rows.join('');
+    }
+
+    $('#result').classList.add('show');
+    $('#result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+
+  $('#resetBtn').addEventListener('click', () => {
+    $('#distSelect').value = '10';
+    $('#customField').style.display = 'none';
+    $('#customDist').value = 15;
+    $('#hInput').value = 0; $('#mInput').value = 50; $('#sInput').value = 0;
+    $('#pmInput').value = 5; $('#psInput').value = 0;
+    $('#result').classList.remove('show');
+  });
+
+  $('#year').textContent = new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
