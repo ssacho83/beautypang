@@ -6,10 +6,10 @@
     <title>beautypang.tools — 일상에 필요한 무료 도구 모음</title>
     <link>https://beautypang.co.kr/</link>
     <atom:link href="https://beautypang.co.kr/rss.xml" rel="self" type="application/rss+xml" />
-    <description>복지·금융·생활에 필요한 무료 계산기와 도구를 한 곳에서. 회원가입 없이 누구나 즉시 사용 가능합니다.</description>
+    <description>건강·다이어트·임신·생활에 필요한 무료 계산기와 도구를 한 곳에서. 회원가입 없이 누구나 즉시 사용 가능합니다.</description>
     <language>ko-KR</language>
     <copyright>© 2026 beautypang.co.kr</copyright>
-    <lastBuildDate>Sun, 24 May 2026 16:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 04 Jul 2026 12:00:00 +0900</lastBuildDate>
     <generator>beautypang.tools</generator>
     <image>
       <url>https://beautypang.co.kr/og-image.png</url>
@@ -18,39 +18,39 @@
     </image>
 
     <item>
-      <title>2026 퇴직금 계산기 — 평균임금·법정 퇴직금·퇴직소득세 자동 계산</title>
-      <link>https://beautypang.co.kr/retirement-calculator/</link>
-      <guid isPermaLink="true">https://beautypang.co.kr/retirement-calculator/</guid>
-      <pubDate>Sun, 24 May 2026 16:00:00 +0900</pubDate>
-      <category>금융</category>
-      <description><![CDATA[입사일·퇴직일·월급여만 입력하면 평균임금과 법정 퇴직금, 퇴직소득세까지 자동 계산. 근로기준법 §34·근로자퇴직급여 보장법·소득세법 §48(근속연수공제) 2026년 기준.]]></description>
+      <title>러닝 페이스 계산기 — 목표 기록·구간 페이스·완주 시간 자동 계산</title>
+      <link>https://beautypang.co.kr/running-pace/</link>
+      <guid isPermaLink="true">https://beautypang.co.kr/running-pace/</guid>
+      <pubDate>Thu, 18 Jun 2026 12:00:00 +0900</pubDate>
+      <category>운동</category>
+      <description><![CDATA[거리와 목표 시간을 입력하면 km당 페이스, 5K·10K·하프·풀코스 예상 완주 시간을 즉시 계산합니다. 러닝 초보부터 마라톤 준비까지 무료로 사용하세요.]]></description>
     </item>
 
     <item>
-      <title>2026 전월세 전환 계산기 — 전세↔월세 환산·반전세 적정 월세</title>
-      <link>https://beautypang.co.kr/rent-conversion/</link>
-      <guid isPermaLink="true">https://beautypang.co.kr/rent-conversion/</guid>
-      <pubDate>Sun, 24 May 2026 14:00:00 +0900</pubDate>
-      <category>부동산</category>
-      <description><![CDATA[전세를 월세로, 월세를 전세로 즉시 환산하고 반전세 적정 보증금을 자동 계산합니다. 주택임대차보호법 §7의2 전환율 상한(한은 기준금리 + 2%p) 안내 포함.]]></description>
+      <title>1RM 최대 중량 계산기 — 벤치프레스·스쿼트·데드리프트 훈련 중량표</title>
+      <link>https://beautypang.co.kr/one-rep-max/</link>
+      <guid isPermaLink="true">https://beautypang.co.kr/one-rep-max/</guid>
+      <pubDate>Thu, 18 Jun 2026 10:00:00 +0900</pubDate>
+      <category>운동</category>
+      <description><![CDATA[들어올린 무게와 반복 횟수만 입력하면 1RM(최대 중량)과 %별 훈련 중량표를 자동 계산. Epley·Brzycki 공식 기반, 회원가입 없이 즉시 사용.]]></description>
     </item>
 
     <item>
-      <title>2026 연봉 실수령액 계산기 — 4대 보험·소득세 자동 공제</title>
-      <link>https://beautypang.co.kr/salary-calculator/</link>
-      <guid isPermaLink="true">https://beautypang.co.kr/salary-calculator/</guid>
-      <pubDate>Sat, 23 May 2026 23:00:00 +0900</pubDate>
-      <category>금융</category>
-      <description><![CDATA[연봉·부양가족·비과세 식대를 입력하면 2026년 인상된 4대 보험 요율(국민연금 9.5%·건강보험 7.19%)과 누진 소득세를 공제한 월 실수령액을 즉시 계산하는 무료 도구입니다.]]></description>
+      <title>혈중알코올농도 계산기 — 술 깨는 시간·운전 가능 시각 확인</title>
+      <link>https://beautypang.co.kr/alcohol-calculator/</link>
+      <guid isPermaLink="true">https://beautypang.co.kr/alcohol-calculator/</guid>
+      <pubDate>Wed, 17 Jun 2026 12:00:00 +0900</pubDate>
+      <category>건강</category>
+      <description><![CDATA[마신 술의 종류와 양, 체중을 입력하면 위드마크 공식으로 혈중알코올농도와 술이 깨는 예상 시간을 계산합니다. 음주운전 기준(0.03%) 안내 포함.]]></description>
     </item>
 
     <item>
-      <title>2026 중위소득 계산기 — 생계·의료·주거·교육급여 자격 확인</title>
-      <link>https://beautypang.co.kr/income-calculator/</link>
-      <guid isPermaLink="true">https://beautypang.co.kr/income-calculator/</guid>
-      <pubDate>Sat, 23 May 2026 21:00:00 +0900</pubDate>
-      <category>복지</category>
-      <description><![CDATA[가구원 수와 월소득을 입력하면 2026년 기준 중위소득 대비 비율과 4대 급여(생계·의료·주거·교육) 자격을 즉시 확인할 수 있는 무료 계산기입니다. 보건복지부 고시 제2025-135호 기준.]]></description>
+      <title>카페인 계산기 — 하루 섭취량·반감기·수면 영향 확인</title>
+      <link>https://beautypang.co.kr/caffeine/</link>
+      <guid isPermaLink="true">https://beautypang.co.kr/caffeine/</guid>
+      <pubDate>Mon, 15 Jun 2026 12:00:00 +0900</pubDate>
+      <category>건강</category>
+      <description><![CDATA[오늘 마신 커피·에너지드링크를 입력하면 총 카페인 섭취량과 권장 상한(400mg) 대비 비율, 몸에 남은 카페인이 수면에 미치는 영향까지 계산합니다.]]></description>
     </item>
   </channel>
 </rss>

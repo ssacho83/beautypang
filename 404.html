@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>페이지를 찾을 수 없어요 — beautypang.tools</title>
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#2563EB">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root {
+    --bg: #FAFAFC;
+    --surface: #FFFFFF;
+    --ink: #0A0A1A;
+    --ink-soft: #475569;
+    --ink-muted: #94A3B8;
+    --line: #E5E7EB;
+    --primary: #2563EB;
+    --primary-soft: #DBEAFE;
+    --primary-deep: #1D4ED8;
+    --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.06);
+    --radius-sm: 12px;
+    --radius-md: 20px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  header.site {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    max-width: 1180px; margin: 0 auto; padding: 16px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 800; font-size: 18px; letter-spacing: -0.4px;
+  }
+  .brand-mark {
+    width: 32px; height: 32px; border-radius: 10px;
+    background: linear-gradient(135deg, #2563EB 0%, #8B5CF6 50%, #EC4899 100%);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 800; font-size: 14px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  }
+  .brand span { color: var(--ink-muted); font-weight: 600; }
+
+  main {
+    flex: 1;
+    max-width: 720px; margin: 0 auto; padding: 72px 24px 96px;
+    text-align: center;
+  }
+  .code {
+    font-size: 88px; font-weight: 800; letter-spacing: -4px; line-height: 1;
+    background: linear-gradient(135deg, #2563EB 0%, #8B5CF6 50%, #EC4899 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    margin-bottom: 12px;
+  }
+  h1 { font-size: 26px; letter-spacing: -0.6px; margin: 0 0 10px; }
+  .lead { color: var(--ink-soft); font-size: 16px; margin: 0 0 36px; }
+  .home-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--primary); color: #fff;
+    font-weight: 700; font-size: 15px;
+    padding: 14px 28px; border-radius: 999px;
+    box-shadow: 0 12px 36px rgba(37, 99, 235, 0.18);
+    transition: background .15s ease;
+  }
+  .home-btn:hover { background: var(--primary-deep); }
+
+  .tools {
+    margin-top: 56px; text-align: left;
+  }
+  .tools h2 {
+    font-size: 14px; font-weight: 700; color: var(--ink-muted);
+    letter-spacing: 0.4px; margin: 0 0 14px; text-align: center;
+  }
+  .tool-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;
+  }
+  .tool-grid a {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--radius-sm); padding: 13px 16px;
+    font-size: 14px; font-weight: 600; color: var(--ink-soft);
+    box-shadow: var(--shadow-md);
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .tool-grid a:hover { border-color: var(--primary); color: var(--primary); }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 24px; text-align: center;
+    color: var(--ink-muted); font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="brand" href="/"><span class="brand-mark">bp</span>beautypang<span>.tools</span></a>
+  </div>
+</header>
+
+<main>
+  <div class="code">404</div>
+  <h1>페이지를 찾을 수 없어요</h1>
+  <p class="lead">주소가 바뀌었거나 삭제된 페이지예요.<br>아래에서 찾으시던 계산기를 골라보세요.</p>
+  <a class="home-btn" href="/">전체 도구 보러 가기 →</a>
+
+  <div class="tools">
+    <h2>자주 찾는 계산기</h2>
+    <div class="tool-grid">
+      <a href="/bmi-calculator/">BMI · 기초대사량</a>
+      <a href="/calorie-calculator/">하루 권장 칼로리</a>
+      <a href="/body-composition/">체지방률 · 체성분</a>
+      <a href="/one-rep-max/">1RM 최대 중량</a>
+      <a href="/running-pace/">러닝 페이스</a>
+      <a href="/pregnancy-calculator/">임신 주수 · 출산일</a>
+      <a href="/ovulation-calculator/">배란일 · 가임기</a>
+      <a href="/sleep-calculator/">수면 시간</a>
+      <a href="/caffeine/">카페인 계산기</a>
+      <a href="/age-calculator/">만 나이 계산기</a>
+      <a href="/d-day/">D-day 계산기</a>
+      <a href="/water-intake/">하루 물 섭취량</a>
+    </div>
+  </div>
+</main>
+
+<footer>© 2026 beautypang.tools — 일상의 무료 계산기 모음</footer>
+</body>
+</html>
