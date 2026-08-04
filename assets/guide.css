@@ -57,3 +57,10 @@ h1, h2, h3, h4 { text-wrap: balance; }
 .guide-bar .gauge-marker { position: absolute; top: -6px; bottom: -6px; width: 4px; background: #0f172a; border: 2px solid #fff; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: left 0.3s; }
 .guide-bar .gauge-marker::after { content: attr(data-label); position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%); font-size: 11px; font-weight: 800; color: #0f172a; white-space: nowrap; }
 .guide-bar .gauge-labels { display: flex; justify-content: space-between; margin-top: 28px; font-size: 11px; color: #64748b; font-weight: 600; }
+
+/* 관련 계산기 정적 링크 (SEO — HTML에 직접 존재해야 크롤러가 링크 그래프를 본다) */
+.bp-static-links { max-width: 960px; margin: 48px auto 32px; padding: 0 20px; }
+.bp-static-links h2 { font-size: 15px; font-weight: 800; color: #475569; margin: 0 0 14px; letter-spacing: -0.2px; }
+.bp-static-links-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.bp-static-links-row a { display: inline-block; padding: 9px 15px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 999px; font-size: 13px; font-weight: 600; color: #475569; text-decoration: none; transition: all 0.15s ease; }
+.bp-static-links-row a:hover { background: #2563eb; border-color: #2563eb; color: #fff; }

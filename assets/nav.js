@@ -65,11 +65,16 @@
     <a href="/legal/terms.html">이용약관</a>
     <a href="/legal/disclaimer.html">면책 고지</a>`;
 
+  // 자매 사이트 링크 마운트 — sister-sites.js 가 이 자리를 채운다.
+  // 이 푸터는 innerHTML을 통째로 갈아끼우므로, 마운트를 여기 포함시켜야 살아남는다.
+  const SISTER_MOUNT = `
+      <div data-sister-sites="beautypang.co.kr"></div>`;
+
   const FOOT_HTML = `
       <div class="foot-nav">
         <a href="/">홈</a>${LEGAL_LINKS}
       </div>
-      <span class="copy">© <span data-foot-year></span> beautypang.co.kr — 계산 결과는 참고용이며 의료 전문가의 진단·처방을 대체하지 않습니다.</span>`;
+      <span class="copy">© <span data-foot-year></span> beautypang.co.kr — 계산 결과는 참고용이며 의료 전문가의 진단·처방을 대체하지 않습니다.</span>${SISTER_MOUNT}`;
 
   function injectFooter() {
     const existing = document.querySelector('footer.site');
@@ -90,6 +95,10 @@
     }
     const y = foot.querySelector('[data-foot-year]');
     if (y) y.textContent = new Date().getFullYear();
+
+    // 푸터를 새로 그린 뒤 자매 링크를 다시 렌더링한다
+    // (sister-sites.js가 먼저 실행됐다면 마운트가 비어 있으므로 재호출이 필요)
+    if (window.renderSisterSites) window.renderSisterSites();
   }
 
   function init() {
