@@ -1,0 +1,44 @@
+# beautypang.tools (뷰티팡)
+
+> 건강·다이어트·임신·생활에 쓰는 무료 계산기 모음과 생활 건강 가이드를 제공하는 한국어 사이트입니다. 회원가입·결제 없이 바로 씁니다.
+
+- 계산기마다 쓰는 공식과 기준을 화면에 밝힙니다. 예: BMI(WHO 아시아 기준)·기초대사량(Mifflin-St Jeor), 운동 칼로리(ACSM Compendium MET), 체지방률(Deurenberg)·체수분율(Watson), 예상 키(중간부모키 공식), 복부비만(대한비만학회·WHO 기준).
+- 동물병원 진료비 페이지는 농림축산식품부 동물병원 진료비 공시(animalclinicfee.or.kr) 자료를 시·군·구별로 옮긴 것이며, 사이트가 추정하거나 계산한 숫자가 아닙니다. 병원 목록은 행정안전부 «동물병원 인허가 정보»(공공데이터포털)이고, 두 자료 모두 2026-09-20에 수집했습니다. 공시 금액은 병원이 게시한 항목별 가격표라 실제 결제 금액과 다릅니다.
+- 모든 계산 결과는 일반 정보 제공용 참고 자료이며 의학적 진단·처방·치료를 대체하지 않습니다. 배란일·가임기 계산은 피임이나 임신 계획의 신뢰할 수 있는 수단이 아닙니다.
+
+## 동물병원 진료비 (공시 자료)
+
+- [전국 동물병원 진료비](https://beautypang.co.kr/vet-fee/): 시·군·구별 진찰료·입원비·예방접종비·검사비 비교
+
+## 건강·다이어트 계산기
+
+- [BMI·기초대사량·일일 권장 칼로리 계산기](https://beautypang.co.kr/bmi-calculator/)
+- [칼로리 계산기](https://beautypang.co.kr/calorie-calculator/): 하루 권장 칼로리(TDEE)와 탄수화물·단백질·지방 분배
+- [체지방률·체수분율·제지방량 계산기](https://beautypang.co.kr/body-composition/)
+- [복부비만 계산기](https://beautypang.co.kr/obesity-check/): 허리둘레·BMI·WHtR·WHR
+- [운동 칼로리 소모 계산기](https://beautypang.co.kr/exercise-calorie/): 종목별 MET 공식
+- [하루 단백질 섭취량 계산기](https://beautypang.co.kr/protein-calculator/)
+- [하루 물 섭취량 계산기](https://beautypang.co.kr/water-intake/)
+- [카페인 계산기](https://beautypang.co.kr/caffeine/)
+- [혈중알코올농도 계산기](https://beautypang.co.kr/alcohol-calculator/)
+- [수면 시간 계산기](https://beautypang.co.kr/sleep-calculator/): 90분 수면 주기 기준 취침·기상 시각
+- [1RM 계산기](https://beautypang.co.kr/one-rep-max/): 벤치프레스·스쿼트·데드리프트 최대중량
+- [러닝 페이스 계산기](https://beautypang.co.kr/running-pace/)
+
+## 임신·가족·생활 계산기
+
+- [임신 주수 계산기](https://beautypang.co.kr/pregnancy-calculator/): 출산 예정일과 주차별 태아 정보
+- [배란일·생리일 계산기](https://beautypang.co.kr/ovulation-calculator/): 가임기간과 다음 생리 예정일
+- [예상 키 계산기](https://beautypang.co.kr/height-predictor/): 부모 키로 자녀 성인 키 예측
+- [만 나이 계산기](https://beautypang.co.kr/age-calculator/)
+- [디데이 계산기](https://beautypang.co.kr/d-day/)
+
+## 가이드
+
+- [건강·생활 가이드 목록](https://beautypang.co.kr/guide/)
+
+## 사이트 정보
+
+- [면책 고지](https://beautypang.co.kr/legal/disclaimer)
+- [개인정보 처리방침](https://beautypang.co.kr/legal/privacy)
+- [이용약관](https://beautypang.co.kr/legal/terms)
