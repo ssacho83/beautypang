@@ -26,6 +26,10 @@
     { icon: '💧', label: '하루 물 섭취량', href: '/water-intake/', cat: '건강' },
     { icon: '🍺', label: '혈중알코올농도 · 술 깨는 시간', href: '/alcohol-calculator/', cat: '생활' },
     { icon: '👟', label: '러닝 페이스 · 완주 시간', href: '/running-pace/', cat: '운동' },
+    // 📝 2026-08-06 신설: 건강·뷰티 가이드(/guide/). 계산기가 "숫자를 알려주는 도구"라면
+    //    가이드는 "그 숫자를 어떻게 다룰지 알려주는 글"이라 같은 우산 아래 있다.
+    //    메뉴에 없으면 고아 페이지가 되어 사람도 크롤러도 못 찾는다.
+    { icon: '📝', label: '건강·뷰티 가이드 (읽을거리)', href: '/guide/', cat: '가이드' },
   ];
 
   // ─── 스타일 ───────────────────────────────────────────
@@ -61,9 +65,9 @@
 
   // ─── 공통 푸터 (법적 링크) — 자체 footer가 없는 페이지에만 주입 ───
   const LEGAL_LINKS = `
-    <a href="/legal/privacy.html">개인정보 처리방침</a>
-    <a href="/legal/terms.html">이용약관</a>
-    <a href="/legal/disclaimer.html">면책 고지</a>`;
+    <a href="/legal/privacy">개인정보 처리방침</a>
+    <a href="/legal/terms">이용약관</a>
+    <a href="/legal/disclaimer">면책 고지</a>`;
 
   // 자매 사이트 링크 마운트 — sister-sites.js 가 이 자리를 채운다.
   // 이 푸터는 innerHTML을 통째로 갈아끼우므로, 마운트를 여기 포함시켜야 살아남는다.
@@ -172,9 +176,9 @@
         </a>
       </nav>
       <div class="nav-section-foot">
-        <a href="/legal/privacy.html">개인정보 처리방침</a> ·
-        <a href="/legal/terms.html">이용약관</a> ·
-        <a href="/legal/disclaimer.html">면책 고지</a><br>
+        <a href="/legal/privacy">개인정보 처리방침</a> ·
+        <a href="/legal/terms">이용약관</a> ·
+        <a href="/legal/disclaimer">면책 고지</a><br>
         © <span data-year></span> beautypang.tools<br>
         <a href="https://jr-j.com/" rel="noopener">주려줌 — URL 단축 · QR 코드</a>
       </div>

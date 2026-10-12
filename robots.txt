@@ -42,4 +42,5 @@ Disallow: /
 
 # 사이트맵 + RSS 피드
 Sitemap: https://beautypang.co.kr/sitemap.xml
+Sitemap: https://beautypang.co.kr/sitemap-vetfee.xml
 Sitemap: https://beautypang.co.kr/rss.xml
