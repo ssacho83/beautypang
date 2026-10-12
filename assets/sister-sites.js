@@ -19,7 +19,7 @@
     {
       host: 'proptax.kr',
       name: '프롭택스',
-      desc: '양도세 · 취득세 · 보유세 계산기 7종',
+      desc: '양도세 · 취득세 · 보유세 계산기 8종',
       href: 'https://proptax.kr/'
     },
     {
