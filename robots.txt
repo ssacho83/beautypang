@@ -21,20 +21,23 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# AI 크롤러 (학습 데이터 수집) - 차단
+# AI 크롤러 정책 (2026-10-12 싸초 «추천대로»: 학습만 막고, 검색·실시간 열람은 연다)
+#  - 막음 = 모델 «학습» 수집: GPTBot(OpenAI) · ClaudeBot/anthropic-ai(Anthropic) · CCBot(Common Crawl)
+#    · Google-Extended(Gemini 학습 + Gemini 답변 출처 — 구글 문서상 둘이 한 토큰이라 «학습은 막는다» 쪽으로)
+#  - 엶(위 «User-agent: *» 를 따름) = AI 검색 색인·질문 순간 열람:
+#    OAI-SearchBot · ChatGPT-User · Claude-SearchBot · Claude-User · PerplexityBot · Perplexity-User
+#    → 손님이 ChatGPT·Claude·Perplexity 에 물을 때 뷰티팡을 열어 보고 출처로 인용할 수 있다
+#  - 예전엔 ChatGPT-User(실시간 열람)까지 막아 ChatGPT 답변에 인용될 길이 없었다
 User-agent: GPTBot
 Disallow: /
 
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: CCBot
+User-agent: ClaudeBot
 Disallow: /
 
 User-agent: anthropic-ai
 Disallow: /
 
-User-agent: Claude-Web
+User-agent: CCBot
 Disallow: /
 
 User-agent: Google-Extended
