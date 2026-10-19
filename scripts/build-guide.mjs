@@ -507,8 +507,12 @@ for (const f of files) {
 
   // 🆕 10/5 — 싣지 않을 원고(파일 이름 일부). 건강기능식품 제품 광고 글은 질병·효능 표현(«만성피로 개선»·«효과 검증»)이
   //   건강기능식품법 광고 기준·애드센스 정책에 걸릴 수 있어 사이트 가이드로 내보내지 않는다.
-  const EXCLUDE = ["935 에클로니아"];
-  if (EXCLUDE.some(x => path.basename(f).includes(x))) { console.log(`  건너뜀(제품 광고 원고): ${path.basename(f)}`); continue; }
+  // 🔴 10/19 — «불법인지 한국에서»는 8/4 원고 선별 때 «보류(법 원문 대조 전 게시 금지)»로 정했는데 이 목록에 안 들어가 있어
+  //   10/19 [5편 발행]으로 라이브에 나갔다(«우버 한국 불법·2014년 철수»=지금 우버 택시 영업 중 · 타투=문신사법 통과로 바뀜). 내리고 여기 넣음.
+  //   법 원문(law.go.kr)과 대조해 고친 뒤에만 이 줄에서 뺀다.
+  const EXCLUDE = [["935 에클로니아", "제품 광고 원고"], ["불법인지 한국에서", "법 원문 대조 전 보류"]];
+  const ex = EXCLUDE.find(([x]) => path.basename(f).includes(x));
+  if (ex) { console.log(`  건너뜀(${ex[1]}): ${path.basename(f)}`); continue; }
 
   const title = path.basename(f, ".txt").replace(/\(feat\..*?\)/gi, "").trim();
   const slug = slugify(title);

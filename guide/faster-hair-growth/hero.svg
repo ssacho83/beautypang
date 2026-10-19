@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="머리카락 빨리 기르는 방법 샴푸로 감는 방법하나 바꿨을 뿐인데">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#EC4899"/>
+    </linearGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="2.5" fill="#fff" opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  <circle cx="1055" cy="120" r="230" fill="#fff" opacity=".07"/>
+  <circle cx="150" cy="560" r="180" fill="#fff" opacity=".05"/>
+
+  <g transform="translate(96,150)"><g stroke="#fff" stroke-width="3" fill="none" opacity=".9" stroke-linecap="round">
+      <path d="M0 26 Q 18 6 36 26 T 72 26"/><path d="M0 44 Q 18 24 36 44 T 72 44"/>
+      <path d="M0 62 Q 18 42 36 62 T 72 62"/></g></g>
+
+  <text x="96" y="128" font-family="Pretendard,'Malgun Gothic',sans-serif" font-size="25" font-weight="700" fill="#fff" opacity=".82" letter-spacing="1">헤어 케어</text>
+
+  <text x="96" y="249" font-family="Pretendard,'Malgun Gothic',sans-serif" font-size="55" font-weight="800" fill="#fff" letter-spacing="-1">머리카락 빨리 기르는 방법</text>
+  <text x="96" y="315" font-family="Pretendard,'Malgun Gothic',sans-serif" font-size="55" font-weight="800" fill="#fff" letter-spacing="-1">샴푸로 감는 방법하나 바꿨을</text>
+  <text x="96" y="381" font-family="Pretendard,'Malgun Gothic',sans-serif" font-size="55" font-weight="800" fill="#fff" letter-spacing="-1">뿐인데</text>
+
+  <rect x="96" y="423" width="70" height="5" rx="2.5" fill="#fff" opacity=".65"/>
+  <text x="96" y="473" font-family="Pretendard,'Malgun Gothic',sans-serif" font-size="23" font-weight="600" fill="#fff" opacity=".72">beautypang.co.kr</text>
+</svg>

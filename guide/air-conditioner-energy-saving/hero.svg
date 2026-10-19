@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="에어컨 전기세 적게 나오는 방법 절약 꿀팁">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="2.5" fill="#fff" opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  <circle cx="1055" cy="120" r="230" fill="#fff" opacity=".07"/>
+  <circle cx="150" cy="560" r="180" fill="#fff" opacity=".05"/>
+
+  <g transform="translate(96,150)"><g fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round">
+    <circle cx="36" cy="36" r="20"/><path d="M28 36l6 6 12-14"/></g></g>
+
+  <text x="96" y="128" font-family="Pretendard,'Malgun Gothic',sans-serif" font-size="25" font-weight="700" fill="#fff" opacity=".82" letter-spacing="1">건강·뷰티</text>
+
+  <text x="96" y="282" font-family="Pretendard,'Malgun Gothic',sans-serif" font-size="55" font-weight="800" fill="#fff" letter-spacing="-1">에어컨 전기세 적게 나오는</text>
+  <text x="96" y="348" font-family="Pretendard,'Malgun Gothic',sans-serif" font-size="55" font-weight="800" fill="#fff" letter-spacing="-1">방법 절약 꿀팁</text>
+
+  <rect x="96" y="390" width="70" height="5" rx="2.5" fill="#fff" opacity=".65"/>
+  <text x="96" y="440" font-family="Pretendard,'Malgun Gothic',sans-serif" font-size="23" font-weight="600" fill="#fff" opacity=".72">beautypang.co.kr</text>
+</svg>
