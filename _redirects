@@ -6,3 +6,7 @@
 /salary-calculator https://wagelab.kr/salary/ 301
 /income-calculator/ https://wagelab.kr/median-income/ 301
 /income-calculator https://wagelab.kr/median-income/ 301
+# 10/19 레드팀: 사이트 생성용 스크립트·설정이 배포 폴더에 같이 올라가 공개됨(PC 경로 노출) → 첫 화면으로
+/scripts/* / 301
+/.gitignore / 301
+/.github/* / 301
