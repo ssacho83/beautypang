@@ -298,8 +298,8 @@
   <div class="calendar" id="calendar">
     <div class="cal-row head">
       <span>회차</span>
-      <span>생리 시작 예정</span>
       <span>배란 예정</span>
+      <span>생리 시작 예정</span>
       <span class="fertile">가임 기간</span>
     </div>
     <div id="calBody" style="padding: 24px; text-align: center; color: var(--muted);">위 폼에 LMP를 입력하면 캘린더가 표시됩니다.</div>
@@ -523,10 +523,11 @@
       const o = addDays(m, -LUTEAL);
       const fs = addDays(o, -5);
       const fe = addDays(o, 1);
+      // 한 줄 = 한 주기를 시간 순서로: 배란(o) → 그 14일 뒤 생리 시작(m). 머리말 칸 순서와 짝(2026-11-12)
       calHtml += `<div class="cal-row">
         <span class="month">${i + 1}회차</span>
-        <span class="menses">${fmtDate(m)}</span>
         <span class="ovulation">${fmtDate(o)}</span>
+        <span class="menses">${fmtDate(m)}</span>
         <span class="fertile">${fmtDate(fs)} ~ ${fmtDate(fe)}</span>
       </div>`;
     }

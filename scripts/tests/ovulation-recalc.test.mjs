@@ -15,6 +15,22 @@ const ok = (c, m) => { console.log((c ? "O " : "X ") + m); if (!c) fail++; };
 const html = fs.readFileSync(path.join(root, "ovulation-calculator", "index.html"), "utf8");
 const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => m[1]).filter((s) => s.includes("getElementById('calc')"));
 ok(scripts.length === 1, "계산 스크립트를 한 덩이 찾음");
+ok((html.match(/id="calBody"/g) || []).length === 1 && /id="calendar"[\s\S]*?id="calBody"/.test(html), "화면에 #calBody가 하나 있고 달력(#calendar) 안에 있다(가짜 문서는 없는 요소도 만들어 주므로 여기서 따로 본다)");
+
+// 기대값은 화면 코드와 따로 계산한다: n회차 생리 = 마지막 생리 + 주기×n · 배란 = 그 14일 전
+const pad2 = (n) => String(n).padStart(2, "0");
+const ymd = (d) => `${d.getFullYear()}.${pad2(d.getMonth() + 1)}.${pad2(d.getDate())}`;
+const expectRows = (lmp, cycle) => Array.from({ length: 6 }, (_, i) => {
+  const [y, mo, da] = lmp.split("-").map(Number);
+  return { o: ymd(new Date(y, mo - 1, da + cycle * (i + 1) - 14)), m: ymd(new Date(y, mo - 1, da + cycle * (i + 1))) };
+});
+// 보이는 달력 줄을 «배란 · 생리 · 줄 안에서 어느 칸이 먼저인가»로 읽는다
+const readRows = (shownHtml) => [...String(shownHtml || "").matchAll(/<div class="cal-row">([\s\S]*?)<\/div>/g)].map((r) => {
+  const o = /class="ovulation">([^<]*)</.exec(r[1]);
+  const m = /class="menses">([^<]*)</.exec(r[1]);
+  return { o: o ? o[1].trim() : "", m: m ? m[1].trim() : "", ovulationFirst: !!o && !!m && o.index < m.index };
+});
+const sameRows = (rows, want) => rows.length === want.length && rows.every((r, i) => r.o === want[i].o && r.m === want[i].m);
 
 // ── 작은 문서: 화면에 «보이는» 달력 = #calBody가 붙어 있으면 그 안, 떨어졌으면 그 자리에 대신 들어간 것
 function makeDoc() {
@@ -63,6 +79,22 @@ if (scripts.length === 1) {
   submit("2026-12-10", 21);
   ok(shown().includes("2026.12.31") && !shown().includes("2027.01.09"), "세 번째(주기만 21일로): 달력 1회차 2026.12.31");
   ok(els.calBody.attached, "#calBody가 문서에 그대로 붙어 있다(자기 요소를 갈아 끼우지 않는다)");
+  ok(els.calBody._style === "", "처음 안내 글용 여백·가운데 정렬을 걷었다(달력 줄이 안내 글 모양으로 나오지 않는다)");
+
+  // 줄 전부를 본다 — 앞 한 줄만 새 값이고 뒤 줄이 낡아 있거나, 줄이 더 붙어도 잡는다(11/12 Codex 지적)
+  for (const [lmp, cycle] of [["2026-11-01", 28], ["2026-12-10", 30], ["2027-12-20", 35], ["2028-02-01", 21]]) {
+    submit(lmp, cycle);
+    const rows = readRows(shown());
+    ok(sameRows(rows, expectRows(lmp, cycle)), `${lmp} · ${cycle}일: 달력 6줄의 배란·생리 날짜가 전부 새 값(${rows[0]?.o} → ${rows[0]?.m} … ${rows[5]?.o} → ${rows[5]?.m})`);
+    ok(rows.length === 6 && rows.every((r) => r.ovulationFirst && r.o < r.m), `${lmp} · ${cycle}일: 줄마다 배란 칸이 생리 칸보다 앞(시간 순서) — 배란 날짜가 그 줄 생리보다 이르다`);
+  }
+}
+
+// 머리말 칸 순서 = 줄 칸 순서(배란 예정 → 생리 시작 예정 → 가임 기간). 한쪽만 바꾸면 날짜가 엉뚱한 이름 아래 선다
+{
+  const head = (/<div class="cal-row head">([\s\S]*?)<\/div>/.exec(html) || [, ""])[1];
+  const labels = [...head.matchAll(/<span[^>]*>([^<]*)<\/span>/g)].map((m) => m[1].trim());
+  ok(labels.join("|") === "회차|배란 예정|생리 시작 예정|가임 기간", `달력 머리말 = 회차 · 배란 예정 · 생리 시작 예정 · 가임 기간(지금: ${labels.join(" · ")})`);
 }
 
 // 같은 꼴 막기: 계산기 화면 어디에도 «요소.outerHTML = …» 대입이 없다
