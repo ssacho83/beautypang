@@ -530,8 +530,9 @@
         <span class="fertile">${fmtDate(fs)} ~ ${fmtDate(fe)}</span>
       </div>`;
     }
-    calBody.innerHTML = '';
-    calBody.outerHTML = calHtml;
+    // #calBody는 그대로 두고 안만 갈아 끼운다 — outerHTML로 자기 요소를 바꾸면 두 번째 계산부터 달력이 안 바뀐다(2026-11-12)
+    calBody.removeAttribute('style');   // 처음 안내 글용 여백·가운데 정렬 걷기
+    calBody.innerHTML = calHtml;
 
     result.classList.add('show');
     result.scrollIntoView({ behavior: 'smooth', block: 'start' });
